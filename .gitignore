@@ -1,0 +1,17 @@
+logs
+target
+tmp
+.history
+dist
+/.idea
+/.cache
+/.target
+/*.iml
+/out
+/.idea_modules
+/.classpath
+/.project
+/*~
+/bin
+/conf/split
+/data

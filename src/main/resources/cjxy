@@ -1,0 +1,11 @@
+#! /bin/bash
+
+#
+# Install with
+# git clone https://github.com/jschnasse/cjxy
+# cd cjxy
+# mvn package
+# sudo cp src/main/resources/cjxy /usr/bin
+# sudo cp target/cjxy.jar /usr/lib
+
+java -jar /usr/lib/cjxy.jar $@
