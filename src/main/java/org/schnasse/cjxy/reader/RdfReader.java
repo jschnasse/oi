@@ -4,7 +4,6 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -15,7 +14,6 @@ import org.eclipse.rdf4j.rio.RDFParser;
 import org.eclipse.rdf4j.rio.RDFWriter;
 import org.eclipse.rdf4j.rio.Rio;
 import org.eclipse.rdf4j.rio.helpers.StatementCollector;
-import org.schnasse.cjxy.settings.Frame;
 
 import com.github.jsonldjava.core.JsonLdOptions;
 import com.github.jsonldjava.core.JsonLdProcessor;
@@ -23,25 +21,15 @@ import com.github.jsonldjava.utils.JsonUtils;
 import com.google.common.base.Charsets;
 
 public class RdfReader {
-	static public Map<String, Object> getMap(InputStream in, RDFFormat format) {
-		return getMap(readRdfToString(in, format, RDFFormat.JSONLD, ""), Frame.getFrame());
+	static public Map<String, Object> getMap(InputStream in, RDFFormat format, Map<String, Object> frame) {
+		return getMap(readRdfToString(in, format, RDFFormat.JSONLD, ""), frame);
 	}
 
 	private static Map<String, Object> getMap(String rdfGraphAsJson, Map<String, Object> frame) {
 		try {
-			// @formatter:off
-			return removeGraphArray(getFramedJson(createJsonObject(rdfGraphAsJson), frame));
-			// @formatter:on
-		} catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-	}
-
-	private static String getPrettyJsonLdString(String rdfGraphAsJson, Map<String, Object> frame) {
-		try {
-			// @formatter:off
-			return JsonUtils.toPrettyString(getMap(rdfGraphAsJson, frame));
-			// @formatter:on
+			Map<String, Object> result = removeGraphArray(getFramedJson(createJsonObject(rdfGraphAsJson), frame));
+			result.put("@context", frame.get("@context"));
+			return result;
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
@@ -59,18 +47,6 @@ public class RdfReader {
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
-	}
-
-	private static Map<String, Object> getFrame2() {
-		Map<String, Object> frame = new HashMap<>();
-		frame.put("@type", "dcat:Distribution");
-		Map<String, Object> context = new HashMap<>();
-		context.put("dct", "http://purl.org/dc/terms/");
-		context.put("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
-		context.put("dcat", "http://www.w3.org/ns/dcat#");
-		context.put("example", "http://example.com/vocabulary/");
-		frame.put("@context", context);
-		return frame;
 	}
 
 	private static Object createJsonObject(String ld) {

@@ -1,4 +1,15 @@
-A small tool to convert json,yaml,xml to each other
+A small tool to convert json,yaml,xml,rdf to each other.
+
+To use rdf and json-ld conversion, it is mandatory to provide a [Json-Ld Frame](https://w3c.github.io/json-ld-framing/).
+Example
+
+```
+cd src/test/resources/json
+cjxy HT015847062.json -f frame.json -trdf
+# You will observe, that the output is Json-Ld again
+cjxy HT015847062.rdf -f frame.json -trdf
+# Also in this case you get Json-Ld back
+```
 
 # Install with
 

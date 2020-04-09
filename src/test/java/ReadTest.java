@@ -1,7 +1,10 @@
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Map;
 
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.junit.Test;
+import org.schnasse.cjxy.main.Main;
 import org.schnasse.cjxy.reader.JsonReader;
 import org.schnasse.cjxy.reader.YamlReader;
 import org.schnasse.cjxy.writer.JsonWriter;
@@ -47,20 +50,23 @@ public class ReadTest {
 
 	@Test
 	public void readRdf() throws Exception {
-		// HTTP
-		System.setProperty("http.proxyHost", "http://192.168.10.66");
-		System.setProperty("http.proxyPort", "3128");
-		System.setProperty("http.nonProxyHosts", "localhost|127.0.0.1");
-
-		// HTTPS
-		System.setProperty("https.proxyHost", "http://192.168.10.66");
-		System.setProperty("https.proxyPort", "3128");
-
 		Map<String, Object> map = org.schnasse.cjxy.reader.RdfReader.getMap(
 				Thread.currentThread().getContextClassLoader().getResourceAsStream("json/HT015847062.json"),
-				RDFFormat.JSONLD);
+				RDFFormat.JSONLD,
+				JsonReader
+				.getMap(Thread.currentThread().getContextClassLoader().getResourceAsStream("json/frame.json")));
 		JsonWriter.gprint(map);
 		YamlWriter.gprint(map);
 		XmlWriter.gprint(map);
+	}
+	
+//	@Test
+	public void mainTest() throws Exception {
+		Path currentRelativePath = Paths.get("");
+		String s = currentRelativePath.toAbsolutePath().toString();
+		Main.main(s+"/src/test/resources/json/HT015847062.rdf","-f"+s+"/src/test/resources/json/frame.json","-tjson");
+		Main.main(s+"/src/test/resources/json/HT015847062.rdf","-f"+s+"/src/test/resources/json/frame.json","-tyaml");
+		Main.main(s+"/src/test/resources/json/HT015847062.rdf","-f"+s+"/src/test/resources/json/frame.json","-txml");
+		Main.main(s+"/src/test/resources/json/HT015847062.rdf","-f"+s+"/src/test/resources/json/frame.json","-trdf");
 	}
 }

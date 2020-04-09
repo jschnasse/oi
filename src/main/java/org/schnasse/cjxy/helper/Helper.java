@@ -7,11 +7,11 @@ import java.io.InputStream;
 
 public class Helper {
 
-	public static InputStream getInputStream(String pathToPasswd) {
+	public static InputStream getInputStream(String pathtofile) {
 		try {
-			if (pathToPasswd == null || pathToPasswd.isEmpty())
+			if (pathtofile == null || pathtofile.isEmpty())
 				return null;
-			FileInputStream in = new FileInputStream(pathToPasswd);
+			FileInputStream in = new FileInputStream(pathtofile);
 			return in;
 		} catch (FileNotFoundException e) {
 			System.out.println(e.getLocalizedMessage());
