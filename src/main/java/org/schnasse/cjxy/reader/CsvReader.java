@@ -1,5 +1,5 @@
 /* Copyright 2019 Jan Schnasse. Licensed under the EPL 2.0 */
-package org.schnasse.cjxy.reader.base;
+package org.schnasse.cjxy.reader;
 
 /* Copyright 2019 Jan Schnasse. Licensed under the EPL 2.0 */
 
@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.MappingIterator;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvParser;
 
-public class MapReader {
+public class CsvReader {
 	public static Map<String, Object> getMap(InputStream inputStream) {
 		try {
 			CsvMapper mapper = new CsvMapper();

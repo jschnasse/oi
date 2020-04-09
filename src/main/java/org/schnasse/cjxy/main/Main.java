@@ -6,9 +6,10 @@ import java.util.Map;
 import java.util.concurrent.Callable;
 
 import org.schnasse.cjxy.helper.Helper;
-import org.schnasse.cjxy.reader.base.JsonReader;
-import org.schnasse.cjxy.reader.base.XmlReader;
-import org.schnasse.cjxy.reader.base.YamlReader;
+import org.schnasse.cjxy.reader.CsvReader;
+import org.schnasse.cjxy.reader.JsonReader;
+import org.schnasse.cjxy.reader.XmlReader;
+import org.schnasse.cjxy.reader.YamlReader;
 import org.schnasse.cjxy.writer.JsonWriter;
 import org.schnasse.cjxy.writer.XmlWriter;
 import org.schnasse.cjxy.writer.YamlWriter;
@@ -28,6 +29,9 @@ public class Main implements Callable<Integer> {
 
 	@Option(names = { "-t", "--type" }, description = "yaml,json,xml")
 	private String type = "yaml";
+
+	@Option(names = { "-f", "--fields" }, description = "Provide a comma separated list of files.")
+	private String fields = "";
 
 	public static void main(String... args) {
 		int exitCode = new CommandLine(new Main()).execute(args);
@@ -50,6 +54,8 @@ public class Main implements Callable<Integer> {
 			content = YamlReader.getMap(Helper.getInputStream(inF));
 		} else if ("xml".equals(suffix)) {
 			content = XmlReader.getMap(Helper.getInputStream(inF));
+		} else if ("csv".equals(suffix)) {
+			content = CsvReader.getMap(Helper.getInputStream(inF));
 		}
 
 		if ("xml".equals(type)) {

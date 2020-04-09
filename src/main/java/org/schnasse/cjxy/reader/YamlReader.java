@@ -1,16 +1,16 @@
-package org.schnasse.cjxy.reader.base;
+package org.schnasse.cjxy.reader;
 
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
-public class XmlReader {
+public class YamlReader {
 	static public Map<String, Object> getMap(InputStream in) {
 		try {
-			ObjectMapper mapper = new XmlMapper();
+			ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
 			Map<String, Object> map = mapper.readValue(in, HashMap.class);
 			return map;
 		} catch (Exception e) {
