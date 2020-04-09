@@ -1,11 +1,9 @@
-/* Copyright 2019 Jan Schnasse. Licensed under the EPL 2.0 */
+/* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
 package org.schnasse.cjxy.main;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Callable;
-import java.util.logging.LogManager;
 
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.schnasse.cjxy.helper.Helper;

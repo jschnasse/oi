@@ -1,7 +1,5 @@
-/* Copyright 2019 Jan Schnasse. Licensed under the EPL 2.0 */
+/* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
 package org.schnasse.cjxy.reader;
-
-/* Copyright 2019 Jan Schnasse. Licensed under the EPL 2.0 */
 
 import java.io.InputStream;
 import java.util.ArrayList;
