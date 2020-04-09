@@ -27,14 +27,13 @@ sudo cp target/cjxy.jar /usr/lib
 
 ```
 $ cjxy --help
-Usage: cjxy [-hV] [-t=<type>] <inputFile>
-Converts yaml,json,xml to each other.
-      <inputFile>     Input file.
-  -h, --help          Show this help message and exit.
-  -t, --type=<type>   yaml,json,xml
-  -V, --version       Print version information and exit.
-
-
+Usage: cjxy [-hV] [-f=JsonLdFrame] [-t=<type>] <inputFile>
+Converts yaml,json,xml,rdf to each other.
+      <inputFile>           Input file.
+  -f, --frame=JsonLdFrame   A json-ld Frame
+  -h, --help                Show this help message and exit.
+  -t, --type=<type>         yaml,json,xml,rdf
+  -V, --version             Print version information and exit.
 ```
 
 # Create Debian Package
