@@ -36,10 +36,7 @@ public class Writer {
 		}
 	}
 
-
 	public static void gprint(ObjectMapper mapper, Map<String, Object> json) {
 		print(mapper, json);
 	}
-
-
 }

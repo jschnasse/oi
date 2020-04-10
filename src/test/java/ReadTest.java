@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.schnasse.cjxy.main.Main;
 import org.schnasse.cjxy.reader.JsonReader;
 import org.schnasse.cjxy.reader.YamlReader;
+import org.schnasse.cjxy.writer.ContextWriter;
 import org.schnasse.cjxy.writer.JsonWriter;
 import org.schnasse.cjxy.writer.XmlWriter;
 import org.schnasse.cjxy.writer.YamlWriter;
@@ -59,6 +60,12 @@ public class ReadTest {
 		JsonWriter.gprint(map);
 		YamlWriter.gprint(map);
 		XmlWriter.gprint(map);
+	}
+	@Test
+	public void writeContext() throws Exception {
+		Map<String, Object> map = org.schnasse.cjxy.reader.JsonReader.getMap(
+				Thread.currentThread().getContextClassLoader().getResourceAsStream("json/49726990.json"));
+		ContextWriter.gprint(map);
 	}
 	
 //	@Test

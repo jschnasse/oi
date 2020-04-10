@@ -12,6 +12,7 @@ import org.schnasse.cjxy.reader.JsonReader;
 import org.schnasse.cjxy.reader.RdfReader;
 import org.schnasse.cjxy.reader.XmlReader;
 import org.schnasse.cjxy.reader.YamlReader;
+import org.schnasse.cjxy.writer.ContextWriter;
 import org.schnasse.cjxy.writer.JsonWriter;
 import org.schnasse.cjxy.writer.XmlWriter;
 import org.schnasse.cjxy.writer.YamlWriter;
@@ -30,7 +31,7 @@ public class Main implements Callable<Integer> {
 	@Parameters(index = "0", arity = "1", description = "Input file.")
 	private String inputFile;
 
-	@Option(names = { "-t", "--type" }, description = "yaml,json,xml,rdf")
+	@Option(names = { "-t", "--type" }, description = "yaml,json,xml,rdf,context")
 	private String type = "yaml";
 
 	@Option(names = { "-f", "--frame" }, paramLabel = "JsonLdFrame", description = "A json-ld Frame")
@@ -88,6 +89,8 @@ public class Main implements Callable<Integer> {
 			YamlWriter.gprint(content);
 		} else if ("rdf".equals(type)) {
 			JsonWriter.gprint(content);
+		}else if("context".equals(type)) {
+			ContextWriter.gprint(content);
 		}
 	}
 
