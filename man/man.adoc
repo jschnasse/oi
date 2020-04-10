@@ -1,0 +1,57 @@
+= cjxy(1)
+Jan Schnasse
+v0.0.1
+:doctype: manpage
+:manmanual: CJXY
+:mansource: CJXY
+:man-linkstyle: pass:[blue R < >]
+
+== Name
+
+cjxy - converts csv,jason,xml,yaml, and rdf to each other
+
+== Synopsis
+
+*cjxy* [-hV] [-f=JsonLdFrame] [-t=<type>] <inputFile>
+  
+== Options
+*<inputFile>*::
+  Input file.
+
+*-o, --out-file*=_OUT_FILE_::
+  Write result to file _OUT_FILE_.
+
+*-c, --capture*::
+  Capture specimen if it's a picture of a life form.
+
+
+  *-f, --frame*=_JsonLdFrame_::   
+   A json-ld frame as json _JsonLdFrame_
+   
+  *-h, --help*::
+   Show this help message and exit.
+  
+  *-t, --type*=_TYPE_::
+    _TYPE_ muts be one of yaml,json,xml,rdf
+  
+  *-V, --version*::
+    Print version information and exit.
+
+== Exit status
+
+*0*::
+  Success.
+
+
+*1*::
+  Failure.
+
+
+== Resources
+
+*Project web site:* https://github.com/jschnasse/cjxy
+
+== Copying
+
+Copyright (C) 2020 {author}. +
+Free use of this software is granted under the terms of the EPL License.

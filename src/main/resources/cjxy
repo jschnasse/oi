@@ -1,11 +1,23 @@
 #! /bin/bash
 
-#
-# Install with
-# git clone https://github.com/jschnasse/cjxy
-# cd cjxy
-# mvn package
-# sudo cp src/main/resources/cjxy /usr/bin
-# sudo cp target/cjxy.jar /usr/lib
 
+function download(){
+ (
+ git clone https://github.com/jschnasse/cjxy /tmp/cjxy
+ cd /tmp/cjxy
+ )
+}
+
+# Install with
+function install(){
+ (
+ mvn package
+ sudo cp src/main/resources/cjxy /usr/bin
+ sudo cp target/cjxy.jar /usr/lib
+ cd man
+ asciidoctor -b manpage man.adoc
+ sudo cp cjxy.1 /usr/share/man/man1/
+ sudo mandb
+ )
+}
 java -jar /usr/lib/cjxy.jar $@
