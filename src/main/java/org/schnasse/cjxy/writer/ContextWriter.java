@@ -1,10 +1,10 @@
 /* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
 package org.schnasse.cjxy.writer;
 
+import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -30,78 +30,86 @@ public class ContextWriter {
 	}
 
 	private static Map<String, Object> findContext(Map<String, Object> map) {
-        Map<String,Object> result = useExistingContext(map);
-        if(result == null) {
-        	result= createContext(map);
-        }
+		Map<String, Object> result = useExistingContext(map);
+		if (result == null) {
+			result = createContext(map);
+		}
 		return result;
 	}
 
 	private static Map<String, Object> createContext(Map<String, Object> map) {
-
 		ObjectMapper mapper = new ObjectMapper();
 		List<String> keys = findKeys(mapper.convertValue(map, ObjectNode.class));
 		ObjectNode data = mapper.createObjectNode();
 		ObjectNode context = mapper.createObjectNode();
-		data.put("@context", context);
-
+		data.set("@context", context);
+		String computername = getComputername();
 		for (String key : keys) {
 			Object o = map.get(key);
 			ObjectNode entry = mapper.createObjectNode();
-			entry.put("@id", createId(key.toString()));
-		    if (o instanceof Set) {
+			entry.put("@id", createId(key.toString(), computername));
+			if (o instanceof Set) {
 				entry.put("@container", "@set");
-			}else if (o instanceof List) {
+			} else if (o instanceof List) {
 				entry.put("@container", "@list");
 			}
-			context.put(key, entry);
+			context.set(key, entry);
 		}
-
 		Map<String, Object> result = mapper.convertValue(data, new TypeReference<Map<String, Object>>() {
 		});
 		return result;
 	}
-	private static String createId(String key) {
-		return "info:mio/"+key;
+
+	private static String getComputername() {
+		try {
+			return InetAddress.getLocalHost().getHostName();
+		} catch (Exception ex) {
+			return "cjxy";
+		}
 	}
+
+	private static String createId(String key, String computername) {
+		return "info:" + computername + "/" + key;
+	}
+
 	public static List<String> findKeys(ObjectNode map) {
-		List<String>result = new ArrayList<>();
+		List<String> result = new ArrayList<>();
 		Iterator<String> it = map.fieldNames();
-		while(it.hasNext()) {
+		while (it.hasNext()) {
 			String field = it.next();
 			result.add(field);
 			JsonNode value = map.get(field);
-			if(value.isArray()) {
-				result.addAll(findKeys((ArrayNode)value));
-			}else if(value.isObject()) {
-				result.addAll(findKeys((ObjectNode)value));
+			if (value.isArray()) {
+				result.addAll(findKeys((ArrayNode) value));
+			} else if (value.isObject()) {
+				result.addAll(findKeys((ObjectNode) value));
 			}
 		}
-       return result;
-    }
-	
+		return result;
+	}
+
 	public static List<String> findKeys(ArrayNode map) {
-		List<String>result = new ArrayList<>();
+		List<String> result = new ArrayList<>();
 		Iterator<JsonNode> it = map.iterator();
-		while(it.hasNext()) {
+		while (it.hasNext()) {
 			JsonNode value = it.next();
-			if(value.isArray()) {
-				result.addAll(findKeys((ArrayNode)value));
-			}else if(value.isObject()) {
-				result.addAll(findKeys((ObjectNode)value));
+			if (value.isArray()) {
+				result.addAll(findKeys((ArrayNode) value));
+			} else if (value.isObject()) {
+				result.addAll(findKeys((ObjectNode) value));
 			}
 		}
-       return result;
-    }
-	
+		return result;
+	}
+
 	private static Map<String, Object> useExistingContext(Map<String, Object> map) {
 		Object context = map.get("@context");
 		if (context != null) {
 			if (context instanceof String) {
-				Map<String,Object> result = new HashMap<>();
+				Map<String, Object> result = new HashMap<>();
 				result.put("@context", context);
 				return result;
-			} else {
+			} else if (context instanceof Map) {
 				return (Map<String, Object>) map.get("@context");
 			}
 		}

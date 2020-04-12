@@ -37,15 +37,24 @@ public class Main implements Callable<Integer> {
 	@Option(names = { "-f", "--frame" }, paramLabel = "JsonLdFrame", description = "A json-ld Frame")
 	String frame;
 
+	@Option(names = { "--header" }, paramLabel = "HeaderFields", description = "a comma separated list of headers")
+	String header;
+
+	@Option(names = { "-d", "--delimiter" }, paramLabel = "Delimiter", description = "delimiter for csv")
+	String delimiter = ",";
+
 	public static void main(String... args) {
 		setLoggingLevel(Level.OFF);
 		int exitCode = new CommandLine(new Main()).execute(args);
 		System.exit(exitCode);
 	}
+
 	public static void setLoggingLevel(Level level) {
-	    ch.qos.logback.classic.Logger root = (ch.qos.logback.classic.Logger) org.slf4j.LoggerFactory.getLogger(ch.qos.logback.classic.Logger.ROOT_LOGGER_NAME);
-	    root.setLevel(level);
+		ch.qos.logback.classic.Logger root = (ch.qos.logback.classic.Logger) org.slf4j.LoggerFactory
+				.getLogger(ch.qos.logback.classic.Logger.ROOT_LOGGER_NAME);
+		root.setLevel(level);
 	}
+
 	@Override
 	public Integer call() throws Exception { // your business logic goes here...
 		convert(inputFile, type);
@@ -63,23 +72,25 @@ public class Main implements Callable<Integer> {
 		} else if ("xml".equals(suffix)) {
 			content = XmlReader.getMap(Helper.getInputStream(inF));
 		} else if ("csv".equals(suffix)) {
-			content = CsvReader.getMap(Helper.getInputStream(inF));
+			content = CsvReader.getMap(Helper.getInputStream(inF), header.split(","), delimiter);
 		}
+		if ("rdf".equals(type) || "rdf".equals(suffix) || "nt".equals(suffix) || "json".equals(suffix)) {
+			if (frame != null) {
 
-		if (frame != null && ("rdf".equals(type)||"rdf".equals(suffix) || "nt".equals(suffix) || "json".equals(suffix))) {
-			if ("rdf".equals(suffix) && frame != null) {
-				content = RdfReader.getMap(Helper.getInputStream(inF), RDFFormat.RDFXML,
-						JsonReader.getMap(Helper.getInputStream(frame)));
-			} else if ("nt".equals(suffix) && frame != null) {
-				content = RdfReader.getMap(Helper.getInputStream(inF), RDFFormat.NTRIPLES,
-						JsonReader.getMap(Helper.getInputStream(frame)));
-			} else if ("json".equals(suffix) && frame != null) {
-				content = RdfReader.getMap(Helper.getInputStream(inF), RDFFormat.JSONLD,
-						JsonReader.getMap(Helper.getInputStream(frame)));	}
-		}
-		else {
-			throw new RuntimeException("Please provide a Frame!");
-		}
+				if ("rdf".equals(suffix) && frame != null) {
+					content = RdfReader.getMap(Helper.getInputStream(inF), RDFFormat.RDFXML,
+							JsonReader.getMap(Helper.getInputStream(frame)));
+				} else if ("nt".equals(suffix) && frame != null) {
+					content = RdfReader.getMap(Helper.getInputStream(inF), RDFFormat.NTRIPLES,
+							JsonReader.getMap(Helper.getInputStream(frame)));
+				} else if ("json".equals(suffix) && frame != null) {
+					content = RdfReader.getMap(Helper.getInputStream(inF), RDFFormat.JSONLD,
+							JsonReader.getMap(Helper.getInputStream(frame)));
+				}
+			}else {
+				throw new RuntimeException("Please provide a Frame!");
+			}
+		} 
 
 		if ("xml".equals(type)) {
 			XmlWriter.gprint(content);
@@ -89,7 +100,7 @@ public class Main implements Callable<Integer> {
 			YamlWriter.gprint(content);
 		} else if ("rdf".equals(type)) {
 			JsonWriter.gprint(content);
-		}else if("context".equals(type)) {
+		} else if ("context".equals(type)) {
 			ContextWriter.gprint(content);
 		}
 	}
