@@ -3,8 +3,6 @@ package org.schnasse.cjxy.writer.base;
 
 import java.io.File;
 import java.io.StringWriter;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
