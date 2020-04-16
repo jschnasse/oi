@@ -1,0 +1,45 @@
+{
+  "@context" : {
+    "data" : {
+      "@id" : "info:jon-desktop/data",
+      "@container" : "@list"
+    },
+    "2019" : {
+      "@id" : "info:jon-desktop/2019"
+    },
+    "Archäologische Zone" : {
+      "@id" : "info:jon-desktop/Archäologische Zone"
+    },
+    "Kölnisches Stadtmuseum" : {
+      "@id" : "info:jon-desktop/Kölnisches Stadtmuseum"
+    },
+    "Museen gesamt" : {
+      "@id" : "info:jon-desktop/Museen gesamt"
+    },
+    "Museum Ludwig" : {
+      "@id" : "info:jon-desktop/Museum Ludwig"
+    },
+    "Museum Schnütgen" : {
+      "@id" : "info:jon-desktop/Museum Schnütgen"
+    },
+    "Museum für Angewandte Kunst" : {
+      "@id" : "info:jon-desktop/Museum für Angewandte Kunst"
+    },
+    "Museum für Ostasiatische Kunst" : {
+      "@id" : "info:jon-desktop/Museum für Ostasiatische Kunst"
+    },
+    "NS-Dokumentationszentrum" : {
+      "@id" : "info:jon-desktop/NS-Dokumentationszentrum"
+    },
+    "Rautenstrauch-Joest-Museum" : {
+      "@id" : "info:jon-desktop/Rautenstrauch-Joest-Museum"
+    },
+    "Römisch-Germanisches Museum" : {
+      "@id" : "info:jon-desktop/Römisch-Germanisches Museum"
+    },
+    "Wallraf-Richartz-Museum - Fondation Corboud" : {
+      "@id" : "info:jon-desktop/Wallraf-Richartz-Museum - Fondation Corboud"
+    }
+  }
+}
+

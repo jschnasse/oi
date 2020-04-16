@@ -15,7 +15,7 @@ public class YamlWriter {
 		return new ObjectMapper(new YAMLFactory()).configure(SerializationFeature.INDENT_OUTPUT, true);
 	}
 
-	public static void gprint(Map<String, Object> map) {
+	public static void gprint(Object map) {
 		Writer.gprint(createMapper(), map);
 	}
 }

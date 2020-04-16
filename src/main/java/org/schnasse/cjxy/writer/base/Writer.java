@@ -3,6 +3,8 @@ package org.schnasse.cjxy.writer.base;
 
 import java.io.File;
 import java.io.StringWriter;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -12,12 +14,11 @@ import com.google.common.io.Files;
 public class Writer {
 
 	@SafeVarargs
-	static public void print(ObjectMapper mapper, Map<String, Object>... maps) {
-		for (Map<String, Object> m : maps) {
+	static public void print(ObjectMapper mapper, Object... maps) {
+		for (Object m : maps) {
 			System.out.println(write(mapper, m) + "\n");
 		}
 	}
-
 	static public String write(ObjectMapper mapper, Object obj) {
 		try {
 			StringWriter w = new StringWriter();
@@ -35,8 +36,7 @@ public class Writer {
 			System.out.println(e.getLocalizedMessage());
 		}
 	}
-
-	public static void gprint(ObjectMapper mapper, Map<String, Object> json) {
-		print(mapper, json);
+	public static void gprint(ObjectMapper mapper, Object json) {
+			print(mapper,json);
 	}
 }

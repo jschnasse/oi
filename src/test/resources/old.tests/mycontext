@@ -1,0 +1,24 @@
+{
+  "@context" : {
+    "row" : {
+      "@id" : "info:jon-desktop/row",
+      "@container" : "@list"
+    },
+    "AUTHOR" : {
+      "@id" : "info:jon-desktop/AUTHOR"
+    },
+    "DATE" : {
+      "@id" : "info:jon-desktop/DATE"
+    },
+    "OCLC" : {
+      "@id" : "info:jon-desktop/OCLC"
+    },
+    "TITLE" : {
+      "@id" : "info:jon-desktop/TITLE"
+    },
+    "URI" : {
+      "@id" : "info:jon-desktop/URI"
+    }
+  }
+}
+

@@ -42,7 +42,7 @@ public class CsvReader {
 				all.add(map);
 			}
 			Map<String, Object> result = new HashMap<>();
-			result.put("row", all);
+			result.put("data", all);
 			return result;
 		} catch (Exception e) {
 			throw new RuntimeException(e);

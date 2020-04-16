@@ -1,0 +1,492 @@
+{
+"type":"BibliographicResource",
+  "@context" : {
+    "extent" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/extent"
+    },
+    "endDate" : {
+      "@id" : "http://schema.org/endDate",
+      "type" : "http://www.w3.org/2001/XMLSchema#gYear"
+    },
+    "focus" : {
+      "@id" : "http://xmlns.com/foaf/0.1/focus"
+    },
+    "altLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#altLabel"
+    },
+    "SecondaryPublicationEvent" : {
+      "@id" : "http://purl.org/lobid/lv#SecondaryPublicationEvent"
+    },
+    "type" : {
+      "@id" : "@type",
+      "@container" : "@set"
+    },
+    "Image" : {
+      "@id" : "http://purl.org/ontology/bibo/Image"
+    },
+    "ReferenceSource" : {
+      "@id" : "http://purl.org/ontology/bibo/ReferenceSource"
+    },
+    "PlaceOrGeographicName" : {
+      "@id" : "https://d-nb.info/standards/elementset/gnd#PlaceOrGeographicName"
+    },
+    "Item" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/Item"
+    },
+    "contribution" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/contribution",
+      "@container" : "@list"
+    },
+    "notation" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#notation"
+    },
+    "Book" : {
+      "@id" : "http://purl.org/ontology/bibo/Book"
+    },
+    "Combination" : {
+      "@id" : "http://iflastandards.info/ns/isbd/terms/mediatype/T1008"
+    },
+    "Work" : {
+      "@id" : "https://d-nb.info/standards/elementset/gnd#Work"
+    },
+    "id" : "@id",
+    "instrumentation" : {
+      "@id" : "http://rdaregistry.info/Elements/w/P10220",
+      "@container" : "@set"
+    },
+    "spatial" : {
+      "@id" : "http://purl.org/dc/terms/spatial",
+      "@container" : "@set"
+    },
+    "hbzId" : {
+      "@id" : "http://purl.org/lobid/lv#hbzID"
+    },
+    "similar" : {
+      "@id" : "http://umbel.org/umbel#isLike",
+      "@container" : "@set"
+    },
+    "titleOfSubSeries" : {
+      "@id" : "http://rdaregistry.info/Elements/u/P60517"
+    },
+    "resultOf" : {
+      "@id" : "http://purl.org/lobid/lv#resultOf"
+    },
+    "containsExampleOfWork" : {
+      "@id" : "http://purl.org/lobid/lv#containsExampleOfWork",
+      "@container" : "@set"
+    },
+    "isPartOf" : {
+      "@id" : "http://purl.org/lobid/lv#isPartOf",
+      "@container" : "@set"
+    },
+    "MultiVolumeBook" : {
+      "@id" : "http://purl.org/ontology/bibo/MultiVolumeBook"
+    },
+    "Newspaper" : {
+      "@id" : "http://purl.org/ontology/bibo/Newspaper"
+    },
+    "Game" : {
+      "@id" : "http://schema.org/Game"
+    },
+    "issn" : {
+      "@id" : "http://purl.org/ontology/bibo/issn",
+      "@container" : "@set"
+    },
+    "supplement" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/supplement",
+      "@container" : "@set"
+    },
+    "bibliographicCitation" : {
+      "@id" : "http://purl.org/dc/terms/bibliographicCitation"
+    },
+    "dateOfBirthAndDeath" : {
+      "@id" : "https://d-nb.info/standards/elementset/gnd#dateOfBirthAndDeath"
+    },
+    "Map" : {
+      "@id" : "http://purl.org/ontology/bibo/Map"
+    },
+    "Person" : {
+      "@id" : "https://d-nb.info/standards/elementset/gnd#Person"
+    },
+    "startDate" : {
+      "@id" : "http://schema.org/startDate",
+      "type" : "http://www.w3.org/2001/XMLSchema#gYear"
+    },
+    "object" : {
+      "@id" : "http://schema.org/object"
+    },
+    "doi" : {
+      "@id" : "http://purl.org/ontology/bibo/doi",
+      "@container" : "@set"
+    },
+    "creatorOfWork" : {
+      "@id" : "http://rdaregistry.info/Elements/w/P10065"
+    },
+    "successor" : {
+      "@id" : "http://rdaregistry.info/Elements/u/P60278",
+      "@container" : "@set"
+    },
+    "role" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/role"
+    },
+    "longitudeAndLatitude" : {
+      "@id" : "http://rdaregistry.info/Elements/u/P60345",
+      "@container" : "@set"
+    },
+    "dateOfDeath" : {
+      "@id" : "https://d-nb.info/standards/elementset/gnd#dateOfDeath",
+      "type" : "http://www.w3.org/2001/XMLSchema#gYear"
+    },
+    "Article" : {
+      "@id" : "http://purl.org/ontology/bibo/Article"
+    },
+    "hasItem" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/hasItem",
+      "@container" : "@set"
+    },
+    "alternativeTitle" : {
+      "@id" : "http://purl.org/dc/terms/alternative",
+      "@container" : "@set"
+    },
+    "Festschrift" : {
+      "@id" : "http://purl.org/lobid/lv#Festschrift"
+    },
+    "lon" : {
+      "@id" : "http://schema.org/longitude"
+    },
+    "predecessor" : {
+      "@id" : "http://rdaregistry.info/Elements/u/P60261",
+      "@container" : "@set"
+    },
+    "fulltextOnline" : {
+      "@id" : "http://purl.org/lobid/lv#fulltextOnline",
+      "@container" : "@set"
+    },
+    "ConferenceOrEvent" : {
+      "@id" : "https://d-nb.info/standards/elementset/gnd#ConferenceOrEvent"
+    },
+    "geo" : {
+      "@id" : "http://schema.org/geo"
+    },
+    "zdbId" : {
+      "@id" : "http://purl.org/lobid/lv#zdbID"
+    },
+    "heldBy" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/heldBy"
+    },
+    "describedBy" : {
+      "@id" : "http://www.w3.org/2007/05/powder-s#describedby"
+    },
+    "modifiedBy" : {
+      "@id" : "http://open-services.net/ns/core#modifiedBy"
+    },
+    "gndIdentifier" : {
+      "@id" : "https://d-nb.info/standards/elementset/gnd#gndIdentifier"
+    },
+    "PublishedScore" : {
+      "@id" : "http://purl.org/ontology/mo/PublishedScore"
+    },
+    "oclcNumber" : {
+      "@id" : "http://purl.org/ontology/bibo/oclcnum",
+      "@container" : "@set"
+    },
+    "PublicationIssue" : {
+      "@id" : "http://schema.org/PublicationIssue"
+    },
+    "corporateBodyForTitle" : {
+      "@id" : "http://rdaregistry.info/Elements/u/P60327",
+      "@container" : "@set"
+    },
+    "Schoolbook" : {
+      "@id" : "http://purl.org/lobid/lv#Schoolbook"
+    },
+    "dateOfBirth" : {
+      "@id" : "https://d-nb.info/standards/elementset/gnd#dateOfBirth",
+      "type" : "http://www.w3.org/2001/XMLSchema#gYear"
+    },
+    "abstract" : {
+      "@id" : "http://purl.org/dc/terms/abstract",
+      "@container" : "@set"
+    },
+    "Statistics" : {
+      "@id" : "http://purl.org/lobid/lv#Statistics"
+    },
+    "otherTitleInformation" : {
+      "@id" : "http://rdaregistry.info/Elements/u/P60493",
+      "@container" : "@set"
+    },
+    "urn" : {
+      "@id" : "http://purl.org/lobid/lv#urn",
+      "@container" : "@set"
+    },
+    "callNumber" : {
+      "@id" : "http://purl.org/lobid/lv#callNumber"
+    },
+    "BibliographicDescription" : {
+      "@id" : "http://purl.org/lobid/lv#BibliographicDescription"
+    },
+    "thesisInformation" : {
+      "@id" : "http://rdaregistry.info/Elements/u/P60489",
+      "@container" : "@set"
+    },
+    "Family" : {
+      "@id" : "https://d-nb.info/standards/elementset/gnd#Family"
+    },
+    "ismn" : {
+      "@id" : "http://purl.org/ontology/mo/ismn",
+      "@container" : "@set"
+    },
+    "endTime" : {
+      "@id" : "http://schema.org/endTime",
+      "type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Bibliography" : {
+      "@id" : "http://purl.org/lobid/lv#Bibliography"
+    },
+    "publishedBy" : {
+      "@id" : "http://schema.org/publishedBy"
+    },
+    "agent" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/agent"
+    },
+    "inDataset" : {
+      "@id" : "http://purl.org/lobid/lv#inDataset"
+    },
+    "Miscellaneous" : {
+      "@id" : "http://purl.org/lobid/lv#Miscellaneous"
+    },
+    "ComplexSubject" : {
+      "@id" : "http://www.loc.gov/mads/rdf/v1#ComplexSubject"
+    },
+    "subject" : {
+      "@id" : "http://purl.org/dc/terms/subject",
+      "@container" : "@set"
+    },
+    "titleKeyword" : {
+      "@id" : "http://purl.org/lobid/lv#titleKeyword",
+      "@container" : "@set"
+    },
+    "componentList" : {
+      "@id" : "http://www.loc.gov/mads/rdf/v1#componentList",
+      "@container" : "@list"
+    },
+    "language" : {
+      "@id" : "http://purl.org/dc/terms/language",
+      "@container" : "@set"
+    },
+    "inCollection" : {
+      "@id" : "http://purl.org/lobid/lv#inCollection",
+      "@container" : "@set"
+    },
+    "source" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/source"
+    },
+    "shortTitle" : {
+      "@id" : "http://purl.org/ontology/bibo/shortTitle",
+      "@container" : "@set"
+    },
+    "frequency" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/frequency",
+      "@container" : "@set"
+    },
+    "Proceedings" : {
+      "@id" : "http://purl.org/ontology/bibo/Proceedings"
+    },
+    "publication" : {
+      "@id" : "http://schema.org/publication",
+      "@container" : "@set"
+    },
+    "containedIn" : {
+      "@id" : "http://purl.org/lobid/lv#containedIn",
+      "@container" : "@set"
+    },
+    "CorporateBody" : {
+      "@id" : "https://d-nb.info/standards/elementset/gnd#CorporateBody"
+    },
+    "lat" : {
+      "@id" : "http://schema.org/latitude"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "numbering" : {
+      "@id" : "http://purl.org/lobid/lv#numbering"
+    },
+    "primaryForm" : {
+      "@id" : "http://purl.org/dc/terms/isFormatOf",
+      "@container" : "@set"
+    },
+    "Legislation" : {
+      "@id" : "http://purl.org/lobid/lv#Legislation"
+    },
+    "IsPartOfRelation" : {
+      "@id" : "http://purl.org/lobid/lv#IsPartOfRelation"
+    },
+    "responsibilityStatement" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/responsibilityStatement",
+      "@container" : "@set"
+    },
+    "workNumbering" : {
+      "@id" : "http://rdaregistry.info/Elements/w/P10079"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://purl.org/lobid/lv#exampleOfWork"
+    },
+    "Thesis" : {
+      "@id" : "http://purl.org/ontology/bibo/Thesis"
+    },
+    "ArchivedWebPage" : {
+      "@id" : "http://purl.org/lobid/lv#ArchivedWebPage"
+    },
+    "license" : {
+      "@id" : "http://schema.org/license",
+      "@container" : "@set"
+    },
+    "BibliographicResource" : {
+      "@id" : "http://purl.org/dc/terms/BibliographicResource"
+    },
+    "musicalKey" : {
+      "@id" : "http://rdaregistry.info/Elements/w/P10221"
+    },
+    "Collection" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/Collection"
+    },
+    "tableOfContents" : {
+      "@id" : "http://purl.org/dc/terms/tableOfContents",
+      "@container" : "@set"
+    },
+    "publicationHistory" : {
+      "@id" : "http://rdaregistry.info/Elements/u/P60491"
+    },
+    "SubjectHeading" : {
+      "@id" : "https://d-nb.info/standards/elementset/gnd#SubjectHeading"
+    },
+    "note" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/note"
+    },
+    "SoftwareApplication" : {
+      "@id" : "http://schema.org/SoftwareApplication"
+    },
+    "hasVersion" : {
+      "@id" : "http://purl.org/dc/terms/hasVersion",
+      "@container" : "@set"
+    },
+    "isbn" : {
+      "@id" : "http://purl.org/ontology/bibo/isbn",
+      "@container" : "@set"
+    },
+    "xsd" : {
+      "@id" : "http://www.w3.org/2001/XMLSchema#",
+      "@container" : "@set"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description",
+      "@container" : "@set"
+    },
+    "edition" : {
+      "@id" : "http://purl.org/ontology/bibo/edition",
+      "@container" : "@set"
+    },
+    "DataFeedItem" : {
+      "@id" : "http://schema.org/DataFeedItem"
+    },
+    "instrument" : {
+      "@id" : "http://schema.org/instrument"
+    },
+    "Standard" : {
+      "@id" : "http://purl.org/ontology/bibo/Standard"
+    },
+    "medium" : {
+      "@id" : "http://purl.org/dc/terms/medium",
+      "@container" : "@set"
+    },
+    "natureOfContent" : {
+      "@id" : "http://rdaregistry.info/Elements/u/P60584",
+      "@container" : "@set"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@container" : "@set"
+    },
+    "dateCreated" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "related" : {
+      "@id" : "http://purl.org/dc/terms/relation",
+      "@container" : "@set"
+    },
+    "provider" : {
+      "@id" : "http://schema.org/provider"
+    },
+    "Biography" : {
+      "@id" : "http://purl.org/lobid/lv#Biography"
+    },
+    "CreateAction" : {
+      "@id" : "http://schema.org/CreateAction"
+    },
+    "coverage" : {
+      "@id" : "http://purl.org/dc/elements/1.1/coverage",
+      "@container" : "@set"
+    },
+    "OfficialPublication" : {
+      "@id" : "http://purl.org/lobid/lv#OfficialPublication"
+    },
+    "Periodical" : {
+      "@id" : "http://purl.org/ontology/bibo/Periodical"
+    },
+    "Report" : {
+      "@id" : "http://purl.org/ontology/bibo/Report"
+    },
+    "webPageArchived" : {
+      "@id" : "http://purl.org/lobid/lv#webPageArchived",
+      "@container" : "@set"
+    },
+    "dateModified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "EditedVolume" : {
+      "@id" : "http://purl.org/lobid/lv#EditedVolume"
+    },
+    "hasSuperordinate" : {
+      "@id" : "http://purl.org/lobid/lv#hasSuperordinate",
+      "@container" : "@set"
+    },
+    "Series" : {
+      "@id" : "http://purl.org/ontology/bibo/Series"
+    },
+    "subjectAltLabel" : {
+      "@id" : "http://purl.org/lobid/lv#subjectAltLabel",
+      "@container" : "@set"
+    },
+    "itemOf" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/itemOf"
+    },
+    "sourceOrganization" : {
+      "@id" : "http://schema.org/sourceOrganization"
+    },
+    "PublicationEvent" : {
+      "@id" : "http://schema.org/PublicationEvent"
+    },
+    "location" : {
+      "@id" : "http://schema.org/location"
+    },
+    "Contribution" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/Contribution"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2002/07/owl#sameAs",
+      "@container" : "@set"
+    },
+    "totalItems":"http://www.w3.org/ns/hydra/core#totalItems",
+    "member":{
+        "@type":"@id",
+        "@id":"http://www.w3.org/ns/hydra/core#member"
+    }
+  }
+}

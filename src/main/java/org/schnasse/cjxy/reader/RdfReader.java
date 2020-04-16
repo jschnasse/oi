@@ -22,14 +22,30 @@ import com.github.jsonldjava.utils.JsonUtils;
 import com.google.common.base.Charsets;
 
 public class RdfReader {
+	static public Map<String, Object> getMap(Map<String, Object> json, RDFFormat format, Map<String, Object> frame) {
+		return getMap(json, frame);
+	}
 	static public Map<String, Object> getMap(InputStream in, RDFFormat format, Map<String, Object> frame) {
 		return getMap(readRdfToString(in, format, RDFFormat.JSONLD, ""), frame);
 	}
-
 	private static Map<String, Object> getMap(String rdfGraphAsJson, Map<String, Object> frame) {
 		try {
 			Map<String, Object> result = removeGraphArray(getFramedJson(createJsonObject(rdfGraphAsJson), frame));
-			result.put("@context", frame.get("@context"));
+			return result;
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+	private static Map<String,Object> createJsonObject(String ld) {
+		try (InputStream inputStream = new ByteArrayInputStream(ld.getBytes(Charsets.UTF_8))) {
+			return JsonReader.getMap(inputStream);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+	private static Map<String, Object> getMap(Map<String, Object> json, Map<String, Object> frame) {
+		try {
+			Map<String, Object> result = removeGraphArray(getFramedJson(json, frame));
 			return result;
 		} catch (Exception e) {
 			throw new RuntimeException(e);
@@ -42,18 +58,10 @@ public class RdfReader {
 		return graph.get(0);
 	}
 
-	private static Map<String, Object> getFramedJson(Object json, Map<String, Object> frame) {
+	private static Map<String, Object> getFramedJson(Map<String, Object> json, Map<String, Object> frame) {
 		try {
+			json.put("@context", frame.get("@context"));
 			return JsonLdProcessor.frame(json, frame, new JsonLdOptions());
-		} catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-	}
-
-	private static Object createJsonObject(String ld) {
-		try (InputStream inputStream = new ByteArrayInputStream(ld.getBytes(Charsets.UTF_8))) {
-			Object jsonObject = JsonUtils.fromInputStream(inputStream);
-			return jsonObject;
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

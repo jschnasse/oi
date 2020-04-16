@@ -1,6 +1,7 @@
 /* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
 package org.schnasse.cjxy.main;
 
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Callable;
@@ -13,6 +14,7 @@ import org.schnasse.cjxy.reader.RdfReader;
 import org.schnasse.cjxy.reader.XmlReader;
 import org.schnasse.cjxy.reader.YamlReader;
 import org.schnasse.cjxy.writer.ContextWriter;
+import org.schnasse.cjxy.writer.CsvWriter;
 import org.schnasse.cjxy.writer.JsonWriter;
 import org.schnasse.cjxy.writer.XmlWriter;
 import org.schnasse.cjxy.writer.YamlWriter;
@@ -28,11 +30,14 @@ import picocli.CommandLine.Parameters;
 @Command(name = "cjxy", mixinStandardHelpOptions = true, version = "checksum 0.1.0", description = "Converts yaml,json,xml,rdf to each other.")
 public class Main implements Callable<Integer> {
 
-	@Parameters(index = "0", arity = "1", description = "Input file.")
+	@Parameters(index = "0", arity = "0..1", description = "Input file.")
 	private String inputFile;
 
-	@Option(names = { "-t", "--type" }, description = "yaml,json,xml,rdf,context")
+	@Option(names = { "-t", "--type" }, description = "yaml,json,xml,rdf,context,csv")
 	private String type = "yaml";
+
+	@Option(names = { "-i", "--inputType" }, description = "yml,json,xml,rdf,context,csv")
+	String inputType;
 
 	@Option(names = { "-f", "--frame" }, paramLabel = "JsonLdFrame", description = "A json-ld Frame")
 	String frame;
@@ -56,53 +61,81 @@ public class Main implements Callable<Integer> {
 	}
 
 	@Override
-	public Integer call() throws Exception { // your business logic goes here...
-		convert(inputFile, type);
+	public Integer call() throws Exception {
+		convert();
 		return 0;
 	}
 
-	private void convert(String inF, String outT) {
-		String suffix = Files.getFileExtension(inF);
-		Map<String, Object> content = new HashMap<>();
-
-		if ("json".equals(suffix) && frame == null) {
-			content = JsonReader.getMap(Helper.getInputStream(inF));
-		} else if ("yml".equals(suffix) || "yaml".equals(suffix)) {
-			content = YamlReader.getMap(Helper.getInputStream(inF));
-		} else if ("xml".equals(suffix)) {
-			content = XmlReader.getMap(Helper.getInputStream(inF));
-		} else if ("csv".equals(suffix)) {
-			content = CsvReader.getMap(Helper.getInputStream(inF), header.split(","), delimiter);
-		}
-		if ("rdf".equals(type) || "rdf".equals(suffix) || "nt".equals(suffix) || "json".equals(suffix)) {
+	private void convert() {
+		try (InputStream in = getInput(inputFile)) {
+			inputType=findInputType();
+			Map<String, Object> content = new HashMap<>();
+			Map<String, Object> frameMap = new HashMap<>();
 			if (frame != null) {
-
-				if ("rdf".equals(suffix) && frame != null) {
-					content = RdfReader.getMap(Helper.getInputStream(inF), RDFFormat.RDFXML,
-							JsonReader.getMap(Helper.getInputStream(frame)));
-				} else if ("nt".equals(suffix) && frame != null) {
-					content = RdfReader.getMap(Helper.getInputStream(inF), RDFFormat.NTRIPLES,
-							JsonReader.getMap(Helper.getInputStream(frame)));
-				} else if ("json".equals(suffix) && frame != null) {
-					content = RdfReader.getMap(Helper.getInputStream(inF), RDFFormat.JSONLD,
-							JsonReader.getMap(Helper.getInputStream(frame)));
-				}
-			}else {
-				throw new RuntimeException("Please provide a Frame!");
+				frameMap = JsonReader.getMap(Helper.getInputStream(frame));
 			}
-		} 
-
-		if ("xml".equals(type)) {
-			XmlWriter.gprint(content);
-		} else if ("json".equals(type)) {
-			JsonWriter.gprint(content);
-		} else if ("yaml".equals(type)) {
-			YamlWriter.gprint(content);
-		} else if ("rdf".equals(type)) {
-			JsonWriter.gprint(content);
-		} else if ("context".equals(type)) {
-			ContextWriter.gprint(content);
+			if ("json".equals(inputType) && frame == null) {
+				content = JsonReader.getMap(in);
+			} else if ("yml".equals(inputType) || "yaml".equals(inputType)) {
+				content = YamlReader.getMap(in);
+			} else if ("xml".equals(inputType)) {
+				content = XmlReader.getMap(Helper.getInputStream(inputFile));
+			} else if ("csv".equals(inputType)) {
+				if (header != null) {
+					content = CsvReader.getMap(in, header.split(","), delimiter);
+				} else {
+					content = CsvReader.getMap(in, null, delimiter);
+				}
+			}
+			else if ("rdf".equals(type) || "rdf".equals(inputType) || "nt".equals(inputType) || "json".equals(inputType)) {
+				if ("rdf".equals(inputType) && frame != null) {
+					content = RdfReader.getMap(in, RDFFormat.RDFXML, frameMap);
+				} else if ("nt".equals(inputType) && frame != null) {
+					content = RdfReader.getMap(in, RDFFormat.NTRIPLES, frameMap);
+				} else if ("json".equals(inputType) && frame != null) {
+					content = RdfReader.getMap(JsonReader.getMap(in), RDFFormat.JSONLD, frameMap);
+				} else if (frame == null) {
+					throw new RuntimeException("Please provide a Frame!");
+				}
+			}
+			if (frame != null) {
+				content.put("@context", frameMap.get("@context"));
+			}
+			
+			if ("xml".equals(type)) {
+				XmlWriter.gprint(content);
+			} else if ("json".equals(type)) {
+				JsonWriter.gprint(content);
+			} else if ("yaml".equals(type)) {
+				YamlWriter.gprint(content);
+			} else if ("rdf".equals(type)) {
+				JsonWriter.gprint(content);
+			} else if ("context".equals(type)) {
+				ContextWriter.gprint(content);
+			} else if ("csv".equals(type)) {
+				CsvWriter.gprint(content.get("row"));
+			}
+		} catch (Exception e) {
+			throw new RuntimeException(e);
 		}
+	}
+
+	private String findInputType() {
+		if (inputType == null) {
+			if (inputFile != null) {
+				inputType = Files.getFileExtension(inputFile);
+			} else {
+				throw new RuntimeException("Please provide an input type via -i,--inputType");
+			}
+		}
+		return inputType;
+	}
+
+	private InputStream getInput(String inputFile) {
+		if (inputFile != null) {
+			return Helper.getInputStream(inputFile);
+		}
+		return System.in;
 	}
 
 }
