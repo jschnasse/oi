@@ -3,12 +3,14 @@ package org.schnasse.cjxy.writer;
 
 import java.net.InetAddress;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.schnasse.cjxy.helper.URLUtil;
 import org.schnasse.cjxy.writer.base.Writer;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -45,21 +47,41 @@ public class ContextWriter {
 		data.set("@context", context);
 		String computername = getComputername();
 		for (String key : keys) {
+			if("@id".equals(key))continue;
+			if("@type".equals(key))continue;
+			if("@value".equals(key))continue;
+			if("@graph".equals(key))continue;
+			if("@list".equals(key))continue;
 			Object o = map.get(key);
 			ObjectNode entry = mapper.createObjectNode();
+			String shortKey = generateReadableKey(key);
 			entry.put("@id", createId(key.toString(), computername));
 			if (o instanceof Set) {
 				entry.put("@container", "@set");
 			} else if (o instanceof List) {
 				entry.put("@container", "@list");
 			}
-			context.set(key, entry);
+			context.set(shortKey, entry);
 		}
 		Map<String, Object> result = mapper.convertValue(data, new TypeReference<Map<String, Object>>() {
 		});
 		return result;
 	}
 
+	private static String generateReadableKey(String key) {
+		String result = URLUtil.saveEncode(key);
+        int i= result.lastIndexOf("#");
+        if(i<0) {
+        	i=result.lastIndexOf("/");
+        }
+        if(i<0 || i+1 == result.length()) {
+        	i=0;
+        }
+		return result.substring(i+1);
+	}
+	private static String base64(String encodeMe) {
+        return Base64.getEncoder().encodeToString(encodeMe.getBytes()).replaceAll("/", "-").replaceAll("\\+", "_");
+    }
 	private static String getComputername() {
 		try {
 			return InetAddress.getLocalHost().getHostName();
@@ -69,6 +91,7 @@ public class ContextWriter {
 	}
 
 	private static String createId(String key, String computername) {
+		if(URLUtil.isValidUrl(key))return key;
 		return "info:" + computername + "/" + key;
 	}
 

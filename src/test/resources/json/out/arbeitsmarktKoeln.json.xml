@@ -1,4 +1,11 @@
-<HashMap>
+<LinkedHashMap>
+  <type>FeatureCollection</type>
+  <crs>
+    <type>name</type>
+    <properties>
+      <name>EPSG:4326</name>
+    </properties>
+  </crs>
   <features>
     <type>Feature</type>
     <id>1</id>
@@ -11628,13 +11635,6 @@
       <SHAPE.LEN>132041.26772555502</SHAPE.LEN>
     </properties>
   </features>
-  <crs>
-    <type>name</type>
-    <properties>
-      <name>EPSG:4326</name>
-    </properties>
-  </crs>
-  <type>FeatureCollection</type>
-</HashMap>
+</LinkedHashMap>
 
 

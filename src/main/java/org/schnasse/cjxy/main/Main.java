@@ -68,7 +68,7 @@ public class Main implements Callable<Integer> {
 
 	private void convert() {
 		try (InputStream in = getInput(inputFile)) {
-			inputType=findInputType();
+			inputType = findInputType();
 			Map<String, Object> content = new HashMap<>();
 			Map<String, Object> frameMap = new HashMap<>();
 			if (frame != null) {
@@ -86,10 +86,12 @@ public class Main implements Callable<Integer> {
 				} else {
 					content = CsvReader.getMap(in, null, delimiter);
 				}
-			}
-			else if ("rdf".equals(type) || "rdf".equals(inputType) || "nt".equals(inputType) || "json".equals(inputType)) {
+			} else if ("rdf".equals(type) || "rdf".equals(inputType) || "nt".equals(inputType)
+					|| "json".equals(inputType)) {
 				if ("rdf".equals(inputType) && frame != null) {
 					content = RdfReader.getMap(in, RDFFormat.RDFXML, frameMap);
+				} else if ("rdf".equals(inputType) && frame == null) {
+					content = RdfReader.getMap(in, RDFFormat.RDFXML,null);
 				} else if ("nt".equals(inputType) && frame != null) {
 					content = RdfReader.getMap(in, RDFFormat.NTRIPLES, frameMap);
 				} else if ("json".equals(inputType) && frame != null) {
@@ -101,7 +103,7 @@ public class Main implements Callable<Integer> {
 			if (frame != null) {
 				content.put("@context", frameMap.get("@context"));
 			}
-			
+
 			if ("xml".equals(type)) {
 				XmlWriter.gprint(content);
 			} else if ("json".equals(type)) {

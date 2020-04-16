@@ -1,4 +1,9 @@
 ---
+type: "FeatureCollection"
+crs:
+  type: "name"
+  properties:
+    name: "EPSG:4326"
 features:
 - type: "Feature"
   id: 1
@@ -413,10 +418,5 @@ features:
     Snippet: ""
     PopupInfo: ""
     Shape_Length: 0.09055540198881518
-crs:
-  type: "name"
-  properties:
-    name: "EPSG:4326"
-type: "FeatureCollection"
 
 

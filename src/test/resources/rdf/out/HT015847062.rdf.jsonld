@@ -1,0 +1,145 @@
+{
+  "@id" : "_:b0",
+  "@type" : "http://schema.org/CreateAction",
+  "endTime" : "2020-04-08T01:43:32",
+  "instrument" : {
+    "@id" : "https://github.com/hbz/lobid-resources",
+    "@type" : "http://schema.org/SoftwareApplication",
+    "label" : "Software lobid-resources"
+  },
+  "object" : {
+    "@id" : "http://lobid.org/hbz01/HT015847062",
+    "@type" : "http://schema.org/DataFeedItem",
+    "inDataset" : {
+      "@id" : "https://datahub.io/dataset/hbz_unioncatalog",
+      "label" : "hbz_unioncatalog"
+    },
+    "label" : "hbz-Ressource HT015847062 im Exportformat MAB2-XML"
+  },
+  "@context" : {
+    "endTime" : {
+      "@id" : "http://schema.org/endTime"
+    },
+    "instrument" : {
+      "@id" : "http://schema.org/instrument"
+    },
+    "object" : {
+      "@id" : "http://schema.org/object"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "componentList" : {
+      "@id" : "http://www.loc.gov/mads/rdf/v1#componentList"
+    },
+    "agent" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/agent"
+    },
+    "role" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/role"
+    },
+    "location" : {
+      "@id" : "http://schema.org/location"
+    },
+    "publishedBy" : {
+      "@id" : "http://schema.org/publishedBy"
+    },
+    "startDate" : {
+      "@id" : "http://schema.org/startDate"
+    },
+    "inDataset" : {
+      "@id" : "http://purl.org/lobid/lv#inDataset"
+    },
+    "heldBy" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/heldBy"
+    },
+    "note" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/note"
+    },
+    "callNumber" : {
+      "@id" : "http://purl.org/lobid/lv#callNumber"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "resultOf" : {
+      "@id" : "http://purl.org/lobid/lv#resultOf"
+    },
+    "license" : {
+      "@id" : "http://schema.org/license"
+    },
+    "sourceOrganization" : {
+      "@id" : "http://schema.org/sourceOrganization"
+    },
+    "contribution" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/contribution"
+    },
+    "extent" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/extent"
+    },
+    "hasItem" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/hasItem"
+    },
+    "responsibilityStatement" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/responsibilityStatement"
+    },
+    "language" : {
+      "@id" : "http://purl.org/dc/terms/language"
+    },
+    "medium" : {
+      "@id" : "http://purl.org/dc/terms/medium"
+    },
+    "subject" : {
+      "@id" : "http://purl.org/dc/terms/subject"
+    },
+    "tableOfContents" : {
+      "@id" : "http://purl.org/dc/terms/tableOfContents"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "exampleOfWork" : {
+      "@id" : "http://purl.org/lobid/lv#exampleOfWork"
+    },
+    "hbzID" : {
+      "@id" : "http://purl.org/lobid/lv#hbzID"
+    },
+    "subjectAltLabel" : {
+      "@id" : "http://purl.org/lobid/lv#subjectAltLabel"
+    },
+    "edition" : {
+      "@id" : "http://purl.org/ontology/bibo/edition"
+    },
+    "isbn" : {
+      "@id" : "http://purl.org/ontology/bibo/isbn"
+    },
+    "oclcnum" : {
+      "@id" : "http://purl.org/ontology/bibo/oclcnum"
+    },
+    "P60493" : {
+      "@id" : "http://rdaregistry.info/Elements/u/P60493"
+    },
+    "publication" : {
+      "@id" : "http://schema.org/publication"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2002/07/owl#sameAs"
+    },
+    "describedby" : {
+      "@id" : "http://www.w3.org/2007/05/powder-s#describedby"
+    },
+    "altLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#altLabel"
+    },
+    "dateOfBirth" : {
+      "@id" : "https://d-nb.info/standards/elementset/gnd#dateOfBirth"
+    },
+    "gndIdentifier" : {
+      "@id" : "https://d-nb.info/standards/elementset/gnd#gndIdentifier"
+    },
+    "source" : {
+      "@id" : "http://id.loc.gov/ontologies/bibframe/source"
+    }
+  }
+}
+

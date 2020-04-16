@@ -1,4 +1,9 @@
 ---
+type: "FeatureCollection"
+crs:
+  type: "name"
+  properties:
+    name: "EPSG:4326"
 features:
 - type: "Feature"
   id: 1
@@ -11626,10 +11631,5 @@ features:
     AM_SGB3_UNTER25_HP: 2.25607099
     SHAPE.AREA: 4.04888994201254E8
     SHAPE.LEN: 132041.26772555502
-crs:
-  type: "name"
-  properties:
-    name: "EPSG:4326"
-type: "FeatureCollection"
 
 

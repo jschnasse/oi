@@ -22,27 +22,37 @@ import com.github.jsonldjava.utils.JsonUtils;
 import com.google.common.base.Charsets;
 
 public class RdfReader {
+	
 	static public Map<String, Object> getMap(Map<String, Object> json, RDFFormat format, Map<String, Object> frame) {
 		return getMap(json, frame);
 	}
+
 	static public Map<String, Object> getMap(InputStream in, RDFFormat format, Map<String, Object> frame) {
 		return getMap(readRdfToString(in, format, RDFFormat.JSONLD, ""), frame);
 	}
+
 	private static Map<String, Object> getMap(String rdfGraphAsJson, Map<String, Object> frame) {
 		try {
-			Map<String, Object> result = removeGraphArray(getFramedJson(createJsonObject(rdfGraphAsJson), frame));
+			Map<String, Object> result = null;
+			if (frame != null) {
+				result = removeGraphArray(getFramedJson(createJsonObject(rdfGraphAsJson), frame));
+			} else {
+				result =createJsonObject(rdfGraphAsJson);
+			}
 			return result;
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
 	}
-	private static Map<String,Object> createJsonObject(String ld) {
+
+	private static Map<String, Object> createJsonObject(String ld) {
 		try (InputStream inputStream = new ByteArrayInputStream(ld.getBytes(Charsets.UTF_8))) {
 			return JsonReader.getMap(inputStream);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
 	}
+
 	private static Map<String, Object> getMap(Map<String, Object> json, Map<String, Object> frame) {
 		try {
 			Map<String, Object> result = removeGraphArray(getFramedJson(json, frame));
@@ -55,6 +65,9 @@ public class RdfReader {
 	private static Map<String, Object> removeGraphArray(Map<String, Object> framedJson) {
 		@SuppressWarnings("unchecked")
 		List<Map<String, Object>> graph = (List<Map<String, Object>>) framedJson.get("@graph");
+		if(graph==null || graph.isEmpty()) {
+			return framedJson;
+		}
 		return graph.get(0);
 	}
 

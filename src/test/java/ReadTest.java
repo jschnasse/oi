@@ -67,10 +67,11 @@ public class ReadTest {
 
 	@Test
 	public void readRdf() throws Exception {
-		Map<String, Object> map = org.schnasse.cjxy.reader.RdfReader.getMap(JsonReader.getMap(
-				Thread.currentThread().getContextClassLoader().getResourceAsStream("old.tests/HT015847062.json")),
-				RDFFormat.JSONLD, JsonReader.getMap(
-						Thread.currentThread().getContextClassLoader().getResourceAsStream("old.tests/context.jsonld")));
+		Map<String, Object> map = org.schnasse.cjxy.reader.RdfReader.getMap(
+				JsonReader.getMap(Thread.currentThread().getContextClassLoader()
+						.getResourceAsStream("old.tests/HT015847062.json")),
+				RDFFormat.JSONLD, JsonReader.getMap(Thread.currentThread().getContextClassLoader()
+						.getResourceAsStream("old.tests/context.jsonld")));
 		JsonWriter.gprint(map);
 		YamlWriter.gprint(map);
 		XmlWriter.gprint(map);
@@ -78,11 +79,12 @@ public class ReadTest {
 
 	@Test
 	public void readJson_2() throws Exception {
-		Map<String, Object> map = org.schnasse.cjxy.reader.RdfReader.getMap(JsonReader.getMap(
-				Thread.currentThread().getContextClassLoader().getResourceAsStream("json/in/arbeitsmarktKoeln.json")),
+		Map<String, Object> map = org.schnasse.cjxy.reader.RdfReader.getMap(
+				JsonReader.getMap(Thread.currentThread().getContextClassLoader()
+						.getResourceAsStream("json/in/arbeitsmarktKoeln.json")),
 				RDFFormat.JSONLD, JsonReader.getMap(Thread.currentThread().getContextClassLoader()
 						.getResourceAsStream("json/context/arbeitsmarktKoeln.json.context")));
-		 JsonWriter.gprint(map);
+		JsonWriter.gprint(map);
 	}
 
 	@Test
@@ -96,7 +98,23 @@ public class ReadTest {
 		ContextWriter.gprint(map);
 	}
 
-	// @Test
+	@Test
+	public void writeContext2() throws Exception {
+		Map<String, Object> map = org.schnasse.cjxy.reader.RdfReader.getMap(
+				Thread.currentThread().getContextClassLoader().getResourceAsStream(
+						"rdf/in/entwicklung-der-kriminalitat-nach-fallen-und-aufklarungen-seit-1990.rdf"),
+				RDFFormat.RDFXML, null);
+		ContextWriter.gprint(map);
+		
+		map = org.schnasse.cjxy.reader.RdfReader.getMap(
+				Thread.currentThread().getContextClassLoader().getResourceAsStream(
+						"rdf/in/entwicklung-der-kriminalitat-nach-fallen-und-aufklarungen-seit-1990.rdf"),
+				RDFFormat.RDFXML, JsonReader.getMap(Thread.currentThread().getContextClassLoader()
+						.getResourceAsStream("rdf/context/entwicklung-der-kriminalitat-nach-fallen-und-aufklarungen-seit-1990.rdf.context")));
+		JsonWriter.gprint(map);
+	}
+
+	//@Test
 	public void mainTest() throws Exception {
 		Path currentRelativePath = Paths.get("");
 		String s = currentRelativePath.toAbsolutePath().toString();
@@ -113,9 +131,11 @@ public class ReadTest {
 
 //		Main.main(s + "/src/test/resources/old.tests/HT015847062_v2.csv","--header=DATE,OCLC,TITLE,AUTHOR,URI","-tjson");
 
-		Main.main(s + "/src/test/resources/old.tests/HT015847062_v2.csv", "--header=DATE,OCLC,TITLE,AUTHOR,URI",
-				"-tcontext");
+//		Main.main(s + "/src/test/resources/old.tests/HT015847062_v2.csv", "--header=DATE,OCLC,TITLE,AUTHOR,URI",
+//				"-tcontext");
 		// Main.main(s +
 		// "/src/test/resources/old.tests/HT015847062_v2.csv","--header=DATE,OCLC,TITLE,AUTHOR,URI","-trdf");
+
+//		Main.main(s + "/src/test/resources/rdf/in/entwicklung-der-kriminalitat-nach-fallen-und-aufklarungen-seit-1990.rdf", "-tcontext");
 	}
 }
