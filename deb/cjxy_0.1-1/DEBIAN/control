@@ -1,0 +1,11 @@
+Section: tools
+Priority: optional
+Homepage: https://github.com/jschnasse/cjxy
+Standards-Version: 3.9.2
+Package: cjxy
+Version: 0.1
+Maintainer: Jan Schnasse <schnasse@gmx.de>
+Depends: openjdk-8-jre | openjdk-11-jre
+Architecture: all
+Description: convert csv,yml,json and rdf
+
