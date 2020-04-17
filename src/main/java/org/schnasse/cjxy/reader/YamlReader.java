@@ -12,6 +12,7 @@ public class YamlReader {
 	static public Map<String, Object> getMap(InputStream in) {
 		try {
 			ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
+			@SuppressWarnings("unchecked")
 			Map<String, Object> map = mapper.readValue(in, HashMap.class);
 			return map;
 		} catch (Exception e) {

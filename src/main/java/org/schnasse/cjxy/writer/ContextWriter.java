@@ -3,7 +3,6 @@ package org.schnasse.cjxy.writer;
 
 import java.net.InetAddress;
 import java.util.ArrayList;
-import java.util.Base64;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -93,10 +92,6 @@ public class ContextWriter {
 		return key;
 	}
 
-	private static String base64(String encodeMe) {
-		return Base64.getEncoder().encodeToString(encodeMe.getBytes()).replaceAll("/", "-").replaceAll("\\+", "_");
-	}
-
 	private static String getComputername() {
 		try {
 			return InetAddress.getLocalHost().getHostName();
@@ -141,6 +136,7 @@ public class ContextWriter {
 		return result;
 	}
 
+	@SuppressWarnings("unchecked")
 	private static Map<String, Object> useExistingContext(Map<String, Object> map) {
 		Object context = map.get("@context");
 		if (context != null) {

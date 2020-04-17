@@ -18,7 +18,6 @@ import org.eclipse.rdf4j.rio.helpers.StatementCollector;
 
 import com.github.jsonldjava.core.JsonLdOptions;
 import com.github.jsonldjava.core.JsonLdProcessor;
-import com.github.jsonldjava.utils.JsonUtils;
 import com.google.common.base.Charsets;
 
 public class RdfReader {

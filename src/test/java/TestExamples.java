@@ -16,7 +16,7 @@ import org.schnasse.cjxy.writer.JsonWriter;
 import org.schnasse.cjxy.writer.XmlWriter;
 import org.schnasse.cjxy.writer.YamlWriter;
 
-public class ReadTest {
+public class TestExamples {
 	@Test
 	public void readJson() throws Exception {
 		Map<String, Object> map = JsonReader.getMap(

@@ -2,7 +2,6 @@
 package org.schnasse.cjxy.reader;
 
 import java.io.InputStream;
-import java.util.HashMap;
 import java.util.Map;
 
 import com.fasterxml.jackson.core.type.TypeReference;

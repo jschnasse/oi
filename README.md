@@ -1,7 +1,7 @@
 # About
 `cjxy` a small tool to convert csv,json,yaml,xml,rdf to each other.
 Use `cjxy` to translate one structured format into another. Even if
-the result is not one hundred percent correct it almost always 
+the result is not hundred percent correct it almost always 
 can be fixed easily with existing tools like `sed`,`grep` and `awk`.
 
 ## Some interesting calls
@@ -18,7 +18,7 @@ cjxy /etc/passwd -d":" --header="login,password,uid,gid,comment,home,shell" -ics
 lsblk |grep -o sd.*|awk '{print $1 ";" $4 ";" $NF}'|cjxy -d";" --header="device,size,mount" -icsv
 ```
 
-3. Create adhoc Json-Ld Context for some abitrary Json-API
+3. Create adhoc Json-Ld Context for some arbitrary Json-API
 
 ```
 curl https://api.github.com/users/jschnasse|cjxy -ijson -tcontext

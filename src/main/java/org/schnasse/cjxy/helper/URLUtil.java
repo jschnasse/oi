@@ -23,7 +23,6 @@ import java.net.URI;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -106,17 +105,6 @@ public class URLUtil {
 		}
 	}
 
-	private static int decode(char c) {
-		if ((c >= '0') && (c <= '9'))
-			return c - '0';
-		if ((c >= 'a') && (c <= 'f'))
-			return c - 'a' + 10;
-		if ((c >= 'A') && (c <= 'F'))
-			return c - 'A' + 10;
-		assert false;
-		return -1;
-	}
-
 	public static InputStream urlToInputStream(URL url, Map<String, String> args) {
 		HttpURLConnection con = null;
 		InputStream inputStream = null;
@@ -174,19 +162,6 @@ public class URLUtil {
 				}
 			}
 		}
-	}
-
-	public static <K, V> Map<K, V> mapOf(Object... keyValues) {
-		Map<K, V> map = new HashMap<>();
-		K key = null;
-		for (int index = 0; index < keyValues.length; index++) {
-			if (index % 2 == 0) {
-				key = (K) keyValues[index];
-			} else {
-				map.put(key, (V) keyValues[index]);
-			}
-		}
-		return map;
 	}
 
 	public static boolean isValidUrl(String url) {
