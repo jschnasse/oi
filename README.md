@@ -1,10 +1,19 @@
 # About
+
 `cjxy` a small tool to convert csv,json,yaml,xml,rdf to each other.
 Use `cjxy` to translate one structured format into another. Even if
 the result is not hundred percent correct it almost always 
 can be fixed easily with existing tools like `sed`,`grep` and `awk`.
 
-## Some interesting calls
+# Install
+
+```
+wget https://schnasse.org/deb/cjxy_0.1-1.deb
+dpkg -i cjxy_0.1-1.deb
+```
+
+
+# First try. 
 
 1. Convert `passwd` to `yml` (use `-t` to print different formats)
 
@@ -24,7 +33,28 @@ lsblk |grep -o sd.*|awk '{print $1 ";" $4 ";" $NF}'|cjxy -d";" --header="device,
 curl https://api.github.com/users/jschnasse|cjxy -ijson -tcontext
 ```
 
-# Examples
+# Manual
+
+```
+$ cjxy --help
+Usage: cjxy [-hV] [-d=Delimiter] [-f=JsonLdFrame] [--header=HeaderFields]
+            [-i=<inputType>] [-t=<type>] [<inputFile>]
+Converts yaml,json,xml,rdf to each other.
+      [<inputFile>]         Input file.
+  -d, --delimiter=Delimiter delimiter for csv
+  -f, --frame=JsonLdFrame   A json-ld Frame
+  -h, --help                Show this help message and exit.
+      --header=HeaderFields a comma separated list of headers
+  -i, --inputType=<inputType>
+                            yml,json,xml,rdf,context,csv
+  -t, --type=<type>         yaml,json,xml,rdf,context,csv
+  -V, --version             Print version information and exit.
+```
+
+Visit the man-page for more info.
+
+
+# Detailed Examples
 
 Find examples in the [test directory](https://github.com/jschnasse/cjxy/tree/master/src/test/resources). 
 Each test folder contains a `in`,`out` and `context` dir. The `in` dir contains the original source.
@@ -34,7 +64,7 @@ The `context` dir contains a generated Json-Ld context. The `out` dir contains g
 To test the examples by yourself you have to (1) clone this repo, (2) install the cjxy tool and 
 (3) cd into `src/test/resources` directory.
 
-## Clone and Install
+## Clone and Install from Source
 
 Requires: JRE >1.8, Git and asciidoctor
 
@@ -146,10 +176,9 @@ cjxy HT015847062.rdf -f frame.json -trdf
 # Also in this case you get Json-Ld back
 ```
 
+# Install from source
 
-# Install with
-
-Requires: JRE >1.8
+Requires: JRE >1.8 and asciidoctor
 
 ```
 git clone https://github.com/jschnasse/cjxy
@@ -163,30 +192,7 @@ sudo cp cjxy.1 /usr/share/man/man1/
 sudo mandb
 ```
 
-# Call with
-
-```
-$ cjxy --help
-Usage: cjxy [-hV] [-d=Delimiter] [-f=JsonLdFrame] [--header=HeaderFields]
-            [-i=<inputType>] [-t=<type>] [<inputFile>]
-Converts yaml,json,xml,rdf to each other.
-      [<inputFile>]         Input file.
-  -d, --delimiter=Delimiter delimiter for csv
-  -f, --frame=JsonLdFrame   A json-ld Frame
-  -h, --help                Show this help message and exit.
-      --header=HeaderFields a comma separated list of headers
-  -i, --inputType=<inputType>
-                            yml,json,xml,rdf,context,csv
-  -t, --type=<type>         yaml,json,xml,rdf,context,csv
-  -V, --version             Print version information and exit.
-```
-
-Visit the man-page for more info.
-
-
 # Create Debian Package
 ```
-editor package.sh # provide valid path to jpackage program
-./package.sh
-sudo dpkg -i cjxy_1.0-1_amd64.deb
+build.sh
 ```
