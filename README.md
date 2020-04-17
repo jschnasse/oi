@@ -9,7 +9,7 @@ can be fixed easily with existing tools like `sed`,`grep` and `awk`.
 
 ```
 wget https://schnasse.org/deb/cjxy_0.1-1.deb
-dpkg -i cjxy_0.1-1.deb
+sudo dpkg -i cjxy_0.1-1.deb
 ```
 
 
