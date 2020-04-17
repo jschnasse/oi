@@ -4,6 +4,9 @@ scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $scriptdir
 
 function build(){
+ mkdir -p deb/cjxy_0.1-1/usr/lib
+ mkdir -p deb/cjxy_0.1-1/usr/bin
+ mkdir -p deb/cjxy_0.1-1/usr/share/man/man1/
  mvn package
  sudo cp src/main/resources/cjxy deb/cjxy_0.1-1/usr/bin
  sudo cp target/cjxy.jar deb/cjxy_0.1-1/usr/lib
