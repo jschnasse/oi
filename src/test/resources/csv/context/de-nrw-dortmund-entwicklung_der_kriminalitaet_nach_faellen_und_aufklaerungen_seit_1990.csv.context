@@ -1,0 +1,24 @@
+{
+  "@context" : {
+    "data" : {
+      "@id" : "info:jon-desktop/data",
+      "@container" : "@list"
+    },
+    "Aufgeklärte Fälle" : {
+      "@id" : "info:jon-desktop/Aufgeklärte Fälle"
+    },
+    "Aufklärungsquote" : {
+      "@id" : "info:jon-desktop/Aufklärungsquote"
+    },
+    "Bekannt gewordene Fälle" : {
+      "@id" : "info:jon-desktop/Bekannt gewordene Fälle"
+    },
+    "Ermittelte Tatverdächtigte" : {
+      "@id" : "info:jon-desktop/Ermittelte Tatverdächtigte"
+    },
+    "Jahr" : {
+      "@id" : "info:jon-desktop/Jahr"
+    }
+  }
+}
+

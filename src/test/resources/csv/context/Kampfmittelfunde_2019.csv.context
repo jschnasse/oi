@@ -1,0 +1,24 @@
+{
+  "@context" : {
+    "data" : {
+      "@id" : "info:jon-desktop/data",
+      "@container" : "@list"
+    },
+    "Art des Kampfmittels" : {
+      "@id" : "info:jon-desktop/Art des Kampfmittels"
+    },
+    "Datum" : {
+      "@id" : "info:jon-desktop/Datum"
+    },
+    "Entschärfungsdatum" : {
+      "@id" : "info:jon-desktop/Entschärfungsdatum"
+    },
+    "Fundzeit" : {
+      "@id" : "info:jon-desktop/Fundzeit"
+    },
+    "Örtlichkeit" : {
+      "@id" : "info:jon-desktop/Örtlichkeit"
+    }
+  }
+}
+

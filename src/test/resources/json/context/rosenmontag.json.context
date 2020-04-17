@@ -1,0 +1,63 @@
+{
+  "@context" : {
+    "type" : {
+      "@id" : "info:jon-desktop/type"
+    },
+    "crs" : {
+      "@id" : "info:jon-desktop/crs"
+    },
+    "properties" : {
+      "@id" : "info:jon-desktop/properties"
+    },
+    "name" : {
+      "@id" : "info:jon-desktop/name"
+    },
+    "features" : {
+      "@id" : "info:jon-desktop/features",
+      "@container" : "@list"
+    },
+    "id" : {
+      "@id" : "info:jon-desktop/id"
+    },
+    "geometry" : {
+      "@id" : "info:jon-desktop/geometry"
+    },
+    "coordinates" : {
+      "@id" : "info:jon-desktop/coordinates"
+    },
+    "OID" : {
+      "@id" : "info:jon-desktop/OID"
+    },
+    "Name" : {
+      "@id" : "info:jon-desktop/Name"
+    },
+    "FolderPath" : {
+      "@id" : "info:jon-desktop/FolderPath"
+    },
+    "SymbolID" : {
+      "@id" : "info:jon-desktop/SymbolID"
+    },
+    "AltMode" : {
+      "@id" : "info:jon-desktop/AltMode"
+    },
+    "Base" : {
+      "@id" : "info:jon-desktop/Base"
+    },
+    "Clamped" : {
+      "@id" : "info:jon-desktop/Clamped"
+    },
+    "Extruded" : {
+      "@id" : "info:jon-desktop/Extruded"
+    },
+    "Snippet" : {
+      "@id" : "info:jon-desktop/Snippet"
+    },
+    "PopupInfo" : {
+      "@id" : "info:jon-desktop/PopupInfo"
+    },
+    "Shape_Length" : {
+      "@id" : "info:jon-desktop/Shape_Length"
+    }
+  }
+}
+

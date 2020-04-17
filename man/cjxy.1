@@ -2,12 +2,12 @@
 .\"     Title: cjxy
 .\"    Author: Jan Schnasse
 .\" Generator: Asciidoctor 1.5.5
-.\"      Date: 2020-04-10
+.\"      Date: 2020-04-16
 .\"    Manual: CJXY
 .\"    Source: CJXY
 .\"  Language: English
 .\"
-.TH "CJXY" "1" "2020-04-10" "CJXY" "CJXY"
+.TH "CJXY" "1" "2020-04-16" "CJXY" "CJXY"
 .ie \n(.g .ds Aq \(aq
 .el       .ds Aq '
 .ss \n[.ss] 0
@@ -22,22 +22,18 @@
 cjxy \- converts csv,jason,xml,yaml, and rdf to each other
 .SH "SYNOPSIS"
 .sp
-\fBcjxy\fP [\-hV] [\-f=JsonLdFrame] [\-t=<type>] <inputFile>
-.SH "OPTIONS"
+\fBcjxy\fP [\-hV] [\-d=Delimiter] [\-f=JsonLdFrame] [\-\-header=HeaderFields]
+            [\-i=<inputType>] [\-t=<type>] [<inputFile>]
+== Options
 .sp
-\fB<inputFile>\fP
+\fB[<inputFile>]\fP
 .RS 4
 Input file.
 .RE
 .sp
-\fB\-o, \-\-out\-file\fP=\fIOUT_FILE\fP
+\fB\-d, \-\-delimiter\fP
 .RS 4
-Write result to file \fIOUT_FILE\fP.
-.RE
-.sp
-\fB\-c, \-\-capture\fP
-.RS 4
-Capture specimen if it\(cqs a picture of a life form.
+delimiter for csv
 .RE
 .sp
 \fB\-f, \-\-frame\fP=\fIJsonLdFrame\fP
@@ -50,9 +46,21 @@ A json\-ld frame as json \fIJsonLdFrame\fP
 Show this help message and exit.
 .RE
 .sp
+\fB\-\-header\fP
+.RS 4
+A comma separated list of headers. Use this option to specify
+headers for CSV files.
+.RE
+.sp
+\fB\-i, \-\-inputType\fP*
+.RS 4
+cjxy tries to recognize the input type based on file extensions. Use this
+option to explicitly provide an input type: yml,json,xml,rdf,context,csv.
+.RE
+.sp
 \fB\-t, \-\-type\fP=\fITYPE\fP
 .RS 4
-\fITYPE\fP muts be one of yaml,json,xml,rdf
+\fITYPE\fP must be one of yaml,json,xml,rdf,context
 .RE
 .sp
 \fB\-V, \-\-version\fP

@@ -47,11 +47,16 @@ public class ContextWriter {
 		data.set("@context", context);
 		String computername = getComputername();
 		for (String key : keys) {
-			if("@id".equals(key))continue;
-			if("@type".equals(key))continue;
-			if("@value".equals(key))continue;
-			if("@graph".equals(key))continue;
-			if("@list".equals(key))continue;
+			if ("@id".equals(key))
+				continue;
+			if ("@type".equals(key))
+				continue;
+			if ("@value".equals(key))
+				continue;
+			if ("@graph".equals(key))
+				continue;
+			if ("@list".equals(key))
+				continue;
 			Object o = map.get(key);
 			ObjectNode entry = mapper.createObjectNode();
 			String shortKey = generateReadableKey(key);
@@ -69,19 +74,29 @@ public class ContextWriter {
 	}
 
 	private static String generateReadableKey(String key) {
-		String result = URLUtil.saveEncode(key);
-        int i= result.lastIndexOf("#");
-        if(i<0) {
-        	i=result.lastIndexOf("/");
-        }
-        if(i<0 || i+1 == result.length()) {
-        	i=0;
-        }
-		return result.substring(i+1);
+		try {
+			if (URLUtil.isValidUrl(key)) {
+				String result = URLUtil.saveEncode(key);
+
+				int i = result.lastIndexOf("#");
+				if (i < 0) {
+					i = result.lastIndexOf("/");
+				}
+				if (i < 0 || i + 1 == result.length()) {
+					i = 0;
+				}
+				return result.substring(i + 1);
+			}
+		} catch (Exception e) {
+			// if saveEncode does not work, leave it as is.
+		}
+		return key;
 	}
+
 	private static String base64(String encodeMe) {
-        return Base64.getEncoder().encodeToString(encodeMe.getBytes()).replaceAll("/", "-").replaceAll("\\+", "_");
-    }
+		return Base64.getEncoder().encodeToString(encodeMe.getBytes()).replaceAll("/", "-").replaceAll("\\+", "_");
+	}
+
 	private static String getComputername() {
 		try {
 			return InetAddress.getLocalHost().getHostName();
@@ -91,7 +106,8 @@ public class ContextWriter {
 	}
 
 	private static String createId(String key, String computername) {
-		if(URLUtil.isValidUrl(key))return key;
+		if (URLUtil.isValidUrl(key))
+			return key;
 		return "info:" + computername + "/" + key;
 	}
 
