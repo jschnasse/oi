@@ -6,16 +6,22 @@ can be fixed easily with existing tools like `sed`,`grep` and `awk`.
 
 ## Some interesting calls
 
-1. Convert passwd to yml (use `-t` to print different formats)
+1. Convert `passwd` to `yml` (use `-t` to print different formats)
 
 ```
 cjxy /etc/passwd -d":" --header="login,password,uid,gid,comment,home,shell" -icsv
 ```
 
-2. List some disk info in yml (use `-t` to print different formats)
+2. List some disk info in `yml` (use `-t` to print different formats)
 
 ```
 lsblk |grep -o sd.*|awk '{print $1 ";" $4 ";" $NF}'|cjxy -d";" --header="device,size,mount" -icsv
+```
+
+3. Create adhoc Json-Ld Context for some abitrary Json-API
+
+```
+curl https://api.github.com/users/jschnasse|cjxy -ijson -tcontext
 ```
 
 # Examples
