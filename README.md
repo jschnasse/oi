@@ -9,7 +9,7 @@ can be fixed easily with existing tools like `sed`,`grep` and `awk`.
 
 ```
 wget https://schnasse.org/deb/oi_0.0.1.deb
-sudo dpkg -i oi_0.0.1.deb
+sudo apt install ./oi_0.0.1.deb #depends on openjdk-11-jre
 ```
 
 
@@ -66,7 +66,7 @@ To test the examples by yourself you have to (1) clone this repo, (2) install th
 
 ## Clone and Install from Source
 
-Requires: JRE >1.8, Git and asciidoctor
+Requires: JRE 11, Git and asciidoctor
 
 ```
 git clone https://github.com/jschnasse/oi
@@ -178,7 +178,7 @@ oi HT015847062.rdf -f frame.json -trdf
 
 # Install from source
 
-Requires: JRE >1.8 and asciidoctor
+Requires: JRE 11 and asciidoctor
 
 ```
 git clone https://github.com/jschnasse/oi
