@@ -15,5 +15,6 @@ function build(){
  cd -
  sudo cp $scriptdir/man/cjxy.1 deb/cjxy_0.1-1/usr/share/man/man1/
 }
+
 build
 dpkg-deb --build deb/cjxy_0.1-1

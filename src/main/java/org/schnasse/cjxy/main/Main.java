@@ -29,7 +29,7 @@ import picocli.CommandLine.Parameters;
 
 @Command(name = "cjxy", mixinStandardHelpOptions = true, version = "checksum 0.1.0", description = "Converts yaml,json,xml,rdf to each other.")
 public class Main implements Callable<Integer> {
-
+	private static final ch.qos.logback.classic.Logger logger = (ch.qos.logback.classic.Logger) org.slf4j.LoggerFactory.getLogger(Main.class);
 	@Parameters(index = "0", arity = "0..1", description = "Input file.")
 	private String inputFile;
 
@@ -48,10 +48,20 @@ public class Main implements Callable<Integer> {
 	@Option(names = { "-d", "--delimiter" }, paramLabel = "Delimiter", description = "delimiter for csv")
 	String delimiter = ",";
 
+	@Option(names = { "-v", "--verbose" }, paramLabel = "Verbosity", description = "Increase Verbosity to Warn")
+	boolean levelWarn = false;
+
+	@Option(names = { "-vv" }, paramLabel = "High Verbosity", description = "Increase Verbosity to Debug")
+	boolean levelDebug = false;
+
 	public static void main(String... args) {
-		setLoggingLevel(Level.OFF);
-		int exitCode = new CommandLine(new Main()).execute(args);
-		System.exit(exitCode);
+		try {
+			int exitCode = new CommandLine(new Main()).execute(args);
+			System.exit(exitCode);
+		} catch (Exception e) {
+			logger.debug("", e);
+			System.exit(1);
+		}
 	}
 
 	public static void setLoggingLevel(Level level) {
@@ -62,6 +72,13 @@ public class Main implements Callable<Integer> {
 
 	@Override
 	public Integer call() throws Exception {
+		if (levelWarn) {
+			setLoggingLevel(Level.WARN);
+		} else if (levelDebug) {
+			setLoggingLevel(Level.DEBUG);
+		}else {
+			setLoggingLevel(Level.OFF);
+		}
 		convert();
 		return 0;
 	}
@@ -91,7 +108,7 @@ public class Main implements Callable<Integer> {
 				if ("rdf".equals(inputType) && frame != null) {
 					content = RdfReader.getMap(in, RDFFormat.RDFXML, frameMap);
 				} else if ("rdf".equals(inputType) && frame == null) {
-					content = RdfReader.getMap(in, RDFFormat.RDFXML,null);
+					content = RdfReader.getMap(in, RDFFormat.RDFXML, null);
 				} else if ("nt".equals(inputType) && frame != null) {
 					content = RdfReader.getMap(in, RDFFormat.NTRIPLES, frameMap);
 				} else if ("json".equals(inputType) && frame != null) {
