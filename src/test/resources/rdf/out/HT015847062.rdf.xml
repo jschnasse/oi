@@ -1,7 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <LinkedHashMap>
   <@graph>
-    <@id>_:genid-fefa8e9f341744b0870271688da74b4c-A1</@id>
+    <@id>_:genid-85362fc457f342a48a4a696f88f51c0d-A1</@id>
     <@type>http://schema.org/CreateAction</@type>
     <http://schema.org/endTime>
       <@value>2020-04-08T01:43:32</@value>
@@ -14,14 +14,14 @@
     </http://schema.org/object>
   </@graph>
   <@graph>
-    <@id>_:genid-fefa8e9f341744b0870271688da74b4c-A2</@id>
+    <@id>_:genid-85362fc457f342a48a4a696f88f51c0d-A2</@id>
     <@type>https://d-nb.info/standards/elementset/gnd#Work</@type>
     <http://www.w3.org/2000/01/rdf-schema#label>
       <@value>&lt;&lt;The>> black swan &lt;dt.></@value>
     </http://www.w3.org/2000/01/rdf-schema#label>
   </@graph>
   <@graph>
-    <@id>_:genid-fefa8e9f341744b0870271688da74b4c-A3</@id>
+    <@id>_:genid-85362fc457f342a48a4a696f88f51c0d-A3</@id>
     <@type>http://www.loc.gov/mads/rdf/v1#ComplexSubject</@type>
     <http://www.loc.gov/mads/rdf/v1#componentList>
       <@list>
@@ -33,7 +33,7 @@
     </http://www.w3.org/2000/01/rdf-schema#label>
   </@graph>
   <@graph>
-    <@id>_:genid-fefa8e9f341744b0870271688da74b4c-A6</@id>
+    <@id>_:genid-85362fc457f342a48a4a696f88f51c0d-A6</@id>
     <@type>http://id.loc.gov/ontologies/bibframe/Contribution</@type>
     <http://id.loc.gov/ontologies/bibframe/agent>
       <@id>https://d-nb.info/gnd/124120180</@id>
@@ -43,7 +43,7 @@
     </http://id.loc.gov/ontologies/bibframe/role>
   </@graph>
   <@graph>
-    <@id>_:genid-fefa8e9f341744b0870271688da74b4c-A7</@id>
+    <@id>_:genid-85362fc457f342a48a4a696f88f51c0d-A7</@id>
     <@type>http://www.loc.gov/mads/rdf/v1#ComplexSubject</@type>
     <http://www.loc.gov/mads/rdf/v1#componentList>
       <@list>
@@ -55,7 +55,7 @@
     </http://www.w3.org/2000/01/rdf-schema#label>
   </@graph>
   <@graph>
-    <@id>_:genid-fefa8e9f341744b0870271688da74b4c-A8</@id>
+    <@id>_:genid-85362fc457f342a48a4a696f88f51c0d-A8</@id>
     <@type>http://schema.org/PublicationEvent</@type>
     <http://schema.org/location>
       <@value>München</@value>
@@ -345,7 +345,7 @@
       <@id>http://lobid.org/resources/dataset#!</@id>
     </http://purl.org/lobid/lv#inDataset>
     <http://purl.org/lobid/lv#resultOf>
-      <@id>_:genid-fefa8e9f341744b0870271688da74b4c-A1</@id>
+      <@id>_:genid-85362fc457f342a48a4a696f88f51c0d-A1</@id>
     </http://purl.org/lobid/lv#resultOf>
     <http://schema.org/license>
       <@id>http://creativecommons.org/publicdomain/zero/1.0</@id>
@@ -363,7 +363,7 @@
     <@type>http://purl.org/ontology/bibo/Book</@type>
     <http://id.loc.gov/ontologies/bibframe/contribution>
       <@list>
-        <@id>_:genid-fefa8e9f341744b0870271688da74b4c-A6</@id>
+        <@id>_:genid-85362fc457f342a48a4a696f88f51c0d-A6</@id>
       </@list>
     </http://id.loc.gov/ontologies/bibframe/contribution>
     <http://id.loc.gov/ontologies/bibframe/extent>
@@ -415,10 +415,10 @@
       <@id>http://rdaregistry.info/termList/RDAproductionMethod/1010</@id>
     </http://purl.org/dc/terms/medium>
     <http://purl.org/dc/terms/subject>
-      <@id>_:genid-fefa8e9f341744b0870271688da74b4c-A7</@id>
+      <@id>_:genid-85362fc457f342a48a4a696f88f51c0d-A7</@id>
     </http://purl.org/dc/terms/subject>
     <http://purl.org/dc/terms/subject>
-      <@id>_:genid-fefa8e9f341744b0870271688da74b4c-A3</@id>
+      <@id>_:genid-85362fc457f342a48a4a696f88f51c0d-A3</@id>
     </http://purl.org/dc/terms/subject>
     <http://purl.org/dc/terms/tableOfContents>
       <@id>http://digitale-objekte.hbz-nrw.de/storage/2009/05/23/file_28/3011578.pdf</@id>
@@ -427,7 +427,7 @@
       <@value>Der schwarze Schwan</@value>
     </http://purl.org/dc/terms/title>
     <http://purl.org/lobid/lv#exampleOfWork>
-      <@id>_:genid-fefa8e9f341744b0870271688da74b4c-A2</@id>
+      <@id>_:genid-85362fc457f342a48a4a696f88f51c0d-A2</@id>
     </http://purl.org/lobid/lv#exampleOfWork>
     <http://purl.org/lobid/lv#hbzID>
       <@value>HT015847062</@value>
@@ -475,7 +475,7 @@
       <@value>die Macht höchst unwahrscheinlicher Ereignisse</@value>
     </http://rdaregistry.info/Elements/u/P60493>
     <http://schema.org/publication>
-      <@id>_:genid-fefa8e9f341744b0870271688da74b4c-A8</@id>
+      <@id>_:genid-85362fc457f342a48a4a696f88f51c0d-A8</@id>
     </http://schema.org/publication>
     <http://www.w3.org/2002/07/owl#sameAs>
       <@id>http://hub.culturegraph.org/resource/HBZ-HT015847062</@id>

@@ -1,5 +1,5 @@
 /* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
-package org.schnasse.cjxy.main;
+package org.schnasse.oi.main;
 
 import java.io.InputStream;
 import java.util.HashMap;
@@ -7,17 +7,17 @@ import java.util.Map;
 import java.util.concurrent.Callable;
 
 import org.eclipse.rdf4j.rio.RDFFormat;
-import org.schnasse.cjxy.helper.Helper;
-import org.schnasse.cjxy.reader.CsvReader;
-import org.schnasse.cjxy.reader.JsonReader;
-import org.schnasse.cjxy.reader.RdfReader;
-import org.schnasse.cjxy.reader.XmlReader;
-import org.schnasse.cjxy.reader.YamlReader;
-import org.schnasse.cjxy.writer.ContextWriter;
-import org.schnasse.cjxy.writer.CsvWriter;
-import org.schnasse.cjxy.writer.JsonWriter;
-import org.schnasse.cjxy.writer.XmlWriter;
-import org.schnasse.cjxy.writer.YamlWriter;
+import org.schnasse.oi.helper.Helper;
+import org.schnasse.oi.reader.CsvReader;
+import org.schnasse.oi.reader.JsonReader;
+import org.schnasse.oi.reader.RdfReader;
+import org.schnasse.oi.reader.XmlReader;
+import org.schnasse.oi.reader.YamlReader;
+import org.schnasse.oi.writer.ContextWriter;
+import org.schnasse.oi.writer.CsvWriter;
+import org.schnasse.oi.writer.JsonWriter;
+import org.schnasse.oi.writer.XmlWriter;
+import org.schnasse.oi.writer.YamlWriter;
 
 import com.google.common.io.Files;
 

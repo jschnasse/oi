@@ -1,5 +1,5 @@
 /* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
-package org.schnasse.cjxy.helper;
+package org.schnasse.oi.helper;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

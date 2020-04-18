@@ -1,16 +1,16 @@
 /* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
-package org.schnasse.cjxy.writer;
+package org.schnasse.oi.writer;
 
-import org.schnasse.cjxy.writer.base.Writer;
+import org.schnasse.oi.writer.base.Writer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.dataformat.csv.CsvFactory;
+import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
-public class CsvWriter {
+public class YamlWriter {
 
 	public static ObjectMapper createMapper() {
-		return new ObjectMapper(new CsvFactory()).configure(SerializationFeature.INDENT_OUTPUT, true);
+		return new ObjectMapper(new YAMLFactory()).configure(SerializationFeature.INDENT_OUTPUT, true);
 	}
 
 	public static void gprint(Object map) {

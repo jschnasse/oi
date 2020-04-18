@@ -1,5 +1,5 @@
 /* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
-package org.schnasse.cjxy.reader;
+package org.schnasse.oi.reader;
 
 import java.io.InputStream;
 import java.util.ArrayList;

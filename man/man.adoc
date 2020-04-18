@@ -1,18 +1,18 @@
-= cjxy(1)
+= oi(1)
 Jan Schnasse
 v0.0.1
 :doctype: manpage
-:manmanual: CJXY
-:mansource: CJXY
+:manmanual: OI
+:mansource: OI
 :man-linkstyle: pass:[blue R < >]
 
 == Name
 
-cjxy - converts csv,jason,xml,yaml, and rdf to each other
+oi - converts csv,jason,xml,yaml, and rdf to each other
 
 == Synopsis
 
-*cjxy* [-hV] [-d=Delimiter] [-f=JsonLdFrame] [--header=HeaderFields]
+*oi* [-hV] [-d=Delimiter] [-f=JsonLdFrame] [--header=HeaderFields]
             [-i=<inputType>] [-t=<type>] [<inputFile>]
 == Options
 
@@ -33,7 +33,7 @@ cjxy - converts csv,jason,xml,yaml, and rdf to each other
   headers for CSV files.
 
 *-i, --inputType**::
-  cjxy tries to recognize the input type based on file extensions. Use this
+  oi tries to recognize the input type based on file extensions. Use this
   option to explicitly provide an input type: yml,json,xml,rdf,context,csv.
   
 *-t, --type*=_TYPE_::
@@ -54,7 +54,7 @@ cjxy - converts csv,jason,xml,yaml, and rdf to each other
 
 == Resources
 
-*Project web site:* https://github.com/jschnasse/cjxy
+*Project web site:* https://github.com/jschnasse/oi
 
 == Copying
 

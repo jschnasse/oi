@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.schnasse</groupId>
-	<artifactId>cjxy</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>oi</artifactId>
+	<version>0.0.1</version>
 	<build>
 		<plugins>
 			<plugin>
@@ -35,16 +35,16 @@
 					</execution>
 				</executions>
 				<configuration>
-					<finalName>cjxy</finalName>
+					<finalName>oi</finalName>
 					<descriptorRefs>
 						<descriptorRef>jar-with-dependencies</descriptorRef>
 					</descriptorRefs>
 					<archive>
 						<manifest>
-							<mainClass>org.schnasse.cjxy.main.Main</mainClass>
+							<mainClass>org.schnasse.oi.main.Main</mainClass>
 						</manifest>
 						<manifestEntries>
-							<Automatic-Module-Name>org.schnasse.cjxy</Automatic-Module-Name>
+							<Automatic-Module-Name>org.schnasse.oi</Automatic-Module-Name>
 						</manifestEntries>
 					</archive>
 					<appendAssemblyId>false</appendAssemblyId>

@@ -1,5 +1,5 @@
 /* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
-package org.schnasse.cjxy.writer;
+package org.schnasse.oi.writer;
 
 import java.net.InetAddress;
 import java.util.ArrayList;
@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import org.schnasse.cjxy.helper.URLUtil;
-import org.schnasse.cjxy.writer.base.Writer;
+import org.schnasse.oi.helper.URLUtil;
+import org.schnasse.oi.writer.base.Writer;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;

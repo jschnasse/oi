@@ -1,7 +1,7 @@
 /* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
-package org.schnasse.cjxy.writer;
+package org.schnasse.oi.writer;
 
-import org.schnasse.cjxy.writer.base.Writer;
+import org.schnasse.oi.writer.base.Writer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;

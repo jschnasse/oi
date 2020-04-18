@@ -1,8 +1,8 @@
 Section: tools
 Priority: optional
-Homepage: https://github.com/jschnasse/cjxy
+Homepage: https://github.com/jschnasse/oi
 Standards-Version: 3.9.2
-Package: cjxy
+Package: oi
 Version: 0.1
 Maintainer: Jan Schnasse <schnasse@gmx.de>
 Depends: openjdk-8-jre | openjdk-11-jre

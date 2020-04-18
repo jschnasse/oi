@@ -1,5 +1,5 @@
 /* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
-package org.schnasse.cjxy.writer.base;
+package org.schnasse.oi.writer.base;
 
 import java.io.File;
 import java.io.StringWriter;
