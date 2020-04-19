@@ -8,13 +8,13 @@ import org.eclipse.rdf4j.rio.RDFFormat;
 import org.junit.Test;
 import org.schnasse.oi.main.Main;
 import org.schnasse.oi.reader.JsonReader;
-import org.schnasse.oi.reader.RdfReader;
 import org.schnasse.oi.reader.YamlReader;
 import org.schnasse.oi.writer.ContextWriter;
-import org.schnasse.oi.writer.CsvWriter;
 import org.schnasse.oi.writer.JsonWriter;
 import org.schnasse.oi.writer.XmlWriter;
 import org.schnasse.oi.writer.YamlWriter;
+
+import picocli.CommandLine;
 
 public class TestExamples {
 	@Test
@@ -114,28 +114,26 @@ public class TestExamples {
 		JsonWriter.gprint(map);
 	}
 
-	//@Test
+	@Test
 	public void mainTest() throws Exception {
 		Path currentRelativePath = Paths.get("");
 		String s = currentRelativePath.toAbsolutePath().toString();
-//		Main.main(s + "/src/test/resources/old.tests/HT015847062.rdf", "-f" + s + "/src/test/resources/old.tests/frame.json",
-//				"-tjson");
-//		Main.main(s + "/src/test/resources/old.tests/HT015847062.rdf", "-f" + s + "/src/test/resources/old.tests/frame.json",
-//				"-tyaml");
-//		Main.main(s + "/src/test/resources/old.tests/HT015847062.rdf", "-f" + s + "/src/test/resources/old.tests/frame.json",
-//				"-txml");
-//		Main.main(s + "/src/test/resources/old.tests/HT015847062.rdf", "-f" + s + "/src/test/resources/old.tests/frame.json",
-//				"-trdf");
-//		Main.main(s + "/src/test/resources/old.tests/HT015847062.csv");
-//		Main.main(s + "/src/test/resources/old.tests/HT015847062_v2.csv","--header=DATE,OCLC,TITLE,AUTHOR,URI");
+		new CommandLine(new Main()).execute(s + "/src/test/resources/old.tests/HT015847062.rdf", "-f" + s + "/src/test/resources/old.tests/frame.json",
+				"-tjson");
+		new CommandLine(new Main()).execute(s + "/src/test/resources/old.tests/HT015847062.rdf", "-f" + s + "/src/test/resources/old.tests/frame.json",
+				"-tyaml");
+		new CommandLine(new Main()).execute(s + "/src/test/resources/old.tests/HT015847062.rdf", "-f" + s + "/src/test/resources/old.tests/frame.json",
+				"-txml");
+		new CommandLine(new Main()).execute(s + "/src/test/resources/old.tests/HT015847062.rdf", "-f" + s + "/src/test/resources/old.tests/frame.json",
+				"-trdf");
+		new CommandLine(new Main()).execute(s + "/src/test/resources/old.tests/HT015847062.csv");
+		new CommandLine(new Main()).execute(s + "/src/test/resources/old.tests/HT015847062_v2.csv","--header=DATE,OCLC,TITLE,AUTHOR,URI");
 
-//		Main.main(s + "/src/test/resources/old.tests/HT015847062_v2.csv","--header=DATE,OCLC,TITLE,AUTHOR,URI","-tjson");
+		new CommandLine(new Main()).execute(s + "/src/test/resources/old.tests/HT015847062_v2.csv","--header=DATE,OCLC,TITLE,AUTHOR,URI","-tjson");
 
-//		Main.main(s + "/src/test/resources/old.tests/HT015847062_v2.csv", "--header=DATE,OCLC,TITLE,AUTHOR,URI",
-//				"-tcontext");
-		// Main.main(s +
-		// "/src/test/resources/old.tests/HT015847062_v2.csv","--header=DATE,OCLC,TITLE,AUTHOR,URI","-trdf");
-
-//		Main.main(s + "/src/test/resources/rdf/in/entwicklung-der-kriminalitat-nach-fallen-und-aufklarungen-seit-1990.rdf", "-tcontext");
+		new CommandLine(new Main()).execute(s + "/src/test/resources/old.tests/HT015847062_v2.csv", "--header=DATE,OCLC,TITLE,AUTHOR,URI",
+				"-tcontext");
+		new CommandLine(new Main()).execute(s +	 "/src/test/resources/old.tests/HT015847062_v2.csv","--header=DATE,OCLC,TITLE,AUTHOR,URI","-trdf");
+		new CommandLine(new Main()).execute(s + "/src/test/resources/rdf/in/entwicklung-der-kriminalitat-nach-fallen-und-aufklarungen-seit-1990.rdf", "-tcontext");
 	}
 }

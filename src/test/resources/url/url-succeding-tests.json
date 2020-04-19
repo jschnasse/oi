@@ -1,0 +1,246 @@
+{
+"tests":[ {
+  "in" : "file:///foo/bar.txt",
+  "out" : "file:///foo/bar.txt"
+}, {
+  "in" : "file:///home/me",
+  "out" : "file:///home/me"
+}, {
+  "in" : "file://localhost/",
+  "out" : "file://localhost/"
+}, {
+  "in" : "file://localhost/test",
+  "out" : "file://localhost/test"
+}, {
+  "in" : "file:///foo/bar.txt",
+  "out" : "file:///foo/bar.txt"
+}, {
+  "in" : "file:///home/me",
+  "out" : "file:///home/me"
+}, {
+  "in" : "file://localhost/",
+  "out" : "file://localhost/"
+}, {
+  "in" : "file://localhost/test",
+  "out" : "file://localhost/test"
+}, {
+  "in" : "http://GOO​⁠﻿goo.com/",
+  "out" : "http://googoo.com/"
+}, {
+  "in" : "http://www.foo。bar.com/",
+  "out" : "http://www.foo.bar.com/"
+}, {
+  "in" : "http://Ｇｏ.com/",
+  "out" : "http://go.com/"
+}, {
+  "in" : "http://你好你好/",
+  "out" : "http://xn--6qqa088eba/"
+}, {
+  "in" : "http://faß.de/",
+  "out" : "http://fass.de/"
+}, {
+  "in" : "http://βόλος.com/",
+  "out" : "http://xn--nxasmq6b.com/"
+}, {
+  "in" : "http://ශ්‍රී.com/",
+  "out" : "http://xn--10cl1a0b.com/"
+}, {
+  "in" : "http://نامه‌ای.com/",
+  "out" : "http://xn--mgba3gch31f.com/"
+}, {
+  "in" : "http://www.looĸout.net/",
+  "out" : "http://www.xn--looout-5bb.net/"
+}, {
+  "in" : "http://ᗯᗯᗯ.lookout.net/",
+  "out" : "http://xn--1qeaa.lookout.net/"
+}, {
+  "in" : "http://www.lookout.сом/",
+  "out" : "http://www.lookout.xn--l1adi/"
+}, {
+  "in" : "http://www.lookout‧net/",
+  "out" : "http://www.xn--lookoutnet-406e/"
+}, {
+  "in" : "http://www.looĸout.net/",
+  "out" : "http://www.xn--looout-5bb.net/"
+}, {
+  "in" : "http://Bücher.de/",
+  "out" : "http://xn--bcher-kva.de/"
+}, {
+  "in" : "http://look͏out.net/",
+  "out" : "http://lookout.net/"
+}, {
+  "in" : "http://192.168.0.1/",
+  "out" : "http://192.168.0.1/"
+}, {
+  "in" : "http://[::]/",
+  "out" : "http://[::]/"
+}, {
+  "in" : "http://[::1]/",
+  "out" : "http://[::1]/"
+}, {
+  "in" : "http://www.example.com/foo/..bar",
+  "out" : "http://www.example.com/foo/..bar"
+}, {
+  "in" : "http://www.example.com/foo",
+  "out" : "http://www.example.com/foo"
+}, {
+  "in" : "http://www.example.com/你好你好",
+  "out" : "http://www.example.com/%E4%BD%A0%E5%A5%BD%E4%BD%A0%E5%A5%BD"
+}, {
+  "in" : "http://www.example.com/‥/foo",
+  "out" : "http://www.example.com/%E2%80%A5/foo"
+}, {
+  "in" : "http://www.example.com/﻿/foo",
+  "out" : "http://www.example.com/%EF%BB%BF/foo"
+}, {
+  "in" : "http://www.example.com/‮/foo/‭/bar",
+  "out" : "http://www.example.com/%E2%80%AE/foo/%E2%80%AD/bar"
+}, {
+  "in" : "http://www.example.com:8080/",
+  "out" : "http://www.example.com:8080/"
+}, {
+  "in" : "http://www.example.com:/",
+  "out" : "http://www.example.com/"
+}, {
+  "in" : "http://www.example.com/?foo=bar",
+  "out" : "http://www.example.com/?foo=bar"
+}, {
+  "in" : "http://www.example.com/?as?df",
+  "out" : "http://www.example.com/?as?df"
+}, {
+  "in" : "http://www.example.com/?q=\"asdf\"",
+  "out" : "http://www.example.com/?q=%22asdf%22"
+}, {
+  "in" : "http://host/",
+  "out" : "http://host/"
+}, {
+  "in" : "http://another/",
+  "out" : "http://another/"
+}, {
+  "in" : "http://host/",
+  "out" : "http://host/"
+}, {
+  "in" : "http://example.com/",
+  "out" : "http://example.com/"
+}, {
+  "in" : "HTTP://example.com/",
+  "out" : "http://example.com/"
+}, {
+  "in" : "http://www.google.com/foo?bar=baz#",
+  "out" : "http://www.google.com/foo?bar=baz#"
+}, {
+  "in" : "http://foo:81/",
+  "out" : "http://foo:81/"
+}, {
+  "in" : "https://foo:80/",
+  "out" : "https://foo:80/"
+}, {
+  "in" : "ftp://foo:80/",
+  "out" : "ftp://foo:80/"
+}, {
+  "in" : "http://example.com/",
+  "out" : "http://example.com/"
+}, {
+  "in" : "http://search.barnesandnoble.com/booksearch/first book.pdf", 
+  "out" : "http://search.barnesandnoble.com/booksearch/first%20book.pdf"
+}, {
+  "in" : "http://example.com/query?q=random word £500 bank $", 
+  "out" : "http://example.com/query?q=random%20word%20%C2%A3500%20bank%20$"
+}, {
+  "in" : "http://betatruebaonline.com/img/parte/330/CIGUEÑAL.JPG", 
+  "out" : "http://betatruebaonline.com/img/parte/330/CIGUE%C3%91AL.JPG"
+}, {
+  "in" : "http://GOO​⁠﻿goo.urltest.lookout.net/",
+  "out" : "http://googoo.urltest.lookout.net/"
+}, {
+  "in" : "http://www.foo。bar.urltest.lookout.net/",
+  "out" : "http://www.foo.bar.urltest.lookout.net/"
+}, {
+  "in" : "http://Ｇｏ.urltest.lookout.net/",
+  "out" : "http://go.urltest.lookout.net/"
+}, {
+  "in" : "http://你好你好.urltest.lookout.net/",
+  "out" : "http://xn--6qqa088eba.urltest.lookout.net/"
+}, {
+  "in" : "http://192.168.0.257.urltest.lookout.net/",
+  "out" : "http://192.168.0.257.urltest.lookout.net/"
+}, {
+  "in" : "http://faß.de.urltest.lookout.net/",
+  "out" : "http://fass.de.urltest.lookout.net/"
+}, {
+  "in" : "http://βόλος.urltest.lookout.net/",
+  "out" : "http://xn--nxasmq6b.urltest.lookout.net/"
+}, {
+  "in" : "http://ශ්‍රී.urltest.lookout.net/",
+  "out" : "http://xn--10cl1a0b.urltest.lookout.net/"
+}, {
+  "in" : "http://نامه‌ای.urltest.lookout.net/",
+  "out" : "http://xn--mgba3gch31f.urltest.lookout.net/"
+}, {
+  "in" : "http://www.looĸout.urltest.lookout.net/",
+  "out" : "http://www.xn--looout-5bb.urltest.lookout.net/"
+}, {
+  "in" : "http://ᗯᗯᗯ.urltest.lookout.net/",
+  "out" : "http://xn--1qeaa.urltest.lookout.net/"
+}, {
+  "in" : "http://www.lookout.сом.urltest.lookout.net/",
+  "out" : "http://www.lookout.xn--l1adi.urltest.lookout.net/"
+}, {
+  "in" : "http://www.lookout‧net.urltest.lookout.net/",
+  "out" : "http://www.xn--lookoutnet-406e.urltest.lookout.net/"
+}, {
+  "in" : "http://www.looĸout.urltest.lookout.net/",
+  "out" : "http://www.xn--looout-5bb.urltest.lookout.net/"
+}, {
+  "in" : "http://Bücher.de.urltest.lookout.net/",
+  "out" : "http://xn--bcher-kva.de.urltest.lookout.net/"
+}, {
+  "in" : "http://look͏out.urltest.lookout.net/",
+  "out" : "http://lookout.urltest.lookout.net/"
+}, {
+  "in" : "http://urltest.lookout.net/foo/..bar",
+  "out" : "http://urltest.lookout.net/foo/..bar"
+}, {
+  "in" : "http://urltest.lookout.net/foo",
+  "out" : "http://urltest.lookout.net/foo"
+}, {
+  "in" : "http://urltest.lookout.net/你好你好",
+  "out" : "http://urltest.lookout.net/%E4%BD%A0%E5%A5%BD%E4%BD%A0%E5%A5%BD"
+}, {
+  "in" : "http://urltest.lookout.net/‥/foo",
+  "out" : "http://urltest.lookout.net/%E2%80%A5/foo"
+}, {
+  "in" : "http://urltest.lookout.net/﻿/foo",
+  "out" : "http://urltest.lookout.net/%EF%BB%BF/foo"
+}, {
+  "in" : "http://urltest.lookout.net/‮/foo/‭/bar",
+  "out" : "http://urltest.lookout.net/%E2%80%AE/foo/%E2%80%AD/bar"
+}, {
+  "in" : "http://urltest.lookout.net/?foo=bar",
+  "out" : "http://urltest.lookout.net/?foo=bar"
+}, {
+  "in" : "http://urltest.lookout.net/?as?df",
+  "out" : "http://urltest.lookout.net/?as?df"
+}, {
+  "in" : "http://urltest.lookout.net/?q=\"asdf\"",
+  "out" : "http://urltest.lookout.net/?q=%22asdf%22"
+}, {
+  "in" : "http://another.urltest.lookout.net/",
+  "out" : "http://another.urltest.lookout.net/"
+}, {
+  "in" : "http://urltest.lookout.net/foo?bar=baz#",
+  "out" : "http://urltest.lookout.net/foo?bar=baz#"
+}, {
+  "in" : "http://urltest.lookout.net/",
+  "out" : "http://urltest.lookout.net/"
+},{
+ "in":"http://servername:7778/reports/rwservlet?server=server1&ORACLE_SHUTDOWN=YES&PARAMFORM=no&report=test.rdf&desformat=pdf&desname=test.pdf&destype=cache&param1=56738&faces-redirect=true&userid=username/passwd@DBname",
+ "out":"http://servername:7778/reports/rwservlet?server=server1&ORACLE_SHUTDOWN=YES&PARAMFORM=no&report=test.rdf&desformat=pdf&desname=test.pdf&destype=cache&param1=56738&faces-redirect=true&userid=username/passwd@DBname"
+},{
+"in":"https://hbz.opus.hbz-nrw.de/files/110/PDFA_2006_2_10_Zentrales_verzeichnis_Digitalisierter_Drucke_geht+_an_den_Start.pdf",
+"out":"https://hbz.opus.hbz-nrw.de/files/110/PDFA_2006_2_10_Zentrales_verzeichnis_Digitalisierter_Drucke_geht%20_an_den_Start.pdf"
+},{
+"in":"https://hbz.opus.hbz-nrw.de/files/110/PDFA_2006_2_10_Zentrales_verzeichnis_Digitalisierter_Drucke_geht%20_an_den_Start.pdf",
+"out":"https://hbz.opus.hbz-nrw.de/files/110/PDFA_2006_2_10_Zentrales_verzeichnis_Digitalisierter_Drucke_geht%20_an_den_Start.pdf"
+}]
+}

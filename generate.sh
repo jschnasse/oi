@@ -31,7 +31,7 @@ function generateRdf(){
 	oi rdf/in/$1 -tjson > rdf/out/$1.json
 	oi rdf/in/$1 -txml > rdf/out/$1.xml
 	oi rdf/in/$1 -tcsv > rdf/out/$1.csv
-	oi rdf/in/$1 -f rdf/context/$1.context -trdf > rdf/out/$1.jsonld
+	oi rdf/in/$1 -f rdf/context/$1-edited.context -trdf > rdf/out/$1.jsonld
 }
 
 function generateXml(){

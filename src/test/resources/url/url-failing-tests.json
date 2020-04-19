@@ -1,0 +1,2604 @@
+{
+"tests":[ {
+  "in" : "http://urltest.lookout.net／foo/",
+  "out" : "http://urltest.lookout.net/foo/"
+},{
+  "in" : "http://www.example.com／foo/",
+  "out" : "http://www.example.com/foo/"
+},{
+  "in" : "http://www.example.com/#hello, world",
+  "out" : "http://www.example.com/#hello, world"
+}, {
+  "in" : "http://www.example.com/#%c2%a9",
+  "out" : "http://www.example.com/#%c2%a9"
+}, {
+  "in" : "http://www.example.com/#𐌀ss",
+  "out" : "http://www.example.com/#𐌀ss"
+}, {
+  "in" : "http://www.example.com/#%41%a",
+  "out" : "http://www.example.com/#%41%a"
+}, {
+  "in" : "http://www.example.com/#\\?\\好",
+  "out" : "http://www.example.com/#\\�\\好"
+}, {
+  "in" : "http://www.example.com/#a\\﷐",
+  "out" : "http://www.example.com/#a\\�"
+}, {
+  "in" : "http://www.example.com/#asdf#qwer",
+  "out" : "http://www.example.com/#asdf#qwer"
+}, {
+  "in" : "http://www.example.com/##asdf",
+  "out" : "http://www.example.com/##asdf"
+}, {
+  "in" : "http://www.example.com/#a\nb\rc\td",
+  "out" : "http://www.example.com/#abcd"
+}, {
+  "in" : "file:c:\\\\foo\\\\bar.html",
+  "out" : "file:///C:/foo/bar.html"
+}, {
+  "in" : "  File:c|////foo\\\\bar.html",
+  "out" : "file:///C:////foo/bar.html"
+}, {
+  "in" : "file:",
+  "out" : "file:///"
+}, {
+  "in" : "file:UNChost/path",
+  "out" : "file://unchost/path"
+}, {
+  "in" : "c:\\\\foo\\\\bar",
+  "out" : "file:///C:/foo/bar"
+}, {
+  "in" : "C|/foo/bar",
+  "out" : "file:///C:/foo/bar"
+}, {
+  "in" : "/C|\\\\foo\\\\bar",
+  "out" : "file:///C:/foo/bar"
+}, {
+  "in" : "//C|/foo/bar",
+  "out" : "file:///C:/foo/bar"
+}, {
+  "in" : "\\\\\\\\server\\\\file",
+  "out" : "file://server/file"
+}, {
+  "in" : "/\\\\server/file",
+  "out" : "file://server/file"
+}, {
+  "in" : "file:c:foo/bar.html",
+  "out" : "file:///C:/foo/bar.html"
+}, {
+  "in" : "file:/\\\\/\\\\C:\\\\\\\\//foo\\\\bar.html",
+  "out" : "file:///C:////foo/bar.html"
+}, {
+  "in" : "FILE:/\\\\/\\\\7:\\\\\\\\//foo\\\\bar.html",
+  "out" : "file://7:////foo/bar.html"
+}, {
+  "in" : "file:filer/home\\\\me",
+  "out" : "file://filer/home/me"
+}, {
+  "in" : "file:///C:/foo/../../../bar.html",
+  "out" : "file:///C:/bar.html"
+}, {
+  "in" : "file:///C:/asdf#\\%c2",
+  "out" : "file:///C:/asdf#\\%ef\\%bf\\%bd"
+}, {
+  "in" : "file:c:\\\\foo\\\\bar.html",
+  "out" : "file:///c:/foo/bar.html"
+}, {
+  "in" : "file:c|//foo\\\\bar.html",
+  "out" : "file:///c%7C//foo/bar.html"
+}, {
+  "in" : "file://test",
+  "out" : "file://test/"
+}, {
+  "in" : "file:c:\\\\foo\\\\bar.html",
+  "out" : "file:///C:/foo/bar.html"
+}, {
+  "in" : "  File:c|////foo\\\\bar.html",
+  "out" : "file:///C:////foo/bar.html"
+}, {
+  "in" : "file:",
+  "out" : "file:///"
+}, {
+  "in" : "file:UNChost/path",
+  "out" : "file://unchost/path"
+}, {
+  "in" : "c:\\\\foo\\\\bar",
+  "out" : "file:///C:/foo/bar"
+}, {
+  "in" : "C|/foo/bar",
+  "out" : "file:///C:/foo/bar"
+}, {
+  "in" : "/C|\\\\foo\\\\bar",
+  "out" : "file:///C:/foo/bar"
+}, {
+  "in" : "//C|/foo/bar",
+  "out" : "file:///C:/foo/bar"
+}, {
+  "in" : "//server/file",
+  "out" : "file://server/file"
+}, {
+  "in" : "\\\\\\\\server\\\\file",
+  "out" : "file://server/file"
+}, {
+  "in" : "/\\\\server/file",
+  "out" : "file://server/file"
+}, {
+  "in" : "file:c:foo/bar.html",
+  "out" : "file:///C:/foo/bar.html"
+}, {
+  "in" : "file:/\\\\/\\\\C:\\\\\\\\//foo\\\\bar.html",
+  "out" : "file:///C:////foo/bar.html"
+}, {
+  "in" : "FILE:/\\\\/\\\\7:\\\\\\\\//foo\\\\bar.html",
+  "out" : "file://7:////foo/bar.html"
+}, {
+  "in" : "file:filer/home\\\\me",
+  "out" : "file://filer/home/me"
+}, {
+  "in" : "file:///C:/foo/../../../bar.html",
+  "out" : "file:///C:/bar.html"
+}, {
+  "in" : "file:///C:/asdf#\\%c2",
+  "out" : "file:///C:/asdf#\\%ef\\%bf\\%bd"
+}, {
+  "in" : "file:c:\\\\foo\\\\bar.html",
+  "out" : "file:///c:/foo/bar.html"
+}, {
+  "in" : "file:c|//foo\\\\bar.html",
+  "out" : "file:///c%7C//foo/bar.html"
+}, {
+  "in" : "//",
+  "out" : "file:///"
+}, {
+  "in" : "///",
+  "out" : "file:///"
+}, {
+  "in" : "///test",
+  "out" : "file:///test"
+}, {
+  "in" : "file://test",
+  "out" : "file://test/"
+}, {
+  "in" : "http://google.com",
+  "out" : "http://google.com/"
+}, {
+  "in" : "http://GoOgLe.CoM/",
+  "out" : "http://google.com/"
+}, {
+  "in" : "http://Goo%20 goo%7C|.com/",
+  "out" : "http://goo%20%20goo%7C%7C.com/"
+}, {
+  "in" : "http://GOO 　goo.com/",
+  "out" : "http://goo%20%20goo.com/"
+}, {
+  "in" : "http://﷐zyx.com/",
+  "out" : "http://%EF%BF%BDzyx.com/"
+}, {
+  "in" : "http://%ef%b7%90zyx.com/",
+  "out" : "http://%EF%BF%BDzyx.com/"
+}, {
+  "in" : "http://％４１.com/",
+  "out" : "http://a.com/"
+}, {
+  "in" : "http://%ef%bc%85%ef%bc%94%ef%bc%91.com/",
+  "out" : "http://a.com/"
+}, {
+  "in" : "http://％００.com/",
+  "out" : "http://%00.com/"
+}, {
+  "in" : "http://%ef%bc%85%ef%bc%90%ef%bc%90.com/",
+  "out" : "http://%00.com/"
+}, {
+  "in" : "http://%zz%66%a/",
+  "out" : "http://%25zzf%25a/"
+}, {
+  "in" : "http://%25/",
+  "out" : "http://%25/"
+}, {
+  "in" : "http://hello%00/",
+  "out" : "http://hello%00/"
+}, {
+  "in" : "http://%30%78%63%30%2e%30%32%35%30.01/",
+  "out" : "http://192.168.0.1/"
+}, {
+  "in" : "http://%30%78%63%30%2e%30%32%35%30.01%2e/",
+  "out" : "http://192.168.0.1/"
+}, {
+  "in" : "http://%3g%78%63%30%2e%30%32%35%30%2E.01/",
+  "out" : "http://%253gxc0.0250..01/"
+}, {
+  "in" : "http://192.168.0.1 hello/",
+  "out" : "http://192.168.0.1%20hello/"
+}, {
+  "in" : "http://０Ｘｃ０．０２５０．０１/",
+  "out" : "http://192.168.0.1/"
+}, {
+  "in" : "http://192.168.0.257/",
+  "out" : "http://192.168.0.257/"
+}, {
+  "in" : "http://[google.com.]/",
+  "out" : "http://[google.com]/"
+}, {
+  "in" : "http://т(",
+  "out" : "http://xn--%28-7ed/"
+}, {
+  "in" : "http://go\\@ogle.com/",
+  "out" : "http://go@ogle.com/"
+}, {
+  "in" : "http://go/@ogle.com/",
+  "out" : "http://go@ogle.com/"
+}, {
+  "in" : "http://www.lookout.net::==80::==443::/",
+  "out" : "http://lookout.net/"
+}, {
+  "in" : "http://www.lookout.net::80::443/",
+  "out" : "http://lookout.net/"
+}, {
+  "in" : "http://\\",
+  "out" : "http://\\"
+}, {
+  "in" : "http://\\\\/",
+  "out" : "http://."
+}, {
+  "in" : "http://\\./",
+  "out" : "http://."
+}, {
+  "in" : "http:////:@/",
+  "out" : "http://."
+}, {
+  "in" : "http://\\google.com/foo",
+  "out" : "http://google.com/foo"
+}, {
+  "in" : "http://\\\\google.com/foo",
+  "out" : "http://google.com/foo"
+}, {
+  "in" : "http:////asdf@/",
+  "out" : "http://."
+}, {
+  "in" : "http:////:81/",
+  "out" : "http://."
+}, {
+  "in" : "http://://",
+  "out" : "http://."
+}, {
+  "in" : "http://c:/",
+  "out" : "http://."
+}, {
+  "in" : "http://xxxx:/",
+  "out" : "http://."
+}, {
+  "in" : "http://.:./",
+  "out" : "http://."
+}, {
+  "in" : "http://////@google.com/",
+  "out" : "http://."
+}, {
+  "in" : "http://@google.com/",
+  "out" : "http://google.com/"
+}, {
+  "in" : "http://c|/",
+  "out" : "http://c|/"
+}, {
+  "in" : "http://www.lookout.net：80/",
+  "out" : "http://www.lookout.net:80/"
+}, {
+  "in" : "http://www‥lookout.net/",
+  "out" : "http://www..lookout.net/"
+}, {
+  "in" : "http://www.lookout.net⩴80/",
+  "out" : "http://www.lookout.net::%3D80/"
+}, {
+  "in" : "http://www .lookout.net/",
+  "out" : "http://www%20.lookout.net/"
+}, {
+  "in" : "http:// lookout.net/",
+  "out" : "http://%E1%9A%80lookout.net/"
+}, {
+  "in" : "http://\u001Flookout.net/",
+  "out" : "http://%1Flookout.net/"
+}, {
+  "in" : "http://look۝out.net/",
+  "out" : "http://look%DB%9Dout.net/"
+}, {
+  "in" : "http://look᠎out.net/",
+  "out" : "http://look%E1%A0%8Eout.net/"
+}, {
+  "in" : "http://look⁠out.net/",
+  "out" : "http://look%E2%81%A0out.net/"
+}, {
+  "in" : "http://look﻿out.net/",
+  "out" : "http://look%EF%BB%BFout.net/"
+}, {
+  "in" : "http://look🿾out.net/",
+  "out" : "http://look%F0%9F%BF%BEout.net/"
+}, {
+  "in" : "http://look?out.net/",
+  "out" : "http://look%ED%BA%ADout.net/"
+}, {
+  "in" : "http://look￺out.net/",
+  "out" : "http://look%EF%BF%BAout.net/"
+}, {
+  "in" : "http://look⿰out.net/",
+  "out" : "http://look%E2%BF%B0out.net/"
+}, {
+  "in" : "http://looḱout.net/",
+  "out" : "http://look%CD%81out.net/"
+}, {
+  "in" : "http://look‮out.net/",
+  "out" : "http://look%E2%80%AEout.net/"
+}, {
+  "in" : "http://look⁫out.net/",
+  "out" : "http://look%E2%81%ABout.net/"
+}, {
+  "in" : "http://look󠀁out.net/",
+  "out" : "http://look%F3%A0%80%81out.net/"
+}, {
+  "in" : "http://look󠀠out.net/",
+  "out" : "http://look%F3%A0%80%A0out.net/"
+}, {
+  "in" : "http://look־out.net/",
+  "out" : "http://look%D6%BEout.net/"
+}, {
+  "in" : "http://faß.de/",
+  "out" : "http://xn--fa-hia.de/"
+}, {
+  "in" : "http://βόλος.com/",
+  "out" : "http://xn--nxasmm1c.com/"
+}, {
+  "in" : "http://ශ්‍රී.com/",
+  "out" : "http://xn--10cl1a0b660p.com/"
+}, {
+  "in" : "http://نامه‌ای.com/",
+  "out" : "http://xn--mgba3gch31f060k.com/"
+}, {
+  "in" : "http://♥.net/",
+  "out" : "http://�.net/"
+}, {
+  "in" : "http://͸.net/",
+  "out" : "http://�.net/"
+}, {
+  "in" : "http://Ӏ.com/",
+  "out" : "http://�.com/"
+}, {
+  "in" : "http://㛼.com/",
+  "out" : "http://�.com/"
+}, {
+  "in" : "http://Ↄ.com/",
+  "out" : "http://�.com/"
+}, {
+  "in" : "http://gOoGle.com/",
+  "out" : "http://google.com/"
+}, {
+  "in" : "http://ড়.com/",
+  "out" : "http://ড়.com/"
+}, {
+  "in" : "http://ẞ.com/",
+  "out" : "http://ss.com/"
+}, {
+  "in" : "http://ẞ.foo.com/",
+  "out" : "http://ss.foo.com/"
+}, {
+  "in" : "http://-foo.bar.com",
+  "out" : "http://"
+}, {
+  "in" : "http://foo-.bar.com",
+  "out" : "http://"
+}, {
+  "in" : "http://ab--cd.com",
+  "out" : "http://"
+}, {
+  "in" : "http://xn--0.com",
+  "out" : "http://"
+}, {
+  "in" : "http://foò.bar.com/",
+  "out" : "http://foo%CC%80.bar.com/"
+}, {
+  "in" : "http://./",
+  "out" : "http://"
+}, {
+  "in" : "http://0300.0250.00.01/",
+  "out" : "http://192.168.0.1/"
+}, {
+  "in" : "http://0xC0.0Xa8.0x0.0x1/",
+  "out" : "http://192.168.0.1/"
+}, {
+  "in" : "http://192.168.9.com/",
+  "out" : "http://"
+}, {
+  "in" : "http://19a.168.0.1/",
+  "out" : "http://"
+}, {
+  "in" : "http://0308.0250.00.01/",
+  "out" : "http://"
+}, {
+  "in" : "http://0xCG.0xA8.0x0.0x1/",
+  "out" : "http://"
+}, {
+  "in" : "http://192/",
+  "out" : "http://0.0.0.192/"
+}, {
+  "in" : "http://0xC0a80001/",
+  "out" : "http://192.168.0.1/"
+}, {
+  "in" : "http://030052000001/",
+  "out" : "http://192.168.0.1/"
+}, {
+  "in" : "http://000030052000001/",
+  "out" : "http://192.168.0.1/"
+}, {
+  "in" : "http://192.168/",
+  "out" : "http://192.0.0.168/"
+}, {
+  "in" : "http://192.0x00A80001/",
+  "out" : "http://192.168.0.1/"
+}, {
+  "in" : "http://0xc0.052000001/",
+  "out" : "http://192.168.0.1/"
+}, {
+  "in" : "http://192.168.1/",
+  "out" : "http://192.168.0.1/"
+}, {
+  "in" : "http://192.168.0.0.1/",
+  "out" : "http://"
+}, {
+  "in" : "http://192.168.0.1./",
+  "out" : "http://192.168.0.1/"
+}, {
+  "in" : "http://192.168.0.1. hello/",
+  "out" : "http://"
+}, {
+  "in" : "http://192.168.0.1../",
+  "out" : "http://"
+}, {
+  "in" : "http://192.168..1/",
+  "out" : "http://"
+}, {
+  "in" : "http://0x100.0/",
+  "out" : "http://"
+}, {
+  "in" : "http://0x100.0.0/",
+  "out" : "http://"
+}, {
+  "in" : "http://0x100.0.0.0/",
+  "out" : "http://"
+}, {
+  "in" : "http://0.0x100.0.0/",
+  "out" : "http://"
+}, {
+  "in" : "http://0.0.0x100.0/",
+  "out" : "http://"
+}, {
+  "in" : "http://0.0.0.0x100/",
+  "out" : "http://"
+}, {
+  "in" : "http://0.0.0x10000/",
+  "out" : "http://"
+}, {
+  "in" : "http://0.0x1000000/",
+  "out" : "http://"
+}, {
+  "in" : "http://0x100000000/",
+  "out" : "http://"
+}, {
+  "in" : "http://0xFF.0/",
+  "out" : ""
+}, {
+  "in" : "http://0xFF.0.0/",
+  "out" : "http://255.0.0.0/"
+}, {
+  "in" : "http://0xFF.0.0.0/",
+  "out" : "http://255.0.0.0/"
+}, {
+  "in" : "http://0.0xFF.0.0/",
+  "out" : "http://0.255.0.0/"
+}, {
+  "in" : "http://0.0.0xFF.0/",
+  "out" : "http://0.0.255.0/"
+}, {
+  "in" : "http://0.0.0.0xFF/",
+  "out" : "http://0.0.0.255/"
+}, {
+  "in" : "http://0.0.0xFFFF/",
+  "out" : "http://0.0.255.255/"
+}, {
+  "in" : "http://0.0xFFFFFF/",
+  "out" : "http://0.255.255.255/"
+}, {
+  "in" : "http://0xFFFFFFFF/",
+  "out" : "http://255.255.255.255/"
+}, {
+  "in" : "http://276.256.0xf1a2.077777/",
+  "out" : "http://"
+}, {
+  "in" : "http://192.168.0.257/",
+  "out" : "http://"
+}, {
+  "in" : "http://192.168.0xa20001/",
+  "out" : "http://"
+}, {
+  "in" : "http://192.015052000001/",
+  "out" : "http://"
+}, {
+  "in" : "http://0X12C0a80001/",
+  "out" : "http://"
+}, {
+  "in" : "http://276.1.2/",
+  "out" : "http://"
+}, {
+  "in" : "http://192.168.0.1 hello/",
+  "out" : "http://"
+}, {
+  "in" : "http://0000000000000300.0x00000000000000fF.00000000000000001/",
+  "out" : "http://192.255.0.1/"
+}, {
+  "in" : "http://0000000000000300.0xffffffffFFFFFFFF.3022415481470977/",
+  "out" : "http://"
+}, {
+  "in" : "http://00000000000000000001/",
+  "out" : "http://0.0.0.1/"
+}, {
+  "in" : "http://0000000000000000100000000000000001/",
+  "out" : "http://"
+}, {
+  "in" : "http://0.0.0.000000000000000000z/",
+  "out" : "http://"
+}, {
+  "in" : "http://0.0.0.100000000000000000z/",
+  "out" : "http://"
+}, {
+  "in" : "http://0.00.0x.0x0/",
+  "out" : "http://0.0.0.0/"
+}, {
+  "in" : "http://[/",
+  "out" : "http://"
+}, {
+  "in" : "http://[:/",
+  "out" : "http://"
+}, {
+  "in" : "http://]/",
+  "out" : "http://"
+}, {
+  "in" : "http://:]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[:]/",
+  "out" : "http://"
+}, {
+  "in" : "http://2001:db8::1/",
+  "out" : "http://"
+}, {
+  "in" : "http://[2001:db8::1/",
+  "out" : "http://"
+}, {
+  "in" : "http://2001:db8::1]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[1::.]/",
+  "out" : "http://[1::.]/"
+}, {
+  "in" : "http://[::192.168.0.1.]/",
+  "out" : "http://[::c0a8:1.]/"
+}, {
+  "in" : "http://[::ffff:192.168.0.1.]/",
+  "out" : "http://[::ffff:c0a8:1.]/"
+}, {
+  "in" : "http://[000:01:02:003:004:5:6:007.]/",
+  "out" : "http://[0:1:2:3:4:5:6:7.]/"
+}, {
+  "in" : "http://[A:b:c:DE:fF:0:1:aC.]/",
+  "out" : "http://[a:b:c:de:ff:0:1:ac.]/"
+}, {
+  "in" : "http://[1:0:0:2::3:0.]/",
+  "out" : "http://[1::2:0:0:3:0.]/"
+}, {
+  "in" : "http://[1::2:0:0:3:0.]/",
+  "out" : "http://[1::2:0:0:3:0.]/"
+}, {
+  "in" : "http://[::eeee:192.168.0.1.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[2001::192.168.0.1.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[1:2:192.168.0.1:5:6.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[::ffff:192.1.2.]/",
+  "out" : "http://[::ffff:c001:2.]/"
+}, {
+  "in" : "http://[::ffff:0xC0.0Xa8.0x0.0x1.]/",
+  "out" : "http://[::ffff:c0a8:1.]/"
+}, {
+  "in" : "http://[0:0::0:0:8.]/",
+  "out" : "http://[::8.]/"
+}, {
+  "in" : "http://[2001:db8::1.]/",
+  "out" : "http://[2001:db8::1.]/"
+}, {
+  "in" : "http://[2001::db8::1.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[2001:db8:::1.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[:::.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[2001::.com.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[::192.168.0.0.1.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[::ffff:192.168.0.0.1.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[1:2:3:4:5:6:7:8:9.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[0:0:0:0:0:0:0:192.168.0.1.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[1:2:3:4:5:6::192.168.0.1.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[1:2:3:4:5:6::8.]/",
+  "out" : "http://[1:2:3:4:5:6:0:8.]/"
+}, {
+  "in" : "http://[1:2:3:4:5:6:7:8:.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[1:2:3:4:5:6:192.168.0.1:.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[-1:2:3:4:5:6:7:8.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[1::%1.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[1::%eth0.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[1::%.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[%.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[::%:.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[:0:0::0:0:8.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[0:0::0:0:8:.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[:0:0::0:0:8:.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[::192.168..1.]/",
+  "out" : "http://"
+}, {
+  "in" : "http://[::1 hello.]/",
+  "out" : "http://"
+}, {
+  "in" : "mailto:addr1",
+  "out" : "mailto:addr1"
+}, {
+  "in" : "mailto:addr1@foo.com",
+  "out" : "mailto:addr1@foo.com"
+}, {
+  "in" : "mailto:addr1 \\t ",
+  "out" : "mailto:addr1"
+}, {
+  "in" : "mailto:addr1?to=jon",
+  "out" : "mailto:addr1?to=jon"
+}, {
+  "in" : "mailto:addr1,addr2",
+  "out" : "mailto:addr1,addr2"
+}, {
+  "in" : "mailto:addr1, addr2",
+  "out" : "mailto:addr1, addr2"
+}, {
+  "in" : "mailto:addr1%2caddr2",
+  "out" : "mailto:addr1%2caddr2"
+}, {
+  "in" : "mailto:𐌀",
+  "out" : "mailto:%F0%90%8C%80"
+}, {
+  "in" : "mailto:addr1?",
+  "out" : "mailto:addr1?"
+}, {
+  "in" : "javascript:",
+  "out" : "javascript:"
+}, {
+  "in" : "JavaScript:Foo",
+  "out" : "javascript:Foo"
+}, {
+  "in" : "http://www.example.com/././foo",
+  "out" : "http://www.example.com/foo"
+}, {
+  "in" : "http://www.example.com/./.foo",
+  "out" : "http://www.example.com/.foo"
+}, {
+  "in" : "http://www.example.com/foo/.",
+  "out" : "http://www.example.com/foo/"
+}, {
+  "in" : "http://www.example.com/foo/./",
+  "out" : "http://www.example.com/foo/"
+}, {
+  "in" : "http://www.example.com/foo/bar/..",
+  "out" : "http://www.example.com/foo/"
+}, {
+  "in" : "http://www.example.com/foo/bar/../",
+  "out" : "http://www.example.com/foo/"
+}, {
+  "in" : "http://www.example.com/foo/bar/../ton",
+  "out" : "http://www.example.com/foo/ton"
+}, {
+  "in" : "http://www.example.com/foo/bar/../ton/../../a",
+  "out" : "http://www.example.com/a"
+}, {
+  "in" : "http://www.example.com/foo/../../..",
+  "out" : "http://www.example.com/"
+}, {
+  "in" : "http://www.example.com/foo/../../../ton",
+  "out" : "http://www.example.com/ton"
+}, {
+  "in" : "http://www.example.com/foo/%2e",
+  "out" : "http://www.example.com/foo/"
+}, {
+  "in" : "http://www.example.com/foo/%2e%2",
+  "out" : "http://www.example.com/foo/.%2"
+}, {
+  "in" : "http://www.example.com/foo/%2e./%2e%2e/.%2e/%2e.bar",
+  "out" : "http://www.example.com/..bar"
+}, {
+  "in" : "http://www.example.com////../..",
+  "out" : "http://www.example.com//"
+}, {
+  "in" : "http://www.example.com/foo/bar//../..",
+  "out" : "http://www.example.com/foo/"
+}, {
+  "in" : "http://www.example.com/foo/bar//..",
+  "out" : "http://www.example.com/foo/bar/"
+}, {
+  "in" : "http://www.example.com/foo/bar/..",
+  "out" : "http://www.example.com/foo/"
+}, {
+  "in" : "http://www.example.com/foo%",
+  "out" : "http://www.example.com/foo%"
+}, {
+  "in" : "http://www.example.com/foo%2",
+  "out" : "http://www.example.com/foo%2"
+}, {
+  "in" : "http://www.example.com/foo%2zbar",
+  "out" : "http://www.example.com/foo%2zbar"
+}, {
+  "in" : "http://www.example.com/foo%2Â©zbar",
+  "out" : "http://www.example.com/foo%2%C3%82%C2%A9zbar"
+}, {
+  "in" : "http://www.example.com/foo\t%91",
+  "out" : "http://www.example.com/foo%09%C2%91%91"
+}, {
+  "in" : "http://www.example.com/(%28:%3A%29)",
+  "out" : "http://www.example.com/(%28:%3A%29)"
+}, {
+  "in" : "http://www.example.com/%3A%3a%3C%3c",
+  "out" : "http://www.example.com/%3A%3a%3C%3c"
+}, {
+  "in" : "http://www.example.com/foo\\tbar",
+  "out" : "http://www.example.com/foo%09bar"
+}, {
+  "in" : "http://www.example.com\\\\foo\\\\bar",
+  "out" : "http://www.example.com/foo/bar"
+}, {
+  "in" : "http://www.example.com/%7Ffp3%3Eju%3Dduvgw%3Dd",
+  "out" : "http://www.example.com/%7Ffp3%3Eju%3Dduvgw%3Dd"
+}, {
+  "in" : "http://www.example.com/@asdf%40",
+  "out" : "http://www.example.com/@asdf%40"
+}, {
+  "in" : "http://www.example.com/﷐zyx",
+  "out" : "http://www.example.com/%EF%BF%BDzyx"
+}, {
+  "in" : "http://www.example.com/?/foo",
+  "out" : "http://www.example.com/�/foo"
+}, {
+  "in" : "http://www.example.com:as df/",
+  "out" : "http://www.example.com:as%20df/"
+}, {
+  "in" : "http://www.example.com:-2/",
+  "out" : "http://www.example.com:-2/"
+}, {
+  "in" : "http://www.example.com:80/",
+  "out" : "http://www.example.com/"
+}, {
+  "in" : "http://www.example.com:፩/",
+  "out" : "http://www.example.com:%E1%8D%A9/"
+}, {
+  "in" : "http://www.example.com:𝟖/",
+  "out" : "http://www.example.com:%F0%9D%9F%96/"
+}, {
+  "in" : "http://www.example.com/?%40%41123",
+  "out" : "http://www.example.com/?%40%41123"
+}, {
+  "in" : "http://www.example.com/?q=你好",
+  "out" : "http://www.example.com/?q=%26%2320320%3B%26%2322909%3B"
+}, {
+  "in" : "http://www.example.com/?q=\\?\\?",
+  "out" : "http://www.example.com/?q=%26%2355296%3B%26%2355296%3B"
+}, {
+  "in" : "http://www.example.com/?q=&lt;asdf&gt;",
+  "out" : "http://www.example.com/?q=%3Casdf%3E"
+}, {
+  "in" : "\\\\\\\\Another\\\\path",
+  "out" : "http://another/path"
+}, {
+  "in" : "/c:\\\\foo",
+  "out" : "http://host/c:/foo"
+}, {
+  "in" : "//c:\\\\foo",
+  "out" : "http://c/foo"
+}, {
+  "in" : "bar",
+  "out" : "file:///C:/bar"
+}, {
+  "in" : "../../../bar.html",
+  "out" : "file:///C:/bar.html"
+}, {
+  "in" : "/../bar.html",
+  "out" : "file:///C:/bar.html"
+}, {
+  "in" : "\\\\\\\\another\\\\path",
+  "out" : ""
+}, {
+  "in" : "//c:/foo",
+  "out" : "file:///C:/foo"
+}, {
+  "in" : "//localhost/c:/foo",
+  "out" : "file:///C:/foo"
+}, {
+  "in" : "c:",
+  "out" : ""
+}, {
+  "in" : "c:/foo",
+  "out" : ""
+}, {
+  "in" : "c:\\\\foo",
+  "out" : ""
+}, {
+  "in" : "/z:/bar",
+  "out" : "file:///Z:/bar"
+}, {
+  "in" : "/bar",
+  "out" : "file:///C:/bar"
+}, {
+  "in" : "/bar",
+  "out" : "file://localhost/C:/bar"
+}, {
+  "in" : "/bar",
+  "out" : "file:///C:/bar"
+}, {
+  "in" : "//somehost/path",
+  "out" : "file://somehost/path"
+}, {
+  "in" : "/\\\\//somehost/path",
+  "out" : "file://somehost/path"
+}, {
+  "in" : "http:////another/",
+  "out" : "http://another/"
+}, {
+  "in" : "",
+  "out" : "http://foo/bar"
+}, {
+  "in" : "",
+  "out" : "http://foo/bar"
+}, {
+  "in" : "",
+  "out" : "http://foo/bar"
+}, {
+  "in" : "  another  ",
+  "out" : "http://foo/another"
+}, {
+  "in" : "  .  ",
+  "out" : "http://foo/"
+}, {
+  "in" : " \\t ",
+  "out" : "http://foo/bar"
+}, {
+  "in" : "http:path",
+  "out" : "http://host/path"
+}, {
+  "in" : "http:path",
+  "out" : "http://host/a/path"
+}, {
+  "in" : "http:/path",
+  "out" : "http://host/path"
+}, {
+  "in" : "HTTP:/path",
+  "out" : "http://host/path"
+}, {
+  "in" : "https:host2",
+  "out" : "https://host2/"
+}, {
+  "in" : "htto:/host2",
+  "out" : "htto:/host2"
+}, {
+  "in" : "/b/c/d",
+  "out" : "http://host/b/c/d"
+}, {
+  "in" : "\\\\b\\\\c\\\\d",
+  "out" : "http://host/b/c/d"
+}, {
+  "in" : "/b/../c",
+  "out" : "http://host/c"
+}, {
+  "in" : "/b/../c",
+  "out" : "http://host/c"
+}, {
+  "in" : "\\\\b/../c?x#y",
+  "out" : "http://host/c?x#y"
+}, {
+  "in" : "/b/../c?x#y",
+  "out" : "http://host/c?x#y"
+}, {
+  "in" : "b",
+  "out" : "http://host/b"
+}, {
+  "in" : "bc/de",
+  "out" : "http://host/bc/de"
+}, {
+  "in" : "bc/de?query#ref",
+  "out" : "http://host/a/bc/de?query#ref"
+}, {
+  "in" : ".",
+  "out" : "http://host/a/"
+}, {
+  "in" : "..",
+  "out" : "http://host/"
+}, {
+  "in" : "./..",
+  "out" : "http://host/"
+}, {
+  "in" : "../.",
+  "out" : "http://host/"
+}, {
+  "in" : "././.",
+  "out" : "http://host/a/"
+}, {
+  "in" : "../../../foo",
+  "out" : "http://host/foo"
+}, {
+  "in" : "?foo=bar",
+  "out" : "http://host/a?foo=bar"
+}, {
+  "in" : "?",
+  "out" : "http://host/a?"
+}, {
+  "in" : "?foo=bar#com",
+  "out" : "http://host/a?foo=bar#com"
+}, {
+  "in" : "#ref",
+  "out" : "http://host/a#ref"
+}, {
+  "in" : "#",
+  "out" : "http://host/a#"
+}, {
+  "in" : "#bye",
+  "out" : "http://host/a?foo=bar#bye"
+}, {
+  "in" : "baz.html",
+  "out" : ""
+}, {
+  "in" : "data:baz",
+  "out" : "data:baz"
+}, {
+  "in" : "data:/base",
+  "out" : "data:/base"
+}, {
+  "in" : "http:host",
+  "out" : "http://host/"
+}, {
+  "in" : "./asd:fgh",
+  "out" : "http://foo/asd:fgh"
+}, {
+  "in" : ":foo",
+  "out" : "http://foo/:foo"
+}, {
+  "in" : " hello world",
+  "out" : "http://foo/hello%20world"
+}, {
+  "in" : ":foo",
+  "out" : ""
+}, {
+  "in" : ";foo",
+  "out" : "http://host/;foo"
+}, {
+  "in" : ";foo",
+  "out" : "http://host/;foo"
+}, {
+  "in" : ";/../bar",
+  "out" : "http://host/bar"
+}, {
+  "in" : "//another",
+  "out" : "http://another/"
+}, {
+  "in" : "//another/path?query#ref",
+  "out" : "http://another/path?query#ref"
+}, {
+  "in" : "///another/path",
+  "out" : "http://another/path"
+}, {
+  "in" : "//Another\\\\path",
+  "out" : "http://another/path"
+}, {
+  "in" : "//",
+  "out" : "http:"
+}, {
+  "in" : "\\\\/another/path",
+  "out" : "http://another/path"
+}, {
+  "in" : "/\\\\Another\\\\path",
+  "out" : "http://another/path"
+}, {
+  "in" : "http://user:pass@foo:21/bar;par?b#c",
+  "out" : ""
+}, {
+  "in" : "http:foo.com",
+  "out" : ""
+}, {
+  "in" : "\t   :foo.com   \n",
+  "out" : ""
+}, {
+  "in" : " foo.com  ",
+  "out" : ""
+}, {
+  "in" : "a:\t foo.com",
+  "out" : ""
+}, {
+  "in" : "http://f:21/ b ? d # e ",
+  "out" : ""
+}, {
+  "in" : "http://f:/c",
+  "out" : ""
+}, {
+  "in" : "http://f:0/c",
+  "out" : ""
+}, {
+  "in" : "http://f:00000000000000/c",
+  "out" : ""
+}, {
+  "in" : "http://f:00000000000000000000080/c",
+  "out" : ""
+}, {
+  "in" : "http://f:b/c",
+  "out" : ""
+}, {
+  "in" : "http://f: /c",
+  "out" : ""
+}, {
+  "in" : "http://f:\n/c",
+  "out" : ""
+}, {
+  "in" : "http://f:fifty-two/c",
+  "out" : ""
+}, {
+  "in" : "http://f:999999/c",
+  "out" : ""
+}, {
+  "in" : "http://f: 21 / b ? d # e ",
+  "out" : ""
+}, {
+  "in" : "",
+  "out" : ""
+}, {
+  "in" : "  \t",
+  "out" : ""
+}, {
+  "in" : ":foo.com/",
+  "out" : ""
+}, {
+  "in" : ":foo.com\\\\",
+  "out" : ""
+}, {
+  "in" : ":",
+  "out" : ""
+}, {
+  "in" : ":a",
+  "out" : ""
+}, {
+  "in" : ":/",
+  "out" : ""
+}, {
+  "in" : ":\\\\",
+  "out" : ""
+}, {
+  "in" : ":#",
+  "out" : ""
+}, {
+  "in" : "#",
+  "out" : ""
+}, {
+  "in" : "#/",
+  "out" : ""
+}, {
+  "in" : "#\\\\",
+  "out" : ""
+}, {
+  "in" : "#;?",
+  "out" : ""
+}, {
+  "in" : "?",
+  "out" : ""
+}, {
+  "in" : "/",
+  "out" : ""
+}, {
+  "in" : ":23",
+  "out" : ""
+}, {
+  "in" : "/:23",
+  "out" : ""
+}, {
+  "in" : "//",
+  "out" : ""
+}, {
+  "in" : "::",
+  "out" : ""
+}, {
+  "in" : "::23",
+  "out" : ""
+}, {
+  "in" : "foo://",
+  "out" : ""
+}, {
+  "in" : "http://a:b@c:29/d",
+  "out" : ""
+}, {
+  "in" : "http::@c:29",
+  "out" : ""
+}, {
+  "in" : "http://&amp;a:foo(b]c@d:2/",
+  "out" : ""
+}, {
+  "in" : "http://::@c@d:2",
+  "out" : ""
+}, {
+  "in" : "http://foo.com:b@d/",
+  "out" : ""
+}, {
+  "in" : "http://foo.com/\\\\@",
+  "out" : ""
+}, {
+  "in" : "http:\\\\\\\\foo.com\\\\",
+  "out" : ""
+}, {
+  "in" : "http:\\\\\\\\a\\\\b:c\\\\d@foo.com\\\\",
+  "out" : ""
+}, {
+  "in" : "foo:/",
+  "out" : ""
+}, {
+  "in" : "foo:/bar.com/",
+  "out" : ""
+}, {
+  "in" : "foo://///////",
+  "out" : ""
+}, {
+  "in" : "foo://///////bar.com/",
+  "out" : ""
+}, {
+  "in" : "foo:////://///",
+  "out" : ""
+}, {
+  "in" : "c:/foo",
+  "out" : ""
+}, {
+  "in" : "//foo/bar",
+  "out" : ""
+}, {
+  "in" : "http://foo/path;a??e#f#g",
+  "out" : ""
+}, {
+  "in" : "http://foo/abcd?efgh?ijkl",
+  "out" : ""
+}, {
+  "in" : "http://foo/abcd#foo?bar",
+  "out" : ""
+}, {
+  "in" : "[61:24:74]:98",
+  "out" : ""
+}, {
+  "in" : "http://[61:27]:98",
+  "out" : ""
+}, {
+  "in" : "http:[61:27]/:foo",
+  "out" : ""
+}, {
+  "in" : "http://[1::2]:3:4",
+  "out" : ""
+}, {
+  "in" : "http://2001::1",
+  "out" : ""
+}, {
+  "in" : "http://[2001::1",
+  "out" : ""
+}, {
+  "in" : "http://2001::1]",
+  "out" : ""
+}, {
+  "in" : "http://2001::1]:80",
+  "out" : ""
+}, {
+  "in" : "http://[2001::1]",
+  "out" : ""
+}, {
+  "in" : "http://[2001::1]:80",
+  "out" : ""
+}, {
+  "in" : "http://[[::]]",
+  "out" : ""
+}, {
+  "in" : "http://user:pass@foo:21/bar;par?b#c",
+  "out" : ""
+}, {
+  "in" : "http:foo.com",
+  "out" : ""
+}, {
+  "in" : "\t   :foo.com   \n",
+  "out" : ""
+}, {
+  "in" : " foo.com  ",
+  "out" : ""
+}, {
+  "in" : "a:\t foo.com",
+  "out" : ""
+}, {
+  "in" : "http://f:21/ b ? d # e ",
+  "out" : ""
+}, {
+  "in" : "http://f:/c",
+  "out" : ""
+}, {
+  "in" : "http://f:0/c",
+  "out" : ""
+}, {
+  "in" : "http://f:00000000000000/c",
+  "out" : ""
+}, {
+  "in" : "http://f:00000000000000000000080/c",
+  "out" : ""
+}, {
+  "in" : "http://f:b/c",
+  "out" : ""
+}, {
+  "in" : "http://f: /c",
+  "out" : ""
+}, {
+  "in" : "http://f:\n/c",
+  "out" : ""
+}, {
+  "in" : "http://f:fifty-two/c",
+  "out" : ""
+}, {
+  "in" : "http://f:999999/c",
+  "out" : ""
+}, {
+  "in" : "http://f: 21 / b ? d # e ",
+  "out" : ""
+}, {
+  "in" : "",
+  "out" : ""
+}, {
+  "in" : "  \t",
+  "out" : ""
+}, {
+  "in" : ":foo.com/",
+  "out" : ""
+}, {
+  "in" : ":foo.com\\\\",
+  "out" : ""
+}, {
+  "in" : ":",
+  "out" : ""
+}, {
+  "in" : ":a",
+  "out" : ""
+}, {
+  "in" : ":/",
+  "out" : ""
+}, {
+  "in" : ":\\\\",
+  "out" : ""
+}, {
+  "in" : ":#",
+  "out" : ""
+}, {
+  "in" : "#",
+  "out" : ""
+}, {
+  "in" : "#/",
+  "out" : ""
+}, {
+  "in" : "#\\\\",
+  "out" : ""
+}, {
+  "in" : "#;?",
+  "out" : ""
+}, {
+  "in" : "?",
+  "out" : ""
+}, {
+  "in" : "/",
+  "out" : ""
+}, {
+  "in" : ":23",
+  "out" : ""
+}, {
+  "in" : "/:23",
+  "out" : ""
+}, {
+  "in" : "//",
+  "out" : ""
+}, {
+  "in" : "::",
+  "out" : ""
+}, {
+  "in" : "::23",
+  "out" : ""
+}, {
+  "in" : "foo://",
+  "out" : ""
+}, {
+  "in" : "http://a:b@c:29/d",
+  "out" : ""
+}, {
+  "in" : "http::@c:29",
+  "out" : ""
+}, {
+  "in" : "http://&amp;a:foo(b]c@d:2/",
+  "out" : ""
+}, {
+  "in" : "http://::@c@d:2",
+  "out" : ""
+}, {
+  "in" : "http://foo.com:b@d/",
+  "out" : ""
+}, {
+  "in" : "http://foo.com/\\\\@",
+  "out" : ""
+}, {
+  "in" : "http:\\\\\\\\foo.com\\\\",
+  "out" : ""
+}, {
+  "in" : "http:\\\\\\\\a\\\\b:c\\\\d@foo.com\\\\",
+  "out" : ""
+}, {
+  "in" : "foo:/",
+  "out" : ""
+}, {
+  "in" : "foo:/bar.com/",
+  "out" : ""
+}, {
+  "in" : "foo://///////",
+  "out" : ""
+}, {
+  "in" : "foo://///////bar.com/",
+  "out" : ""
+}, {
+  "in" : "foo:////://///",
+  "out" : ""
+}, {
+  "in" : "c:/foo",
+  "out" : ""
+}, {
+  "in" : "//foo/bar",
+  "out" : ""
+}, {
+  "in" : "http://foo/path;a??e#f#g",
+  "out" : ""
+}, {
+  "in" : "http://foo/abcd?efgh?ijkl",
+  "out" : ""
+}, {
+  "in" : "http://foo/abcd#foo?bar",
+  "out" : ""
+}, {
+  "in" : "[61:24:74]:98",
+  "out" : ""
+}, {
+  "in" : "http://[61:27]:98",
+  "out" : ""
+}, {
+  "in" : "http:[61:27]/:foo",
+  "out" : ""
+}, {
+  "in" : "http://[1::2]:3:4",
+  "out" : ""
+}, {
+  "in" : "http://2001::1",
+  "out" : ""
+}, {
+  "in" : "http://[2001::1",
+  "out" : ""
+}, {
+  "in" : "http://2001::1]",
+  "out" : ""
+}, {
+  "in" : "http://2001::1]:80",
+  "out" : ""
+}, {
+  "in" : "http://[2001::1]",
+  "out" : ""
+}, {
+  "in" : "http://[2001::1]:80",
+  "out" : ""
+}, {
+  "in" : "http://[[::]]",
+  "out" : ""
+}, {
+  "in" : "http://[www.google.com]/",
+  "out" : "http://[www.google.com]/"
+}, {
+  "in" : "http:////////user:@google.com:99?foo",
+  "out" : "http://user@google.com:99/?foo"
+}, {
+  "in" : "http://192.0x00A80001",
+  "out" : "http://192.168.0.1/"
+}, {
+  "in" : "http://user:pass@/",
+  "out" : "http://user:pass@/"
+}, {
+  "in" : "http:\\\\\\\\www.google.com\\\\foo",
+  "out" : "http://www.google.com/foo"
+}, {
+  "in" : "http://www.google.com/asdf#\\?",
+  "out" : "http://www.google.com/asdf#\\�"
+}, {
+  "in" : "http://foo:80/",
+  "out" : "http://foo/"
+}, {
+  "in" : "httpa://foo:80/",
+  "out" : "httpa://foo:80/"
+}, {
+  "in" : "http://foo:-80/",
+  "out" : "http://foo:-80/"
+}, {
+  "in" : "https://foo:443/",
+  "out" : "https://foo/"
+}, {
+  "in" : "ftp://foo:21/",
+  "out" : "ftp://foo/"
+}, {
+  "in" : "gopher://foo:70/",
+  "out" : "gopher://foo/"
+}, {
+  "in" : "gopher://foo:443/",
+  "out" : "gopher://foo:443/"
+}, {
+  "in" : "ws://foo:80/",
+  "out" : "ws://foo/"
+}, {
+  "in" : "ws://foo:81/",
+  "out" : "ws://foo:81/"
+}, {
+  "in" : "ws://foo:443/",
+  "out" : "ws://foo:443/"
+}, {
+  "in" : "ws://foo:815/",
+  "out" : "ws://foo:815/"
+}, {
+  "in" : "wss://foo:80/",
+  "out" : "wss://foo:80/"
+}, {
+  "in" : "wss://foo:81/",
+  "out" : "wss://foo:81/"
+}, {
+  "in" : "wss://foo:443/",
+  "out" : "wss://foo/"
+}, {
+  "in" : "wss://foo:815/",
+  "out" : "wss://foo:815/"
+}, {
+  "in" : "",
+  "out" : ""
+}, {
+  "in" : "",
+  "out" : ""
+}, {
+  "in" : "",
+  "out" : ""
+}, {
+  "in" : "",
+  "out" : ""
+}, {
+  "in" : "",
+  "out" : ""
+}, {
+  "in" : "",
+  "out" : ""
+}, {
+  "in" : "",
+  "out" : ""
+}, {
+  "in" : "",
+  "out" : ""
+}, {
+  "in" : "",
+  "out" : ""
+}, {
+  "in" : "",
+  "out" : ""
+}, {
+  "in" : "/",
+  "out" : "http://example.org/"
+}, {
+  "in" : "re&#x301;sume&#x301;/re&#x301;sume&#x301;.html",
+  "out" : "re&#x301;sume&#x301;/re&#x301;sume&#x301;.html"
+}, {
+  "in" : "r&#xE9;sum&#xE9;.html",
+  "out" : "r&#xE9;sum&#xE9;.html"
+}, {
+  "in" : "Vi&#xEA;&#x323;tNam.html",
+  "out" : "Vi&#xEA;&#x323;tNam.html"
+}, {
+  "in" : "ﬁ?ﬁ#ﬁ",
+  "out" : "ﬁ?ﬁ#ﬁ"
+}, {
+  "in" : "?re&#x301;sume&#x301;#re&#x301;sume&#x301;",
+  "out" : "?re&#x301;sume&#x301;#re&#x301;sume&#x301;"
+}, {
+  "in" : "2⁵?2⁵#2⁵",
+  "out" : "2⁵?2⁵#2⁵"
+}, {
+  "in" : "?Vi&#xEA;&#x323;tNam#Vi&#xEA;&#x323;tNam",
+  "out" : "?Vi&#xEA;&#x323;tNam#Vi&#xEA;&#x323;tNam"
+}, {
+  "in" : "foo?q=♥",
+  "out" : "foo?q=♥"
+}, {
+  "in" : "ẛ̣/?ẛ̣#ẛ̣",
+  "out" : "ẛ̣/?ẛ̣#ẛ̣"
+}, {
+  "in" : "Å/?Å#Å",
+  "out" : "ẛ̣/?ẛ̣#ẛ̣"
+}, {
+  "in" : "ẛ̣/?ẛ̣#ẛ̣",
+  "out" : "ẛ̣/?ẛ̣#ẛ̣"
+}, {
+  "in" : "ḍ̇/?ḍ̇#ḍ̇",
+  "out" : "ḍ̇/?ḍ̇#ḍ̇"
+}, {
+  "in" : "http://www.example.com/foo    bar/?   foo   =   bar     #    foo",
+  "out" : "http://www.example.com/foo    bar/?   foo   =   bar     #    foo"
+}, {
+  "in" : "http://www.example.com/ ",
+  "out" : "http://www.example.com/ "
+}, {
+  "in" : "http://%77%77%77%2e%65%78%61%6d%70%6c%65%2e%63%6f%6d%3a%38%30",
+  "out" : "http://www.example.com:80/"
+}, {
+  "in" : "http://%A1%C1.com",
+  "out" : "http://¡À.com"
+}, {
+  "in" : "http://www.example.com/%A1%C1/?foo=%EF%BD%81",
+  "out" : "http://www.example.com/%A1%C1/?foo=%EF%BD%81"
+}, {
+  "in" : "http://www.example.com/%EF%BD%81/?foo=%A1%C1",
+  "out" : "http://www.example.com/%EF%BD%81/?foo=%A1%C1"
+}, {
+  "in" : "http://www.example.com/ＦＯＯ/?foo=%A1%C1",
+  "out" : "http://www.example.com/ＦＯＯ/?foo=%A1%C1"
+}, {
+  "in" : "http://www.example.com/%A1%C1/?foo=ＦＯＯ",
+  "out" : "http://www.example.com/%A1%C1/?foo=ＦＯＯ"
+}, {
+  "in" : "http://www.example.com/ＦＯＯ/?foo=%A1%C1",
+  "out" : "http://www.example.com/ＦＯＯ/?foo=%A1%C1"
+}, {
+  "in" : "http://www.example.com/D%FCrst",
+  "out" : "http://www.example.com/D%FCrst"
+}, {
+  "in" : "http://www.example.com/?D%FCrst",
+  "out" : "http://www.example.com/?D%FCrst"
+}, {
+  "in" : "http://user%3Ainfo%40/",
+  "out" : "http://user:info@/"
+}, {
+  "in" : "http://user@/",
+  "out" : "http://user@/"
+}, {
+  "in" : "$:foo/bar",
+  "out" : "$:"
+}, {
+  "in" : "mailto::foo@bar.com",
+  "out" : "mailto::foo@bar.com"
+}, {
+  "in" : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPnZDfS1NhGMfff8oLEUE0FBfqmrigi/DKrvKqiNDEKYjCUJdH3I/Q5WoLdYmlU1FP0LQoEclYOCcoMbJuDAUVA/v0vK8/QssL98AH3u97zud7Ho4ajr8i2P8sJ2JDcVSwf5BcR7sqEHpqQpF/60ro0e5Zwb1FiPyAoW14tAIVE5fjGDPKaUHYhOQhTO1DYu+Y/4mn/C0Io3oDAyasCYtHsPALRmUL5+R56j9AdwbsA4jJpnq0q6y+JyboO11ibUBt8jxpuV8VPgn6I5M7cpDRrhSETKiXf3BXuPP+X8Zlo3V5JyUs/4aZXaNIQQj12AqY0CBPL9KW+kIwbWF/b2MqW8d09iZzW27mf0aNo13lOynwpPZpTHpotstpfVOK9105oeUKnqeqiK06iWduMLbhIvG1Gvub2zjaVV09fhPqRgq5nyimYaaEptlrtCfL6Fu6TvhzJREpeZF28nLdxevNamazNcbRrvJ2WiY4/Hm4w/ncihRwO1pwVqjLWuxS2t+W0SVbWR8dDK5UGke7qsPrMyGX0a7y9fSaQy48eNjIH2VPyHZqSIx2AAAAAElFTkSuQmCC",
+  "out" : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPnZDfS1NhGMfff8oLEUE0FBfqmrigi/DKrvKqiNDEKYjCUJdH3I/Q5WoLdYmlU1FP0LQoEclYOCcoMbJuDAUVA/v0vK8/QssL98AH3u97zud7Ho4ajr8i2P8sJ2JDcVSwf5BcR7sqEHpqQpF/60ro0e5Zwb1FiPyAoW14tAIVE5fjGDPKaUHYhOQhTO1DYu+Y/4mn/C0Io3oDAyasCYtHsPALRmUL5+R56j9AdwbsA4jJpnq0q6y+JyboO11ibUBt8jxpuV8VPgn6I5M7cpDRrhSETKiXf3BXuPP+X8Zlo3V5JyUs/4aZXaNIQQj12AqY0CBPL9KW+kIwbWF/b2MqW8d09iZzW27mf0aNo13lOynwpPZpTHpotstpfVOK9105oeUKnqeqiK06iWduMLbhIvG1Gvub2zjaVV09fhPqRgq5nyimYaaEptlrtCfL6Fu6TvhzJREpeZF28nLdxevNamazNcbRrvJ2WiY4/Hm4w/ncihRwO1pwVqjLWuxS2t+W0SVbWR8dDK5UGke7qsPrMyGX0a7y9fSaQy48eNjIH2VPyHZqSIx2AAAAAElFTkSuQmCC"
+}, {
+  "in" : "data::image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPnZDfS1NhGMfff8oLEUE0FBfqmrigi/DKrvKqiNDEKYjCUJdH3I/Q5WoLdYmlU1FP0LQoEclYOCcoMbJuDAUVA/v0vK8/QssL98AH3u97zud7Ho4ajr8i2P8sJ2JDcVSwf5BcR7sqEHpqQpF/60ro0e5Zwb1FiPyAoW14tAIVE5fjGDPKaUHYhOQhTO1DYu+Y/4mn/C0Io3oDAyasCYtHsPALRmUL5+R56j9AdwbsA4jJpnq0q6y+JyboO11ibUBt8jxpuV8VPgn6I5M7cpDRrhSETKiXf3BXuPP+X8Zlo3V5JyUs/4aZXaNIQQj12AqY0CBPL9KW+kIwbWF/b2MqW8d09iZzW27mf0aNo13lOynwpPZpTHpotstpfVOK9105oeUKnqeqiK06iWduMLbhIvG1Gvub2zjaVV09fhPqRgq5nyimYaaEptlrtCfL6Fu6TvhzJREpeZF28nLdxevNamazNcbRrvJ2WiY4/Hm4w/ncihRwO1pwVqjLWuxS2t+W0SVbWR8dDK5UGke7qsPrMyGX0a7y9fSaQy48eNjIH2VPyHZqSIx2AAAAAElFTkSuQmCC",
+  "out" : "data::image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPnZDfS1NhGMfff8oLEUE0FBfqmrigi/DKrvKqiNDEKYjCUJdH3I/Q5WoLdYmlU1FP0LQoEclYOCcoMbJuDAUVA/v0vK8/QssL98AH3u97zud7Ho4ajr8i2P8sJ2JDcVSwf5BcR7sqEHpqQpF/60ro0e5Zwb1FiPyAoW14tAIVE5fjGDPKaUHYhOQhTO1DYu+Y/4mn/C0Io3oDAyasCYtHsPALRmUL5+R56j9AdwbsA4jJpnq0q6y+JyboO11ibUBt8jxpuV8VPgn6I5M7cpDRrhSETKiXf3BXuPP+X8Zlo3V5JyUs/4aZXaNIQQj12AqY0CBPL9KW+kIwbWF/b2MqW8d09iZzW27mf0aNo13lOynwpPZpTHpotstpfVOK9105oeUKnqeqiK06iWduMLbhIvG1Gvub2zjaVV09fhPqRgq5nyimYaaEptlrtCfL6Fu6TvhzJREpeZF28nLdxevNamazNcbRrvJ2WiY4/Hm4w/ncihRwO1pwVqjLWuxS2t+W0SVbWR8dDK5UGke7qsPrMyGX0a7y9fSaQy48eNjIH2VPyHZqSIx2AAAAAElFTkSuQmCC"
+}, {
+  "in" : "data:::image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPnZDfS1NhGMfff8oLEUE0FBfqmrigi/DKrvKqiNDEKYjCUJdH3I/Q5WoLdYmlU1FP0LQoEclYOCcoMbJuDAUVA/v0vK8/QssL98AH3u97zud7Ho4ajr8i2P8sJ2JDcVSwf5BcR7sqEHpqQpF/60ro0e5Zwb1FiPyAoW14tAIVE5fjGDPKaUHYhOQhTO1DYu+Y/4mn/C0Io3oDAyasCYtHsPALRmUL5+R56j9AdwbsA4jJpnq0q6y+JyboO11ibUBt8jxpuV8VPgn6I5M7cpDRrhSETKiXf3BXuPP+X8Zlo3V5JyUs/4aZXaNIQQj12AqY0CBPL9KW+kIwbWF/b2MqW8d09iZzW27mf0aNo13lOynwpPZpTHpotstpfVOK9105oeUKnqeqiK06iWduMLbhIvG1Gvub2zjaVV09fhPqRgq5nyimYaaEptlrtCfL6Fu6TvhzJREpeZF28nLdxevNamazNcbRrvJ2WiY4/Hm4w/ncihRwO1pwVqjLWuxS2t+W0SVbWR8dDK5UGke7qsPrMyGX0a7y9fSaQy48eNjIH2VPyHZqSIx2AAAAAElFTkSuQmCC",
+  "out" : "data:::image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPnZDfS1NhGMfff8oLEUE0FBfqmrigi/DKrvKqiNDEKYjCUJdH3I/Q5WoLdYmlU1FP0LQoEclYOCcoMbJuDAUVA/v0vK8/QssL98AH3u97zud7Ho4ajr8i2P8sJ2JDcVSwf5BcR7sqEHpqQpF/60ro0e5Zwb1FiPyAoW14tAIVE5fjGDPKaUHYhOQhTO1DYu+Y/4mn/C0Io3oDAyasCYtHsPALRmUL5+R56j9AdwbsA4jJpnq0q6y+JyboO11ibUBt8jxpuV8VPgn6I5M7cpDRrhSETKiXf3BXuPP+X8Zlo3V5JyUs/4aZXaNIQQj12AqY0CBPL9KW+kIwbWF/b2MqW8d09iZzW27mf0aNo13lOynwpPZpTHpotstpfVOK9105oeUKnqeqiK06iWduMLbhIvG1Gvub2zjaVV09fhPqRgq5nyimYaaEptlrtCfL6Fu6TvhzJREpeZF28nLdxevNamazNcbRrvJ2WiY4/Hm4w/ncihRwO1pwVqjLWuxS2t+W0SVbWR8dDK5UGke7qsPrMyGX0a7y9fSaQy48eNjIH2VPyHZqSIx2AAAAAElFTkSuQmCC"
+}, {
+  "in" : "http://googoo.com/",
+  "out" : "http://GOO​⁠﻿goo.com/"
+},{
+  "in" : "http://urltest.lookout.net",
+  "out" : "http://urltest.lookout.net/"
+}, {
+  "in" : "http://uRLTest.lookout.net/",
+  "out" : "http://urltest.lookout.net/"
+}, {
+  "in" : "http://Goo%20 goo%7C|.urltest.lookout.net/",
+  "out" : "http://goo%20%20goo%7C%7C.urltest.lookout.net/"
+}, {
+  "in" : "http://GOO 　goo.urltest.lookout.net/",
+  "out" : "http://goo%20%20goo.urltest.lookout.net/"
+}, {
+  "in" : "http://﷐zyx.urltest.lookout.net/",
+  "out" : "http://%EF%BF%BDzyx.urltest.lookout.net/"
+}, {
+  "in" : "http://%ef%b7%90zyx.urltest.lookout.net/",
+  "out" : "http://%EF%BF%BDzyx.urltest.lookout.net/"
+}, {
+  "in" : "http://％４１.urltest.lookout.net/",
+  "out" : "http://a.urltest.lookout.net/"
+}, {
+  "in" : "http://%ef%bc%85%ef%bc%94%ef%bc%91.urltest.lookout.net/",
+  "out" : "http://a.urltest.lookout.net/"
+}, {
+  "in" : "http://％００.urltest.lookout.net/",
+  "out" : "http://%00.urltest.lookout.net/"
+}, {
+  "in" : "http://%ef%bc%85%ef%bc%90%ef%bc%90.urltest.lookout.net/",
+  "out" : "http://%00.urltest.lookout.net/"
+}, {
+  "in" : "http://%E4%BD%A0%E5%A5%BD你好.urltest.lookout.net/",
+  "out" : "http://xn--6qqa088eba.urltest.lookout.net/"
+}, {
+  "in" : "http://%zz%66%a.urltest.lookout.net/",
+  "out" : "http://%25zzf%25a.urltest.lookout.net/"
+}, {
+  "in" : "http://%25.urltest.lookout.net/",
+  "out" : "http://%25.urltest.lookout.net/"
+}, {
+  "in" : "http://hello%00.urltest.lookout.net/",
+  "out" : "http://hello%00.urltest.lookout.net/"
+}, {
+  "in" : "http://%30%78%63%30%2e%30%32%35%30.01.urltest.lookout.net/",
+  "out" : "http://192.168.0.1.urltest.lookout.net/"
+}, {
+  "in" : "http://%30%78%63%30%2e%30%32%35%30.01%2e.urltest.lookout.net/",
+  "out" : "http://192.168.0.1.urltest.lookout.net/"
+}, {
+  "in" : "http://%3g%78%63%30%2e%30%32%35%30%2E.01.urltest.lookout.net/",
+  "out" : "http://%253gxc0.0250..01.urltest.lookout.net/"
+}, {
+  "in" : "http://192.168.0.1 hello.urltest.lookout.net/",
+  "out" : "http://192.168.0.1%20hello.urltest.lookout.net/"
+}, {
+  "in" : "http://０Ｘｃ０．０２５０．０１.urltest.lookout.net/",
+  "out" : "http://192.168.0.1.urltest.lookout.net/"
+}, {
+  "in" : "http://[google.com.].urltest.lookout.net/",
+  "out" : "http://[google.com].urltest.lookout.net/"
+}, {
+  "in" : "http://т(.urltest.lookout.net",
+  "out" : "http://xn--%28-7ed.urltest.lookout.net/"
+}, {
+  "in" : "http://urltest.lookout.net::==80::==443::/",
+  "out" : "http://urltest.lookout.net/"
+}, {
+  "in" : "http://urltest.lookout.net::80::443/",
+  "out" : "http://urltest.lookout.net/"
+}, {
+  "in" : "http://www.lookout.net：80.urltest.lookout.net/",
+  "out" : "http://www.lookout.net.urltest.lookout.net:80/"
+}, {
+  "in" : "http://www‥urltest.lookout.net/",
+  "out" : "http://www..urltest.lookout.net/"
+}, {
+  "in" : "http://urltest.lookout.net⩴80/",
+  "out" : "http://urltest.lookout.net::%3D80/"
+}, {
+  "in" : "http://www .urltest.lookout.net/",
+  "out" : "http://www%20.urltest.lookout.net/"
+}, {
+  "in" : "http:// .urltest.lookout.net/",
+  "out" : "http://%E1%9A%80.urltest.lookout.net/"
+}, {
+  "in" : "http://\u001F.urltest.lookout.net/",
+  "out" : "http://%1F.urltest.lookout.net/"
+}, {
+  "in" : "http://۝.urltest.lookout.net/",
+  "out" : "http://%DB%9D.urltest.lookout.net/"
+}, {
+  "in" : "http://᠎.urltest.lookout.net/",
+  "out" : "http://%E1%A0%8E.urltest.lookout.net/"
+}, {
+  "in" : "http://look⁠.urltest.lookout.net/",
+  "out" : "http://look%E2%81%A0.urltest.lookout.net/"
+}, {
+  "in" : "http://look﻿out.urltest.lookout.net/",
+  "out" : "http://look%EF%BB%BFout.urltest.lookout.net/"
+}, {
+  "in" : "http://look🿾out.urltest.lookout.net/",
+  "out" : "http://look%F0%9F%BF%BEout.urltest.lookout.net/"
+}, {
+  "in" : "http://look?out.urltest.lookout.net/",
+  "out" : "http://look%ED%BA%ADout.urltest.lookout.net/"
+}, {
+  "in" : "http://look￺out.urltest.lookout.net/",
+  "out" : "http://look%EF%BF%BAout.urltest.lookout.net/"
+}, {
+  "in" : "http://look⿰out.urltest.lookout.net/",
+  "out" : "http://look%E2%BF%B0out.urltest.lookout.net/"
+}, {
+  "in" : "http://looḱout.urltest.lookout.net/",
+  "out" : "http://look%CD%81out.urltest.lookout.net/"
+}, {
+  "in" : "http://look‮out.urltest.lookout.net/",
+  "out" : "http://look%E2%80%AEout.urltest.lookout.net/"
+}, {
+  "in" : "http://look⁫out.urltest.lookout.net/",
+  "out" : "http://look%E2%81%ABout.urltest.lookout.net/"
+}, {
+  "in" : "http://look󠀁out.urltest.lookout.net/",
+  "out" : "http://look%F3%A0%80%81out.urltest.lookout.net/"
+}, {
+  "in" : "http://look󠀠out.urltest.lookout.net/",
+  "out" : "http://look%F3%A0%80%A0out.urltest.lookout.net/"
+}, {
+  "in" : "http://look־out.urltest.lookout.net/",
+  "out" : "http://look%D6%BEout.urltest.lookout.net/"
+}, {
+  "in" : "http://faß.de.urltest.lookout.net/",
+  "out" : "http://xn--fa-hia.de.urltest.lookout.net/"
+}, {
+  "in" : "http://βόλος.com.urltest.lookout.net/",
+  "out" : "http://xn--nxasmm1c.com.urltest.lookout.net/"
+}, {
+  "in" : "http://ශ්‍රී.com.urltest.lookout.net/",
+  "out" : "http://xn--10cl1a0b660p.com.urltest.lookout.net/"
+}, {
+  "in" : "http://نامه‌ای.urltest.lookout.net/",
+  "out" : "http://xn--mgba3gch31f060k.urltest.lookout.net/"
+}, {
+  "in" : "http://♥.urltest.lookout.net/",
+  "out" : "http://�.urltest.lookout.net/"
+}, {
+  "in" : "http://͸.urltest.lookout.net/",
+  "out" : "http://�.urltest.lookout.net/"
+}, {
+  "in" : "http://Ӏ.urltest.lookout.net/",
+  "out" : "http://�.urltest.lookout.net/"
+}, {
+  "in" : "http://㛼.urltest.lookout.net/",
+  "out" : "http://�.urltest.lookout.net/"
+}, {
+  "in" : "http://Ↄ.urltest.lookout.net/",
+  "out" : "http://�.urltest.lookout.net/"
+}, {
+  "in" : "http://gOoGle.urltest.lookout.net/",
+  "out" : "http://google.urltest.lookout.net/"
+}, {
+  "in" : "http://ড়.urltest.lookout.net/",
+  "out" : "http://ড়.urltest.lookout.net/"
+}, {
+  "in" : "http://ẞ.urltest.lookout.net/",
+  "out" : "http://ss.urltest.lookout.net/"
+}, {
+  "in" : "http://ẞ.urltest.lookout.net/",
+  "out" : "http://ss.urltest.lookout.net/"
+}, {
+  "in" : "http://-foo.urltest.lookout.net",
+  "out" : "http://"
+}, {
+  "in" : "http://foo-.urltest.lookout.net",
+  "out" : "http://"
+}, {
+  "in" : "http://ab--cd.urltest.lookout.net",
+  "out" : "http://"
+}, {
+  "in" : "http://xn--0.urltest.lookout.net",
+  "out" : "http://"
+}, {
+  "in" : "http://foò.urltest.lookout.net/",
+  "out" : "http://foo%CC%80.bar.com/"
+}, {
+  "in" : "http://urltest.lookout.net/././foo",
+  "out" : "http://urltest.lookout.net/foo"
+}, {
+  "in" : "http://urltest.lookout.net/./.foo",
+  "out" : "http://urltest.lookout.net/.foo"
+}, {
+  "in" : "http://urltest.lookout.net/foo/.",
+  "out" : "http://urltest.lookout.net/foo/"
+}, {
+  "in" : "http://urltest.lookout.net/foo/./",
+  "out" : "http://urltest.lookout.net/foo/"
+}, {
+  "in" : "http://urltest.lookout.net/foo/bar/..",
+  "out" : "http://urltest.lookout.net/foo/"
+}, {
+  "in" : "http://urltest.lookout.net/foo/bar/../",
+  "out" : "http://urltest.lookout.net/foo/"
+}, {
+  "in" : "http://urltest.lookout.net/foo/bar/../ton",
+  "out" : "http://urltest.lookout.net/foo/ton"
+}, {
+  "in" : "http://urltest.lookout.net/foo/bar/../ton/../../a",
+  "out" : "http://urltest.lookout.net/a"
+}, {
+  "in" : "http://urltest.lookout.net/foo/../../..",
+  "out" : "http://urltest.lookout.net/"
+}, {
+  "in" : "http://urltest.lookout.net/foo/../../../ton",
+  "out" : "http://urltest.lookout.net/ton"
+}, {
+  "in" : "http://urltest.lookout.net/foo/%2e",
+  "out" : "http://urltest.lookout.net/foo/"
+}, {
+  "in" : "http://urltest.lookout.net/foo/%2e%2",
+  "out" : "http://urltest.lookout.net/foo/.%2"
+}, {
+  "in" : "http://urltest.lookout.net/foo/%2e./%2e%2e/.%2e/%2e.bar",
+  "out" : "http://urltest.lookout.net/..bar"
+}, {
+  "in" : "http://urltest.lookout.net////../..",
+  "out" : "http://urltest.lookout.net//"
+}, {
+  "in" : "http://urltest.lookout.net/foo/bar//../..",
+  "out" : "http://urltest.lookout.net/foo/"
+}, {
+  "in" : "http://urltest.lookout.net/foo/bar//..",
+  "out" : "http://urltest.lookout.net/foo/bar/"
+}, {
+  "in" : "http://urltest.lookout.net/foo/bar/..",
+  "out" : "http://urltest.lookout.net/foo/"
+}, {
+  "in" : "http://urltest.lookout.net/%20foo",
+  "out" : "http://urltest.lookout.net/%20foo"
+}, {
+  "in" : "http://urltest.lookout.net/foo%",
+  "out" : "http://urltest.lookout.net/foo%"
+}, {
+  "in" : "http://urltest.lookout.net/foo%2",
+  "out" : "http://urltest.lookout.net/foo%2"
+}, {
+  "in" : "http://urltest.lookout.net/foo%2zbar",
+  "out" : "http://urltest.lookout.net/foo%2zbar"
+}, {
+  "in" : "http://urltest.lookout.net/foo%2Â©zbar",
+  "out" : "http://urltest.lookout.net/foo%2%C3%82%C2%A9zbar"
+}, {
+  "in" : "http://urltest.lookout.net/foo%41%7a",
+  "out" : "http://urltest.lookout.net/fooAz"
+}, {
+  "in" : "http://urltest.lookout.net/foo\t%91",
+  "out" : "http://urltest.lookout.net/foo%09%C2%91%91"
+}, {
+  "in" : "http://urltest.lookout.net/foo%00%51",
+  "out" : "http://urltest.lookout.net/foo%00Q"
+}, {
+  "in" : "http://urltest.lookout.net/(%28:%3A%29)",
+  "out" : "http://urltest.lookout.net/(%28:%3A%29)"
+}, {
+  "in" : "http://urltest.lookout.net/%3A%3a%3C%3c",
+  "out" : "http://urltest.lookout.net/%3A%3a%3C%3c"
+}, {
+  "in" : "http://urltest.lookout.net/foo\\tbar",
+  "out" : "http://urltest.lookout.net/foo%09bar"
+}, {
+  "in" : "http://urltest.lookout.net\\\\foo\\\\bar",
+  "out" : "http://urltest.lookout.net/foo/bar"
+}, {
+  "in" : "http://urltest.lookout.net/%7Ffp3%3Eju%3Dduvgw%3Dd",
+  "out" : "http://urltest.lookout.net/%7Ffp3%3Eju%3Dduvgw%3Dd"
+}, {
+  "in" : "http://urltest.lookout.net/@asdf%40",
+  "out" : "http://urltest.lookout.net/@asdf%40"
+}, {
+  "in" : "http://urltest.lookout.net/﷐zyx",
+  "out" : "http://urltest.lookout.net/%EF%BF%BDzyx"
+}, {
+  "in" : "http://urltest.lookout.net/?/foo",
+  "out" : "http://urltest.lookout.net/�/foo"
+}, {
+  "in" : "http://urltest.lookout.net/?%02hello%7f bye",
+  "out" : "http://urltest.lookout.net/?%02hello%7F%20bye"
+}, {
+  "in" : "http://urltest.lookout.net/?%40%41123",
+  "out" : "http://urltest.lookout.net/?%40%41123"
+}, {
+  "in" : "http://urltest.lookout.net/?q=你好",
+  "out" : "http://urltest.lookout.net/?q=%26%2320320%3B%26%2322909%3B"
+}, {
+  "in" : "http://urltest.lookout.net/?q=\\?\\?",
+  "out" : "http://urltest.lookout.net/?q=%26%2355296%3B%26%2355296%3B"
+}, {
+  "in" : "http://urltest.lookout.net/?q=&lt;asdf&gt;",
+  "out" : "http://urltest.lookout.net/?q=%3Casdf%3E"
+}, {
+  "in" : "http://[urltest.lookout.net]/",
+  "out" : "http://[urltest.lookout.net]/"
+}, {
+  "in" : "http:////////user:@urltest.lookout.net?foo",
+  "out" : "http://user@urltest.lookout.net/?foo"
+}, {
+  "in" : "http://urltest.lookout.net/foo%2Ehtml",
+  "out" : "http://urltest.lookout.net/foo.html"
+}, {
+  "in" : "http://%25DOMAIN:foobar@urltest.lookout.net/",
+  "out" : "http://%25DOMAIN:foobar@urltest.lookout.net/"
+}, {
+  "in" : "http:\\\\\\\\urltest.lookout.net\\\\foo",
+  "out" : "http://urltest.lookout.net/foo"
+}, {
+  "in" : "http://urltest.lookout.net/asdf#\\?",
+  "out" : "http://urltest.lookout.net/asdf#\\�"
+}, {
+  "in" : "http://urltest.lookout.net:80/",
+  "out" : "http://urltest.lookout.net/"
+}, {
+  "in" : "http://urltest.lookout.net",
+  "out" : "http://urltest.lookout.net/"
+}, {
+  "in" : "http://uRLTest.lookout.net/",
+  "out" : "http://urltest.lookout.net/"
+}, {
+  "in" : "http://Goo%20 goo%7C|.urltest.lookout.net/",
+  "out" : "http://goo%20%20goo%7C%7C.urltest.lookout.net/"
+}, {
+  "in" : "http://GOO 　goo.urltest.lookout.net/",
+  "out" : "http://goo%20%20goo.urltest.lookout.net/"
+}, {
+  "in" : "http://﷐zyx.urltest.lookout.net/",
+  "out" : "http://%EF%BF%BDzyx.urltest.lookout.net/"
+}, {
+  "in" : "http://%ef%b7%90zyx.urltest.lookout.net/",
+  "out" : "http://%EF%BF%BDzyx.urltest.lookout.net/"
+}, {
+  "in" : "http://％４１.urltest.lookout.net/",
+  "out" : "http://a.urltest.lookout.net/"
+}, {
+  "in" : "http://%ef%bc%85%ef%bc%94%ef%bc%91.urltest.lookout.net/",
+  "out" : "http://a.urltest.lookout.net/"
+}, {
+  "in" : "http://％００.urltest.lookout.net/",
+  "out" : "http://%00.urltest.lookout.net/"
+}, {
+  "in" : "http://%ef%bc%85%ef%bc%90%ef%bc%90.urltest.lookout.net/",
+  "out" : "http://%00.urltest.lookout.net/"
+}, {
+  "in" : "http://%E4%BD%A0%E5%A5%BD你好.urltest.lookout.net/",
+  "out" : "http://xn--6qqa088eba.urltest.lookout.net/"
+}, {
+  "in" : "http://%zz%66%a.urltest.lookout.net/",
+  "out" : "http://%25zzf%25a.urltest.lookout.net/"
+}, {
+  "in" : "http://%25.urltest.lookout.net/",
+  "out" : "http://%25.urltest.lookout.net/"
+}, {
+  "in" : "http://hello%00.urltest.lookout.net/",
+  "out" : "http://hello%00.urltest.lookout.net/"
+}, {
+  "in" : "http://%30%78%63%30%2e%30%32%35%30.01.urltest.lookout.net/",
+  "out" : "http://192.168.0.1.urltest.lookout.net/"
+}, {
+  "in" : "http://%30%78%63%30%2e%30%32%35%30.01%2e.urltest.lookout.net/",
+  "out" : "http://192.168.0.1.urltest.lookout.net/"
+}, {
+  "in" : "http://%3g%78%63%30%2e%30%32%35%30%2E.01.urltest.lookout.net/",
+  "out" : "http://%253gxc0.0250..01.urltest.lookout.net/"
+}, {
+  "in" : "http://192.168.0.1 hello.urltest.lookout.net/",
+  "out" : "http://192.168.0.1%20hello.urltest.lookout.net/"
+}, {
+  "in" : "http://０Ｘｃ０．０２５０．０１.urltest.lookout.net/",
+  "out" : "http://192.168.0.1.urltest.lookout.net/"
+}, {
+  "in" : "http://[google.com.].urltest.lookout.net/",
+  "out" : "http://[google.com].urltest.lookout.net/"
+}, {
+  "in" : "http://т(.urltest.lookout.net",
+  "out" : "http://xn--%28-7ed.urltest.lookout.net/"
+}, {
+  "in" : "http://urltest.lookout.net::==80::==443::/",
+  "out" : "http://urltest.lookout.net/"
+}, {
+  "in" : "http://urltest.lookout.net::80::443/",
+  "out" : "http://urltest.lookout.net/"
+}, {
+  "in" : "http://www.lookout.net：80.urltest.lookout.net/",
+  "out" : "http://www.lookout.net.urltest.lookout.net:80/"
+}, {
+  "in" : "http://www‥urltest.lookout.net/",
+  "out" : "http://www..urltest.lookout.net/"
+}, {
+  "in" : "http://urltest.lookout.net⩴80/",
+  "out" : "http://urltest.lookout.net::%3D80/"
+}, {
+  "in" : "http://www .urltest.lookout.net/",
+  "out" : "http://www%20.urltest.lookout.net/"
+}, {
+  "in" : "http:// .urltest.lookout.net/",
+  "out" : "http://%E1%9A%80.urltest.lookout.net/"
+}, {
+  "in" : "http://\u001F.urltest.lookout.net/",
+  "out" : "http://%1F.urltest.lookout.net/"
+}, {
+  "in" : "http://۝.urltest.lookout.net/",
+  "out" : "http://%DB%9D.urltest.lookout.net/"
+}, {
+  "in" : "http://᠎.urltest.lookout.net/",
+  "out" : "http://%E1%A0%8E.urltest.lookout.net/"
+}, {
+  "in" : "http://look⁠.urltest.lookout.net/",
+  "out" : "http://look%E2%81%A0.urltest.lookout.net/"
+}, {
+  "in" : "http://look﻿out.urltest.lookout.net/",
+  "out" : "http://look%EF%BB%BFout.urltest.lookout.net/"
+}, {
+  "in" : "http://look🿾out.urltest.lookout.net/",
+  "out" : "http://look%F0%9F%BF%BEout.urltest.lookout.net/"
+}, {
+  "in" : "http://look?out.urltest.lookout.net/",
+  "out" : "http://look%ED%BA%ADout.urltest.lookout.net/"
+}, {
+  "in" : "http://look￺out.urltest.lookout.net/",
+  "out" : "http://look%EF%BF%BAout.urltest.lookout.net/"
+}, {
+  "in" : "http://look⿰out.urltest.lookout.net/",
+  "out" : "http://look%E2%BF%B0out.urltest.lookout.net/"
+}, {
+  "in" : "http://looḱout.urltest.lookout.net/",
+  "out" : "http://look%CD%81out.urltest.lookout.net/"
+}, {
+  "in" : "http://look‮out.urltest.lookout.net/",
+  "out" : "http://look%E2%80%AEout.urltest.lookout.net/"
+}, {
+  "in" : "http://look⁫out.urltest.lookout.net/",
+  "out" : "http://look%E2%81%ABout.urltest.lookout.net/"
+}, {
+  "in" : "http://look󠀁out.urltest.lookout.net/",
+  "out" : "http://look%F3%A0%80%81out.urltest.lookout.net/"
+}, {
+  "in" : "http://look󠀠out.urltest.lookout.net/",
+  "out" : "http://look%F3%A0%80%A0out.urltest.lookout.net/"
+}, {
+  "in" : "http://look־out.urltest.lookout.net/",
+  "out" : "http://look%D6%BEout.urltest.lookout.net/"
+}, {
+  "in" : "http://faß.de.urltest.lookout.net/",
+  "out" : "http://xn--fa-hia.de.urltest.lookout.net/"
+}, {
+  "in" : "http://βόλος.com.urltest.lookout.net/",
+  "out" : "http://xn--nxasmm1c.com.urltest.lookout.net/"
+}, {
+  "in" : "http://ශ්‍රී.com.urltest.lookout.net/",
+  "out" : "http://xn--10cl1a0b660p.com.urltest.lookout.net/"
+}, {
+  "in" : "http://نامه‌ای.urltest.lookout.net/",
+  "out" : "http://xn--mgba3gch31f060k.urltest.lookout.net/"
+}, {
+  "in" : "http://♥.urltest.lookout.net/",
+  "out" : "http://�.urltest.lookout.net/"
+}, {
+  "in" : "http://͸.urltest.lookout.net/",
+  "out" : "http://�.urltest.lookout.net/"
+}, {
+  "in" : "http://Ӏ.urltest.lookout.net/",
+  "out" : "http://�.urltest.lookout.net/"
+}, {
+  "in" : "http://㛼.urltest.lookout.net/",
+  "out" : "http://�.urltest.lookout.net/"
+}, {
+  "in" : "http://Ↄ.urltest.lookout.net/",
+  "out" : "http://�.urltest.lookout.net/"
+}, {
+  "in" : "http://gOoGle.urltest.lookout.net/",
+  "out" : "http://google.urltest.lookout.net/"
+}, {
+  "in" : "http://ড়.urltest.lookout.net/",
+  "out" : "http://ড়.urltest.lookout.net/"
+}, {
+  "in" : "http://ẞ.urltest.lookout.net/",
+  "out" : "http://ss.urltest.lookout.net/"
+}, {
+  "in" : "http://ẞ.urltest.lookout.net/",
+  "out" : "http://ss.urltest.lookout.net/"
+}, {
+  "in" : "http://-foo.urltest.lookout.net",
+  "out" : "http://"
+}, {
+  "in" : "http://foo-.urltest.lookout.net",
+  "out" : "http://"
+}, {
+  "in" : "http://ab--cd.urltest.lookout.net",
+  "out" : "http://"
+}, {
+  "in" : "http://xn--0.urltest.lookout.net",
+  "out" : "http://"
+}, {
+  "in" : "http://foò.urltest.lookout.net/",
+  "out" : "http://foo%CC%80.bar.com/"
+}, {
+  "in" : "http://urltest.lookout.net/././foo",
+  "out" : "http://urltest.lookout.net/foo"
+}, {
+  "in" : "http://urltest.lookout.net/./.foo",
+  "out" : "http://urltest.lookout.net/.foo"
+}, {
+  "in" : "http://urltest.lookout.net/foo/.",
+  "out" : "http://urltest.lookout.net/foo/"
+}, {
+  "in" : "http://urltest.lookout.net/foo/./",
+  "out" : "http://urltest.lookout.net/foo/"
+}, {
+  "in" : "http://urltest.lookout.net/foo/bar/..",
+  "out" : "http://urltest.lookout.net/foo/"
+}, {
+  "in" : "http://urltest.lookout.net/foo/bar/../",
+  "out" : "http://urltest.lookout.net/foo/"
+}, {
+  "in" : "http://urltest.lookout.net/foo/bar/../ton",
+  "out" : "http://urltest.lookout.net/foo/ton"
+}, {
+  "in" : "http://urltest.lookout.net/foo/bar/../ton/../../a",
+  "out" : "http://urltest.lookout.net/a"
+}, {
+  "in" : "http://urltest.lookout.net/foo/../../..",
+  "out" : "http://urltest.lookout.net/"
+}, {
+  "in" : "http://urltest.lookout.net/foo/../../../ton",
+  "out" : "http://urltest.lookout.net/ton"
+}, {
+  "in" : "http://urltest.lookout.net/foo/%2e",
+  "out" : "http://urltest.lookout.net/foo/"
+}, {
+  "in" : "http://urltest.lookout.net/foo/%2e%2",
+  "out" : "http://urltest.lookout.net/foo/.%2"
+}, {
+  "in" : "http://urltest.lookout.net/foo/%2e./%2e%2e/.%2e/%2e.bar",
+  "out" : "http://urltest.lookout.net/..bar"
+}, {
+  "in" : "http://urltest.lookout.net////../..",
+  "out" : "http://urltest.lookout.net//"
+}, {
+  "in" : "http://urltest.lookout.net/foo/bar//../..",
+  "out" : "http://urltest.lookout.net/foo/"
+}, {
+  "in" : "http://urltest.lookout.net/foo/bar//..",
+  "out" : "http://urltest.lookout.net/foo/bar/"
+}, {
+  "in" : "http://urltest.lookout.net/foo/bar/..",
+  "out" : "http://urltest.lookout.net/foo/"
+}, {
+  "in" : "http://urltest.lookout.net/%20foo",
+  "out" : "http://urltest.lookout.net/%20foo"
+}, {
+  "in" : "http://urltest.lookout.net/foo%",
+  "out" : "http://urltest.lookout.net/foo%"
+}, {
+  "in" : "http://urltest.lookout.net/foo%2",
+  "out" : "http://urltest.lookout.net/foo%2"
+}, {
+  "in" : "http://urltest.lookout.net/foo%2zbar",
+  "out" : "http://urltest.lookout.net/foo%2zbar"
+}, {
+  "in" : "http://urltest.lookout.net/foo%2Â©zbar",
+  "out" : "http://urltest.lookout.net/foo%2%C3%82%C2%A9zbar"
+}, {
+  "in" : "http://urltest.lookout.net/foo%41%7a",
+  "out" : "http://urltest.lookout.net/fooAz"
+}, {
+  "in" : "http://urltest.lookout.net/foo\t%91",
+  "out" : "http://urltest.lookout.net/foo%09%C2%91%91"
+}, {
+  "in" : "http://urltest.lookout.net/foo%00%51",
+  "out" : "http://urltest.lookout.net/foo%00Q"
+}, {
+  "in" : "http://urltest.lookout.net/(%28:%3A%29)",
+  "out" : "http://urltest.lookout.net/(%28:%3A%29)"
+}, {
+  "in" : "http://urltest.lookout.net/%3A%3a%3C%3c",
+  "out" : "http://urltest.lookout.net/%3A%3a%3C%3c"
+}, {
+  "in" : "http://urltest.lookout.net/foo\\tbar",
+  "out" : "http://urltest.lookout.net/foo%09bar"
+}, {
+  "in" : "http://urltest.lookout.net\\\\foo\\\\bar",
+  "out" : "http://urltest.lookout.net/foo/bar"
+}, {
+  "in" : "http://urltest.lookout.net/%7Ffp3%3Eju%3Dduvgw%3Dd",
+  "out" : "http://urltest.lookout.net/%7Ffp3%3Eju%3Dduvgw%3Dd"
+}, {
+  "in" : "http://urltest.lookout.net/@asdf%40",
+  "out" : "http://urltest.lookout.net/@asdf%40"
+}, {
+  "in" : "http://urltest.lookout.net/﷐zyx",
+  "out" : "http://urltest.lookout.net/%EF%BF%BDzyx"
+}, {
+  "in" : "http://urltest.lookout.net/?/foo",
+  "out" : "http://urltest.lookout.net/�/foo"
+}, {
+  "in" : "http://urltest.lookout.net/?%02hello%7f bye",
+  "out" : "http://urltest.lookout.net/?%02hello%7F%20bye"
+}, {
+  "in" : "http://urltest.lookout.net/?%40%41123",
+  "out" : "http://urltest.lookout.net/?%40%41123"
+}, {
+  "in" : "http://urltest.lookout.net/?q=你好",
+  "out" : "http://urltest.lookout.net/?q=%26%2320320%3B%26%2322909%3B"
+}, {
+  "in" : "http://urltest.lookout.net/?q=\\?\\?",
+  "out" : "http://urltest.lookout.net/?q=%26%2355296%3B%26%2355296%3B"
+}, {
+  "in" : "http://urltest.lookout.net/?q=&lt;asdf&gt;",
+  "out" : "http://urltest.lookout.net/?q=%3Casdf%3E"
+}, {
+  "in" : "http:////another.urltest.lookout.net/",
+  "out" : "http://another.urltest.lookout.net/"
+}, {
+  "in" : "",
+  "out" : "http://urltest.lookout.net/bar"
+}, {
+  "in" : "",
+  "out" : "http://urltest.lookout.net/bar"
+}, {
+  "in" : "",
+  "out" : "http://urltest.lookout.net/bar"
+}, {
+  "in" : "  another  ",
+  "out" : "http://urltest.lookout.net/another"
+}, {
+  "in" : "  .  ",
+  "out" : "http://urltest.lookout.net/"
+}, {
+  "in" : " \\t ",
+  "out" : "http://urltest.lookout.net/bar"
+}, {
+  "in" : "http:path",
+  "out" : "http://urltest.lookout.net/path"
+}, {
+  "in" : "http:path",
+  "out" : "http://urltest.lookout.net/a/path"
+}, {
+  "in" : "http:/path",
+  "out" : "http://urltest.lookout.net/path"
+}, {
+  "in" : "HTTP:/path",
+  "out" : "http://urltest.lookout.net/path"
+}, {
+  "in" : "https:host2.urltest.lookout.net",
+  "out" : "https://host2.urltest.lookout.net/"
+}, {
+  "in" : "http:/host2",
+  "out" : "http://urltest.lookout.net/http:/host2"
+}, {
+  "in" : "/b/c/d",
+  "out" : "http://urltest.lookout.net/b/c/d"
+}, {
+  "in" : "\\\\b\\\\c\\\\d",
+  "out" : "http://urltest.lookout.net/b/c/d"
+}, {
+  "in" : "/b/../c",
+  "out" : "http://urltest.lookout.net/c"
+}, {
+  "in" : "\\\\b/../c?x#y",
+  "out" : "http://urltest.lookout.net/c?x#y"
+}, {
+  "in" : "/b/../c?x#y",
+  "out" : "http://urltest.lookout.net/c?x#y"
+}, {
+  "in" : "b",
+  "out" : "http://urltest.lookout.net/b"
+}, {
+  "in" : "bc/de",
+  "out" : "http://urltest.lookout.net/bc/de"
+}, {
+  "in" : "bc/de?query#ref",
+  "out" : "http://urltest.lookout.net/a/bc/de?query#ref"
+}, {
+  "in" : ".",
+  "out" : "http://urltest.lookout.net/a/"
+}, {
+  "in" : "..",
+  "out" : "http://urltest.lookout.net/"
+}, {
+  "in" : "./..",
+  "out" : "http://urltest.lookout.net/"
+}, {
+  "in" : "../.",
+  "out" : "http://urltest.lookout.net/"
+}, {
+  "in" : "././.",
+  "out" : "http://urltest.lookout.net/a/"
+}, {
+  "in" : "../../../foo",
+  "out" : "http://urltest.lookout.net/foo"
+}, {
+  "in" : "?foo=bar",
+  "out" : "http://urltest.lookout.net/a?foo=bar"
+}, {
+  "in" : "?",
+  "out" : "http://urltest.lookout.net/a?"
+}, {
+  "in" : "?foo=bar#com",
+  "out" : "http://urltest.lookout.net/a?foo=bar#com"
+}, {
+  "in" : "#ref",
+  "out" : "http://urltest.lookout.net/a#ref"
+}, {
+  "in" : "#",
+  "out" : "http://urltest.lookout.net/a#"
+}, {
+  "in" : "#bye",
+  "out" : "http://urltest.lookout.net/a?foo=bar#bye"
+}, {
+  "in" : "./asd:fgh",
+  "out" : "http://urltest.lookout.net/asd:fgh"
+}, {
+  "in" : ":foo",
+  "out" : "http://urltest.lookout.net/:foo"
+}, {
+  "in" : " hello world",
+  "out" : "http://urltest.lookout.net/hello%20world"
+}, {
+  "in" : ";foo",
+  "out" : "http://urltest.lookout.net/;foo"
+}, {
+  "in" : ";foo",
+  "out" : "http://urltest.lookout.net/;foo"
+}, {
+  "in" : ";/../bar",
+  "out" : "http://urltest.lookout.net/bar"
+}, {
+  "in" : "//another.urltest.lookout.net",
+  "out" : "http://another.urltest.lookout.net/"
+}, {
+  "in" : "//another.urltest.lookout.net/path?query#ref",
+  "out" : "http://another.urltest.lookout.net/path?query#ref"
+}, {
+  "in" : "///another.urltest.lookout.net/path",
+  "out" : "http://another.urltest.lookout.net/path"
+}, {
+  "in" : "//Another.urltest.lookout.net\\\\path",
+  "out" : "http://another.urltest.lookout.net/path"
+}, {
+  "in" : "\\\\/another.urltest.lookout.net/path",
+  "out" : "http://another.urltest.lookout.net/path"
+}, {
+  "in" : "/\\\\Another.urltest.lookout.net\\\\path",
+  "out" : "http://another.urltest.lookout.net/path"
+}, {
+  "in" : "http://user:pass@urltest.lookout.net/bar;par?b#c",
+  "out" : ""
+}, {
+  "in" : "http:foo.com",
+  "out" : ""
+}, {
+  "in" : "\t   :foo.com   \n",
+  "out" : ""
+}, {
+  "in" : " foo.com  ",
+  "out" : ""
+}, {
+  "in" : "a:\t foo.com",
+  "out" : ""
+}, {
+  "in" : "",
+  "out" : ""
+}, {
+  "in" : "  \t",
+  "out" : ""
+}, {
+  "in" : ":foo.com/",
+  "out" : ""
+}, {
+  "in" : ":foo.com\\\\",
+  "out" : ""
+}, {
+  "in" : ":",
+  "out" : ""
+}, {
+  "in" : ":a",
+  "out" : ""
+}, {
+  "in" : ":/",
+  "out" : ""
+}, {
+  "in" : ":\\\\",
+  "out" : ""
+}, {
+  "in" : ":#",
+  "out" : ""
+}, {
+  "in" : "#",
+  "out" : ""
+}, {
+  "in" : "#/",
+  "out" : ""
+}, {
+  "in" : "#\\\\",
+  "out" : ""
+}, {
+  "in" : "#;?",
+  "out" : ""
+}, {
+  "in" : "?",
+  "out" : ""
+}, {
+  "in" : "/",
+  "out" : ""
+}, {
+  "in" : ":23",
+  "out" : ""
+}, {
+  "in" : "/:23",
+  "out" : ""
+}, {
+  "in" : "/",
+  "out" : ""
+}, {
+  "in" : "::",
+  "out" : ""
+}, {
+  "in" : "::23",
+  "out" : ""
+}, {
+  "in" : "http::@c:29",
+  "out" : ""
+}, {
+  "in" : "http://foo.urltest.lookout.net:b@d/",
+  "out" : ""
+}, {
+  "in" : "http://foo.urltest.lookout.net/\\\\@",
+  "out" : ""
+}, {
+  "in" : "http:\\\\\\\\foo.urltest.lookout.net\\\\",
+  "out" : ""
+}, {
+  "in" : "http:\\\\\\\\a.urltest.lookout.net\\\\b:c\\\\d@foo.com\\\\",
+  "out" : ""
+}, {
+  "in" : "//foo.urltest.lookout.net/bar",
+  "out" : ""
+}, {
+  "in" : "http://foo.urltest.lookout.net/path;a??e#f#g",
+  "out" : ""
+}, {
+  "in" : "http://foo.urltest.lookout.net/abcd?efgh?ijkl",
+  "out" : ""
+}, {
+  "in" : "http://foo.urltest.lookout.net/abcd#foo?bar",
+  "out" : ""
+}, {
+  "in" : "[61:24:74]:98",
+  "out" : ""
+}, {
+  "in" : "http:[61:27]/:foo",
+  "out" : ""
+}, {
+  "in" : "http://[urltest.lookout.net]/",
+  "out" : "http://[urltest.lookout.net]/"
+}, {
+  "in" : "http:////////user:@urltest.lookout.net?foo",
+  "out" : "http://user@urltest.lookout.net/?foo"
+}, {
+  "in" : "http://urltest.lookout.net/foo%2Ehtml",
+  "out" : "http://urltest.lookout.net/foo.html"
+}, {
+  "in" : "http://%25DOMAIN:foobar@urltest.lookout.net/",
+  "out" : "http://%25DOMAIN:foobar@urltest.lookout.net/"
+}, {
+  "in" : "http:\\\\\\\\urltest.lookout.net\\\\foo",
+  "out" : "http://urltest.lookout.net/foo"
+}, {
+  "in" : "http://urltest.lookout.net/asdf#\\?",
+  "out" : "http://urltest.lookout.net/asdf#\\�"
+}, {
+  "in" : "http://urltest.lookout.net:80/",
+  "out" : "http://urltest.lookout.net/"
+}, {
+  "in" : "/",
+  "out" : "http://urltest.lookout.net/"
+}, {
+  "in" : "re&#x301;sume&#x301;/re&#x301;sume&#x301;.html",
+  "out" : "re&#x301;sume&#x301;/re&#x301;sume&#x301;.html"
+}, {
+  "in" : "r&#xE9;sum&#xE9;.html",
+  "out" : "r&#xE9;sum&#xE9;.html"
+}, {
+  "in" : "Vi&#xEA;&#x323;tNam.html",
+  "out" : "Vi&#xEA;&#x323;tNam.html"
+}, {
+  "in" : "ﬁ?ﬁ#ﬁ",
+  "out" : "ﬁ?ﬁ#ﬁ"
+}, {
+  "in" : "?re&#x301;sume&#x301;#re&#x301;sume&#x301;",
+  "out" : "?re&#x301;sume&#x301;#re&#x301;sume&#x301;"
+}, {
+  "in" : "2⁵?2⁵#2⁵",
+  "out" : "2⁵?2⁵#2⁵"
+}, {
+  "in" : "?Vi&#xEA;&#x323;tNam#Vi&#xEA;&#x323;tNam",
+  "out" : "?Vi&#xEA;&#x323;tNam#Vi&#xEA;&#x323;tNam"
+}, {
+  "in" : "foo?q=♥",
+  "out" : "foo?q=♥"
+}, {
+  "in" : "ẛ̣/?ẛ̣#ẛ̣",
+  "out" : "ẛ̣/?ẛ̣#ẛ̣"
+}, {
+  "in" : "Å/?Å#Å",
+  "out" : "ẛ̣/?ẛ̣#ẛ̣"
+}, {
+  "in" : "ẛ̣/?ẛ̣#ẛ̣",
+  "out" : "ẛ̣/?ẛ̣#ẛ̣"
+}, {
+  "in" : "ḍ̇/?ḍ̇#ḍ̇",
+  "out" : "ḍ̇/?ḍ̇#ḍ̇"
+}, {
+  "in" : "http://urltest.lookout.net/foo    bar/?   foo   =   bar     #    foo",
+  "out" : "http://urltest.lookout.net/foo    bar/?   foo   =   bar     #    foo"
+}, {
+  "in" : "http://urltest.lookout.net/ ",
+  "out" : "http://urltest.lookout.net/ "
+}, {
+  "in" : "http://urltest.lookout.net/foo%3fbar",
+  "out" : "http://urltest.lookout.net/foo?bar"
+}, {
+  "in" : "http://urltest.lookout.net/foo%2fbar",
+  "out" : "http://urltest.lookout.net/foo/bar"
+}, {
+  "in" : "%68%74%74%70%3a%2f%2f%77%77%77%2e%65%78%61%6d%70%6c%65%2e%63%6f%6d%2f.urltest.lookout.net",
+  "out" : "http://www.example.com.urltest.lookout.net/"
+}, {
+  "in" : "http%3a%2f%2f%77%77%77%2e%65%78%61%6d%70%6c%65%2e%63%6f%6d%2f.urltest.lookout.net",
+  "out" : "http://www.example.com.urltest.lookout.net/"
+}, {
+  "in" : "http://%77%77%77%2e%65%78%61%6d%70%6c%65%2e%63%6f%6d.urltest.lookout.net%3a%38%30",
+  "out" : "http://www.example.com.urltest.lookout.net:80/"
+}, {
+  "in" : "http://%A1%C1.urltest.lookout.net",
+  "out" : "http://¡À.urltest.lookout.net"
+}, {
+  "in" : "http://urltest.lookout.net/%A1%C1/?foo=%EF%BD%81",
+  "out" : "http://urltest.lookout.net/%A1%C1/?foo=%EF%BD%81"
+}, {
+  "in" : "http://urltest.lookout.net/%EF%BD%81/?foo=%A1%C1",
+  "out" : "http://urltest.lookout.net/%EF%BD%81/?foo=%A1%C1"
+}, {
+  "in" : "http://urltest.lookout.net/???/?foo=%A1%C1",
+  "out" : "http://urltest.lookout.net/???/?foo=%A1%C1"
+}, {
+  "in" : "http://urltest.lookout.net/%A1%C1/?foo=???",
+  "out" : "http://urltest.lookout.net/%A1%C1/?foo=???"
+}, {
+  "in" : "http://urltest.lookout.net/???/?foo=%A1%C1",
+  "out" : "http://urltest.lookout.net/???/?foo=%A1%C1"
+}, {
+  "in" : "http://urltest.lookout.net/D%FCrst",
+  "out" : "http://urltest.lookout.net/D%FCrst"
+}, {
+  "in" : "http://urltest.lookout.net/D%C3%BCrst",
+  "out" : "http://urltest.lookout.net/D%C3%BCrst"
+}, {
+  "in" : "http://urltest.lookout.net/?D%FCrst",
+  "out" : "http://urltest.lookout.net/?D%FCrst"
+}, {
+  "in" : "http://urltest.lookout.net/?D%C3%BCrst",
+  "out" : "http://urltest.lookout.net/?D%C3%BCrst"
+} ]
+}

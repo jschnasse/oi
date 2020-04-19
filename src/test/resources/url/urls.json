@@ -1,0 +1,4770 @@
+{
+	"tests": {
+		"desc": "A collection of URL test cases, compiled from Webkit's /fast/url tests, Julian Reschke, and other sources.",
+		"group": [
+			{
+				"name": "anchor",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/anchor.js",
+				"desc": "Test cases from Webkit's fast/url/anchor.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "A U+0020 space in the fragment",
+						"unencoded": "http://www.example.com/#hello, world",
+						"encoded": "http://www.example.com/#hello, world"
+					},
+					{
+						"id": "2",
+						"name": "Percent-encoding in the fragment",
+						"unencoded": "http://www.example.com/#%c2%a9",
+						"encoded": "http://www.example.com/#%c2%a9"
+					},
+					{
+						"id": "3",
+						"name": "Unicode surrogates",
+						"unencoded": "http://www.example.com/#\ud800\udf00ss",
+						"encoded": "http://www.example.com/#\ud800\udf00ss"
+					},
+					{
+						"id": "4",
+						"name": "illegal percent-encoding",
+						"unencoded": "http://www.example.com/#%41%a",
+						"encoded": "http://www.example.com/#%41%a"
+					},
+					{
+						"id": "5",
+						"name": "Illegal Unicode half-surrogate U+D800",
+						"unencoded": "http://www.example.com/#\\\ud800\\\u597D",
+						"encoded": "http://www.example.com/#\\\uFFFD\\\u597D"
+					},
+					{
+						"id": "6",
+						"name": "Illegal Unicode U+FDD0 in the fragment",
+						"unencoded": "http://www.example.com/#a\\\uFDD0",
+						"encoded": "http://www.example.com/#a\\\uFFFD"
+					},
+					{
+						"id": "7",
+						"name": "An extra U+0023 NUMBER SIGN in middle of the fragment",
+						"unencoded": "http://www.example.com/#asdf#qwer",
+						"encoded": "http://www.example.com/#asdf#qwer"
+					},
+					{
+						"id": "8",
+						"name": "An extra U+0023 NUMBER SIGN at the start of fragment",
+						"unencoded": "http://www.example.com/##asdf",
+						"encoded": "http://www.example.com/##asdf"
+					},
+					{
+						"id": "9",
+						"name": "Extra white space characters",
+						"unencoded": "http://www.example.com/#a\u000Ab\u000Dc\u0009d",
+						"encoded": "http://www.example.com/#abcd"
+					}
+				]
+			},
+			{
+				"name": "file-http-base",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/file-http-base.js",
+				"desc": "Test cases from Webkit's fast/url/file-http-base.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "file:c:\\\\foo\\\\bar.html",
+						"encoded": "file:///C:/foo/bar.html"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "  File:c|////foo\\\\bar.html",
+						"encoded": "file:///C:////foo/bar.html"
+					},
+					{
+						"id": "3",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "file:",
+						"encoded": "file:///"
+					},
+					{
+						"id": "4",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "file:UNChost/path",
+						"encoded": "file://unchost/path"
+					},
+					{
+						"id": "5",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "c:\\\\foo\\\\bar",
+						"encoded": "file:///C:/foo/bar"
+					},
+					{
+						"id": "6",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "C|/foo/bar",
+						"encoded": "file:///C:/foo/bar"
+					},
+					{
+						"id": "7",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "/C|\\\\foo\\\\bar",
+						"encoded": "file:///C:/foo/bar"
+					},
+					{
+						"id": "8",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "//C|/foo/bar",
+						"encoded": "file:///C:/foo/bar"
+					},
+					{
+						"id": "10",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "\\\\\\\\server\\\\file",
+						"encoded": "file://server/file"
+					},
+					{
+						"id": "11",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "/\\\\server/file",
+						"encoded": "file://server/file"
+					},
+					{
+						"id": "12",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "file:c:foo/bar.html",
+						"encoded": "file:///C:/foo/bar.html"
+					},
+					{
+						"id": "13",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "file:/\\\\/\\\\C:\\\\\\\\//foo\\\\bar.html",
+						"encoded": "file:///C:////foo/bar.html"
+					},
+					{
+						"id": "14",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "file:///foo/bar.txt",
+						"encoded": "file:///foo/bar.txt"
+					},
+					{
+						"id": "15",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "FILE:/\\\\/\\\\7:\\\\\\\\//foo\\\\bar.html",
+						"encoded": "file://7:////foo/bar.html"
+					},
+					{
+						"id": "16",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "file:filer/home\\\\me",
+						"encoded": "file://filer/home/me"
+					},
+					{
+						"id": "17",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "file:///C:/foo/../../../bar.html",
+						"encoded": "file:///C:/bar.html"
+					},
+					{
+						"id": "18",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "file:///C:/asdf#\\%c2",
+						"encoded": "file:///C:/asdf#\\%ef\\%bf\\%bd"
+					},
+					{
+						"id": "19",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "file:///home/me",
+						"encoded": "file:///home/me"
+					},
+					{
+						"id": "20",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "file:c:\\\\foo\\\\bar.html",
+						"encoded": "file:///c:/foo/bar.html"
+					},
+					{
+						"id": "21",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "file:c|//foo\\\\bar.html",
+						"encoded": "file:///c%7C//foo/bar.html"
+					},
+					{
+						"id": "25",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "file://test",
+						"encoded": "file://test/"
+					},
+					{
+						"id": "26",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "file://localhost/",
+						"encoded": "file://localhost/"
+					},
+					{
+						"id": "27",
+						"name": "",
+						"base": "http://www.example.com/foo/bar",
+						"unencoded": "file://localhost/test",
+						"encoded": "file://localhost/test"
+					}
+				]
+			},
+			{
+				"name": "file",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/file.js",
+				"desc": "Test cases from Webkit's fast/url/file.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "file:c:\\\\foo\\\\bar.html",
+						"encoded": "file:///C:/foo/bar.html"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "  File:c|////foo\\\\bar.html",
+						"encoded": "file:///C:////foo/bar.html"
+					},
+					{
+						"id": "3",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "file:",
+						"encoded": "file:///"
+					},
+					{
+						"id": "4",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "file:UNChost/path",
+						"encoded": "file://unchost/path"
+					},
+					{
+						"id": "5",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "c:\\\\foo\\\\bar",
+						"encoded": "file:///C:/foo/bar"
+					},
+					{
+						"id": "6",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "C|/foo/bar",
+						"encoded": "file:///C:/foo/bar"
+					},
+					{
+						"id": "7",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "/C|\\\\foo\\\\bar",
+						"encoded": "file:///C:/foo/bar"
+					},
+					{
+						"id": "8",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "//C|/foo/bar",
+						"encoded": "file:///C:/foo/bar"
+					},
+					{
+						"id": "9",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "//server/file",
+						"encoded": "file://server/file"
+					},
+					{
+						"id": "10",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "\\\\\\\\server\\\\file",
+						"encoded": "file://server/file"
+					},
+					{
+						"id": "11",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "/\\\\server/file",
+						"encoded": "file://server/file"
+					},
+					{
+						"id": "12",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "file:c:foo/bar.html",
+						"encoded": "file:///C:/foo/bar.html"
+					},
+					{
+						"id": "13",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "file:/\\\\/\\\\C:\\\\\\\\//foo\\\\bar.html",
+						"encoded": "file:///C:////foo/bar.html"
+					},
+					{
+						"id": "14",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "file:///foo/bar.txt",
+						"encoded": "file:///foo/bar.txt"
+					},
+					{
+						"id": "15",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "FILE:/\\\\/\\\\7:\\\\\\\\//foo\\\\bar.html",
+						"encoded": "file://7:////foo/bar.html"
+					},
+					{
+						"id": "16",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "file:filer/home\\\\me",
+						"encoded": "file://filer/home/me"
+					},
+					{
+						"id": "17",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "file:///C:/foo/../../../bar.html",
+						"encoded": "file:///C:/bar.html"
+					},
+					{
+						"id": "18",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "file:///C:/asdf#\\%c2",
+						"encoded": "file:///C:/asdf#\\%ef\\%bf\\%bd"
+					},
+					{
+						"id": "19",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "file:///home/me",
+						"encoded": "file:///home/me"
+					},
+					{
+						"id": "20",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "file:c:\\\\foo\\\\bar.html",
+						"encoded": "file:///c:/foo/bar.html"
+					},
+					{
+						"id": "21",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "file:c|//foo\\\\bar.html",
+						"encoded": "file:///c%7C//foo/bar.html"
+					},
+					{
+						"id": "22",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "//",
+						"encoded": "file:///"
+					},
+					{
+						"id": "23",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "///",
+						"encoded": "file:///"
+					},
+					{
+						"id": "24",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "///test",
+						"encoded": "file:///test"
+					},
+					{
+						"id": "25",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "file://test",
+						"encoded": "file://test/"
+					},
+					{
+						"id": "26",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "file://localhost/",
+						"encoded": "file://localhost/"
+					},
+					{
+						"id": "27",
+						"name": "",
+						"base": "file:///tmp/mock/path",
+						"unencoded": "file://localhost/test",
+						"encoded": "file://localhost/test"
+					}
+				]
+			},
+			{
+				"name": "host",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/host.js",
+				"desc": "Test cases from Webkit's fast/url/host.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "A pathless URL",
+						"unencoded": "http://google.com",
+						"encoded": "http://google.com/"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"unencoded": "http://GoOgLe.CoM/",
+						"encoded": "http://google.com/"
+					},
+					{
+						"id": "3",
+						"name": "",
+						"unencoded": "http://Goo%20 goo%7C|.com/",
+						"encoded": "http://goo%20%20goo%7C%7C.com/"
+					},
+					{
+						"id": "4",
+						"name": "",
+						"unencoded": "http://GOO\u00a0\u3000goo.com/",
+						"encoded": "http://goo%20%20goo.com/"
+					},
+					{
+						"id": "5",
+						"name": "",
+						"unencoded": "http://GOO\u200b\u2060\ufeffgoo.com/",
+						"encoded": "http://googoo.com/"
+					},
+					{
+						"id": "6",
+						"name": "",
+						"unencoded": "http://www.foo\u3002bar.com/",
+						"encoded": "http://www.foo.bar.com/"
+					},
+					{
+						"id": "7",
+						"name": "",
+						"unencoded": "http://\ufdd0zyx.com/",
+						"encoded": "http://%EF%BF%BDzyx.com/"
+					},
+					{
+						"id": "8",
+						"name": "",
+						"unencoded": "http://%ef%b7%90zyx.com/",
+						"encoded": "http://%EF%BF%BDzyx.com/"
+					},
+					{
+						"id": "9",
+						"name": "",
+						"unencoded": "http://\uff27\uff4f.com/",
+						"encoded": "http://go.com/"
+					},
+					{
+						"id": "10",
+						"name": "",
+						"unencoded": "http://\uff05\uff14\uff11.com/",
+						"encoded": "http://a.com/"
+					},
+					{
+						"id": "11",
+						"name": "",
+						"unencoded": "http://%ef%bc%85%ef%bc%94%ef%bc%91.com/",
+						"encoded": "http://a.com/"
+					},
+					{
+						"id": "12",
+						"name": "",
+						"unencoded": "http://\uff05\uff10\uff10.com/",
+						"encoded": "http://%00.com/"
+					},
+					{
+						"id": "13",
+						"name": "",
+						"unencoded": "http://%ef%bc%85%ef%bc%90%ef%bc%90.com/",
+						"encoded": "http://%00.com/"
+					},
+					{
+						"id": "14",
+						"name": "",
+						"unencoded": "http://\u4f60\u597d\u4f60\u597d/",
+						"encoded": "http://xn--6qqa088eba/"
+					},
+					{
+						"id": "15",
+						"name": "",
+						"unencoded": "http://%E4%BD%A0%E5%A5%BD\u4f60\u597d/",
+						"encoded": "http://xn--6qqa088eba/"
+					},
+					{
+						"id": "16",
+						"name": "",
+						"unencoded": "http://%zz%66%a/",
+						"encoded": "http://%25zzf%25a/"
+					},
+					{
+						"id": "17",
+						"name": "",
+						"unencoded": "http://%25/",
+						"encoded": "http://%25/"
+					},
+					{
+						"id": "18",
+						"name": "",
+						"unencoded": "http://hello%00/",
+						"encoded": "http://hello%00/"
+					},
+					{
+						"id": "19",
+						"name": "",
+						"unencoded": "http://%30%78%63%30%2e%30%32%35%30.01/",
+						"encoded": "http://192.168.0.1/"
+					},
+					{
+						"id": "20",
+						"name": "",
+						"unencoded": "http://%30%78%63%30%2e%30%32%35%30.01%2e/",
+						"encoded": "http://192.168.0.1/"
+					},
+					{
+						"id": "21",
+						"name": "",
+						"unencoded": "http://%3g%78%63%30%2e%30%32%35%30%2E.01/",
+						"encoded": "http://%253gxc0.0250..01/"
+					},
+					{
+						"id": "22",
+						"name": "",
+						"unencoded": "http://192.168.0.1 hello/",
+						"encoded": "http://192.168.0.1%20hello/"
+					},
+					{
+						"id": "23",
+						"name": "",
+						"unencoded": "http://\uff10\uff38\uff43\uff10\uff0e\uff10\uff12\uff15\uff10\uff0e\uff10\uff11/",
+						"encoded": "http://192.168.0.1/"
+					},
+					{
+						"id": "24",
+						"name": "",
+						"unencoded": "http://192.168.0.257/",
+						"encoded": "http://192.168.0.257/"
+					},
+					{
+						"id": "25",
+						"name": "",
+						"unencoded": "http://[google.com.]/",
+						"encoded": "http://[google.com]/"
+					},
+					{
+						"id": "26",
+						"name": "",
+						"unencoded": "http://\u0442(",
+						"encoded": "http://xn--%28-7ed/"
+					},
+					{
+						"id": "27",
+						"name": "",
+						"unencoded": "http://go\\@ogle.com/",
+						"encoded": "http://go@ogle.com/"
+					},
+					{
+						"id": "28",
+						"name": "",
+						"unencoded": "http://go/@ogle.com/",
+						"encoded": "http://go@ogle.com/"
+					},
+					{
+						"id": "29",
+						"name": "",
+						"unencoded": "http://www.lookout.net::==80::==443::/",
+						"encoded": "http://lookout.net/"
+					},
+					{
+						"id": "30",
+						"name": "",
+						"unencoded": "http://www.lookout.net::80::443/",
+						"encoded": "http://lookout.net/"
+					},
+					{
+						"id": "31",
+						"name": "",
+						"unencoded": "http://\\",
+						"encoded": "http://\\"
+					},
+					{
+						"id": "32",
+						"name": "",
+						"unencoded": "http://\\\\/",
+						"encoded": "http://."
+					},
+					{
+						"id": "33",
+						"name": "",
+						"unencoded": "http://\\./",
+						"encoded": "http://."
+					},
+					{
+						"id": "34",
+						"name": "",
+						"unencoded": "http:////:@/",
+						"encoded": "http://."
+					},
+					{
+						"id": "35",
+						"name": "",
+						"unencoded": "http://\\google.com/foo",
+						"encoded": "http://google.com/foo"
+					},
+					{
+						"id": "36",
+						"name": "",
+						"unencoded": "http://\\\\google.com/foo",
+						"encoded": "http://google.com/foo"
+					},
+					{
+						"id": "37",
+						"name": "",
+						"unencoded": "http:////asdf@/",
+						"encoded": "http://."
+					},
+					{
+						"id": "38",
+						"name": "",
+						"unencoded": "http:////:81/",
+						"encoded": "http://."
+					},
+					{
+						"id": "39",
+						"name": "",
+						"unencoded": "http://://",
+						"encoded": "http://."
+					},
+					{
+						"id": "40",
+						"name": "",
+						"unencoded": "http://c:/",
+						"encoded": "http://."
+					},
+					{
+						"id": "41",
+						"name": "",
+						"unencoded": "http://xxxx:/",
+						"encoded": "http://."
+					},
+					{
+						"id": "42",
+						"name": "",
+						"unencoded": "http://.:./",
+						"encoded": "http://."
+					},
+					{
+						"id": "43",
+						"name": "",
+						"unencoded": "http://////@google.com/",
+						"encoded": "http://."
+					},
+					{
+						"id": "44",
+						"name": "",
+						"unencoded": "http://@google.com/",
+						"encoded": "http://google.com/"
+					},
+					{
+						"id": "45",
+						"name": "A URL with a pipe character in the hostname.",
+						"unencoded": "http://c|/",
+						"encoded": "http://c|/"
+					}
+				]
+			},
+			{
+				"name": "idna2003",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/idna2003.js",
+				"desc": "Test cases from Webkit's fast/url/idna2003.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"unencoded": "http://fa\u00DF.de/",
+						"encoded": "http://fass.de/"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"unencoded": "http://\u03B2\u03CC\u03BB\u03BF\u03C2.com/",
+						"encoded": "http://xn--nxasmq6b.com/"
+					},
+					{
+						"id": "3",
+						"name": "",
+						"unencoded": "http://\u0DC1\u0DCA\u200D\u0DBB\u0DD3.com/",
+						"encoded": "http://xn--10cl1a0b.com/"
+					},
+					{
+						"id": "4",
+						"name": "",
+						"unencoded": "http://\u0646\u0627\u0645\u0647\u200C\u0627\u06CC.com/",
+						"encoded": "http://xn--mgba3gch31f.com/"
+					},
+					{
+						"id": "5",
+						"name": "",
+						"unencoded": "http://www.loo\u0138out.net/",
+						"encoded": "http://www.xn--looout-5bb.net/"
+					},
+					{
+						"id": "6",
+						"name": "",
+						"unencoded": "http://\u15EF\u15EF\u15EF.lookout.net/",
+						"encoded": "http://xn--1qeaa.lookout.net/"
+					},
+					{
+						"id": "7",
+						"name": "",
+						"unencoded": "http://www.lookout.\u0441\u043E\u043C/",
+						"encoded": "http://www.lookout.xn--l1adi/"
+					},
+					{
+						"id": "8",
+						"name": "",
+						"unencoded": "http://www.lookout.net\uFF1A80/",
+						"encoded": "http://www.lookout.net:80/"
+					},
+					{
+						"id": "9",
+						"name": "",
+						"unencoded": "http://www\u2025lookout.net/",
+						"encoded": "http://www..lookout.net/"
+					},
+					{
+						"id": "10",
+						"name": "",
+						"unencoded": "http://www.lookout\u2027net/",
+						"encoded": "http://www.xn--lookoutnet-406e/"
+					},
+					{
+						"id": "11",
+						"name": "",
+						"unencoded": "http://www.loo\u0138out.net/",
+						"encoded": "http://www.xn--looout-5bb.net/"
+					},
+					{
+						"id": "12",
+						"name": "",
+						"unencoded": "http://www.lookout.net\u2A7480/",
+						"encoded": "http://www.lookout.net::%3D80/"
+					},
+					{
+						"id": "13",
+						"name": "",
+						"unencoded": "http://www\u00A0.lookout.net/",
+						"encoded": "http://www%20.lookout.net/"
+					},
+					{
+						"id": "14",
+						"name": "",
+						"unencoded": "http://\u1680lookout.net/",
+						"encoded": "http://%E1%9A%80lookout.net/"
+					},
+					{
+						"id": "15",
+						"name": "",
+						"unencoded": "http://\u001Flookout.net/",
+						"encoded": "http://%1Flookout.net/"
+					},
+					{
+						"id": "16",
+						"name": "",
+						"unencoded": "http://look\u06DDout.net/",
+						"encoded": "http://look%DB%9Dout.net/"
+					},
+					{
+						"id": "17",
+						"name": "",
+						"unencoded": "http://look\u180Eout.net/",
+						"encoded": "http://look%E1%A0%8Eout.net/"
+					},
+					{
+						"id": "18",
+						"name": "",
+						"unencoded": "http://look\u2060out.net/",
+						"encoded": "http://look%E2%81%A0out.net/"
+					},
+					{
+						"id": "19",
+						"name": "",
+						"unencoded": "http://look\uFEFFout.net/",
+						"encoded": "http://look%EF%BB%BFout.net/"
+					},
+					{
+						"id": "20",
+						"name": "",
+						"unencoded": "http://look\uD83F\uDFFEout.net/",
+						"encoded": "http://look%F0%9F%BF%BEout.net/"
+					},
+					{
+						"id": "21",
+						"name": "",
+						"unencoded": "http://look\uDEADout.net/",
+						"encoded": "http://look%ED%BA%ADout.net/"
+					},
+					{
+						"id": "22",
+						"name": "",
+						"unencoded": "http://look\uFFFAout.net/",
+						"encoded": "http://look%EF%BF%BAout.net/"
+					},
+					{
+						"id": "23",
+						"name": "",
+						"unencoded": "http://look\u2FF0out.net/",
+						"encoded": "http://look%E2%BF%B0out.net/"
+					},
+					{
+						"id": "24",
+						"name": "",
+						"unencoded": "http://look\u0341out.net/",
+						"encoded": "http://look%CD%81out.net/"
+					},
+					{
+						"id": "25",
+						"name": "",
+						"unencoded": "http://look\u202Eout.net/",
+						"encoded": "http://look%E2%80%AEout.net/"
+					},
+					{
+						"id": "26",
+						"name": "",
+						"unencoded": "http://look\u206Bout.net/",
+						"encoded": "http://look%E2%81%ABout.net/"
+					},
+					{
+						"id": "27",
+						"name": "",
+						"unencoded": "http://look\uDB40\uDC01out.net/",
+						"encoded": "http://look%F3%A0%80%81out.net/"
+					},
+					{
+						"id": "28",
+						"name": "",
+						"unencoded": "http://look\uDB40\uDC20out.net/",
+						"encoded": "http://look%F3%A0%80%A0out.net/"
+					},
+					{
+						"id": "29",
+						"name": "",
+						"unencoded": "http://look\u05BEout.net/",
+						"encoded": "http://look%D6%BEout.net/"
+					}
+				]
+			},
+			{
+				"name": "idna2008",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/idna2008.js",
+				"desc": "Test cases from Webkit's fast/url/idna2008.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"unencoded": "http://B\u00FCcher.de/",
+						"encoded": "http://xn--bcher-kva.de/"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"unencoded": "http://fa\u00DF.de/",
+						"encoded": "http://xn--fa-hia.de/"
+					},
+					{
+						"id": "3",
+						"name": "",
+						"unencoded": "http://\u03B2\u03CC\u03BB\u03BF\u03C2.com/",
+						"encoded": "http://xn--nxasmm1c.com/"
+					},
+					{
+						"id": "4",
+						"name": "",
+						"unencoded": "http://\u0DC1\u0DCA\u200D\u0DBB\u0DD3.com/",
+						"encoded": "http://xn--10cl1a0b660p.com/"
+					},
+					{
+						"id": "5",
+						"name": "",
+						"unencoded": "http://\u0646\u0627\u0645\u0647\u200C\u0627\u06CC.com/",
+						"encoded": "http://xn--mgba3gch31f060k.com/"
+					},
+					{
+						"id": "6",
+						"name": "",
+						"unencoded": "http://\u2665.net/",
+						"encoded": "http://\uFFFD.net/"
+					},
+					{
+						"id": "7",
+						"name": "",
+						"unencoded": "http://\u0378.net/",
+						"encoded": "http://\uFFFD.net/"
+					},
+					{
+						"id": "8",
+						"name": "",
+						"unencoded": "http://\u04C0.com/",
+						"encoded": "http://\uFFFD.com/"
+					},
+					{
+						"id": "9",
+						"name": "",
+						"unencoded": "http://\uD87E\uDC68.com/",
+						"encoded": "http://\uFFFD.com/"
+					},
+					{
+						"id": "10",
+						"name": "",
+						"unencoded": "http://\u2183.com/",
+						"encoded": "http://\uFFFD.com/"
+					},
+					{
+						"id": "11",
+						"name": "",
+						"unencoded": "http://look\u034Fout.net/",
+						"encoded": "http://lookout.net/"
+					},
+					{
+						"id": "12",
+						"name": "",
+						"unencoded": "http://gOoGle.com/",
+						"encoded": "http://google.com/"
+					},
+					{
+						"id": "13",
+						"name": "",
+						"unencoded": "http://\u09dc.com/",
+						"encoded": "http://\u09A1\u09BC.com/"
+					},
+					{
+						"id": "14",
+						"name": "",
+						"unencoded": "http://\u1E9E.com/",
+						"encoded": "http://ss.com/"
+					},
+					{
+						"id": "15",
+						"name": "",
+						"unencoded": "http://\u1E9E.foo.com/",
+						"encoded": "http://ss.foo.com/"
+					},
+					{
+						"id": "16",
+						"name": "",
+						"unencoded": "http://-foo.bar.com",
+						"encoded": "http://"
+					},
+					{
+						"id": "17",
+						"name": "",
+						"unencoded": "http://foo-.bar.com",
+						"encoded": "http://"
+					},
+					{
+						"id": "18",
+						"name": "",
+						"unencoded": "http://ab--cd.com",
+						"encoded": "http://"
+					},
+					{
+						"id": "19",
+						"name": "",
+						"unencoded": "http://xn--0.com",
+						"encoded": "http://"
+					},
+					{
+						"id": "20",
+						"name": "",
+						"unencoded": "http://foo\u0300.bar.com/",
+						"encoded": "http://foo%CC%80.bar.com/"
+					}
+				]
+			},
+			{
+				"name": "ipv4",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/ipv4.js",
+				"desc": "Test cases from Webkit's fast/url/ipv4.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"unencoded": "http://./",
+						"encoded": "http://"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"unencoded": "http://192.168.0.1/",
+						"encoded": "http://192.168.0.1/"
+					},
+					{
+						"id": "3",
+						"name": "",
+						"unencoded": "http://0300.0250.00.01/",
+						"encoded": "http://192.168.0.1/"
+					},
+					{
+						"id": "4",
+						"name": "",
+						"unencoded": "http://0xC0.0Xa8.0x0.0x1/",
+						"encoded": "http://192.168.0.1/"
+					},
+					{
+						"id": "5",
+						"name": "",
+						"unencoded": "http://192.168.9.com/",
+						"encoded": "http://"
+					},
+					{
+						"id": "6",
+						"name": "",
+						"unencoded": "http://19a.168.0.1/",
+						"encoded": "http://"
+					},
+					{
+						"id": "7",
+						"name": "",
+						"unencoded": "http://0308.0250.00.01/",
+						"encoded": "http://"
+					},
+					{
+						"id": "8",
+						"name": "",
+						"unencoded": "http://0xCG.0xA8.0x0.0x1/",
+						"encoded": "http://"
+					},
+					{
+						"id": "9",
+						"name": "",
+						"unencoded": "http://192/",
+						"encoded": "http://0.0.0.192/"
+					},
+					{
+						"id": "10",
+						"name": "",
+						"unencoded": "http://0xC0a80001/",
+						"encoded": "http://192.168.0.1/"
+					},
+					{
+						"id": "11",
+						"name": "",
+						"unencoded": "http://030052000001/",
+						"encoded": "http://192.168.0.1/"
+					},
+					{
+						"id": "12",
+						"name": "",
+						"unencoded": "http://000030052000001/",
+						"encoded": "http://192.168.0.1/"
+					},
+					{
+						"id": "13",
+						"name": "",
+						"unencoded": "http://192.168/",
+						"encoded": "http://192.0.0.168/"
+					},
+					{
+						"id": "14",
+						"name": "",
+						"unencoded": "http://192.0x00A80001/",
+						"encoded": "http://192.168.0.1/"
+					},
+					{
+						"id": "15",
+						"name": "",
+						"unencoded": "http://0xc0.052000001/",
+						"encoded": "http://192.168.0.1/"
+					},
+					{
+						"id": "16",
+						"name": "",
+						"unencoded": "http://192.168.1/",
+						"encoded": "http://192.168.0.1/"
+					},
+					{
+						"id": "17",
+						"name": "",
+						"unencoded": "http://192.168.0.0.1/",
+						"encoded": "http://"
+					},
+					{
+						"id": "18",
+						"name": "",
+						"unencoded": "http://192.168.0.1./",
+						"encoded": "http://192.168.0.1/"
+					},
+					{
+						"id": "19",
+						"name": "",
+						"unencoded": "http://192.168.0.1. hello/",
+						"encoded": "http://"
+					},
+					{
+						"id": "20",
+						"name": "",
+						"unencoded": "http://192.168.0.1../",
+						"encoded": "http://"
+					},
+					{
+						"id": "21",
+						"name": "",
+						"unencoded": "http://192.168..1/",
+						"encoded": "http://"
+					},
+					{
+						"id": "22",
+						"name": "",
+						"unencoded": "http://0x100.0/",
+						"encoded": "http://"
+					},
+					{
+						"id": "23",
+						"name": "",
+						"unencoded": "http://0x100.0.0/",
+						"encoded": "http://"
+					},
+					{
+						"id": "24",
+						"name": "",
+						"unencoded": "http://0x100.0.0.0/",
+						"encoded": "http://"
+					},
+					{
+						"id": "25",
+						"name": "",
+						"unencoded": "http://0.0x100.0.0/",
+						"encoded": "http://"
+					},
+					{
+						"id": "26",
+						"name": "",
+						"unencoded": "http://0.0.0x100.0/",
+						"encoded": "http://"
+					},
+					{
+						"id": "27",
+						"name": "",
+						"unencoded": "http://0.0.0.0x100/",
+						"encoded": "http://"
+					},
+					{
+						"id": "28",
+						"name": "",
+						"unencoded": "http://0.0.0x10000/",
+						"encoded": "http://"
+					},
+					{
+						"id": "29",
+						"name": "",
+						"unencoded": "http://0.0x1000000/",
+						"encoded": "http://"
+					},
+					{
+						"id": "30",
+						"name": "",
+						"unencoded": "http://0x100000000/",
+						"encoded": "http://"
+					},
+					{
+						"id": "31",
+						"name": "",
+						"unencoded": "http://0xFF.0/",
+						"encoded": "http://255.0.0.0/",
+						"encoded": ""
+					},
+					{
+						"id": "32",
+						"name": "",
+						"unencoded": "http://0xFF.0.0/",
+						"encoded": "http://255.0.0.0/"
+					},
+					{
+						"id": "33",
+						"name": "",
+						"unencoded": "http://0xFF.0.0.0/",
+						"encoded": "http://255.0.0.0/"
+					},
+					{
+						"id": "34",
+						"name": "",
+						"unencoded": "http://0.0xFF.0.0/",
+						"encoded": "http://0.255.0.0/"
+					},
+					{
+						"id": "35",
+						"name": "",
+						"unencoded": "http://0.0.0xFF.0/",
+						"encoded": "http://0.0.255.0/"
+					},
+					{
+						"id": "36",
+						"name": "",
+						"unencoded": "http://0.0.0.0xFF/",
+						"encoded": "http://0.0.0.255/"
+					},
+					{
+						"id": "37",
+						"name": "",
+						"unencoded": "http://0.0.0xFFFF/",
+						"encoded": "http://0.0.255.255/"
+					},
+					{
+						"id": "38",
+						"name": "",
+						"unencoded": "http://0.0xFFFFFF/",
+						"encoded": "http://0.255.255.255/"
+					},
+					{
+						"id": "39",
+						"name": "",
+						"unencoded": "http://0xFFFFFFFF/",
+						"encoded": "http://255.255.255.255/"
+					},
+					{
+						"id": "40",
+						"name": "",
+						"unencoded": "http://276.256.0xf1a2.077777/",
+						"encoded": "http://"
+					},
+					{
+						"id": "41",
+						"name": "",
+						"unencoded": "http://192.168.0.257/",
+						"encoded": "http://"
+					},
+					{
+						"id": "42",
+						"name": "",
+						"unencoded": "http://192.168.0xa20001/",
+						"encoded": "http://"
+					},
+					{
+						"id": "43",
+						"name": "",
+						"unencoded": "http://192.015052000001/",
+						"encoded": "http://"
+					},
+					{
+						"id": "44",
+						"name": "",
+						"unencoded": "http://0X12C0a80001/",
+						"encoded": "http://"
+					},
+					{
+						"id": "45",
+						"name": "",
+						"unencoded": "http://276.1.2/",
+						"encoded": "http://"
+					},
+					{
+						"id": "46",
+						"name": "",
+						"unencoded": "http://192.168.0.1 hello/",
+						"encoded": "http://"
+					},
+					{
+						"id": "47",
+						"name": "",
+						"unencoded": "http://0000000000000300.0x00000000000000fF.00000000000000001/",
+						"encoded": "http://192.255.0.1/"
+					},
+					{
+						"id": "48",
+						"name": "",
+						"unencoded": "http://0000000000000300.0xffffffffFFFFFFFF.3022415481470977/",
+						"encoded": "http://"
+					},
+					{
+						"id": "49",
+						"name": "",
+						"unencoded": "http://00000000000000000001/",
+						"encoded": "http://0.0.0.1/"
+					},
+					{
+						"id": "50",
+						"name": "",
+						"unencoded": "http://0000000000000000100000000000000001/",
+						"encoded": "http://"
+					},
+					{
+						"id": "51",
+						"name": "",
+						"unencoded": "http://0.0.0.000000000000000000z/",
+						"encoded": "http://"
+					},
+					{
+						"id": "52",
+						"name": "",
+						"unencoded": "http://0.0.0.100000000000000000z/",
+						"encoded": "http://"
+					},
+					{
+						"id": "53",
+						"name": "",
+						"unencoded": "http://0.00.0x.0x0/",
+						"encoded": "http://0.0.0.0/"
+					}
+				]
+			},
+			{
+				"name": "ipv6",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/ipv6.js",
+				"desc": "Test cases from Webkit's fast/url/ipv6.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"unencoded": "http://[/",
+						"encoded": "http://"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"unencoded": "http://[:/",
+						"encoded": "http://"
+					},
+					{
+						"id": "3",
+						"name": "",
+						"unencoded": "http://]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "4",
+						"name": "",
+						"unencoded": "http://:]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "5",
+						"name": "",
+						"unencoded": "http://[]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "6",
+						"name": "",
+						"unencoded": "http://[:]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "7",
+						"name": "",
+						"unencoded": "http://2001:db8::1/",
+						"encoded": "http://"
+					},
+					{
+						"id": "8",
+						"name": "",
+						"unencoded": "http://[2001:db8::1/",
+						"encoded": "http://"
+					},
+					{
+						"id": "9",
+						"name": "",
+						"unencoded": "http://2001:db8::1]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "10",
+						"name": "",
+						"unencoded": "http://[::]/",
+						"encoded": "http://[::]/"
+					},
+					{
+						"id": "11",
+						"name": "",
+						"unencoded": "http://[::1]/",
+						"encoded": "http://[::1]/"
+					},
+					{
+						"id": "12",
+						"name": "",
+						"unencoded": "http://[1::.]/",
+						"encoded": "http://[1::.]/"
+					},
+					{
+						"id": "13",
+						"name": "",
+						"unencoded": "http://[::192.168.0.1.]/",
+						"encoded": "http://[::c0a8:1.]/"
+					},
+					{
+						"id": "14",
+						"name": "",
+						"unencoded": "http://[::ffff:192.168.0.1.]/",
+						"encoded": "http://[::ffff:c0a8:1.]/"
+					},
+					{
+						"id": "15",
+						"name": "",
+						"unencoded": "http://[000:01:02:003:004:5:6:007.]/",
+						"encoded": "http://[0:1:2:3:4:5:6:7.]/"
+					},
+					{
+						"id": "16",
+						"name": "",
+						"unencoded": "http://[A:b:c:DE:fF:0:1:aC.]/",
+						"encoded": "http://[a:b:c:de:ff:0:1:ac.]/"
+					},
+					{
+						"id": "17",
+						"name": "",
+						"unencoded": "http://[1:0:0:2::3:0.]/",
+						"encoded": "http://[1::2:0:0:3:0.]/"
+					},
+					{
+						"id": "18",
+						"name": "",
+						"unencoded": "http://[1::2:0:0:3:0.]/",
+						"encoded": "http://[1::2:0:0:3:0.]/"
+					},
+					{
+						"id": "19",
+						"name": "",
+						"unencoded": "http://[::eeee:192.168.0.1.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "20",
+						"name": "",
+						"unencoded": "http://[2001::192.168.0.1.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "21",
+						"name": "",
+						"unencoded": "http://[1:2:192.168.0.1:5:6.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "22",
+						"name": "",
+						"unencoded": "http://[::ffff:192.1.2.]/",
+						"encoded": "http://[::ffff:c001:2.]/"
+					},
+					{
+						"id": "23",
+						"name": "",
+						"unencoded": "http://[::ffff:0xC0.0Xa8.0x0.0x1.]/",
+						"encoded": "http://[::ffff:c0a8:1.]/"
+					},
+					{
+						"id": "24",
+						"name": "",
+						"unencoded": "http://[0:0::0:0:8.]/",
+						"encoded": "http://[::8.]/"
+					},
+					{
+						"id": "25",
+						"name": "",
+						"unencoded": "http://[2001:db8::1.]/",
+						"encoded": "http://[2001:db8::1.]/"
+					},
+					{
+						"id": "26",
+						"name": "",
+						"unencoded": "http://[2001::db8::1.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "27",
+						"name": "",
+						"unencoded": "http://[2001:db8:::1.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "28",
+						"name": "",
+						"unencoded": "http://[:::.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "29",
+						"name": "",
+						"unencoded": "http://[2001::.com.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "30",
+						"name": "",
+						"unencoded": "http://[::192.168.0.0.1.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "31",
+						"name": "",
+						"unencoded": "http://[::ffff:192.168.0.0.1.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "32",
+						"name": "",
+						"unencoded": "http://[1:2:3:4:5:6:7:8:9.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "33",
+						"name": "",
+						"unencoded": "http://[0:0:0:0:0:0:0:192.168.0.1.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "34",
+						"name": "",
+						"unencoded": "http://[1:2:3:4:5:6::192.168.0.1.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "35",
+						"name": "",
+						"unencoded": "http://[1:2:3:4:5:6::8.]/",
+						"encoded": "http://[1:2:3:4:5:6:0:8.]/"
+					},
+					{
+						"id": "36",
+						"name": "",
+						"unencoded": "http://[1:2:3:4:5:6:7:8:.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "37",
+						"name": "",
+						"unencoded": "http://[1:2:3:4:5:6:192.168.0.1:.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "38",
+						"name": "",
+						"unencoded": "http://[-1:2:3:4:5:6:7:8.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "39",
+						"name": "",
+						"unencoded": "http://[1::%1.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "40",
+						"name": "",
+						"unencoded": "http://[1::%eth0.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "41",
+						"name": "",
+						"unencoded": "http://[1::%.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "42",
+						"name": "",
+						"unencoded": "http://[%.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "43",
+						"name": "",
+						"unencoded": "http://[::%:.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "44",
+						"name": "",
+						"unencoded": "http://[:0:0::0:0:8.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "45",
+						"name": "",
+						"unencoded": "http://[0:0::0:0:8:.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "46",
+						"name": "",
+						"unencoded": "http://[:0:0::0:0:8:.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "47",
+						"name": "",
+						"unencoded": "http://[::192.168..1.]/",
+						"encoded": "http://"
+					},
+					{
+						"id": "48",
+						"name": "",
+						"unencoded": "http://[::1 hello.]/",
+						"encoded": "http://"
+					}
+				]
+			},
+			{
+				"name": "mailto",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/mailto.js",
+				"desc": "Test cases from Webkit's fast/url/mailto.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"unencoded": "mailto:addr1",
+						"encoded": "mailto:addr1"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"unencoded": "mailto:addr1@foo.com",
+						"encoded": "mailto:addr1@foo.com"
+					},
+					{
+						"id": "3",
+						"name": "",
+						"unencoded": "mailto:addr1 \\t ",
+						"encoded": "mailto:addr1"
+					},
+					{
+						"id": "4",
+						"name": "",
+						"unencoded": "mailto:addr1?to=jon",
+						"encoded": "mailto:addr1?to=jon"
+					},
+					{
+						"id": "5",
+						"name": "",
+						"unencoded": "mailto:addr1,addr2",
+						"encoded": "mailto:addr1,addr2"
+					},
+					{
+						"id": "6",
+						"name": "",
+						"unencoded": "mailto:addr1, addr2",
+						"encoded": "mailto:addr1, addr2"
+					},
+					{
+						"id": "7",
+						"name": "",
+						"unencoded": "mailto:addr1%2caddr2",
+						"encoded": "mailto:addr1%2caddr2"
+					},
+					{
+						"id": "8",
+						"name": "",
+						"unencoded": "mailto:\uD800\uDF00",
+						"encoded": "mailto:%F0%90%8C%80"
+					},
+					{
+						"id": "9",
+						"name": "",
+						"unencoded": "mailto:addr1?",
+						"encoded": "mailto:addr1?"
+					}
+				]
+			},
+			{
+				"name": "path-url",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/path-url.js",
+				"desc": "Test cases from Webkit's fast/url/path-url.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"unencoded": "javascript:",
+						"encoded": "javascript:"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"unencoded": "JavaScript:Foo",
+						"encoded": "javascript:Foo"
+					}
+				]
+			},
+			{
+				"name": "path",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/path.js",
+				"desc": "Test cases from Webkit's fast/url/path.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"unencoded": "http://www.example.com/././foo",
+						"encoded": "http://www.example.com/foo"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"unencoded": "http://www.example.com/./.foo",
+						"encoded": "http://www.example.com/.foo"
+					},
+					{
+						"id": "3",
+						"name": "",
+						"unencoded": "http://www.example.com/foo/.",
+						"encoded": "http://www.example.com/foo/"
+					},
+					{
+						"id": "4",
+						"name": "",
+						"unencoded": "http://www.example.com/foo/./",
+						"encoded": "http://www.example.com/foo/"
+					},
+					{
+						"id": "5",
+						"name": "",
+						"unencoded": "http://www.example.com/foo/bar/..",
+						"encoded": "http://www.example.com/foo/"
+					},
+					{
+						"id": "6",
+						"name": "",
+						"unencoded": "http://www.example.com/foo/bar/../",
+						"encoded": "http://www.example.com/foo/"
+					},
+					{
+						"id": "7",
+						"name": "",
+						"unencoded": "http://www.example.com/foo/..bar",
+						"encoded": "http://www.example.com/foo/..bar"
+					},
+					{
+						"id": "8",
+						"name": "",
+						"unencoded": "http://www.example.com/foo/bar/../ton",
+						"encoded": "http://www.example.com/foo/ton"
+					},
+					{
+						"id": "9",
+						"name": "",
+						"unencoded": "http://www.example.com/foo/bar/../ton/../../a",
+						"encoded": "http://www.example.com/a"
+					},
+					{
+						"id": "10",
+						"name": "",
+						"unencoded": "http://www.example.com/foo/../../..",
+						"encoded": "http://www.example.com/"
+					},
+					{
+						"id": "11",
+						"name": "",
+						"unencoded": "http://www.example.com/foo/../../../ton",
+						"encoded": "http://www.example.com/ton"
+					},
+					{
+						"id": "12",
+						"name": "",
+						"unencoded": "http://www.example.com/foo/%2e",
+						"encoded": "http://www.example.com/foo/"
+					},
+					{
+						"id": "13",
+						"name": "",
+						"unencoded": "http://www.example.com/foo/%2e%2",
+						"encoded": "http://www.example.com/foo/.%2"
+					},
+					{
+						"id": "14",
+						"name": "",
+						"unencoded": "http://www.example.com/foo/%2e./%2e%2e/.%2e/%2e.bar",
+						"encoded": "http://www.example.com/..bar"
+					},
+					{
+						"id": "15",
+						"name": "",
+						"unencoded": "http://www.example.com////../..",
+						"encoded": "http://www.example.com//"
+					},
+					{
+						"id": "16",
+						"name": "",
+						"unencoded": "http://www.example.com/foo/bar//../..",
+						"encoded": "http://www.example.com/foo/"
+					},
+					{
+						"id": "17",
+						"name": "",
+						"unencoded": "http://www.example.com/foo/bar//..",
+						"encoded": "http://www.example.com/foo/bar/"
+					},
+					{
+						"id": "18",
+						"name": "",
+						"unencoded": "http://www.example.com/foo/bar/..",
+						"encoded": "http://www.example.com/foo/"
+					},
+					{
+						"id": "19",
+						"name": "",
+						"unencoded": "http://www.example.com/foo",
+						"encoded": "http://www.example.com/foo"
+					},
+					{
+						"id": "20",
+						"name": "",
+						"unencoded": "http://www.example.com/%20foo",
+						"encoded": "http://www.example.com/%20foo"
+					},
+					{
+						"id": "21",
+						"name": "",
+						"unencoded": "http://www.example.com/foo%",
+						"encoded": "http://www.example.com/foo%"
+					},
+					{
+						"id": "22",
+						"name": "",
+						"unencoded": "http://www.example.com/foo%2",
+						"encoded": "http://www.example.com/foo%2"
+					},
+					{
+						"id": "23",
+						"name": "",
+						"unencoded": "http://www.example.com/foo%2zbar",
+						"encoded": "http://www.example.com/foo%2zbar"
+					},
+					{
+						"id": "24",
+						"name": "",
+						"unencoded": "http://www.example.com/foo%2\u00c2\u00a9zbar",
+						"encoded": "http://www.example.com/foo%2%C3%82%C2%A9zbar"
+					},
+					{
+						"id": "25",
+						"name": "",
+						"unencoded": "http://www.example.com/foo%41%7a",
+						"encoded": "http://www.example.com/fooAz"
+					},
+					{
+						"id": "26",
+						"name": "",
+						"unencoded": "http://www.example.com/foo\u0009\u0091%91",
+						"encoded": "http://www.example.com/foo%09%C2%91%91"
+					},
+					{
+						"id": "27",
+						"name": "",
+						"unencoded": "http://www.example.com/foo%00%51",
+						"encoded": "http://www.example.com/foo%00Q"
+					},
+					{
+						"id": "28",
+						"name": "",
+						"unencoded": "http://www.example.com/(%28:%3A%29)",
+						"encoded": "http://www.example.com/(%28:%3A%29)"
+					},
+					{
+						"id": "29",
+						"name": "",
+						"unencoded": "http://www.example.com/%3A%3a%3C%3c",
+						"encoded": "http://www.example.com/%3A%3a%3C%3c"
+					},
+					{
+						"id": "30",
+						"name": "",
+						"unencoded": "http://www.example.com/foo\\tbar",
+						"encoded": "http://www.example.com/foo%09bar"
+					},
+					{
+						"id": "31",
+						"name": "",
+						"unencoded": "http://www.example.com\\\\foo\\\\bar",
+						"encoded": "http://www.example.com/foo/bar"
+					},
+					{
+						"id": "32",
+						"name": "",
+						"unencoded": "http://www.example.com/%7Ffp3%3Eju%3Dduvgw%3Dd",
+						"encoded": "http://www.example.com/%7Ffp3%3Eju%3Dduvgw%3Dd"
+					},
+					{
+						"id": "33",
+						"name": "",
+						"unencoded": "http://www.example.com/@asdf%40",
+						"encoded": "http://www.example.com/@asdf%40"
+					},
+					{
+						"id": "34",
+						"name": "",
+						"unencoded": "http://www.example.com/\u4f60\u597d\u4f60\u597d",
+						"encoded": "http://www.example.com/%E4%BD%A0%E5%A5%BD%E4%BD%A0%E5%A5%BD"
+					},
+					{
+						"id": "35",
+						"name": "",
+						"unencoded": "http://www.example.com/\ufdd0zyx",
+						"encoded": "http://www.example.com/%EF%BF%BDzyx"
+					},
+					{
+						"id": "36",
+						"name": "",
+						"unencoded": "http://www.example.com/\u2025/foo",
+						"encoded": "http://www.example.com/%E2%80%A5/foo"
+					},
+					{
+						"id": "37",
+						"name": "",
+						"unencoded": "http://www.example.com/\uDEAD/foo",
+						"encoded": "http://www.example.com/\uFFFD/foo"
+					},
+					{
+						"id": "38",
+						"name": "",
+						"unencoded": "http://www.example.com/\uFEFF/foo",
+						"encoded": "http://www.example.com/%EF%BB%BF/foo"
+					},
+					{
+						"id": "39",
+						"name": "",
+						"unencoded": "http://www.example.com/\u202E/foo/\u202D/bar",
+						"encoded": "http://www.example.com/%E2%80%AE/foo/%E2%80%AD/bar"
+					},
+					{
+						"id": "40",
+						"name": "",
+						"unencoded": "http://www.example.com\uFF0Ffoo/",
+						"encoded": "http://www.example.com/foo/"
+					}
+				]
+			},
+			{
+				"name": "port",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/port.js",
+				"desc": "Test cases from Webkit's fast/url/port.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"unencoded": "http://www.example.com:as df/",
+						"encoded": "http://www.example.com:as%20df/"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"unencoded": "http://www.example.com:-2/",
+						"encoded": "http://www.example.com:-2/"
+					},
+					{
+						"id": "3",
+						"name": "",
+						"unencoded": "http://www.example.com:80/",
+						"encoded": "http://www.example.com/"
+					},
+					{
+						"id": "4",
+						"name": "",
+						"unencoded": "http://www.example.com:8080/",
+						"encoded": "http://www.example.com:8080/"
+					},
+					{
+						"id": "5",
+						"name": "",
+						"unencoded": "http://www.example.com:/",
+						"encoded": "http://www.example.com/"
+					},
+					{
+						"id": "6",
+						"name": "",
+						"unencoded": "http://www.example.com:\u1369/",
+						"encoded": "http://www.example.com:%E1%8D%A9/"
+					},
+					{
+						"id": "7",
+						"name": "",
+						"unencoded": "http://www.example.com:\uD835\uDFD6/",
+						"encoded": "http://www.example.com:%F0%9D%9F%96/"
+					}
+				]
+			},
+			{
+				"name": "query",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/query.js",
+				"desc": "Test cases from Webkit's fast/url/query.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"unencoded": "http://www.example.com/?foo=bar",
+						"encoded": "http://www.example.com/?foo=bar"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"unencoded": "http://www.example.com/?as?df",
+						"encoded": "http://www.example.com/?as?df"
+					},
+					{
+						"id": "3",
+						"name": "",
+						"unencoded": "http://www.example.com/?%02hello%7f bye",
+						"encoded": "http://www.example.com/?%02hello%7F%20bye"
+					},
+					{
+						"id": "4",
+						"name": "",
+						"unencoded": "http://www.example.com/?%40%41123",
+						"encoded": "http://www.example.com/?%40%41123"
+					},
+					{
+						"id": "5",
+						"name": "",
+						"unencoded": "http://www.example.com/?q=\u4F60\u597D",
+						"encoded": "http://www.example.com/?q=%26%2320320%3B%26%2322909%3B"
+					},
+					{
+						"id": "6",
+						"name": "",
+						"unencoded": "http://www.example.com/?q=\\\ud800\\\ud800",
+						"encoded": "http://www.example.com/?q=%26%2355296%3B%26%2355296%3B"
+					},
+					{
+						"id": "7",
+						"name": "",
+						"unencoded": "http://www.example.com/?q=&lt;asdf&gt;",
+						"encoded": "http://www.example.com/?q=%3Casdf%3E"
+					},
+					{
+						"id": "8",
+						"name": "",
+						"unencoded": "http://www.example.com/?q=\"asdf\"",
+						"encoded": "http://www.example.com/?q=%22asdf%22"
+					}
+				]
+			},
+			{
+				"name": "unencodedative-unix",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/unencodedative-unix.js",
+				"desc": "Test cases from Webkit's fast/url/unencodedative-unix.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "\\\\\\\\Another\\\\path",
+						"encoded": "http://another/path"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "/c:\\\\foo",
+						"encoded": "http://host/c:/foo"
+					},
+					{
+						"id": "3",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "//c:\\\\foo",
+						"encoded": "http://c/foo"
+					}
+				]
+			},
+			{
+				"name": "unencodedative-win",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/unencodedative-win.js",
+				"desc": "Test cases from Webkit's fast/url/unencodedative-win.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"base": "file:///C:/foo",
+						"unencoded": "http://host/",
+						"encoded": "http://host/"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"base": "file:///C:/foo",
+						"unencoded": "bar",
+						"encoded": "file:///C:/bar"
+					},
+					{
+						"id": "3",
+						"name": "",
+						"base": "file:///C:/foo",
+						"unencoded": "../../../bar.html",
+						"encoded": "file:///C:/bar.html"
+					},
+					{
+						"id": "4",
+						"name": "",
+						"base": "file:///C:/foo",
+						"unencoded": "/../bar.html",
+						"encoded": "file:///C:/bar.html"
+					},
+					{
+						"id": "5",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "\\\\\\\\another\\\\path",
+						"encoded": ""
+					},
+					{
+						"id": "6",
+						"name": "",
+						"base": "file:///C:/something",
+						"unencoded": "//c:/foo",
+						"encoded": "file:///C:/foo"
+					},
+					{
+						"id": "7",
+						"name": "",
+						"base": "file:///C:/something",
+						"unencoded": "//localhost/c:/foo",
+						"encoded": "file:///C:/foo"
+					},
+					{
+						"id": "8",
+						"name": "",
+						"base": "file:///C:/foo",
+						"unencoded": "c:",
+						"encoded": ""
+					},
+					{
+						"id": "9",
+						"name": "",
+						"base": "file:///C:/foo",
+						"unencoded": "c:/foo",
+						"encoded": ""
+					},
+					{
+						"id": "10",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "c:\\\\foo",
+						"encoded": ""
+					},
+					{
+						"id": "11",
+						"name": "",
+						"base": "file:///C:/foo",
+						"unencoded": "/z:/bar",
+						"encoded": "file:///Z:/bar"
+					},
+					{
+						"id": "12",
+						"name": "",
+						"base": "file:///C:/foo",
+						"unencoded": "/bar",
+						"encoded": "file:///C:/bar"
+					},
+					{
+						"id": "13",
+						"name": "",
+						"base": "file://localhost/C:/foo",
+						"unencoded": "/bar",
+						"encoded": "file://localhost/C:/bar"
+					},
+					{
+						"id": "14",
+						"name": "",
+						"base": "file:///C:/foo/com/",
+						"unencoded": "/bar",
+						"encoded": "file:///C:/bar"
+					},
+					{
+						"id": "15",
+						"name": "",
+						"base": "file:///C:/something",
+						"unencoded": "//somehost/path",
+						"encoded": "file://somehost/path"
+					},
+					{
+						"id": "16",
+						"name": "",
+						"base": "file:///C:/something",
+						"unencoded": "/\\\\//somehost/path",
+						"encoded": "file://somehost/path"
+					}
+				]
+			},
+			{
+				"name": "unencodedative",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/unencodedative.js",
+				"desc": "Test cases from Webkit's fast/url/unencodedative.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "http://another/",
+						"encoded": "http://another/"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "http:////another/",
+						"encoded": "http://another/"
+					},
+					{
+						"id": "3",
+						"name": "",
+						"base": "http://foo/bar",
+						"unencoded": "",
+						"encoded": "http://foo/bar"
+					},
+					{
+						"id": "4",
+						"name": "",
+						"base": "http://foo/bar#ref",
+						"unencoded": "",
+						"encoded": "http://foo/bar"
+					},
+					{
+						"id": "5",
+						"name": "",
+						"base": "http://foo/bar#",
+						"unencoded": "",
+						"encoded": "http://foo/bar"
+					},
+					{
+						"id": "6",
+						"name": "",
+						"base": "http://foo/bar",
+						"unencoded": "  another  ",
+						"encoded": "http://foo/another"
+					},
+					{
+						"id": "7",
+						"name": "",
+						"base": "http://foo/bar",
+						"unencoded": "  .  ",
+						"encoded": "http://foo/"
+					},
+					{
+						"id": "8",
+						"name": "",
+						"base": "http://foo/bar",
+						"unencoded": " \\t ",
+						"encoded": "http://foo/bar"
+					},
+					{
+						"id": "9",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "http:path",
+						"encoded": "http://host/path"
+					},
+					{
+						"id": "10",
+						"name": "",
+						"base": "http://host/a/",
+						"unencoded": "http:path",
+						"encoded": "http://host/a/path"
+					},
+					{
+						"id": "11",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "http:/path",
+						"encoded": "http://host/path"
+					},
+					{
+						"id": "12",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "HTTP:/path",
+						"encoded": "http://host/path"
+					},
+					{
+						"id": "13",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "https:host2",
+						"encoded": "https://host2/"
+					},
+					{
+						"id": "14",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "htto:/host2",
+						"encoded": "htto:/host2"
+					},
+					{
+						"id": "15",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "/b/c/d",
+						"encoded": "http://host/b/c/d"
+					},
+					{
+						"id": "16",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "\\\\b\\\\c\\\\d",
+						"encoded": "http://host/b/c/d"
+					},
+					{
+						"id": "17",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "/b/../c",
+						"encoded": "http://host/c"
+					},
+					{
+						"id": "18",
+						"name": "",
+						"base": "http://host/a?b#c",
+						"unencoded": "/b/../c",
+						"encoded": "http://host/c"
+					},
+					{
+						"id": "19",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "\\\\b/../c?x#y",
+						"encoded": "http://host/c?x#y"
+					},
+					{
+						"id": "20",
+						"name": "",
+						"base": "http://host/a?b#c",
+						"unencoded": "/b/../c?x#y",
+						"encoded": "http://host/c?x#y"
+					},
+					{
+						"id": "21",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "b",
+						"encoded": "http://host/b"
+					},
+					{
+						"id": "22",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "bc/de",
+						"encoded": "http://host/bc/de"
+					},
+					{
+						"id": "23",
+						"name": "",
+						"base": "http://host/a/",
+						"unencoded": "bc/de?query#ref",
+						"encoded": "http://host/a/bc/de?query#ref"
+					},
+					{
+						"id": "24",
+						"name": "",
+						"base": "http://host/a/",
+						"unencoded": ".",
+						"encoded": "http://host/a/"
+					},
+					{
+						"id": "25",
+						"name": "",
+						"base": "http://host/a/",
+						"unencoded": "..",
+						"encoded": "http://host/"
+					},
+					{
+						"id": "26",
+						"name": "",
+						"base": "http://host/a/",
+						"unencoded": "./..",
+						"encoded": "http://host/"
+					},
+					{
+						"id": "27",
+						"name": "",
+						"base": "http://host/a/",
+						"unencoded": "../.",
+						"encoded": "http://host/"
+					},
+					{
+						"id": "28",
+						"name": "",
+						"base": "http://host/a/",
+						"unencoded": "././.",
+						"encoded": "http://host/a/"
+					},
+					{
+						"id": "29",
+						"name": "",
+						"base": "http://host/a?query#ref",
+						"unencoded": "../../../foo",
+						"encoded": "http://host/foo"
+					},
+					{
+						"id": "30",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "?foo=bar",
+						"encoded": "http://host/a?foo=bar"
+					},
+					{
+						"id": "31",
+						"name": "",
+						"base": "http://host/a?x=y#z",
+						"unencoded": "?",
+						"encoded": "http://host/a?"
+					},
+					{
+						"id": "32",
+						"name": "",
+						"base": "http://host/a?x=y#z",
+						"unencoded": "?foo=bar#com",
+						"encoded": "http://host/a?foo=bar#com"
+					},
+					{
+						"id": "33",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "#ref",
+						"encoded": "http://host/a#ref"
+					},
+					{
+						"id": "34",
+						"name": "",
+						"base": "http://host/a#b",
+						"unencoded": "#",
+						"encoded": "http://host/a#"
+					},
+					{
+						"id": "35",
+						"name": "",
+						"base": "http://host/a?foo=bar#hello",
+						"unencoded": "#bye",
+						"encoded": "http://host/a?foo=bar#bye"
+					},
+					{
+						"id": "36",
+						"name": "",
+						"base": "data:foobar",
+						"unencoded": "baz.html",
+						"encoded": ""
+					},
+					{
+						"id": "37",
+						"name": "",
+						"base": "data:foobar",
+						"unencoded": "data:baz",
+						"encoded": "data:baz"
+					},
+					{
+						"id": "38",
+						"name": "",
+						"base": "data:foobar",
+						"unencoded": "data:/base",
+						"encoded": "data:/base"
+					},
+					{
+						"id": "39",
+						"name": "",
+						"base": "data:foobar",
+						"unencoded": "http://host/",
+						"encoded": "http://host/"
+					},
+					{
+						"id": "40",
+						"name": "",
+						"base": "data:foobar",
+						"unencoded": "http:host",
+						"encoded": "http://host/"
+					},
+					{
+						"id": "41",
+						"name": "",
+						"base": "http://foo/bar",
+						"unencoded": "./asd:fgh",
+						"encoded": "http://foo/asd:fgh"
+					},
+					{
+						"id": "42",
+						"name": "",
+						"base": "http://foo/bar",
+						"unencoded": ":foo",
+						"encoded": "http://foo/:foo"
+					},
+					{
+						"id": "43",
+						"name": "",
+						"base": "http://foo/bar",
+						"unencoded": " hello world",
+						"encoded": "http://foo/hello%20world"
+					},
+					{
+						"id": "44",
+						"name": "",
+						"base": "data:asdf",
+						"unencoded": ":foo",
+						"encoded": ""
+					},
+					{
+						"id": "45",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": ";foo",
+						"encoded": "http://host/;foo"
+					},
+					{
+						"id": "46",
+						"name": "",
+						"base": "http://host/a;",
+						"unencoded": ";foo",
+						"encoded": "http://host/;foo"
+					},
+					{
+						"id": "47",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": ";/../bar",
+						"encoded": "http://host/bar"
+					},
+					{
+						"id": "48",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "//another",
+						"encoded": "http://another/"
+					},
+					{
+						"id": "49",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "//another/path?query#ref",
+						"encoded": "http://another/path?query#ref"
+					},
+					{
+						"id": "50",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "///another/path",
+						"encoded": "http://another/path"
+					},
+					{
+						"id": "51",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "//Another\\\\path",
+						"encoded": "http://another/path"
+					},
+					{
+						"id": "52",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "//",
+						"encoded": "http:"
+					},
+					{
+						"id": "53",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "\\\\/another/path",
+						"encoded": "http://another/path"
+					},
+					{
+						"id": "54",
+						"name": "",
+						"base": "http://host/a",
+						"unencoded": "/\\\\Another\\\\path",
+						"encoded": "http://another/path"
+					}
+				]
+			},
+			{
+				"name": "scheme",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/scheme.js",
+				"desc": "Test cases from Webkit's fast/url/scheme.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"unencoded": "http://example.com/",
+						"encoded": "http://example.com/"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"unencoded": "HTTP://example.com/",
+						"encoded": "http://example.com/"
+					}
+				]
+			},
+			{
+				"name": "segments-from-data-url",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/segments-from-data-url.js",
+				"desc": "Test cases from Webkit's fast/url/segments-from-data-url.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"unencoded": "http://user:pass@foo:21/bar;par?b#c",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "foo",
+						"expect_port": "21",
+						"expect_pathname": "/bar;par",
+						"expect_search": "?b",
+						"expect_hash": "#c"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"unencoded": "http:foo.com",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "foo.com",
+						"expect_port": "",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "3",
+						"name": "",
+						"unencoded": "\u0009   :foo.com   \u000A",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "4",
+						"name": "",
+						"unencoded": " foo.com  ",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "5",
+						"name": "",
+						"unencoded": "a:\u0009 foo.com",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "a:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": " foo.com",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "6",
+						"name": "",
+						"unencoded": "http://f:21/ b ? d # e ",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "f",
+						"expect_port": "21",
+						"expect_pathname": "/%20b%20",
+						"expect_search": "?%20d%20",
+						"expect_hash": "# e"
+					},
+					{
+						"id": "7",
+						"name": "",
+						"unencoded": "http://f:/c",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "f",
+						"expect_port": "",
+						"expect_pathname": "/c",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "8",
+						"name": "",
+						"unencoded": "http://f:0/c",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "f",
+						"expect_port": "0",
+						"expect_pathname": "/c",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "9",
+						"name": "",
+						"unencoded": "http://f:00000000000000/c",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "f",
+						"expect_port": "0",
+						"expect_pathname": "/c",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "10",
+						"name": "",
+						"unencoded": "http://f:00000000000000000000080/c",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "f",
+						"expect_port": "",
+						"expect_pathname": "/c",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "11",
+						"name": "",
+						"unencoded": "http://f:b/c",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "12",
+						"name": "",
+						"unencoded": "http://f: /c",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "13",
+						"name": "",
+						"unencoded": "http://f:\u000A/c",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "14",
+						"name": "",
+						"unencoded": "http://f:fifty-two/c",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "15",
+						"name": "",
+						"unencoded": "http://f:999999/c",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "16",
+						"name": "",
+						"unencoded": "http://f: 21 / b ? d # e ",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "17",
+						"name": "",
+						"unencoded": "",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "data:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "text/plain,baseURL",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "18",
+						"name": "",
+						"unencoded": "  \u0009",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "data:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "text/plain,baseURL",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "19",
+						"name": "",
+						"unencoded": ":foo.com/",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "20",
+						"name": "",
+						"unencoded": ":foo.com\\\\",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "21",
+						"name": "",
+						"unencoded": ":",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "22",
+						"name": "",
+						"unencoded": ":a",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "23",
+						"name": "",
+						"unencoded": ":/",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "24",
+						"name": "",
+						"unencoded": ":\\\\",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "25",
+						"name": "",
+						"unencoded": ":#",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "26",
+						"name": "",
+						"unencoded": "#",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "27",
+						"name": "",
+						"unencoded": "#/",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "28",
+						"name": "",
+						"unencoded": "#\\\\",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "29",
+						"name": "",
+						"unencoded": "#;?",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "30",
+						"name": "",
+						"unencoded": "?",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "31",
+						"name": "",
+						"unencoded": "/",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "32",
+						"name": "",
+						"unencoded": ":23",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "33",
+						"name": "",
+						"unencoded": "/:23",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "data:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "/:23",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "34",
+						"name": "",
+						"unencoded": "//",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "35",
+						"name": "",
+						"unencoded": "::",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "36",
+						"name": "",
+						"unencoded": "::23",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "37",
+						"name": "",
+						"unencoded": "foo://",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "foo:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "//",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "38",
+						"name": "",
+						"unencoded": "http://a:b@c:29/d",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "c",
+						"expect_port": "29",
+						"expect_pathname": "/d",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "39",
+						"name": "",
+						"unencoded": "http::@c:29",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "c",
+						"expect_port": "29",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "40",
+						"name": "",
+						"unencoded": "http://&amp;a:foo(b]c@d:2/",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "d",
+						"expect_port": "2",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "41",
+						"name": "",
+						"unencoded": "http://::@c@d:2",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "d",
+						"expect_port": "2",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "42",
+						"name": "",
+						"unencoded": "http://foo.com:b@d/",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "d",
+						"expect_port": "",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "43",
+						"name": "",
+						"unencoded": "http://foo.com/\\\\@",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "foo.com",
+						"expect_port": "",
+						"expect_pathname": "//@",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "44",
+						"name": "",
+						"unencoded": "http:\\\\\\\\foo.com\\\\",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "foo.com",
+						"expect_port": "",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "45",
+						"name": "",
+						"unencoded": "http:\\\\\\\\a\\\\b:c\\\\d@foo.com\\\\",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "a",
+						"expect_port": "",
+						"expect_pathname": "/b:c/d@foo.com/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "46",
+						"name": "",
+						"unencoded": "foo:/",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "foo:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "47",
+						"name": "",
+						"unencoded": "foo:/bar.com/",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "foo:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "/bar.com/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "48",
+						"name": "",
+						"unencoded": "foo://///////",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "foo:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "/////////",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "49",
+						"name": "",
+						"unencoded": "foo://///////bar.com/",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "foo:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "/////////bar.com/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "50",
+						"name": "",
+						"unencoded": "foo:////://///",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "foo:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "////://///",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "51",
+						"name": "",
+						"unencoded": "c:/foo",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "c:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "/foo",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "52",
+						"name": "",
+						"unencoded": "//foo/bar",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "53",
+						"name": "",
+						"unencoded": "http://foo/path;a??e#f#g",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "foo",
+						"expect_port": "",
+						"expect_pathname": "/path;a",
+						"expect_search": "??e",
+						"expect_hash": "#f#g"
+					},
+					{
+						"id": "54",
+						"name": "",
+						"unencoded": "http://foo/abcd?efgh?ijkl",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "foo",
+						"expect_port": "",
+						"expect_pathname": "/abcd",
+						"expect_search": "?efgh?ijkl",
+						"expect_hash": ""
+					},
+					{
+						"id": "55",
+						"name": "",
+						"unencoded": "http://foo/abcd#foo?bar",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "foo",
+						"expect_port": "",
+						"expect_pathname": "/abcd",
+						"expect_search": "",
+						"expect_hash": "#foo?bar"
+					},
+					{
+						"id": "56",
+						"name": "",
+						"unencoded": "[61:24:74]:98",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "data:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "text/[61:24:74]:98",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "57",
+						"name": "",
+						"unencoded": "http://[61:27]:98",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "58",
+						"name": "",
+						"unencoded": "http:[61:27]/:foo",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "59",
+						"name": "",
+						"unencoded": "http://[1::2]:3:4",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "60",
+						"name": "",
+						"unencoded": "http://2001::1",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "61",
+						"name": "",
+						"unencoded": "http://[2001::1",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "62",
+						"name": "",
+						"unencoded": "http://2001::1]",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "63",
+						"name": "",
+						"unencoded": "http://2001::1]:80",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "64",
+						"name": "",
+						"unencoded": "http://[2001::1]",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "[2001::1]",
+						"expect_port": "",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "65",
+						"name": "",
+						"unencoded": "http://[2001::1]:80",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": "http:",
+						"expect_hostname": "[2001::1]",
+						"expect_port": "",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "66",
+						"name": "",
+						"unencoded": "http://[[::]]",
+						"base": "data:text/plain,baseURL",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					}
+				]
+			},
+			{
+				"name": "segments",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/segments.js",
+				"desc": "Test cases from Webkit's fast/url/segments.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"unencoded": "http://user:pass@foo:21/bar;par?b#c",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "foo",
+						"expect_port": "21",
+						"expect_pathname": "/bar;par",
+						"expect_search": "?b",
+						"expect_hash": "#c"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"unencoded": "http:foo.com",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/foo.com",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "3",
+						"name": "",
+						"unencoded": "\u0009   :foo.com   \u000A",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/:foo.com",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "4",
+						"name": "",
+						"unencoded": " foo.com  ",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/foo.com",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "5",
+						"name": "",
+						"unencoded": "a:\u0009 foo.com",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "a:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": " foo.com",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "6",
+						"name": "",
+						"unencoded": "http://f:21/ b ? d # e ",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "f",
+						"expect_port": "21",
+						"expect_pathname": "/%20b%20",
+						"expect_search": "?%20d%20",
+						"expect_hash": "# e"
+					},
+					{
+						"id": "7",
+						"name": "",
+						"unencoded": "http://f:/c",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "f",
+						"expect_port": "",
+						"expect_pathname": "/c",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "8",
+						"name": "",
+						"unencoded": "http://f:0/c",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "f",
+						"expect_port": "0",
+						"expect_pathname": "/c",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "9",
+						"name": "",
+						"unencoded": "http://f:00000000000000/c",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "f",
+						"expect_port": "0",
+						"expect_pathname": "/c",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "10",
+						"name": "",
+						"unencoded": "http://f:00000000000000000000080/c",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "f",
+						"expect_port": "",
+						"expect_pathname": "/c",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "11",
+						"name": "",
+						"unencoded": "http://f:b/c",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "12",
+						"name": "",
+						"unencoded": "http://f: /c",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "13",
+						"name": "",
+						"unencoded": "http://f:\u000A/c",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "14",
+						"name": "",
+						"unencoded": "http://f:fifty-two/c",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "15",
+						"name": "",
+						"unencoded": "http://f:999999/c",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "16",
+						"name": "",
+						"unencoded": "http://f: 21 / b ? d # e ",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "17",
+						"name": "",
+						"unencoded": "",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/bar",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "18",
+						"name": "",
+						"unencoded": "  \u0009",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/bar",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "19",
+						"name": "",
+						"unencoded": ":foo.com/",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/:foo.com/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "20",
+						"name": "",
+						"unencoded": ":foo.com\\\\",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/:foo.com/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "21",
+						"name": "",
+						"unencoded": ":",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/:",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "22",
+						"name": "",
+						"unencoded": ":a",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/:a",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "23",
+						"name": "",
+						"unencoded": ":/",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/:/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "24",
+						"name": "",
+						"unencoded": ":\\\\",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/:/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "25",
+						"name": "",
+						"unencoded": ":#",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/:",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "26",
+						"name": "",
+						"unencoded": "#",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/bar",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "27",
+						"name": "",
+						"unencoded": "#/",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/bar",
+						"expect_search": "",
+						"expect_hash": "#/"
+					},
+					{
+						"id": "28",
+						"name": "",
+						"unencoded": "#\\\\",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/bar",
+						"expect_search": "",
+						"expect_hash": "#\\\\"
+					},
+					{
+						"id": "29",
+						"name": "",
+						"unencoded": "#;?",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/bar",
+						"expect_search": "",
+						"expect_hash": "#;?"
+					},
+					{
+						"id": "30",
+						"name": "",
+						"unencoded": "?",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/bar",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "31",
+						"name": "",
+						"unencoded": "/",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "32",
+						"name": "",
+						"unencoded": ":23",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/:23",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "33",
+						"name": "",
+						"unencoded": "/:23",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/:23",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "34",
+						"name": "",
+						"unencoded": "//",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "35",
+						"name": "",
+						"unencoded": "::",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/::",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "36",
+						"name": "",
+						"unencoded": "::23",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/::23",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "37",
+						"name": "",
+						"unencoded": "foo://",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "foo:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "//",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "38",
+						"name": "",
+						"unencoded": "http://a:b@c:29/d",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "c",
+						"expect_port": "29",
+						"expect_pathname": "/d",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "39",
+						"name": "",
+						"unencoded": "http::@c:29",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/:@c:29",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "40",
+						"name": "",
+						"unencoded": "http://&amp;a:foo(b]c@d:2/",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "d",
+						"expect_port": "2",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "41",
+						"name": "",
+						"unencoded": "http://::@c@d:2",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "d",
+						"expect_port": "2",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "42",
+						"name": "",
+						"unencoded": "http://foo.com:b@d/",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "d",
+						"expect_port": "",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "43",
+						"name": "",
+						"unencoded": "http://foo.com/\\\\@",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "foo.com",
+						"expect_port": "",
+						"expect_pathname": "//@",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "44",
+						"name": "",
+						"unencoded": "http:\\\\\\\\foo.com\\\\",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "foo.com",
+						"expect_port": "",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "45",
+						"name": "",
+						"unencoded": "http:\\\\\\\\a\\\\b:c\\\\d@foo.com\\\\",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "a",
+						"expect_port": "",
+						"expect_pathname": "/b:c/d@foo.com/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "46",
+						"name": "",
+						"unencoded": "foo:/",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "foo:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "47",
+						"name": "",
+						"unencoded": "foo:/bar.com/",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "foo:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "/bar.com/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "48",
+						"name": "",
+						"unencoded": "foo://///////",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "foo:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "/////////",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "49",
+						"name": "",
+						"unencoded": "foo://///////bar.com/",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "foo:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "/////////bar.com/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "50",
+						"name": "",
+						"unencoded": "foo:////://///",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "foo:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "////://///",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "51",
+						"name": "",
+						"unencoded": "c:/foo",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "c:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "/foo",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "52",
+						"name": "",
+						"unencoded": "//foo/bar",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "foo",
+						"expect_port": "",
+						"expect_pathname": "/bar",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "53",
+						"name": "",
+						"unencoded": "http://foo/path;a??e#f#g",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "foo",
+						"expect_port": "",
+						"expect_pathname": "/path;a",
+						"expect_search": "??e",
+						"expect_hash": "#f#g"
+					},
+					{
+						"id": "54",
+						"name": "",
+						"unencoded": "http://foo/abcd?efgh?ijkl",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "foo",
+						"expect_port": "",
+						"expect_pathname": "/abcd",
+						"expect_search": "?efgh?ijkl",
+						"expect_hash": ""
+					},
+					{
+						"id": "55",
+						"name": "",
+						"unencoded": "http://foo/abcd#foo?bar",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "foo",
+						"expect_port": "",
+						"expect_pathname": "/abcd",
+						"expect_search": "",
+						"expect_hash": "#foo?bar"
+					},
+					{
+						"id": "56",
+						"name": "",
+						"unencoded": "[61:24:74]:98",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/[61:24:74]:98",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "57",
+						"name": "",
+						"unencoded": "http://[61:27]:98",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "58",
+						"name": "",
+						"unencoded": "http:[61:27]/:foo",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.org",
+						"expect_port": "",
+						"expect_pathname": "/foo/[61:27]/:foo",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "59",
+						"name": "",
+						"unencoded": "http://[1::2]:3:4",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "60",
+						"name": "",
+						"unencoded": "http://2001::1",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "61",
+						"name": "",
+						"unencoded": "http://[2001::1",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "62",
+						"name": "",
+						"unencoded": "http://2001::1]",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "63",
+						"name": "",
+						"unencoded": "http://2001::1]:80",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "64",
+						"name": "",
+						"unencoded": "http://[2001::1]",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "[2001::1]",
+						"expect_port": "",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "65",
+						"name": "",
+						"unencoded": "http://[2001::1]:80",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": "http:",
+						"expect_hostname": "[2001::1]",
+						"expect_port": "",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "66",
+						"name": "",
+						"unencoded": "http://[[::]]",
+						"base": "http://example.org/foo/bar",
+						"expect_protocol": ":",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "",
+						"expect_search": "",
+						"expect_hash": ""
+					}
+				]
+			},
+			{
+				"name": "standard-url",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/standard-url.js",
+				"desc": "Test cases from Webkit's fast/url/standard-url.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"unencoded": "http://www.google.com/foo?bar=baz#",
+						"encoded": "http://www.google.com/foo?bar=baz#"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"unencoded": "http://[www.google.com]/",
+						"encoded": "http://[www.google.com]/"
+					},
+					{
+						"id": "3",
+						"name": "",
+						"unencoded": "http:////////user:@google.com:99?foo",
+						"encoded": "http://user@google.com:99/?foo"
+					},
+					{
+						"id": "4",
+						"name": "",
+						"unencoded": "http://192.0x00A80001",
+						"encoded": "http://192.168.0.1/"
+					},
+					{
+						"id": "5",
+						"name": "",
+						"unencoded": "http://www/foo%2Ehtml",
+						"encoded": "http://www/foo.html"
+					},
+					{
+						"id": "6",
+						"name": "",
+						"unencoded": "http://user:pass@/",
+						"encoded": "http://user:pass@/"
+					},
+					{
+						"id": "7",
+						"name": "",
+						"unencoded": "http://%25DOMAIN:foobar@foodomain.com/",
+						"encoded": "http://%25DOMAIN:foobar@foodomain.com/"
+					},
+					{
+						"id": "8",
+						"name": "",
+						"unencoded": "http:\\\\\\\\www.google.com\\\\foo",
+						"encoded": "http://www.google.com/foo"
+					},
+					{
+						"id": "9",
+						"name": "",
+						"unencoded": "http://www.google.com/asdf#\\\ud800",
+						"encoded": "http://www.google.com/asdf#\\\uFFFD"
+					},
+					{
+						"id": "10",
+						"name": "",
+						"unencoded": "http://foo:80/",
+						"encoded": "http://foo/"
+					},
+					{
+						"id": "11",
+						"name": "",
+						"unencoded": "http://foo:81/",
+						"encoded": "http://foo:81/"
+					},
+					{
+						"id": "12",
+						"name": "",
+						"unencoded": "httpa://foo:80/",
+						"encoded": "httpa://foo:80/"
+					},
+					{
+						"id": "13",
+						"name": "",
+						"unencoded": "http://foo:-80/",
+						"encoded": "http://foo:-80/"
+					},
+					{
+						"id": "14",
+						"name": "",
+						"unencoded": "https://foo:443/",
+						"encoded": "https://foo/"
+					},
+					{
+						"id": "15",
+						"name": "",
+						"unencoded": "https://foo:80/",
+						"encoded": "https://foo:80/"
+					},
+					{
+						"id": "16",
+						"name": "",
+						"unencoded": "ftp://foo:21/",
+						"encoded": "ftp://foo/"
+					},
+					{
+						"id": "17",
+						"name": "",
+						"unencoded": "ftp://foo:80/",
+						"encoded": "ftp://foo:80/"
+					},
+					{
+						"id": "18",
+						"name": "",
+						"unencoded": "gopher://foo:70/",
+						"encoded": "gopher://foo/"
+					},
+					{
+						"id": "19",
+						"name": "",
+						"unencoded": "gopher://foo:443/",
+						"encoded": "gopher://foo:443/"
+					},
+					{
+						"id": "20",
+						"name": "",
+						"unencoded": "ws://foo:80/",
+						"encoded": "ws://foo/"
+					},
+					{
+						"id": "21",
+						"name": "",
+						"unencoded": "ws://foo:81/",
+						"encoded": "ws://foo:81/"
+					},
+					{
+						"id": "22",
+						"name": "",
+						"unencoded": "ws://foo:443/",
+						"encoded": "ws://foo:443/"
+					},
+					{
+						"id": "23",
+						"name": "",
+						"unencoded": "ws://foo:815/",
+						"encoded": "ws://foo:815/"
+					},
+					{
+						"id": "24",
+						"name": "",
+						"unencoded": "wss://foo:80/",
+						"encoded": "wss://foo:80/"
+					},
+					{
+						"id": "25",
+						"name": "",
+						"unencoded": "wss://foo:81/",
+						"encoded": "wss://foo:81/"
+					},
+					{
+						"id": "26",
+						"name": "",
+						"unencoded": "wss://foo:443/",
+						"encoded": "wss://foo/"
+					},
+					{
+						"id": "27",
+						"name": "",
+						"unencoded": "wss://foo:815/",
+						"encoded": "wss://foo:815/"
+					}
+				]
+			},
+			{
+				"name": "trivial-segments",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/trivial-segments.js",
+				"desc": "Test cases from Webkit's fast/url/trivial-segments.js",
+				"test": {
+					"id": "1",
+					"name": "",
+					"unencoded": "http://example.com/",
+					"base": "http://example.org/foo/bar",
+					"expect_protocol": "http:",
+					"expect_hostname": "example.com",
+					"expect_port": "",
+					"expect_pathname": "/",
+					"expect_search": "",
+					"expect_hash": ""
+				}
+			},
+			{
+				"name": "trivial",
+				"link": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/url/script-tests/trivial.js",
+				"desc": "Test cases from Webkit's fast/url/trivial.js",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"base": "http://example.org/foo/bar",
+						"unencoded": "http://example.com/",
+						"encoded": "http://example.com/"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"base": "http://example.org/foo/bar",
+						"unencoded": "/",
+						"encoded": "http://example.org/"
+					}
+				]
+			},
+			{
+				"name": "normalization",
+				"link": "#",
+				"desc": "Test cases for normalization behaviors - see http://www.unicode.org/reports/tr15/ Figure 6 and RFC3987",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"charset": "utf-8",
+						"base": "http://www.example.com/",
+						"unencoded": "re&#x301;sume&#x301;/re&#x301;sume&#x301;.html",
+						"encoded": "re&#x301;sume&#x301;/re&#x301;sume&#x301;.html"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"charset": "utf-8",
+						"base": "http://www.example.com/",
+						"unencoded": "r&#xE9;sum&#xE9;.html",
+						"encoded": "r&#xE9;sum&#xE9;.html"
+					},
+					{
+						"id": "3",
+						"name": "",
+						"charset": "windows-1258",
+						"base": "http://www.example.com/",
+						"unencoded": "Vi&#xEA;&#x323;tNam.html",
+						"encoded": "Vi&#xEA;&#x323;tNam.html"
+					},
+					{
+						"id": "4",
+						"name": "",
+						"charset": "utf-8",
+						"base": "http://www.example.com/",
+						"unencoded": "\uFB01?\uFB01#\uFB01",
+						"encoded": "\uFB01?\uFB01#\uFB01"
+					},
+					{
+						"id": "5",
+						"name": "",
+						"charset": "utf-8",
+						"base": "http://www.example.com/",
+						"unencoded": "?re&#x301;sume&#x301;#re&#x301;sume&#x301;",
+						"encoded": "?re&#x301;sume&#x301;#re&#x301;sume&#x301;"
+					},
+					{
+						"id": "6",
+						"name": "",
+						"charset": "utf-8",
+						"base": "http://www.example.com/",
+						"unencoded": "2\u2075?2\u2075#2\u2075",
+						"encoded": "2\u2075?2\u2075#2\u2075"
+					},
+					{
+						"id": "7",
+						"name": "",
+						"charset": "windows-1258",
+						"base": "http://www.example.com/",
+						"unencoded": "?Vi&#xEA;&#x323;tNam#Vi&#xEA;&#x323;tNam",
+						"encoded": "?Vi&#xEA;&#x323;tNam#Vi&#xEA;&#x323;tNam"
+					},
+					{
+						"id": "8",
+						"name": "",
+						"charset": "windows-1258",
+						"base": "http://www.example.com/",
+						"unencoded": "foo?q=\u2665",
+						"encoded": "foo?q=\u2665"
+					},
+					{
+						"id": "9",
+						"name": "",
+						"charset": "utf-8",
+						"base": "http://www.example.com/",
+						"unencoded": "\u1E9B\u0323/?\u1E9B\u0323#\u1E9B\u0323",
+						"encoded": "\u1E9B\u0323/?\u1E9B\u0323#\u1E9B\u0323"
+					},
+					{
+						"id": "10",
+						"name": "",
+						"charset": "utf-8",
+						"base": "http://www.example.com/",
+						"unencoded": "\u212B/?\u212B#\u212B",
+						"encoded": "\u1E9B\u0323/?\u1E9B\u0323#\u1E9B\u0323"
+					},
+					{
+						"id": "11",
+						"name": "",
+						"charset": "utf-8",
+						"base": "http://www.example.com/",
+						"unencoded": "\u1E9B\u0323/?\u1E9B\u0323#\u1E9B\u0323",
+						"encoded": "\u1E9B\u0323/?\u1E9B\u0323#\u1E9B\u0323"
+					},
+					{
+						"id": "12",
+						"name": "",
+						"charset": "utf-8",
+						"base": "http://www.example.com/",
+						"unencoded": "\u1E0B\u0323/?\u1E0B\u0323#\u1E0B\u0323",
+						"encoded": "\u1E0B\u0323/?\u1E0B\u0323#\u1E0B\u0323"
+					}
+				]
+			},
+			{
+				"name": "whitespace",
+				"link": "#",
+				"desc": "Various references with white space",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"unencoded": "http://www.example.com/foo    bar/?   foo   =   bar     #    foo",
+						"encoded": "http://www.example.com/foo    bar/?   foo   =   bar     #    foo"
+					},
+					{
+						"id": "2",
+						"name": "",
+						"unencoded": "http://www.example.com/ ",
+						"encoded": "http://www.example.com/ "
+					}
+				]
+			},
+			{
+				"name": "percent-encoding",
+				"link": "#",
+				"desc": "Test how percent-encoding is handled",
+				"test": [
+					{
+						"id": "1",
+						"name": "Test if delimeters such as \"?\" are unencoded",
+						"charset": "utf-8",
+						"unencoded": "http://www.example.com/foo%3fbar",
+						"encoded": "http://www.example.com/foo?bar"
+					},
+					{
+						"id": "2",
+						"name": "Test if delimeters such as \"/\" are unencoded",
+						"charset": "utf-8",
+						"unencoded": "http://www.example.com/foo%2fbar",
+						"encoded": "http://www.example.com/foo/bar"
+					},
+					{
+						"id": "3",
+						"name": "Test if entire string is unencoded",
+						"charset": "utf-8",
+						"unencoded": "%68%74%74%70%3a%2f%2f%77%77%77%2e%65%78%61%6d%70%6c%65%2e%63%6f%6d%2f",
+						"encoded": "http://www.example.com/"
+					},
+					{
+						"id": "4",
+						"name": "Test if scheme gets unencoded",
+						"charset": "utf-8",
+						"unencoded": "http%3a%2f%2f%77%77%77%2e%65%78%61%6d%70%6c%65%2e%63%6f%6d%2f",
+						"encoded": "http://www.example.com/"
+					},
+					{
+						"id": "5",
+						"name": "Test if authority and port gets unencoded",
+						"charset": "utf-8",
+						"unencoded": "http://%77%77%77%2e%65%78%61%6d%70%6c%65%2e%63%6f%6d%3a%38%30",
+						"encoded": "http://www.example.com:80/"
+					},
+					{
+						"id": "6",
+						"name": "",
+						"charset": "iso-8859-1",
+						"unencoded": "http://%A1%C1.com",
+						"encoded": "http://¡À.com"
+					},
+					{
+						"id": "7",
+						"name": "Test mixed encodings",
+						"charset": "iso-8859-1",
+						"unencoded": "http://www.example.com/%A1%C1/?foo=%EF%BD%81",
+						"encoded": "http://www.example.com/%A1%C1/?foo=%EF%BD%81"
+					},
+					{
+						"id": "8",
+						"name": "Test mixed encodings",
+						"charset": "iso-8859-1",
+						"unencoded": "http://www.example.com/%EF%BD%81/?foo=%A1%C1",
+						"encoded": "http://www.example.com/%EF%BD%81/?foo=%A1%C1",
+						"comment": "."
+					},
+					{
+						"id": "9",
+						"name": "Test mixed encodings",
+						"charset": "iso-8859-1",
+						"unencoded": "http://www.example.com/ＦＯＯ/?foo=%A1%C1",
+						"encoded": "http://www.example.com/ＦＯＯ/?foo=%A1%C1"
+					},
+					{
+						"id": "10",
+						"name": "Test mixed encodings",
+						"charset": "iso-8859-1",
+						"unencoded": "http://www.example.com/%A1%C1/?foo=ＦＯＯ",
+						"encoded": "http://www.example.com/%A1%C1/?foo=ＦＯＯ"
+					},
+					{
+						"id": "11",
+						"name": "Test mixed encodings",
+						"charset": "utf-8",
+						"unencoded": "http://www.example.com/ＦＯＯ/?foo=%A1%C1",
+						"encoded": "http://www.example.com/ＦＯＯ/?foo=%A1%C1"
+					},
+					{
+						"id": "12",
+						"name": "The Martin Dürst test",
+						"charset": "iso-8859-1",
+						"unencoded": "http://www.example.com/D%FCrst",
+						"encoded": "http://www.example.com/D%FCrst"
+					},
+					{
+						"id": "13",
+						"name": "The Martin Dürst test",
+						"charset": "iso-8859-1",
+						"unencoded": "http://www.example.com/D%C3%BCrst",
+						"encoded": "http://www.example.com/D%C3%BCrst"
+					},
+					{
+						"id": "14",
+						"name": "The Martin Dürst test",
+						"charset": "iso-8859-1",
+						"unencoded": "http://www.example.com/?D%FCrst",
+						"encoded": "http://www.example.com/?D%FCrst"
+					},
+					{
+						"id": "15",
+						"name": "The Martin Dürst test",
+						"charset": "iso-8859-1",
+						"unencoded": "http://www.example.com/?D%C3%BCrst",
+						"encoded": "http://www.example.com/?D%C3%BCrst"
+					}
+				]
+			},
+			{
+				"name": "miscellaneous",
+				"link": "#",
+				"desc": "Misc test cases",
+				"test": [
+					{
+						"id": "1",
+						"name": "",
+						"unencoded": "http://user%40example.com/",
+						"encoded": "http://user@example.com/",
+						"expect_protocol": "http:",
+						"expect_hostname": "example.com",
+						"expect_port": "80",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "2",
+						"name": "",
+						"unencoded": "http://user%3Ainfo%40/",
+						"encoded": "http://user:info@/",
+						"expect_protocol": "http:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "3",
+						"name": "",
+						"unencoded": "http://user@/",
+						"encoded": "http://user@/",
+						"expect_protocol": "http:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "/",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "4",
+						"name": "",
+						"unencoded": "$:foo/bar",
+						"encoded": "$:",
+						"expect_protocol": "$:",
+						"expect_hostname": "foo",
+						"expect_port": "",
+						"expect_pathname": "bar",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "5",
+						"name": "Two colons after mailto scheme",
+						"unencoded": "mailto::foo@bar.com",
+						"encoded": "mailto::foo@bar.com",
+						"expect_protocol": "mailto:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": ":foo@bar.com",
+						"expect_search": "",
+						"expect_hash": ""
+					}
+				]
+			},
+			{
+				"name": "data-scheme",
+				"link": "#",
+				"desc": "Test cases using the data scheme",
+				"test": [
+					{
+						"id": "1",
+						"name": "A good test that should pass.",
+						"unencoded": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPnZDfS1NhGMfff8oLEUE0FBfqmrigi/DKrvKqiNDEKYjCUJdH3I/Q5WoLdYmlU1FP0LQoEclYOCcoMbJuDAUVA/v0vK8/QssL98AH3u97zud7Ho4ajr8i2P8sJ2JDcVSwf5BcR7sqEHpqQpF/60ro0e5Zwb1FiPyAoW14tAIVE5fjGDPKaUHYhOQhTO1DYu+Y/4mn/C0Io3oDAyasCYtHsPALRmUL5+R56j9AdwbsA4jJpnq0q6y+JyboO11ibUBt8jxpuV8VPgn6I5M7cpDRrhSETKiXf3BXuPP+X8Zlo3V5JyUs/4aZXaNIQQj12AqY0CBPL9KW+kIwbWF/b2MqW8d09iZzW27mf0aNo13lOynwpPZpTHpotstpfVOK9105oeUKnqeqiK06iWduMLbhIvG1Gvub2zjaVV09fhPqRgq5nyimYaaEptlrtCfL6Fu6TvhzJREpeZF28nLdxevNamazNcbRrvJ2WiY4/Hm4w/ncihRwO1pwVqjLWuxS2t+W0SVbWR8dDK5UGke7qsPrMyGX0a7y9fSaQy48eNjIH2VPyHZqSIx2AAAAAElFTkSuQmCC",
+						"encoded": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPnZDfS1NhGMfff8oLEUE0FBfqmrigi/DKrvKqiNDEKYjCUJdH3I/Q5WoLdYmlU1FP0LQoEclYOCcoMbJuDAUVA/v0vK8/QssL98AH3u97zud7Ho4ajr8i2P8sJ2JDcVSwf5BcR7sqEHpqQpF/60ro0e5Zwb1FiPyAoW14tAIVE5fjGDPKaUHYhOQhTO1DYu+Y/4mn/C0Io3oDAyasCYtHsPALRmUL5+R56j9AdwbsA4jJpnq0q6y+JyboO11ibUBt8jxpuV8VPgn6I5M7cpDRrhSETKiXf3BXuPP+X8Zlo3V5JyUs/4aZXaNIQQj12AqY0CBPL9KW+kIwbWF/b2MqW8d09iZzW27mf0aNo13lOynwpPZpTHpotstpfVOK9105oeUKnqeqiK06iWduMLbhIvG1Gvub2zjaVV09fhPqRgq5nyimYaaEptlrtCfL6Fu6TvhzJREpeZF28nLdxevNamazNcbRrvJ2WiY4/Hm4w/ncihRwO1pwVqjLWuxS2t+W0SVbWR8dDK5UGke7qsPrMyGX0a7y9fSaQy48eNjIH2VPyHZqSIx2AAAAAElFTkSuQmCC",
+						"expect_protocol": "data:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPnZDfS1NhGMfff8oLEUE0FBfqmrigi/DKrvKqiNDEKYjCUJdH3I/Q5WoLdYmlU1FP0LQoEclYOCcoMbJuDAUVA/v0vK8/QssL98AH3u97zud7Ho4ajr8i2P8sJ2JDcVSwf5BcR7sqEHpqQpF/60ro0e5Zwb1FiPyAoW14tAIVE5fjGDPKaUHYhOQhTO1DYu+Y/4mn/C0Io3oDAyasCYtHsPALRmUL5+R56j9AdwbsA4jJpnq0q6y+JyboO11ibUBt8jxpuV8VPgn6I5M7cpDRrhSETKiXf3BXuPP+X8Zlo3V5JyUs/4aZXaNIQQj12AqY0CBPL9KW+kIwbWF/b2MqW8d09iZzW27mf0aNo13lOynwpPZpTHpotstpfVOK9105oeUKnqeqiK06iWduMLbhIvG1Gvub2zjaVV09fhPqRgq5nyimYaaEptlrtCfL6Fu6TvhzJREpeZF28nLdxevNamazNcbRrvJ2WiY4/Hm4w/ncihRwO1pwVqjLWuxS2t+W0SVbWR8dDK5UGke7qsPrMyGX0a7y9fSaQy48eNjIH2VPyHZqSIx2AAAAAElFTkSuQmCC",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "2",
+						"name": "A test using two colons after scheme",
+						"unencoded": "data::image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPnZDfS1NhGMfff8oLEUE0FBfqmrigi/DKrvKqiNDEKYjCUJdH3I/Q5WoLdYmlU1FP0LQoEclYOCcoMbJuDAUVA/v0vK8/QssL98AH3u97zud7Ho4ajr8i2P8sJ2JDcVSwf5BcR7sqEHpqQpF/60ro0e5Zwb1FiPyAoW14tAIVE5fjGDPKaUHYhOQhTO1DYu+Y/4mn/C0Io3oDAyasCYtHsPALRmUL5+R56j9AdwbsA4jJpnq0q6y+JyboO11ibUBt8jxpuV8VPgn6I5M7cpDRrhSETKiXf3BXuPP+X8Zlo3V5JyUs/4aZXaNIQQj12AqY0CBPL9KW+kIwbWF/b2MqW8d09iZzW27mf0aNo13lOynwpPZpTHpotstpfVOK9105oeUKnqeqiK06iWduMLbhIvG1Gvub2zjaVV09fhPqRgq5nyimYaaEptlrtCfL6Fu6TvhzJREpeZF28nLdxevNamazNcbRrvJ2WiY4/Hm4w/ncihRwO1pwVqjLWuxS2t+W0SVbWR8dDK5UGke7qsPrMyGX0a7y9fSaQy48eNjIH2VPyHZqSIx2AAAAAElFTkSuQmCC",
+						"encoded": "data::image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPnZDfS1NhGMfff8oLEUE0FBfqmrigi/DKrvKqiNDEKYjCUJdH3I/Q5WoLdYmlU1FP0LQoEclYOCcoMbJuDAUVA/v0vK8/QssL98AH3u97zud7Ho4ajr8i2P8sJ2JDcVSwf5BcR7sqEHpqQpF/60ro0e5Zwb1FiPyAoW14tAIVE5fjGDPKaUHYhOQhTO1DYu+Y/4mn/C0Io3oDAyasCYtHsPALRmUL5+R56j9AdwbsA4jJpnq0q6y+JyboO11ibUBt8jxpuV8VPgn6I5M7cpDRrhSETKiXf3BXuPP+X8Zlo3V5JyUs/4aZXaNIQQj12AqY0CBPL9KW+kIwbWF/b2MqW8d09iZzW27mf0aNo13lOynwpPZpTHpotstpfVOK9105oeUKnqeqiK06iWduMLbhIvG1Gvub2zjaVV09fhPqRgq5nyimYaaEptlrtCfL6Fu6TvhzJREpeZF28nLdxevNamazNcbRrvJ2WiY4/Hm4w/ncihRwO1pwVqjLWuxS2t+W0SVbWR8dDK5UGke7qsPrMyGX0a7y9fSaQy48eNjIH2VPyHZqSIx2AAAAAElFTkSuQmCC",
+						"expect_protocol": "data:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": ":image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPnZDfS1NhGMfff8oLEUE0FBfqmrigi/DKrvKqiNDEKYjCUJdH3I/Q5WoLdYmlU1FP0LQoEclYOCcoMbJuDAUVA/v0vK8/QssL98AH3u97zud7Ho4ajr8i2P8sJ2JDcVSwf5BcR7sqEHpqQpF/60ro0e5Zwb1FiPyAoW14tAIVE5fjGDPKaUHYhOQhTO1DYu+Y/4mn/C0Io3oDAyasCYtHsPALRmUL5+R56j9AdwbsA4jJpnq0q6y+JyboO11ibUBt8jxpuV8VPgn6I5M7cpDRrhSETKiXf3BXuPP+X8Zlo3V5JyUs/4aZXaNIQQj12AqY0CBPL9KW+kIwbWF/b2MqW8d09iZzW27mf0aNo13lOynwpPZpTHpotstpfVOK9105oeUKnqeqiK06iWduMLbhIvG1Gvub2zjaVV09fhPqRgq5nyimYaaEptlrtCfL6Fu6TvhzJREpeZF28nLdxevNamazNcbRrvJ2WiY4/Hm4w/ncihRwO1pwVqjLWuxS2t+W0SVbWR8dDK5UGke7qsPrMyGX0a7y9fSaQy48eNjIH2VPyHZqSIx2AAAAAElFTkSuQmCC",
+						"expect_search": "",
+						"expect_hash": ""
+					},
+					{
+						"id": "3",
+						"name": "A test using three colons after scheme",
+						"unencoded": "data:::image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPnZDfS1NhGMfff8oLEUE0FBfqmrigi/DKrvKqiNDEKYjCUJdH3I/Q5WoLdYmlU1FP0LQoEclYOCcoMbJuDAUVA/v0vK8/QssL98AH3u97zud7Ho4ajr8i2P8sJ2JDcVSwf5BcR7sqEHpqQpF/60ro0e5Zwb1FiPyAoW14tAIVE5fjGDPKaUHYhOQhTO1DYu+Y/4mn/C0Io3oDAyasCYtHsPALRmUL5+R56j9AdwbsA4jJpnq0q6y+JyboO11ibUBt8jxpuV8VPgn6I5M7cpDRrhSETKiXf3BXuPP+X8Zlo3V5JyUs/4aZXaNIQQj12AqY0CBPL9KW+kIwbWF/b2MqW8d09iZzW27mf0aNo13lOynwpPZpTHpotstpfVOK9105oeUKnqeqiK06iWduMLbhIvG1Gvub2zjaVV09fhPqRgq5nyimYaaEptlrtCfL6Fu6TvhzJREpeZF28nLdxevNamazNcbRrvJ2WiY4/Hm4w/ncihRwO1pwVqjLWuxS2t+W0SVbWR8dDK5UGke7qsPrMyGX0a7y9fSaQy48eNjIH2VPyHZqSIx2AAAAAElFTkSuQmCC",
+						"encoded": "data:::image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPnZDfS1NhGMfff8oLEUE0FBfqmrigi/DKrvKqiNDEKYjCUJdH3I/Q5WoLdYmlU1FP0LQoEclYOCcoMbJuDAUVA/v0vK8/QssL98AH3u97zud7Ho4ajr8i2P8sJ2JDcVSwf5BcR7sqEHpqQpF/60ro0e5Zwb1FiPyAoW14tAIVE5fjGDPKaUHYhOQhTO1DYu+Y/4mn/C0Io3oDAyasCYtHsPALRmUL5+R56j9AdwbsA4jJpnq0q6y+JyboO11ibUBt8jxpuV8VPgn6I5M7cpDRrhSETKiXf3BXuPP+X8Zlo3V5JyUs/4aZXaNIQQj12AqY0CBPL9KW+kIwbWF/b2MqW8d09iZzW27mf0aNo13lOynwpPZpTHpotstpfVOK9105oeUKnqeqiK06iWduMLbhIvG1Gvub2zjaVV09fhPqRgq5nyimYaaEptlrtCfL6Fu6TvhzJREpeZF28nLdxevNamazNcbRrvJ2WiY4/Hm4w/ncihRwO1pwVqjLWuxS2t+W0SVbWR8dDK5UGke7qsPrMyGX0a7y9fSaQy48eNjIH2VPyHZqSIx2AAAAAElFTkSuQmCC",
+						"expect_protocol": "data:",
+						"expect_hostname": "",
+						"expect_port": "",
+						"expect_pathname": "::image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVDhPnZDfS1NhGMfff8oLEUE0FBfqmrigi/DKrvKqiNDEKYjCUJdH3I/Q5WoLdYmlU1FP0LQoEclYOCcoMbJuDAUVA/v0vK8/QssL98AH3u97zud7Ho4ajr8i2P8sJ2JDcVSwf5BcR7sqEHpqQpF/60ro0e5Zwb1FiPyAoW14tAIVE5fjGDPKaUHYhOQhTO1DYu+Y/4mn/C0Io3oDAyasCYtHsPALRmUL5+R56j9AdwbsA4jJpnq0q6y+JyboO11ibUBt8jxpuV8VPgn6I5M7cpDRrhSETKiXf3BXuPP+X8Zlo3V5JyUs/4aZXaNIQQj12AqY0CBPL9KW+kIwbWF/b2MqW8d09iZzW27mf0aNo13lOynwpPZpTHpotstpfVOK9105oeUKnqeqiK06iWduMLbhIvG1Gvub2zjaVV09fhPqRgq5nyimYaaEptlrtCfL6Fu6TvhzJREpeZF28nLdxevNamazNcbRrvJ2WiY4/Hm4w/ncihRwO1pwVqjLWuxS2t+W0SVbWR8dDK5UGke7qsPrMyGX0a7y9fSaQy48eNjIH2VPyHZqSIx2AAAAAElFTkSuQmCC",
+						"expect_search": "",
+						"expect_hash": ""
+					}
+				]
+			}
+		]
+	}
+}

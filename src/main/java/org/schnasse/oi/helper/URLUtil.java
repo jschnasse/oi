@@ -69,6 +69,7 @@ public class URLUtil {
 
 	public static String encode(String url) {
 		try {
+			System.out.println(url);
 			URL u = new URL(url);
 			URI uri = new URI(u.getProtocol(), u.getUserInfo(), IDN.toASCII(u.getHost()), u.getPort(), u.getPath(),
 					u.getQuery(), u.getRef());
