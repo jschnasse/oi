@@ -1,0 +1,119 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<HashMap>
+  <extent>XIV, 441 S. : Ill., graph. Darst.</extent>
+  <oclcNumber>553577538</oclcNumber>
+  <subject>
+    <type>ComplexSubject</type>
+    <componentList>
+      <id>https://d-nb.info/gnd/4047390-9</id>
+      <type>SubjectHeading</type>
+      <source>
+        <id>https://d-nb.info/gnd/7749153-1</id>
+        <label>Gemeinsame Normdatei (GND)</label>
+      </source>
+      <label>Prognose</label>
+      <gndIdentifier>4047390-9</gndIdentifier>
+    </componentList>
+    <label>Prognose</label>
+  </subject>
+  <isbn>3446415688</isbn>
+  <hasItem>
+    <id>http://lobid.org/items/HT015847062:DE-467:32QFD8011%2B1#!</id>
+    <type>Item</type>
+    <heldBy>
+      <id>http://lobid.org/organisations/DE-467#!</id>
+      <label>lobid Organisation</label>
+    </heldBy>
+    <note>US1</note>
+    <callNumber>32QFD8011+1</callNumber>
+    <label>32QFD8011+1</label>
+  </hasItem>
+  <responsibilityStatement>Nassim Nicholas Taleb</responsibilityStatement>
+  <edition>[Nachdr.]</edition>
+  <language>
+    <id>http://id.loc.gov/vocabulary/iso639-2/deu</id>
+    <label>Deutsch</label>
+  </language>
+  <medium>
+    <id>http://rdaregistry.info/termList/RDAproductionMethod/1010</id>
+    <label>Print</label>
+  </medium>
+  <type>Book</type>
+  <title>Der schwarze Schwan</title>
+  <exampleOfWork>
+    <type>Work</type>
+    <label>&lt;&lt;The>> black swan &lt;dt.></label>
+  </exampleOfWork>
+  <otherTitleInformation>die Macht höchst unwahrscheinlicher Ereignisse</otherTitleInformation>
+  <contribution>
+    <type>Contribution</type>
+    <agent>
+      <id>https://d-nb.info/gnd/124120180</id>
+      <type>Person</type>
+      <label>Taleb, Nassim Nicholas</label>
+      <altLabel>Taleb, Nassim N.</altLabel>
+      <dateOfBirth>1960</dateOfBirth>
+      <gndIdentifier>124120180</gndIdentifier>
+    </agent>
+    <role>
+      <id>http://id.loc.gov/vocabulary/relators/cre</id>
+      <label>Autor/in</label>
+    </role>
+  </contribution>
+  <subjectAltLabel>Prognostizierbarkeit</subjectAltLabel>
+  <publication>
+    <type>PublicationEvent</type>
+    <location>München</location>
+    <publishedBy>Hanser</publishedBy>
+    <startDate>2009</startDate>
+  </publication>
+  <context>http://lobid.org/resources/context.jsonld</context>
+  <describedBy>
+    <id>http://lobid.org/resources/HT015847062</id>
+    <type>BibliographicDescription</type>
+    <dateCreated>20090226</dateCreated>
+    <inDataset>
+      <id>http://lobid.org/resources/dataset#!</id>
+      <label>lobid-resources – Der hbz-Verbundkatalog als Linked Open Data</label>
+    </inDataset>
+    <resultOf>
+      <type>CreateAction</type>
+      <endTime>2020-04-08T01:43:32</endTime>
+      <instrument>
+        <id>https://github.com/hbz/lobid-resources</id>
+        <type>SoftwareApplication</type>
+        <label>Software lobid-resources</label>
+      </instrument>
+      <object>
+        <id>http://lobid.org/hbz01/HT015847062</id>
+        <type>DataFeedItem</type>
+        <inDataset>
+          <id>https://datahub.io/dataset/hbz_unioncatalog</id>
+          <label>hbz_unioncatalog</label>
+        </inDataset>
+        <label>hbz-Ressource HT015847062 im Exportformat MAB2-XML</label>
+      </object>
+    </resultOf>
+    <license>
+      <id>http://creativecommons.org/publicdomain/zero/1.0</id>
+      <label>Creative Commons-Lizenz CC0 1.0 Universal</label>
+    </license>
+    <sourceOrganization>
+      <id>http://lobid.org/organisations/DE-467#!</id>
+      <label>lobid Organisation</label>
+    </sourceOrganization>
+    <label>Webseite der hbz-Ressource HT015847062</label>
+  </describedBy>
+  <id>http://lobid.org/resources/HT015847062#!</id>
+  <hbzId>HT015847062</hbzId>
+  <tableOfContents>
+    <id>http://digitale-objekte.hbz-nrw.de/storage/2009/05/23/file_28/3011578.pdf</id>
+    <label>3011578.pdf</label>
+  </tableOfContents>
+  <sameAs>
+    <id>http://worldcat.org/oclc/553577538</id>
+    <label>553577538</label>
+  </sameAs>
+</HashMap>
+
+

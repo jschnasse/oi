@@ -140,58 +140,6 @@ public class UrlUtilTest {
 		}
 	}
 
-	private String asJson(Object obj) throws Exception {
-		StringWriter w = new StringWriter();
-		new ObjectMapper().configure(SerializationFeature.INDENT_OUTPUT, true).writeValue(w, obj);
-		String result = w.toString();
-		return result;
-	}
-
-	public void generateTestData() {
-		generateTestData("urls-local.json");
-		generateTestData("urls.json");
-	}
-
-	public void generateTestData(String name) {
-		List<Map<String, Object>> success = new ArrayList<>(200);
-
-		List<Map<String, Object>> failing = new ArrayList<>(200);
-		try (InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream(name)) {
-			ObjectMapper mapper = new ObjectMapper();
-			JsonNode urlData = mapper.readValue(in, JsonNode.class);
-			JsonNode groups = urlData.at("/tests/group");
-			for (JsonNode group : groups) {
-				JsonNode tests = group.at("/test");
-				for (JsonNode test : tests) {
-
-					Map<String, Object> testData = new TreeMap<>();
-
-					String expectedUrl = test.at("/encoded").asText();
-					String unencodedUrl = test.at("/unencoded").asText();
-					try {
-						String encodedUrl = URLUtil.encode(unencodedUrl);
-						if (!expectedUrl.equals(encodedUrl))
-							throw new RuntimeException("Unexpected comparison!");
-						testData.put("in", unencodedUrl);
-						testData.put("out", expectedUrl);
-						success.add(testData);
-					} catch (Exception e) {
-						testData.put("in", unencodedUrl);
-						testData.put("out", expectedUrl);
-						failing.add(testData);
-					}
-				}
-			}
-			System.out.println("Working URLs --------------");
-			System.out.println(asJson(success));
-			System.out.println("Not Working URLs-----------");
-			System.out.println(asJson(failing));
-		} catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-
-	}
-	
 	@Test
 	public void readFromUrl() {
 		try (InputStream in = getInputStreamFromUrl("http://jira.atlassian.com/rest/api/2/issue/JSWCLOUD-11658")) {

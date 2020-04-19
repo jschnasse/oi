@@ -1,0 +1,137 @@
+{
+  "@context" : {
+    "extent" : {
+      "@id" : "info:jon-desktop/extent"
+    },
+    "oclcNumber" : {
+      "@id" : "info:jon-desktop/oclcNumber"
+    },
+    "subject" : {
+      "@id" : "info:jon-desktop/subject"
+    },
+    "type" : {
+      "@id" : "info:jon-desktop/type"
+    },
+    "componentList" : {
+      "@id" : "info:jon-desktop/componentList"
+    },
+    "id" : {
+      "@id" : "info:jon-desktop/id"
+    },
+    "source" : {
+      "@id" : "info:jon-desktop/source"
+    },
+    "label" : {
+      "@id" : "info:jon-desktop/label"
+    },
+    "gndIdentifier" : {
+      "@id" : "info:jon-desktop/gndIdentifier"
+    },
+    "isbn" : {
+      "@id" : "info:jon-desktop/isbn"
+    },
+    "hasItem" : {
+      "@id" : "info:jon-desktop/hasItem"
+    },
+    "heldBy" : {
+      "@id" : "info:jon-desktop/heldBy"
+    },
+    "note" : {
+      "@id" : "info:jon-desktop/note"
+    },
+    "callNumber" : {
+      "@id" : "info:jon-desktop/callNumber"
+    },
+    "responsibilityStatement" : {
+      "@id" : "info:jon-desktop/responsibilityStatement"
+    },
+    "edition" : {
+      "@id" : "info:jon-desktop/edition"
+    },
+    "language" : {
+      "@id" : "info:jon-desktop/language"
+    },
+    "medium" : {
+      "@id" : "info:jon-desktop/medium"
+    },
+    "title" : {
+      "@id" : "info:jon-desktop/title"
+    },
+    "exampleOfWork" : {
+      "@id" : "info:jon-desktop/exampleOfWork"
+    },
+    "otherTitleInformation" : {
+      "@id" : "info:jon-desktop/otherTitleInformation"
+    },
+    "contribution" : {
+      "@id" : "info:jon-desktop/contribution"
+    },
+    "agent" : {
+      "@id" : "info:jon-desktop/agent"
+    },
+    "altLabel" : {
+      "@id" : "info:jon-desktop/altLabel"
+    },
+    "dateOfBirth" : {
+      "@id" : "info:jon-desktop/dateOfBirth"
+    },
+    "role" : {
+      "@id" : "info:jon-desktop/role"
+    },
+    "subjectAltLabel" : {
+      "@id" : "info:jon-desktop/subjectAltLabel"
+    },
+    "publication" : {
+      "@id" : "info:jon-desktop/publication"
+    },
+    "location" : {
+      "@id" : "info:jon-desktop/location"
+    },
+    "publishedBy" : {
+      "@id" : "info:jon-desktop/publishedBy"
+    },
+    "startDate" : {
+      "@id" : "info:jon-desktop/startDate"
+    },
+    "context" : {
+      "@id" : "info:jon-desktop/context"
+    },
+    "describedBy" : {
+      "@id" : "info:jon-desktop/describedBy"
+    },
+    "dateCreated" : {
+      "@id" : "info:jon-desktop/dateCreated"
+    },
+    "inDataset" : {
+      "@id" : "info:jon-desktop/inDataset"
+    },
+    "resultOf" : {
+      "@id" : "info:jon-desktop/resultOf"
+    },
+    "endTime" : {
+      "@id" : "info:jon-desktop/endTime"
+    },
+    "instrument" : {
+      "@id" : "info:jon-desktop/instrument"
+    },
+    "object" : {
+      "@id" : "info:jon-desktop/object"
+    },
+    "license" : {
+      "@id" : "info:jon-desktop/license"
+    },
+    "sourceOrganization" : {
+      "@id" : "info:jon-desktop/sourceOrganization"
+    },
+    "hbzId" : {
+      "@id" : "info:jon-desktop/hbzId"
+    },
+    "tableOfContents" : {
+      "@id" : "info:jon-desktop/tableOfContents"
+    },
+    "sameAs" : {
+      "@id" : "info:jon-desktop/sameAs"
+    }
+  }
+}
+

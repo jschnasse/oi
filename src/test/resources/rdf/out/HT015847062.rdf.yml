@@ -1,6 +1,6 @@
 ---
 '@graph':
-- '@id': "_:genid-1ae75fa8acc0482fae1cbac965a0e554-A1"
+- '@id': "_:genid-805dfaab9f8d4886818b5d37c0d7b8be-A1"
   '@type':
   - "http://schema.org/CreateAction"
   http://schema.org/endTime:
@@ -9,12 +9,12 @@
   - '@id': "https://github.com/hbz/lobid-resources"
   http://schema.org/object:
   - '@id': "http://lobid.org/hbz01/HT015847062"
-- '@id': "_:genid-1ae75fa8acc0482fae1cbac965a0e554-A2"
+- '@id': "_:genid-805dfaab9f8d4886818b5d37c0d7b8be-A2"
   '@type':
   - "https://d-nb.info/standards/elementset/gnd#Work"
   http://www.w3.org/2000/01/rdf-schema#label:
   - '@value': "<<The>> black swan <dt.>"
-- '@id': "_:genid-1ae75fa8acc0482fae1cbac965a0e554-A3"
+- '@id': "_:genid-805dfaab9f8d4886818b5d37c0d7b8be-A3"
   '@type':
   - "http://www.loc.gov/mads/rdf/v1#ComplexSubject"
   http://www.loc.gov/mads/rdf/v1#componentList:
@@ -22,14 +22,14 @@
     - '@id': "https://d-nb.info/gnd/4260601-9"
   http://www.w3.org/2000/01/rdf-schema#label:
   - '@value': "Vorhersagbarkeit"
-- '@id': "_:genid-1ae75fa8acc0482fae1cbac965a0e554-A6"
+- '@id': "_:genid-805dfaab9f8d4886818b5d37c0d7b8be-A6"
   '@type':
   - "http://id.loc.gov/ontologies/bibframe/Contribution"
   http://id.loc.gov/ontologies/bibframe/agent:
   - '@id': "https://d-nb.info/gnd/124120180"
   http://id.loc.gov/ontologies/bibframe/role:
   - '@id': "http://id.loc.gov/vocabulary/relators/cre"
-- '@id': "_:genid-1ae75fa8acc0482fae1cbac965a0e554-A7"
+- '@id': "_:genid-805dfaab9f8d4886818b5d37c0d7b8be-A7"
   '@type':
   - "http://www.loc.gov/mads/rdf/v1#ComplexSubject"
   http://www.loc.gov/mads/rdf/v1#componentList:
@@ -37,7 +37,7 @@
     - '@id': "https://d-nb.info/gnd/4047390-9"
   http://www.w3.org/2000/01/rdf-schema#label:
   - '@value': "Prognose"
-- '@id': "_:genid-1ae75fa8acc0482fae1cbac965a0e554-A8"
+- '@id': "_:genid-805dfaab9f8d4886818b5d37c0d7b8be-A8"
   '@type':
   - "http://schema.org/PublicationEvent"
   http://schema.org/location:
@@ -225,7 +225,7 @@
   http://purl.org/lobid/lv#inDataset:
   - '@id': "http://lobid.org/resources/dataset#!"
   http://purl.org/lobid/lv#resultOf:
-  - '@id': "_:genid-1ae75fa8acc0482fae1cbac965a0e554-A1"
+  - '@id': "_:genid-805dfaab9f8d4886818b5d37c0d7b8be-A1"
   http://schema.org/license:
   - '@id': "http://creativecommons.org/publicdomain/zero/1.0"
   http://schema.org/sourceOrganization:
@@ -238,7 +238,7 @@
   - "http://purl.org/ontology/bibo/Book"
   http://id.loc.gov/ontologies/bibframe/contribution:
   - '@list':
-    - '@id': "_:genid-1ae75fa8acc0482fae1cbac965a0e554-A6"
+    - '@id': "_:genid-805dfaab9f8d4886818b5d37c0d7b8be-A6"
   http://id.loc.gov/ontologies/bibframe/extent:
   - '@value': "XIV, 441 S. : Ill., graph. Darst."
   http://id.loc.gov/ontologies/bibframe/hasItem:
@@ -261,14 +261,14 @@
   http://purl.org/dc/terms/medium:
   - '@id': "http://rdaregistry.info/termList/RDAproductionMethod/1010"
   http://purl.org/dc/terms/subject:
-  - '@id': "_:genid-1ae75fa8acc0482fae1cbac965a0e554-A7"
-  - '@id': "_:genid-1ae75fa8acc0482fae1cbac965a0e554-A3"
+  - '@id': "_:genid-805dfaab9f8d4886818b5d37c0d7b8be-A7"
+  - '@id': "_:genid-805dfaab9f8d4886818b5d37c0d7b8be-A3"
   http://purl.org/dc/terms/tableOfContents:
   - '@id': "http://digitale-objekte.hbz-nrw.de/storage/2009/05/23/file_28/3011578.pdf"
   http://purl.org/dc/terms/title:
   - '@value': "Der schwarze Schwan"
   http://purl.org/lobid/lv#exampleOfWork:
-  - '@id': "_:genid-1ae75fa8acc0482fae1cbac965a0e554-A2"
+  - '@id': "_:genid-805dfaab9f8d4886818b5d37c0d7b8be-A2"
   http://purl.org/lobid/lv#hbzID:
   - '@value': "HT015847062"
   http://purl.org/lobid/lv#subjectAltLabel:
@@ -291,7 +291,7 @@
   http://rdaregistry.info/Elements/u/P60493:
   - '@value': "die Macht höchst unwahrscheinlicher Ereignisse"
   http://schema.org/publication:
-  - '@id': "_:genid-1ae75fa8acc0482fae1cbac965a0e554-A8"
+  - '@id': "_:genid-805dfaab9f8d4886818b5d37c0d7b8be-A8"
   http://www.w3.org/2002/07/owl#sameAs:
   - '@id': "http://hub.culturegraph.org/resource/HBZ-HT015847062"
   - '@id': "http://worldcat.org/oclc/553577538"

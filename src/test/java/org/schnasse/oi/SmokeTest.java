@@ -1,12 +1,11 @@
+package org.schnasse.oi;
 
 /* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
-import java.nio.file.Path;
-import java.nio.file.Paths;
+
 import java.util.Map;
 
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.junit.Test;
-import org.schnasse.oi.main.Main;
 import org.schnasse.oi.reader.JsonReader;
 import org.schnasse.oi.reader.YamlReader;
 import org.schnasse.oi.writer.ContextWriter;
@@ -14,9 +13,7 @@ import org.schnasse.oi.writer.JsonWriter;
 import org.schnasse.oi.writer.XmlWriter;
 import org.schnasse.oi.writer.YamlWriter;
 
-import picocli.CommandLine;
-
-public class TestExamples {
+public class SmokeTest {
 	@Test
 	public void readJson() throws Exception {
 		Map<String, Object> map = JsonReader.getMap(
@@ -51,7 +48,6 @@ public class TestExamples {
 		JsonWriter.gprint(map);
 		YamlWriter.gprint(map);
 		XmlWriter.gprint(map);
-		// CsvWriter.gprint(map);
 	}
 
 	@Test
@@ -62,7 +58,6 @@ public class TestExamples {
 		JsonWriter.gprint(map);
 		YamlWriter.gprint(map);
 		XmlWriter.gprint(map);
-//		CsvWriter.gprint(map);
 	}
 
 	@Test
@@ -114,26 +109,4 @@ public class TestExamples {
 		JsonWriter.gprint(map);
 	}
 
-	@Test
-	public void mainTest() throws Exception {
-		Path currentRelativePath = Paths.get("");
-		String s = currentRelativePath.toAbsolutePath().toString();
-		new CommandLine(new Main()).execute(s + "/src/test/resources/old.tests/HT015847062.rdf", "-f" + s + "/src/test/resources/old.tests/frame.json",
-				"-tjson");
-		new CommandLine(new Main()).execute(s + "/src/test/resources/old.tests/HT015847062.rdf", "-f" + s + "/src/test/resources/old.tests/frame.json",
-				"-tyaml");
-		new CommandLine(new Main()).execute(s + "/src/test/resources/old.tests/HT015847062.rdf", "-f" + s + "/src/test/resources/old.tests/frame.json",
-				"-txml");
-		new CommandLine(new Main()).execute(s + "/src/test/resources/old.tests/HT015847062.rdf", "-f" + s + "/src/test/resources/old.tests/frame.json",
-				"-trdf");
-		new CommandLine(new Main()).execute(s + "/src/test/resources/old.tests/HT015847062.csv");
-		new CommandLine(new Main()).execute(s + "/src/test/resources/old.tests/HT015847062_v2.csv","--header=DATE,OCLC,TITLE,AUTHOR,URI");
-
-		new CommandLine(new Main()).execute(s + "/src/test/resources/old.tests/HT015847062_v2.csv","--header=DATE,OCLC,TITLE,AUTHOR,URI","-tjson");
-
-		new CommandLine(new Main()).execute(s + "/src/test/resources/old.tests/HT015847062_v2.csv", "--header=DATE,OCLC,TITLE,AUTHOR,URI",
-				"-tcontext");
-		new CommandLine(new Main()).execute(s +	 "/src/test/resources/old.tests/HT015847062_v2.csv","--header=DATE,OCLC,TITLE,AUTHOR,URI","-trdf");
-		new CommandLine(new Main()).execute(s + "/src/test/resources/rdf/in/entwicklung-der-kriminalitat-nach-fallen-und-aufklarungen-seit-1990.rdf", "-tcontext");
-	}
 }

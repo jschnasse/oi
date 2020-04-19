@@ -1,3 +1,4 @@
+package org.schnasse.oi;
 import java.util.Map;
 
 import org.junit.Test;
