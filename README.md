@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/jschnasse/oi.svg?branch=master)](https://travis-ci.org/jschnasse/oi)
+[![codecov](https://codecov.io/gh/jschnasse/oi/branch/master/graph/badge.svg)](https://codecov.io/gh/jschnasse/oi)
 # About
 
 `oi` a small tool to convert csv,json,yaml,xml,rdf to each other.
