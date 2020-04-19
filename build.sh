@@ -9,7 +9,7 @@ function build(){
  mkdir -p deb/$package/usr/lib
  mkdir -p deb/$package/usr/bin
  mkdir -p deb/$package/usr/share/man/man1/
- mvn package 
+ mvn package $1
  sudo cp src/main/resources/oi deb/$package/usr/bin
  sudo cp target/oi.jar deb/$package/usr/lib
  cd $scriptdir/man
@@ -18,5 +18,5 @@ function build(){
  sudo cp $scriptdir/man/oi.1 deb/$package/usr/share/man/man1/
 }
 
-build
+build $1
 dpkg-deb --build deb/$package

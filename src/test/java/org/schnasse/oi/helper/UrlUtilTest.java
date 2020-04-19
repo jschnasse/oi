@@ -240,6 +240,7 @@ public class UrlUtilTest {
 		return result.toString("UTF-8");
 	}
 
+	@SuppressWarnings("unchecked")
 	private <K, V> Map<K, V> mapOf(Object... keyValues) {
 		Map<K, V> map = new HashMap<>();
 		K key = null;

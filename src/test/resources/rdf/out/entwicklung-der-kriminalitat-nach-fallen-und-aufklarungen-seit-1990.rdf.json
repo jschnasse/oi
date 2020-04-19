@@ -1,6 +1,6 @@
 {
   "@graph" : [ {
-    "@id" : "_:genid-ad570cd14c454fb8a3b26789795dc243-1A2D02C76371A4441F0DD897C4852CDB",
+    "@id" : "_:genid-c92440ea296c497696d10f65c8ba6e5c-1A2D02C76371A4441F0DD897C4852CDB",
     "@type" : [ "http://purl.org/dc/terms/PeriodOfTime" ],
     "http://schema.org/endDate" : [ {
       "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
@@ -11,7 +11,7 @@
       "@value" : "1990-01-01T00:00:00"
     } ]
   }, {
-    "@id" : "_:genid-ad570cd14c454fb8a3b26789795dc243-33EC29442ED10241EB7C5F5152A112C0",
+    "@id" : "_:genid-c92440ea296c497696d10f65c8ba6e5c-33EC29442ED10241EB7C5F5152A112C0",
     "@type" : [ "http://purl.org/dc/terms/Location" ],
     "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
       "@value" : "05913000"
@@ -45,10 +45,10 @@
       "@id" : "https://ckan.www.open.nrw.de/organization/29cfaeaa-bea5-4dcd-9c1e-b928d73b838b"
     } ],
     "http://purl.org/dc/terms/spatial" : [ {
-      "@id" : "_:genid-ad570cd14c454fb8a3b26789795dc243-33EC29442ED10241EB7C5F5152A112C0"
+      "@id" : "_:genid-c92440ea296c497696d10f65c8ba6e5c-33EC29442ED10241EB7C5F5152A112C0"
     } ],
     "http://purl.org/dc/terms/temporal" : [ {
-      "@id" : "_:genid-ad570cd14c454fb8a3b26789795dc243-1A2D02C76371A4441F0DD897C4852CDB"
+      "@id" : "_:genid-c92440ea296c497696d10f65c8ba6e5c-1A2D02C76371A4441F0DD897C4852CDB"
     } ],
     "http://purl.org/dc/terms/title" : [ {
       "@value" : "Entwicklung der Kriminalität nach Fällen und Aufklärungen seit 1990"
