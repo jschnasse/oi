@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/jschnasse/oi.svg?branch=master)](https://travis-ci.org/jschnasse/oi)
 # About
 
 `oi` a small tool to convert csv,json,yaml,xml,rdf to each other.
