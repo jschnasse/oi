@@ -13,6 +13,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
 					<includes>
+						<include>UnitTests.java</include>
 						<include>IntegrationTests.java</include>
 					</includes>
 				</configuration>
