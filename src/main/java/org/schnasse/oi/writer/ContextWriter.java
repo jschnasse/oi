@@ -1,7 +1,6 @@
 /* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
 package org.schnasse.oi.writer;
 
-import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -93,11 +92,7 @@ public class ContextWriter {
 	}
 
 	private static String getComputername() {
-		try {
-			return InetAddress.getLocalHost().getHostName();
-		} catch (Exception ex) {
-			return "cjxy";
-		}
+		return "oi";
 	}
 
 	private static String createId(String key, String computername) {

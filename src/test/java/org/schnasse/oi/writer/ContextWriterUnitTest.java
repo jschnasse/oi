@@ -10,14 +10,14 @@ import java.util.Map;
 import org.junit.Test;
 import org.schnasse.oi.reader.JsonReader;
 
-public class XmlWriterUnitTest extends WriterUnitTest {
+public class ContextWriterUnitTest extends WriterUnitTest {
 
 	@Test
-	public void testXmlWriter() throws IOException {
+	public void testContextWriter() throws IOException {
 		try (InputStream input = new ByteArrayInputStream(new String("{\"root\": \"test\"}").getBytes())) {
 			Map<String, Object> map = JsonReader.getMap(input);
-			XmlWriter.gprint(map);
-			assertEquals("<?xml version='1.1' encoding='UTF-8'?><LinkedHashMap><root>test</root></LinkedHashMap>",
+			ContextWriter.gprint(map);
+			assertEquals("{\"@context\":{\"root\":{\"@id\":\"info:oi/root\"}}}",
 					outContent.toString().replaceAll("\\s+", ""));
 		}
 	}
