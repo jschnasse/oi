@@ -17,8 +17,8 @@ public class XmlWriterUnitTest extends WriterUnitTest {
 		try (InputStream input = new ByteArrayInputStream(new String("{\"root\": \"test\"}").getBytes())) {
 			Map<String, Object> map = JsonReader.getMap(input);
 			XmlWriter.gprint(map);
-			assertEquals("<?xml version='1.1' encoding='UTF-8'?><LinkedHashMap><root>test</root></LinkedHashMap>",
-					outContent.toString().replaceAll("\\s+", ""));
+			assertEquals("<?xml version='1.1' encoding='UTF-8'?><LinkedHashMap><root>test</root></LinkedHashMap>"
+					.replaceAll("\\s+", ""), outContent.toString().replaceAll("\\s+", ""));
 		}
 	}
 }
