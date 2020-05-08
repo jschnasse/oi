@@ -308,23 +308,23 @@
   } ],
   "@context" : {
     "data" : {
-      "@id" : "info:jon-desktop/data",
+      "@id" : "info:oi/data",
       "@container" : "@list"
     },
     "Art des Kampfmittels" : {
-      "@id" : "info:jon-desktop/Art des Kampfmittels"
+      "@id" : "info:oi/Art des Kampfmittels"
     },
     "Datum" : {
-      "@id" : "info:jon-desktop/Datum"
+      "@id" : "info:oi/Datum"
     },
     "Entschärfungsdatum" : {
-      "@id" : "info:jon-desktop/Entschärfungsdatum"
+      "@id" : "info:oi/Entschärfungsdatum"
     },
     "Fundzeit" : {
-      "@id" : "info:jon-desktop/Fundzeit"
+      "@id" : "info:oi/Fundzeit"
     },
     "Örtlichkeit" : {
-      "@id" : "info:jon-desktop/Örtlichkeit"
+      "@id" : "info:oi/Örtlichkeit"
     }
   }
 }

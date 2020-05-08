@@ -35,62 +35,62 @@
   "type" : "FeatureCollection",
   "@context" : {
     "type" : {
-      "@id" : "info:jon-desktop/type"
+      "@id" : "info:oi/type"
     },
     "crs" : {
-      "@id" : "info:jon-desktop/crs"
+      "@id" : "info:oi/crs"
     },
     "properties" : {
-      "@id" : "info:jon-desktop/properties"
+      "@id" : "info:oi/properties"
     },
     "name" : {
-      "@id" : "info:jon-desktop/name"
+      "@id" : "info:oi/name"
     },
     "features" : {
-      "@id" : "info:jon-desktop/features",
+      "@id" : "info:oi/features",
       "@container" : "@list"
     },
     "id" : {
-      "@id" : "info:jon-desktop/id"
+      "@id" : "info:oi/id"
     },
     "geometry" : {
-      "@id" : "info:jon-desktop/geometry"
+      "@id" : "info:oi/geometry"
     },
     "coordinates" : {
-      "@id" : "info:jon-desktop/coordinates"
+      "@id" : "info:oi/coordinates"
     },
     "OID" : {
-      "@id" : "info:jon-desktop/OID"
+      "@id" : "info:oi/OID"
     },
     "Name" : {
-      "@id" : "info:jon-desktop/Name"
+      "@id" : "info:oi/Name"
     },
     "FolderPath" : {
-      "@id" : "info:jon-desktop/FolderPath"
+      "@id" : "info:oi/FolderPath"
     },
     "SymbolID" : {
-      "@id" : "info:jon-desktop/SymbolID"
+      "@id" : "info:oi/SymbolID"
     },
     "AltMode" : {
-      "@id" : "info:jon-desktop/AltMode"
+      "@id" : "info:oi/AltMode"
     },
     "Base" : {
-      "@id" : "info:jon-desktop/Base"
+      "@id" : "info:oi/Base"
     },
     "Clamped" : {
-      "@id" : "info:jon-desktop/Clamped"
+      "@id" : "info:oi/Clamped"
     },
     "Extruded" : {
-      "@id" : "info:jon-desktop/Extruded"
+      "@id" : "info:oi/Extruded"
     },
     "Snippet" : {
-      "@id" : "info:jon-desktop/Snippet"
+      "@id" : "info:oi/Snippet"
     },
     "PopupInfo" : {
-      "@id" : "info:jon-desktop/PopupInfo"
+      "@id" : "info:oi/PopupInfo"
     },
     "Shape_Length" : {
-      "@id" : "info:jon-desktop/Shape_Length"
+      "@id" : "info:oi/Shape_Length"
     }
   }
 }

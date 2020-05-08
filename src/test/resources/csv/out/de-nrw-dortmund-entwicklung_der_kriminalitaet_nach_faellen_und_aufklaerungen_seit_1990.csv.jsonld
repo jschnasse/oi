@@ -170,23 +170,23 @@
   } ],
   "@context" : {
     "data" : {
-      "@id" : "info:jon-desktop/data",
+      "@id" : "info:oi/data",
       "@container" : "@list"
     },
     "Aufgeklärte Fälle" : {
-      "@id" : "info:jon-desktop/Aufgeklärte Fälle"
+      "@id" : "info:oi/Aufgeklärte Fälle"
     },
     "Aufklärungsquote" : {
-      "@id" : "info:jon-desktop/Aufklärungsquote"
+      "@id" : "info:oi/Aufklärungsquote"
     },
     "Bekannt gewordene Fälle" : {
-      "@id" : "info:jon-desktop/Bekannt gewordene Fälle"
+      "@id" : "info:oi/Bekannt gewordene Fälle"
     },
     "Ermittelte Tatverdächtigte" : {
-      "@id" : "info:jon-desktop/Ermittelte Tatverdächtigte"
+      "@id" : "info:oi/Ermittelte Tatverdächtigte"
     },
     "Jahr" : {
-      "@id" : "info:jon-desktop/Jahr"
+      "@id" : "info:oi/Jahr"
     }
   }
 }

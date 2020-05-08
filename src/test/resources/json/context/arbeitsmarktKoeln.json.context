@@ -1,245 +1,245 @@
 {
   "@context" : {
     "type" : {
-      "@id" : "info:jon-desktop/type"
+      "@id" : "info:oi/type"
     },
     "crs" : {
-      "@id" : "info:jon-desktop/crs"
+      "@id" : "info:oi/crs"
     },
     "properties" : {
-      "@id" : "info:jon-desktop/properties"
+      "@id" : "info:oi/properties"
     },
     "name" : {
-      "@id" : "info:jon-desktop/name"
+      "@id" : "info:oi/name"
     },
     "features" : {
-      "@id" : "info:jon-desktop/features",
+      "@id" : "info:oi/features",
       "@container" : "@list"
     },
     "id" : {
-      "@id" : "info:jon-desktop/id"
+      "@id" : "info:oi/id"
     },
     "geometry" : {
-      "@id" : "info:jon-desktop/geometry"
+      "@id" : "info:oi/geometry"
     },
     "coordinates" : {
-      "@id" : "info:jon-desktop/coordinates"
+      "@id" : "info:oi/coordinates"
     },
     "OBJECTID" : {
-      "@id" : "info:jon-desktop/OBJECTID"
+      "@id" : "info:oi/OBJECTID"
     },
     "AGGR" : {
-      "@id" : "info:jon-desktop/AGGR"
+      "@id" : "info:oi/AGGR"
     },
     "SUM_FLAECHE" : {
-      "@id" : "info:jon-desktop/SUM_FLAECHE"
+      "@id" : "info:oi/SUM_FLAECHE"
     },
     "NAME" : {
-      "@id" : "info:jon-desktop/NAME"
+      "@id" : "info:oi/NAME"
     },
     "NUMMER" : {
-      "@id" : "info:jon-desktop/NUMMER"
+      "@id" : "info:oi/NUMMER"
     },
     "AGS" : {
-      "@id" : "info:jon-desktop/AGS"
+      "@id" : "info:oi/AGS"
     },
     "AM_SGB_INSG_AA" : {
-      "@id" : "info:jon-desktop/AM_SGB_INSG_AA"
+      "@id" : "info:oi/AM_SGB_INSG_AA"
     },
     "AM_SGB_MANN_AA" : {
-      "@id" : "info:jon-desktop/AM_SGB_MANN_AA"
+      "@id" : "info:oi/AM_SGB_MANN_AA"
     },
     "AM_SGB_FRAU_AA" : {
-      "@id" : "info:jon-desktop/AM_SGB_FRAU_AA"
+      "@id" : "info:oi/AM_SGB_FRAU_AA"
     },
     "AM_SGB_DEUTSCH_AA" : {
-      "@id" : "info:jon-desktop/AM_SGB_DEUTSCH_AA"
+      "@id" : "info:oi/AM_SGB_DEUTSCH_AA"
     },
     "AM_SGB_UNTER25_AA" : {
-      "@id" : "info:jon-desktop/AM_SGB_UNTER25_AA"
+      "@id" : "info:oi/AM_SGB_UNTER25_AA"
     },
     "AM_SGB_INSG_AP" : {
-      "@id" : "info:jon-desktop/AM_SGB_INSG_AP"
+      "@id" : "info:oi/AM_SGB_INSG_AP"
     },
     "AM_SGB_MANN_AP" : {
-      "@id" : "info:jon-desktop/AM_SGB_MANN_AP"
+      "@id" : "info:oi/AM_SGB_MANN_AP"
     },
     "AM_SGB_FRAU_AP" : {
-      "@id" : "info:jon-desktop/AM_SGB_FRAU_AP"
+      "@id" : "info:oi/AM_SGB_FRAU_AP"
     },
     "AM_SGB_DEUTSCH_AP" : {
-      "@id" : "info:jon-desktop/AM_SGB_DEUTSCH_AP"
+      "@id" : "info:oi/AM_SGB_DEUTSCH_AP"
     },
     "AM_SGB_UNTER25_AP" : {
-      "@id" : "info:jon-desktop/AM_SGB_UNTER25_AP"
+      "@id" : "info:oi/AM_SGB_UNTER25_AP"
     },
     "AM_SGB_INSG_HA" : {
-      "@id" : "info:jon-desktop/AM_SGB_INSG_HA"
+      "@id" : "info:oi/AM_SGB_INSG_HA"
     },
     "AM_SGB_MANN_HA" : {
-      "@id" : "info:jon-desktop/AM_SGB_MANN_HA"
+      "@id" : "info:oi/AM_SGB_MANN_HA"
     },
     "AM_SGB_FRAU_HA" : {
-      "@id" : "info:jon-desktop/AM_SGB_FRAU_HA"
+      "@id" : "info:oi/AM_SGB_FRAU_HA"
     },
     "AM_SGB_DEUTSCH_HA" : {
-      "@id" : "info:jon-desktop/AM_SGB_DEUTSCH_HA"
+      "@id" : "info:oi/AM_SGB_DEUTSCH_HA"
     },
     "AM_SGB_UNTER25_HA" : {
-      "@id" : "info:jon-desktop/AM_SGB_UNTER25_HA"
+      "@id" : "info:oi/AM_SGB_UNTER25_HA"
     },
     "AM_SGB_INSG_HP" : {
-      "@id" : "info:jon-desktop/AM_SGB_INSG_HP"
+      "@id" : "info:oi/AM_SGB_INSG_HP"
     },
     "AM_SGB_MANN_HP" : {
-      "@id" : "info:jon-desktop/AM_SGB_MANN_HP"
+      "@id" : "info:oi/AM_SGB_MANN_HP"
     },
     "AM_SGB_FRAU_HP" : {
-      "@id" : "info:jon-desktop/AM_SGB_FRAU_HP"
+      "@id" : "info:oi/AM_SGB_FRAU_HP"
     },
     "AM_SGB_DEUTSCH_HP" : {
-      "@id" : "info:jon-desktop/AM_SGB_DEUTSCH_HP"
+      "@id" : "info:oi/AM_SGB_DEUTSCH_HP"
     },
     "AM_SGB_UNTER25_HP" : {
-      "@id" : "info:jon-desktop/AM_SGB_UNTER25_HP"
+      "@id" : "info:oi/AM_SGB_UNTER25_HP"
     },
     "OBJECTID_12" : {
-      "@id" : "info:jon-desktop/OBJECTID_12"
+      "@id" : "info:oi/OBJECTID_12"
     },
     "AGS_1" : {
-      "@id" : "info:jon-desktop/AGS_1"
+      "@id" : "info:oi/AGS_1"
     },
     "AM_SGB2_INSG_AA" : {
-      "@id" : "info:jon-desktop/AM_SGB2_INSG_AA"
+      "@id" : "info:oi/AM_SGB2_INSG_AA"
     },
     "AM_SGB2_MANN_AA" : {
-      "@id" : "info:jon-desktop/AM_SGB2_MANN_AA"
+      "@id" : "info:oi/AM_SGB2_MANN_AA"
     },
     "AM_SGB2_FRAU_AA" : {
-      "@id" : "info:jon-desktop/AM_SGB2_FRAU_AA"
+      "@id" : "info:oi/AM_SGB2_FRAU_AA"
     },
     "AM_SGB2_DEUTSCH_AA" : {
-      "@id" : "info:jon-desktop/AM_SGB2_DEUTSCH_AA"
+      "@id" : "info:oi/AM_SGB2_DEUTSCH_AA"
     },
     "AM_SGB2_UNTER25_AA" : {
-      "@id" : "info:jon-desktop/AM_SGB2_UNTER25_AA"
+      "@id" : "info:oi/AM_SGB2_UNTER25_AA"
     },
     "AM_SGB2_INSG_AP" : {
-      "@id" : "info:jon-desktop/AM_SGB2_INSG_AP"
+      "@id" : "info:oi/AM_SGB2_INSG_AP"
     },
     "AM_SGB2_MANN_AP" : {
-      "@id" : "info:jon-desktop/AM_SGB2_MANN_AP"
+      "@id" : "info:oi/AM_SGB2_MANN_AP"
     },
     "AM_SGB2_FRAU_AP" : {
-      "@id" : "info:jon-desktop/AM_SGB2_FRAU_AP"
+      "@id" : "info:oi/AM_SGB2_FRAU_AP"
     },
     "AM_SGB2_DEUTSCH_AP" : {
-      "@id" : "info:jon-desktop/AM_SGB2_DEUTSCH_AP"
+      "@id" : "info:oi/AM_SGB2_DEUTSCH_AP"
     },
     "AM_SGB2_UNTER25_AP" : {
-      "@id" : "info:jon-desktop/AM_SGB2_UNTER25_AP"
+      "@id" : "info:oi/AM_SGB2_UNTER25_AP"
     },
     "AM_SGB2_INSG_HA" : {
-      "@id" : "info:jon-desktop/AM_SGB2_INSG_HA"
+      "@id" : "info:oi/AM_SGB2_INSG_HA"
     },
     "AM_SGB2_MANN_HA" : {
-      "@id" : "info:jon-desktop/AM_SGB2_MANN_HA"
+      "@id" : "info:oi/AM_SGB2_MANN_HA"
     },
     "AM_SGB2_FRAU_HA" : {
-      "@id" : "info:jon-desktop/AM_SGB2_FRAU_HA"
+      "@id" : "info:oi/AM_SGB2_FRAU_HA"
     },
     "AM_SGB2_DEUTSCH_HA" : {
-      "@id" : "info:jon-desktop/AM_SGB2_DEUTSCH_HA"
+      "@id" : "info:oi/AM_SGB2_DEUTSCH_HA"
     },
     "AM_SGB2_UNTER25_HA" : {
-      "@id" : "info:jon-desktop/AM_SGB2_UNTER25_HA"
+      "@id" : "info:oi/AM_SGB2_UNTER25_HA"
     },
     "AM_SGB2_INSG_HP" : {
-      "@id" : "info:jon-desktop/AM_SGB2_INSG_HP"
+      "@id" : "info:oi/AM_SGB2_INSG_HP"
     },
     "AM_SGB2_MANN_HP" : {
-      "@id" : "info:jon-desktop/AM_SGB2_MANN_HP"
+      "@id" : "info:oi/AM_SGB2_MANN_HP"
     },
     "AM_SGB2_FRAU_HP" : {
-      "@id" : "info:jon-desktop/AM_SGB2_FRAU_HP"
+      "@id" : "info:oi/AM_SGB2_FRAU_HP"
     },
     "AM_SGB2_DEUTSCH_HP" : {
-      "@id" : "info:jon-desktop/AM_SGB2_DEUTSCH_HP"
+      "@id" : "info:oi/AM_SGB2_DEUTSCH_HP"
     },
     "AM_SGB2_UNTER25_HP" : {
-      "@id" : "info:jon-desktop/AM_SGB2_UNTER25_HP"
+      "@id" : "info:oi/AM_SGB2_UNTER25_HP"
     },
     "OBJECTID_12_13" : {
-      "@id" : "info:jon-desktop/OBJECTID_12_13"
+      "@id" : "info:oi/OBJECTID_12_13"
     },
     "AGS_12" : {
-      "@id" : "info:jon-desktop/AGS_12"
+      "@id" : "info:oi/AGS_12"
     },
     "AM_SGB3_INSG_AA" : {
-      "@id" : "info:jon-desktop/AM_SGB3_INSG_AA"
+      "@id" : "info:oi/AM_SGB3_INSG_AA"
     },
     "AM_SGB3_MANN_AA" : {
-      "@id" : "info:jon-desktop/AM_SGB3_MANN_AA"
+      "@id" : "info:oi/AM_SGB3_MANN_AA"
     },
     "AM_SGB3_FRAU_AA" : {
-      "@id" : "info:jon-desktop/AM_SGB3_FRAU_AA"
+      "@id" : "info:oi/AM_SGB3_FRAU_AA"
     },
     "AM_SGB3_DEUTSCH_AA" : {
-      "@id" : "info:jon-desktop/AM_SGB3_DEUTSCH_AA"
+      "@id" : "info:oi/AM_SGB3_DEUTSCH_AA"
     },
     "AM_SGB3_UNTER25_AA" : {
-      "@id" : "info:jon-desktop/AM_SGB3_UNTER25_AA"
+      "@id" : "info:oi/AM_SGB3_UNTER25_AA"
     },
     "AM_SGB3_INSG_AP" : {
-      "@id" : "info:jon-desktop/AM_SGB3_INSG_AP"
+      "@id" : "info:oi/AM_SGB3_INSG_AP"
     },
     "AM_SGB3_MANN_AP" : {
-      "@id" : "info:jon-desktop/AM_SGB3_MANN_AP"
+      "@id" : "info:oi/AM_SGB3_MANN_AP"
     },
     "AM_SGB3_FRAU_AP" : {
-      "@id" : "info:jon-desktop/AM_SGB3_FRAU_AP"
+      "@id" : "info:oi/AM_SGB3_FRAU_AP"
     },
     "AM_SGB3_DEUTSCH_AP" : {
-      "@id" : "info:jon-desktop/AM_SGB3_DEUTSCH_AP"
+      "@id" : "info:oi/AM_SGB3_DEUTSCH_AP"
     },
     "AM_SGB3_UNTER25_AP" : {
-      "@id" : "info:jon-desktop/AM_SGB3_UNTER25_AP"
+      "@id" : "info:oi/AM_SGB3_UNTER25_AP"
     },
     "AM_SGB3_INSG_HA" : {
-      "@id" : "info:jon-desktop/AM_SGB3_INSG_HA"
+      "@id" : "info:oi/AM_SGB3_INSG_HA"
     },
     "AM_SGB3_MANN_HA" : {
-      "@id" : "info:jon-desktop/AM_SGB3_MANN_HA"
+      "@id" : "info:oi/AM_SGB3_MANN_HA"
     },
     "AM_SGB3_FRAU_HA" : {
-      "@id" : "info:jon-desktop/AM_SGB3_FRAU_HA"
+      "@id" : "info:oi/AM_SGB3_FRAU_HA"
     },
     "AM_SGB3_DEUTSCH_HA" : {
-      "@id" : "info:jon-desktop/AM_SGB3_DEUTSCH_HA"
+      "@id" : "info:oi/AM_SGB3_DEUTSCH_HA"
     },
     "AM_SGB3_UNTER25_HA" : {
-      "@id" : "info:jon-desktop/AM_SGB3_UNTER25_HA"
+      "@id" : "info:oi/AM_SGB3_UNTER25_HA"
     },
     "AM_SGB3_INSG_HP" : {
-      "@id" : "info:jon-desktop/AM_SGB3_INSG_HP"
+      "@id" : "info:oi/AM_SGB3_INSG_HP"
     },
     "AM_SGB3_MANN_HP" : {
-      "@id" : "info:jon-desktop/AM_SGB3_MANN_HP"
+      "@id" : "info:oi/AM_SGB3_MANN_HP"
     },
     "AM_SGB3_FRAU_HP" : {
-      "@id" : "info:jon-desktop/AM_SGB3_FRAU_HP"
+      "@id" : "info:oi/AM_SGB3_FRAU_HP"
     },
     "AM_SGB3_DEUTSCH_HP" : {
-      "@id" : "info:jon-desktop/AM_SGB3_DEUTSCH_HP"
+      "@id" : "info:oi/AM_SGB3_DEUTSCH_HP"
     },
     "AM_SGB3_UNTER25_HP" : {
-      "@id" : "info:jon-desktop/AM_SGB3_UNTER25_HP"
+      "@id" : "info:oi/AM_SGB3_UNTER25_HP"
     },
     "SHAPE.AREA" : {
-      "@id" : "info:jon-desktop/SHAPE.AREA"
+      "@id" : "info:oi/SHAPE.AREA"
     },
     "SHAPE.LEN" : {
-      "@id" : "info:jon-desktop/SHAPE.LEN"
+      "@id" : "info:oi/SHAPE.LEN"
     }
   }
 }
