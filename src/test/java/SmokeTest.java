@@ -1,4 +1,4 @@
-package org.schnasse.smoketests;
+
 
 /* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
 

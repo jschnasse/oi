@@ -14,7 +14,6 @@ import org.schnasse.oi.reader.RdfReader;
 import org.schnasse.oi.reader.XmlReader;
 import org.schnasse.oi.reader.YamlReader;
 import org.schnasse.oi.writer.ContextWriter;
-import org.schnasse.oi.writer.CsvWriter;
 import org.schnasse.oi.writer.JsonWriter;
 import org.schnasse.oi.writer.XmlWriter;
 import org.schnasse.oi.writer.YamlWriter;
@@ -131,9 +130,7 @@ public class Main implements Callable<Integer> {
 				JsonWriter.gprint(content);
 			} else if ("context".equals(type)) {
 				ContextWriter.gprint(content);
-			} else if ("csv".equals(type)) {
-				CsvWriter.gprint(content.get("row"));
-			}
+			} 
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

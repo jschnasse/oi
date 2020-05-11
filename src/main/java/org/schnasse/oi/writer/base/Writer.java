@@ -27,13 +27,6 @@ public class Writer {
 		}
 	}
 
-	public static void createFile(ObjectMapper mapper, String path, Map<String, Object> content) {
-		try {
-			Files.asCharSink(new File(path), Charsets.UTF_8).write(write(mapper, content));
-		} catch (Exception e) {
-			System.out.println(e.getLocalizedMessage());
-		}
-	}
 	public static void gprint(ObjectMapper mapper, Object json) {
 			print(mapper,json);
 	}
