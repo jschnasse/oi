@@ -1,0 +1,10 @@
+Section: tools
+Priority: optional
+Homepage: -
+Standards-Version: 3.9.2
+Package: lscsv
+Version: 0.1
+Maintainer: Jan Schnasse <schnasse@gmx.de>
+Architecture: all
+Description: directory listing as csv
+Copyright: Jan Schnasse, EPL v2.0

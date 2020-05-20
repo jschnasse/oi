@@ -1,0 +1,27 @@
+#! /bin/bash
+
+_space_="\ *";
+type=".";
+perm="[^\ ]*";
+hlinks=$perm;
+user=$perm;
+group=$perm;
+size=$perm;
+modified=".{12}";
+name=".*";
+REGEX="^($type)"
+REGEX=${REGEX}"($perm)"
+REGEX=${REGEX}"$_space_"
+REGEX=${REGEX}"($hlinks)"
+REGEX=${REGEX}"$_space_"
+REGEX=${REGEX}"($user)"
+REGEX=${REGEX}"$_space_"
+REGEX=${REGEX}"($group)"
+REGEX=${REGEX}"$_space_"
+REGEX=${REGEX}"($size)"
+REGEX=${REGEX}"$_space_"
+REGEX=${REGEX}"($modified)"
+REGEX=${REGEX}"$_space_($name)"
+ls -l $@ | \
+sed -r -e s/"$REGEX"/'"\1","\2","\3","\4","\5","\6","\7","\8"'/g
+
