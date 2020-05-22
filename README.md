@@ -7,11 +7,28 @@ Use `oi` to translate one structured format into another. Even if
 the result is not hundred percent correct it almost always 
 can be fixed easily with existing tools like `sed`,`grep` and `awk`.
 
-# Install
+# Test Install
 
 ```
-wget https://schnasse.org/deb/oi_0.0.1.deb
+wget https://dl.bintray.com/jschnasse/debian/oi_0.0.1.deb
 sudo apt install ./oi_0.0.1.deb #depends on openjdk-11-jre
+```
+# Keep up to date
+
+Accept the bintray gpg key. 
+
+```
+curl -sSL \
+'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x379ce192d401ab61' \
+| sudo apt-key add -
+```
+
+Add [my repo](https://dl.bintray.com/jschnasse/debian/)
+
+```
+echo "deb https://dl.bintray.com/jschnasse/debian buster main" | sudo tee -a /etc/apt/sources.list.d/jschnasse.list
+sudo apt update
+sudo apt install oi
 ```
 
 
