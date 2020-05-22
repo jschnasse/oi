@@ -14,7 +14,6 @@ filepath=${PACKAGE}_${VERSION}.deb
 curl -u$API_AUTH -XPOST "https://bintray.com/api/v1/packages/$subject/$repo/" -d@bintray/${PACKAGE}/package.json -H"content-type:application/json"
 curl -u$API_AUTH -XPOST "https://bintray.com/api/v1/packages/$subject/$repo/$PACKAGE/versions" -d@bintray/${PACKAGE}/version.json -H"content-type:application/json"
 curl -u$API_AUTH -T deb/$filepath "https://bintray.com/api/v1/content/$subject/$repo/$PACKAGE/$VERSION/$filepath;deb_distribution=buster;deb_component=main;deb_architecture=all;publish=1;override=1;"
-#curl -u$API_AUTH -XPUT "https://bintray.com/api/v1/content/$subject/$repo/$PACKAGE/$VERSION/$filepath" -d'{"list_in_downloads":true}'
 curl -u$API_AUTH -XPUT "https://bintray.com/api/ui/artifact/$subject/$repo/$filepath" -d'{"list_in_downloads":true}' -H"content-type:application/json"
 cd -
 }

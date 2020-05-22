@@ -1,9 +1,14 @@
 FROM ubuntu:18.04
 RUN apt-get update && apt-get install -y \
-  wget \
+  curl \
   man \
-  && wget https://schnasse.org/deb/oi_0.0.1.deb \
-  && apt install -y ./oi_0.0.1.deb \
+  gnupg \
+  && curl -sSL 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x379ce192d401ab61' | apt-key add - \
+  && echo "deb https://dl.bintray.com/jschnasse/debian buster main" | tee -a /etc/apt/sources.list.d/jschnasse.list \
+  && apt update -y \
+  && apt install -y lscsv \
+  && apt install -y libprocname \
+  && apt install -y oi \
   && java -version \
   && oi /etc/passwd -d":" --header="login,password,uid,gid,comment,home,shell" -icsv
 
