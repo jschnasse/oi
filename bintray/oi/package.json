@@ -1,0 +1,15 @@
+{
+   "repo" : "debian",
+   "maturity" : "Experimental",
+   "vcs_url" : "https://github.com/jschnasse/oi",
+   "public_download_numbers" : true,
+   "name" : "oi",
+   "github_repo" : "jschnasse/oi",
+   "desc" : "csv transformation to yml,xml,json,rdf",
+   "github_release_notes_file" : "",
+   "website_url" : null,
+   "licenses" : [
+      "EPL-2.0"
+   ],
+   "public_stats" : true
+}

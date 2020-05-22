@@ -1,0 +1,15 @@
+{
+   "repo" : "debian",
+   "maturity" : "Experimental",
+   "vcs_url" : "https://github.com/jschnasse/oi/tree/master/deb/libprocname_0.1",
+   "public_download_numbers" : true,
+   "name" : "libprocname",
+   "github_repo" : "jschnasse/oi",
+   "desc" : "define process name via LD preloading",
+   "github_release_notes_file" : "",
+   "website_url" : null,
+   "licenses" : [
+      "EPL-2.0"
+   ],
+   "public_stats" : true
+}

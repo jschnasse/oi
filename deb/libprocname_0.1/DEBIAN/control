@@ -1,0 +1,10 @@
+Section: tools
+Priority: optional
+Homepage: -
+Standards-Version: 3.9.2
+Package: libprocname
+Version: 0.1
+Maintainer: Jan Schnasse <schnasse@gmx.de>
+Architecture: all
+Description: start programm under defined name
+Copyright: David Phillips <david@acz.org>

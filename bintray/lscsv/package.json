@@ -1,0 +1,15 @@
+{
+   "repo" : "debian",
+   "maturity" : "Experimental",
+   "vcs_url" : "https://github.com/jschnasse/oi/tree/master/deb/lscsv_0.1",
+   "public_download_numbers" : true,
+   "name" : "lscsv",
+   "github_repo" : "jschnasse/oi",
+   "desc" : "directory long listing as csv",
+   "github_release_notes_file" : "",
+   "website_url" : null,
+   "licenses" : [
+      "EPL-2.0"
+   ],
+   "public_stats" : true
+}

@@ -1,29 +1,38 @@
 '\" t
 .\"     Title: oi
 .\"    Author: Jan Schnasse
-.\" Generator: Asciidoctor 1.5.5
-.\"      Date: 2020-04-18
+.\" Generator: Asciidoctor 1.5.8
+.\"      Date: 2020-05-11
 .\"    Manual: OI
 .\"    Source: OI
 .\"  Language: English
 .\"
-.TH "OI" "1" "2020-04-18" "OI" "OI"
+.TH "OI" "1" "2020-05-11" "OI" "OI"
 .ie \n(.g .ds Aq \(aq
 .el       .ds Aq '
 .ss \n[.ss] 0
 .nh
 .ad l
 .de URL
-\\$2 \(laURL: \\$1 \(ra\\$3
+\fI\\$2\fP <\\$1>\\$3
 ..
-.if \n[.g] .mso www.tmac
-.LINKSTYLE blue R < >
+.als MTO URL
+.if \n[.g] \{\
+.  mso www.tmac
+.  am URL
+.    ad l
+.  .
+.  am MTO
+.    ad l
+.  .
+.  LINKSTYLE blue R < >
+.\}
 .SH "NAME"
 oi \- converts csv,jason,xml,yaml, and rdf to each other
 .SH "SYNOPSIS"
 .sp
 \fBoi\fP [\-hV] [\-d=Delimiter] [\-f=JsonLdFrame] [\-\-header=HeaderFields]
-            [\-i=<inputType>] [\-t=<type>] [<inputFile>]
+[\-i=<inputType>] [\-t=<type>] [<inputFile>]
 == Options
 .sp
 \fB[<inputFile>]\fP
@@ -85,11 +94,8 @@ Failure.
 .SH "COPYING"
 .sp
 Copyright \(co 2020 Jan Schnasse.
-\&.br
+.br
 Free use of this software is granted under the terms of the EPL License.
-.SH "AUTHOR(S)"
+.SH "AUTHOR"
 .sp
-\fBJan Schnasse\fP
-.RS 4
-Author(s).
-.RE
+Jan Schnasse

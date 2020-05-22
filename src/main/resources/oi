@@ -20,4 +20,9 @@ function install(){
  sudo mandb
  )
 }
-java -jar /usr/lib/oi.jar $@
+if [ -f /usr/lib/libprocname.so ]
+then
+    LD_PRELOAD=/usr/lib/libprocname.so PROCNAME=oi java -jar /usr/lib/oi.jar $@
+else
+    java -jar /usr/lib/oi.jar $@
+fi
