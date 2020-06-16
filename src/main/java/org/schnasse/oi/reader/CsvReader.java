@@ -16,24 +16,34 @@ import com.fasterxml.jackson.dataformat.csv.CsvSchema;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema.Builder;
 
 public class CsvReader {
-	public static Map<String, Object> getMap(InputStream inputStream, String[] header,String delimiter) {
+	public static Map<String, Object> getMap(InputStream inputStream, String[] header, String delimiter,
+			String quoteChar) {
 		try {
+			if (delimiter == null) {
+				delimiter = ",";
+			}
+			if (quoteChar == null) {
+				quoteChar = "\"";
+			}
 			Builder sb = CsvSchema.builder();
 			sb.setColumnSeparator(delimiter.charAt(0));
+			sb.setQuoteChar(quoteChar.charAt(0));
+
 			CsvSchema schema = sb.build();
 			CsvMapper mapper = new CsvMapper();
 			mapper.enable(CsvParser.Feature.WRAP_AS_ARRAY);
 
 			MappingIterator<String[]> it = mapper.readerFor(String[].class).with(schema).readValues(inputStream);
 			List<Map<String, Object>> all = new ArrayList<>();
-			if(header==null) {
-				header=it.next();
+			if (header == null) {
+				header = it.next();
 			}
 			while (it.hasNext()) {
 				String[] row = it.next();
 				Map<String, Object> map = new TreeMap<>();
-				if(row.length!=header.length) {
-					System.out.println(Arrays.toString(row)+" "+row.length+"\n"+Arrays.toString(header)+" "+header.length);
+				if (row.length != header.length) {
+					System.out.println(Arrays.toString(row) + " " + row.length + "\n" + Arrays.toString(header) + " "
+							+ header.length);
 				}
 				for (int j = 0; j < row.length; j++) {
 					String col = row[j];

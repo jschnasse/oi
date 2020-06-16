@@ -28,7 +28,8 @@ import picocli.CommandLine.Parameters;
 
 @Command(name = "cjxy", mixinStandardHelpOptions = true, version = "checksum 0.1.0", description = "Converts yaml,json,xml,rdf to each other.")
 public class Main implements Callable<Integer> {
-	private static final ch.qos.logback.classic.Logger logger = (ch.qos.logback.classic.Logger) org.slf4j.LoggerFactory.getLogger(Main.class);
+	private static final ch.qos.logback.classic.Logger logger = (ch.qos.logback.classic.Logger) org.slf4j.LoggerFactory
+			.getLogger(Main.class);
 	@Parameters(index = "0", arity = "0..1", description = "Input file.")
 	private String inputFile;
 
@@ -46,6 +47,9 @@ public class Main implements Callable<Integer> {
 
 	@Option(names = { "-d", "--delimiter" }, paramLabel = "Delimiter", description = "delimiter for csv")
 	String delimiter = ",";
+
+	@Option(names = { "-q", "--quoteChar" }, paramLabel = "QuoteChar", description = "quote char for csv")
+	String quoteChar = "\"";
 
 	@Option(names = { "-v", "--verbose" }, paramLabel = "Verbosity", description = "Increase Verbosity to Warn")
 	boolean levelWarn = false;
@@ -75,7 +79,7 @@ public class Main implements Callable<Integer> {
 			setLoggingLevel(Level.WARN);
 		} else if (levelDebug) {
 			setLoggingLevel(Level.DEBUG);
-		}else {
+		} else {
 			setLoggingLevel(Level.OFF);
 		}
 		convert();
@@ -98,9 +102,9 @@ public class Main implements Callable<Integer> {
 				content = XmlReader.getMap(Helper.getInputStream(inputFile));
 			} else if ("csv".equals(inputType)) {
 				if (header != null) {
-					content = CsvReader.getMap(in, header.split(","), delimiter);
+					content = CsvReader.getMap(in, header.split(","), delimiter, quoteChar);
 				} else {
-					content = CsvReader.getMap(in, null, delimiter);
+					content = CsvReader.getMap(in, null, delimiter, quoteChar);
 				}
 			} else if ("rdf".equals(type) || "rdf".equals(inputType) || "nt".equals(inputType)
 					|| "json".equals(inputType)) {
@@ -130,7 +134,7 @@ public class Main implements Callable<Integer> {
 				JsonWriter.gprint(content);
 			} else if ("context".equals(type)) {
 				ContextWriter.gprint(content);
-			} 
+			}
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
