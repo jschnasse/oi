@@ -1,5 +1,4 @@
 
-
 /* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
 
 import java.util.Map;
@@ -43,8 +42,8 @@ public class SmokeTest {
 
 	@Test
 	public void readCsv() throws Exception {
-		Map<String, Object> map = org.schnasse.oi.reader.CsvReader.getMap(Thread.currentThread()
-				.getContextClassLoader().getResourceAsStream("csv/in/BesucherzahlenMuseen2019.csv"), null, ";");
+		Map<String, Object> map = org.schnasse.oi.reader.CsvReader.getMap(Thread.currentThread().getContextClassLoader()
+				.getResourceAsStream("csv/in/BesucherzahlenMuseen2019.csv"), null, ";", null);
 		JsonWriter.gprint(map);
 		YamlWriter.gprint(map);
 		XmlWriter.gprint(map);
@@ -54,7 +53,7 @@ public class SmokeTest {
 	public void readCsv2() throws Exception {
 		Map<String, Object> map = org.schnasse.oi.reader.CsvReader.getMap(
 				Thread.currentThread().getContextClassLoader().getResourceAsStream("old.tests/HT015847062_v2.csv"),
-				new String[] { "OclcNumber", "URI", "Title", "Author", "Date" }, ",");
+				new String[] { "OclcNumber", "URI", "Title", "Author", "Date" }, ",", null);
 		JsonWriter.gprint(map);
 		YamlWriter.gprint(map);
 		XmlWriter.gprint(map);
@@ -100,13 +99,12 @@ public class SmokeTest {
 						"rdf/in/entwicklung-der-kriminalitat-nach-fallen-und-aufklarungen-seit-1990.rdf"),
 				RDFFormat.RDFXML, null);
 		ContextWriter.gprint(map);
-		
+
 		map = org.schnasse.oi.reader.RdfReader.getMap(
 				Thread.currentThread().getContextClassLoader().getResourceAsStream(
 						"rdf/in/entwicklung-der-kriminalitat-nach-fallen-und-aufklarungen-seit-1990.rdf"),
-				RDFFormat.RDFXML, JsonReader.getMap(Thread.currentThread().getContextClassLoader()
-						.getResourceAsStream("rdf/context/entwicklung-der-kriminalitat-nach-fallen-und-aufklarungen-seit-1990.rdf.context")));
+				RDFFormat.RDFXML, JsonReader.getMap(Thread.currentThread().getContextClassLoader().getResourceAsStream(
+						"rdf/context/entwicklung-der-kriminalitat-nach-fallen-und-aufklarungen-seit-1990.rdf.context")));
 		JsonWriter.gprint(map);
 	}
-
 }
