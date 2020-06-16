@@ -1,6 +1,6 @@
 = oi(1)
 Jan Schnasse
-v0.0.1
+v0.2.0
 :doctype: manpage
 :manmanual: OI
 :mansource: OI
@@ -12,8 +12,10 @@ oi - converts csv,jason,xml,yaml, and rdf to each other
 
 == Synopsis
 
-*oi* [-hV] [-d=Delimiter] [-f=JsonLdFrame] [--header=HeaderFields]
-            [-i=<inputType>] [-t=<type>] [<inputFile>]
+*oi* [-hvV] [-vv] [-d=Delimiter] [-f=JsonLdFrame]
+            [--header=HeaderFields] [-i=<inputType>] [-q=QuoteChar] [-t=<type>]
+            [<inputFile>]
+	    
 == Options
 
 *[<inputFile>]*::
@@ -35,6 +37,8 @@ oi - converts csv,jason,xml,yaml, and rdf to each other
 *-i, --inputType**::
   oi tries to recognize the input type based on file extensions. Use this
   option to explicitly provide an input type: yml,json,xml,rdf,context,csv.
+*-q, --quoteChar**::
+  use the specified char when parsing strings in csv files.
   
 *-t, --type*=_TYPE_::
   _TYPE_ must be one of yaml,json,xml,rdf,context

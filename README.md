@@ -10,8 +10,8 @@ can be fixed easily with existing tools like `sed`,`grep` and `awk`.
 # Test Install
 
 ```
-wget https://dl.bintray.com/jschnasse/debian/oi_0.0.1.deb
-sudo apt install ./oi_0.0.1.deb #depends on openjdk-11-jre
+wget https://dl.bintray.com/jschnasse/debian/oi_0.2.0.deb
+sudo apt install ./oi_0.2.0.deb #depends on openjdk-11-jre
 ```
 # Keep up to date
 
@@ -56,8 +56,9 @@ curl https://api.github.com/users/jschnasse|oi -ijson -tcontext
 
 ```
 $ oi --help
-Usage: oi [-hV] [-d=Delimiter] [-f=JsonLdFrame] [--header=HeaderFields]
-            [-i=<inputType>] [-t=<type>] [<inputFile>]
+Usage: oi  [-hvV] [-vv] [-d=Delimiter] [-f=JsonLdFrame]
+           [--header=HeaderFields] [-i=<inputType>] [-q=QuoteChar] [-t=<type>]
+           [<inputFile>]  
 Converts yaml,json,xml,rdf to each other.
       [<inputFile>]         Input file.
   -d, --delimiter=Delimiter delimiter for csv
@@ -66,8 +67,10 @@ Converts yaml,json,xml,rdf to each other.
       --header=HeaderFields a comma separated list of headers
   -i, --inputType=<inputType>
                             yml,json,xml,rdf,context,csv
+  -q, --quoteChar=QuoteChar quote char for csv		    
   -t, --type=<type>         yaml,json,xml,rdf,context,csv
   -V, --version             Print version information and exit.
+  -vv                       Increase Verbosity to Debug
 ```
 
 Visit the man-page for more info.
