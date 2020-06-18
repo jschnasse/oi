@@ -11,6 +11,7 @@ import java.util.Map;
 
 import org.eclipse.rdf4j.rio.RDFFormat;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.schnasse.oi.reader.JsonReader;
@@ -57,6 +58,7 @@ public class MainTest {
 		Map<String, Object> expected = YamlReader.getMap(
 				Thread.currentThread().getContextClassLoader().getResourceAsStream("json/out/rosenmontag.json.yml"));
 		Map<String, Object> actual = YamlReader.getMap(new ByteArrayInputStream(outContent.toByteArray()));
+		Assert.assertTrue(expected.equals(actual));
 		assertEquals(expected, actual);
 	}
 
@@ -65,7 +67,7 @@ public class MainTest {
 		Path currentRelativePath = Paths.get("");
 		String s = currentRelativePath.toAbsolutePath().toString();
 		new CommandLine(new Main()).execute(s + "/src/test/resources/json/in/rosenmontag.json",
-				"-f" + s+"/src/test/resources/json/context/rosenmontag.json.context", "-trdf");
+				"-f" + s + "/src/test/resources/json/context/rosenmontag.json.context", "-trdf");
 		Map<String, Object> frame = JsonReader.getMap(Thread.currentThread().getContextClassLoader()
 				.getResourceAsStream("json/context/rosenmontag.json.context"));
 		Map<String, Object> expected = RdfReader.getMap(

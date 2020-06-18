@@ -5,7 +5,7 @@ crs:
   properties:
     name: "EPSG:4326"
 features:
-- type: "Feature"
+  type: "Feature"
   id: 1
   geometry:
     type: "LineString"

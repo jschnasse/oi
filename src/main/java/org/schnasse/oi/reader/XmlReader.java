@@ -38,6 +38,7 @@ public class XmlReader {
 						jp.nextToken();
 						result.put(fieldName, deserialize(jp, ctxt));
 					} while (jp.nextToken() != JsonToken.END_OBJECT);
+
 					return (Map) result.asMap();
 				}
 			}));
