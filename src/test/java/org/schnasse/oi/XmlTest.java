@@ -3,7 +3,7 @@ package org.schnasse.oi;
 import java.util.Map;
 
 import org.junit.Test;
-import org.schnasse.oi.writer.JsonWriter;
+import org.schnasse.oi.helper.TestHelper;
 
 public class XmlTest {
 	@Test
@@ -12,7 +12,6 @@ public class XmlTest {
 				.getMap(Thread.currentThread().getContextClassLoader().getResourceAsStream("xml/in/HT015847062.xml"));
 		Map<String, Object> json = org.schnasse.oi.reader.JsonReader.getMap(
 				Thread.currentThread().getContextClassLoader().getResourceAsStream("xml/out/HT015847062.xml.json"));
-		JsonWriter.gprint(xml);
-		JsonWriter.gprint(json);
+		TestHelper.mapCompare(xml, json);
 	}
 }
