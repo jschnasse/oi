@@ -1,119 +1,268 @@
 <?xml version='1.1' encoding='UTF-8'?>
-<HashMap>
+<AsMap>
   <extent>XIV, 441 S. : Ill., graph. Darst.</extent>
   <oclcNumber>553577538</oclcNumber>
   <subject>
-    <type>ComplexSubject</type>
     <componentList>
-      <id>https://d-nb.info/gnd/4047390-9</id>
-      <type>SubjectHeading</type>
       <source>
-        <id>https://d-nb.info/gnd/7749153-1</id>
         <label>Gemeinsame Normdatei (GND)</label>
+        <id>https://d-nb.info/gnd/7749153-1</id>
+      </source>
+      <label>Vorhersagbarkeit</label>
+      <type>SubjectHeading</type>
+      <id>https://d-nb.info/gnd/4260601-9</id>
+      <gndIdentifier>4260601-9</gndIdentifier>
+    </componentList>
+    <label>Vorhersagbarkeit</label>
+    <type>ComplexSubject</type>
+  </subject>
+  <subject>
+    <componentList>
+      <source>
+        <label>Gemeinsame Normdatei (GND)</label>
+        <id>https://d-nb.info/gnd/7749153-1</id>
       </source>
       <label>Prognose</label>
+      <type>SubjectHeading</type>
+      <id>https://d-nb.info/gnd/4047390-9</id>
       <gndIdentifier>4047390-9</gndIdentifier>
     </componentList>
     <label>Prognose</label>
+    <type>ComplexSubject</type>
   </subject>
+  <isbn>9783446415683</isbn>
   <isbn>3446415688</isbn>
   <hasItem>
-    <id>http://lobid.org/items/HT015847062:DE-467:32QFD8011%2B1#!</id>
+    <note>00040000</note>
+    <label>OCT Tale</label>
     <type>Item</type>
     <heldBy>
-      <id>http://lobid.org/organisations/DE-467#!</id>
       <label>lobid Organisation</label>
+      <id>http://lobid.org/organisations/DE-Bi10#!</id>
     </heldBy>
+    <callNumber>OCT Tale</callNumber>
+    <id>http://lobid.org/items/HT015847062:DE-Bi10:OCT%20Tale#!</id>
+  </hasItem>
+  <hasItem>
+    <note>D05</note>
+    <label>OCT9386+3</label>
+    <type>Item</type>
+    <heldBy>
+      <label>lobid Organisation</label>
+      <id>http://lobid.org/organisations/DE-464#!</id>
+    </heldBy>
+    <callNumber>OCT9386+3</callNumber>
+    <id>http://lobid.org/items/HT015847062:DE-464:OCT9386%2B3#!</id>
+  </hasItem>
+  <hasItem>
+    <label>lobid Bestandsressource</label>
+    <type>Item</type>
+    <heldBy>
+      <label>lobid Organisation</label>
+      <id>http://lobid.org/organisations/DE-1044#!</id>
+    </heldBy>
+    <id>http://lobid.org/items/HT015847062:DE-1044:OCT9386%2B4#!</id>
+  </hasItem>
+  <hasItem>
+    <note>E11</note>
+    <label>OCT9386+4</label>
+    <type>Item</type>
+    <heldBy>
+      <label>lobid Organisation</label>
+      <id>http://lobid.org/organisations/DE-465#!</id>
+    </heldBy>
+    <callNumber>OCT9386+4</callNumber>
+    <id>http://lobid.org/items/HT015847062:DE-465:OCT9386%2B4#!</id>
+  </hasItem>
+  <hasItem>
+    <note>00000010</note>
+    <label>2009/5398</label>
+    <type>Item</type>
+    <heldBy>
+      <label>lobid Organisation</label>
+      <id>http://lobid.org/organisations/DE-5#!</id>
+    </heldBy>
+    <callNumber>2009/5398</callNumber>
+    <id>http://lobid.org/items/HT015847062:DE-5:2009%2F5398#!</id>
+  </hasItem>
+  <hasItem>
+    <note>D05</note>
+    <label>OCT9386+1</label>
+    <type>Item</type>
+    <heldBy>
+      <label>lobid Organisation</label>
+      <id>http://lobid.org/organisations/DE-464#!</id>
+    </heldBy>
+    <callNumber>OCT9386+1</callNumber>
+    <id>http://lobid.org/items/HT015847062:DE-464:OCT9386%2B1#!</id>
+  </hasItem>
+  <hasItem>
+    <note>E11</note>
+    <label>OCT9386+5</label>
+    <type>Item</type>
+    <heldBy>
+      <label>lobid Organisation</label>
+      <id>http://lobid.org/organisations/DE-465#!</id>
+    </heldBy>
+    <callNumber>OCT9386+5</callNumber>
+    <id>http://lobid.org/items/HT015847062:DE-465:OCT9386%2B5#!</id>
+  </hasItem>
+  <hasItem>
+    <note>ULEHR</note>
+    <label>75QFD8011</label>
+    <type>Item</type>
+    <heldBy>
+      <label>lobid Organisation</label>
+      <id>http://lobid.org/organisations/DE-467#!</id>
+    </heldBy>
+    <callNumber>75QFD8011</callNumber>
+    <id>http://lobid.org/items/HT015847062:DE-467:75QFD8011#!</id>
+  </hasItem>
+  <hasItem>
+    <note>ULEHR</note>
+    <label>75QFD8011+1</label>
+    <type>Item</type>
+    <heldBy>
+      <label>lobid Organisation</label>
+      <id>http://lobid.org/organisations/DE-467#!</id>
+    </heldBy>
+    <callNumber>75QFD8011+1</callNumber>
+    <id>http://lobid.org/items/HT015847062:DE-467:75QFD8011%2B1#!</id>
+  </hasItem>
+  <hasItem>
+    <note>D05</note>
+    <label>OCT9386+2</label>
+    <type>Item</type>
+    <heldBy>
+      <label>lobid Organisation</label>
+      <id>http://lobid.org/organisations/DE-464#!</id>
+    </heldBy>
+    <callNumber>OCT9386+2</callNumber>
+    <id>http://lobid.org/items/HT015847062:DE-464:OCT9386%2B2#!</id>
+  </hasItem>
+  <hasItem>
+    <note>FRHKO</note>
+    <label>PH/V 2009 4482</label>
+    <type>Item</type>
+    <heldBy>
+      <label>lobid Organisation</label>
+      <id>http://lobid.org/organisations/DE-Kob7#!</id>
+    </heldBy>
+    <callNumber>PH/V 2009 4482</callNumber>
+    <id>http://lobid.org/items/HT015847062:DE-Kob7:PH%2FV%202009%204482#!</id>
+  </hasItem>
+  <hasItem>
     <note>US1</note>
-    <callNumber>32QFD8011+1</callNumber>
     <label>32QFD8011+1</label>
+    <type>Item</type>
+    <heldBy>
+      <label>lobid Organisation</label>
+      <id>http://lobid.org/organisations/DE-467#!</id>
+    </heldBy>
+    <callNumber>32QFD8011+1</callNumber>
+    <id>http://lobid.org/items/HT015847062:DE-467:32QFD8011%2B1#!</id>
   </hasItem>
   <responsibilityStatement>Nassim Nicholas Taleb</responsibilityStatement>
   <edition>[Nachdr.]</edition>
   <language>
-    <id>http://id.loc.gov/vocabulary/iso639-2/deu</id>
     <label>Deutsch</label>
+    <id>http://id.loc.gov/vocabulary/iso639-2/deu</id>
   </language>
   <medium>
-    <id>http://rdaregistry.info/termList/RDAproductionMethod/1010</id>
     <label>Print</label>
+    <id>http://rdaregistry.info/termList/RDAproductionMethod/1010</id>
   </medium>
+  <type>BibliographicResource</type>
   <type>Book</type>
   <title>Der schwarze Schwan</title>
   <exampleOfWork>
-    <type>Work</type>
     <label>&lt;&lt;The>> black swan &lt;dt.></label>
+    <type>Work</type>
   </exampleOfWork>
   <otherTitleInformation>die Macht höchst unwahrscheinlicher Ereignisse</otherTitleInformation>
   <contribution>
-    <type>Contribution</type>
     <agent>
-      <id>https://d-nb.info/gnd/124120180</id>
-      <type>Person</type>
-      <label>Taleb, Nassim Nicholas</label>
+      <altLabel>Taleb Nassim, Nicholas</altLabel>
+      <altLabel>Taleb, Nassim</altLabel>
       <altLabel>Taleb, Nassim N.</altLabel>
       <dateOfBirth>1960</dateOfBirth>
+      <label>Taleb, Nassim Nicholas</label>
+      <type>Person</type>
+      <id>https://d-nb.info/gnd/124120180</id>
       <gndIdentifier>124120180</gndIdentifier>
     </agent>
     <role>
-      <id>http://id.loc.gov/vocabulary/relators/cre</id>
       <label>Autor/in</label>
+      <id>http://id.loc.gov/vocabulary/relators/cre</id>
     </role>
+    <type>Contribution</type>
   </contribution>
+  <subjectAltLabel>Prädiktion</subjectAltLabel>
+  <subjectAltLabel>Zukunftsprognose</subjectAltLabel>
+  <subjectAltLabel>Vorhersehbarkeit</subjectAltLabel>
+  <subjectAltLabel>Vorhersage</subjectAltLabel>
+  <subjectAltLabel>Zukunftsvoraussage</subjectAltLabel>
+  <subjectAltLabel>Voraussehbarkeit</subjectAltLabel>
+  <subjectAltLabel>Voraussage</subjectAltLabel>
+  <subjectAltLabel>Vorausschätzung</subjectAltLabel>
   <subjectAltLabel>Prognostizierbarkeit</subjectAltLabel>
   <publication>
+    <publishedBy>Hanser</publishedBy>
     <type>PublicationEvent</type>
     <location>München</location>
-    <publishedBy>Hanser</publishedBy>
     <startDate>2009</startDate>
   </publication>
   <context>http://lobid.org/resources/context.jsonld</context>
   <describedBy>
-    <id>http://lobid.org/resources/HT015847062</id>
-    <type>BibliographicDescription</type>
-    <dateCreated>20090226</dateCreated>
     <inDataset>
-      <id>http://lobid.org/resources/dataset#!</id>
       <label>lobid-resources – Der hbz-Verbundkatalog als Linked Open Data</label>
+      <id>http://lobid.org/resources/dataset#!</id>
     </inDataset>
     <resultOf>
+      <instrument>
+        <label>Software lobid-resources</label>
+        <type>SoftwareApplication</type>
+        <id>https://github.com/hbz/lobid-resources</id>
+      </instrument>
       <type>CreateAction</type>
       <endTime>2020-04-08T01:43:32</endTime>
-      <instrument>
-        <id>https://github.com/hbz/lobid-resources</id>
-        <type>SoftwareApplication</type>
-        <label>Software lobid-resources</label>
-      </instrument>
       <object>
-        <id>http://lobid.org/hbz01/HT015847062</id>
-        <type>DataFeedItem</type>
         <inDataset>
-          <id>https://datahub.io/dataset/hbz_unioncatalog</id>
           <label>hbz_unioncatalog</label>
+          <id>https://datahub.io/dataset/hbz_unioncatalog</id>
         </inDataset>
         <label>hbz-Ressource HT015847062 im Exportformat MAB2-XML</label>
+        <type>DataFeedItem</type>
+        <id>http://lobid.org/hbz01/HT015847062</id>
       </object>
     </resultOf>
-    <license>
-      <id>http://creativecommons.org/publicdomain/zero/1.0</id>
-      <label>Creative Commons-Lizenz CC0 1.0 Universal</label>
-    </license>
-    <sourceOrganization>
-      <id>http://lobid.org/organisations/DE-467#!</id>
-      <label>lobid Organisation</label>
-    </sourceOrganization>
     <label>Webseite der hbz-Ressource HT015847062</label>
+    <type>BibliographicDescription</type>
+    <license>
+      <label>Creative Commons-Lizenz CC0 1.0 Universal</label>
+      <id>http://creativecommons.org/publicdomain/zero/1.0</id>
+    </license>
+    <dateCreated>20090226</dateCreated>
+    <sourceOrganization>
+      <label>lobid Organisation</label>
+      <id>http://lobid.org/organisations/DE-467#!</id>
+    </sourceOrganization>
+    <id>http://lobid.org/resources/HT015847062</id>
   </describedBy>
   <id>http://lobid.org/resources/HT015847062#!</id>
   <hbzId>HT015847062</hbzId>
   <tableOfContents>
-    <id>http://digitale-objekte.hbz-nrw.de/storage/2009/05/23/file_28/3011578.pdf</id>
     <label>3011578.pdf</label>
+    <id>http://digitale-objekte.hbz-nrw.de/storage/2009/05/23/file_28/3011578.pdf</id>
   </tableOfContents>
   <sameAs>
-    <id>http://worldcat.org/oclc/553577538</id>
-    <label>553577538</label>
+    <label>Culturegraph Ressource</label>
+    <id>http://hub.culturegraph.org/resource/HBZ-HT015847062</id>
   </sameAs>
-</HashMap>
+  <sameAs>
+    <label>553577538</label>
+    <id>http://worldcat.org/oclc/553577538</id>
+  </sameAs>
+</AsMap>
 
 

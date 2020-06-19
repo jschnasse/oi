@@ -24,7 +24,7 @@ function generate(){
 	oi $extension/in/$filename -d=";" -f $extension/context/$filename.context -trdf > $extension/out/$filename.jsonld
 }
 
-
+rm deb/*.deb
 ./build.sh -DskipTests
 sudo dpkg -i deb/*.deb
 cd $scriptdir/src/test/resources

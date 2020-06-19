@@ -9,7 +9,8 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 public class JsonWriter {
 
 	public static ObjectMapper createMapper() {
-		return new ObjectMapper().configure(SerializationFeature.INDENT_OUTPUT, true);
+		return new ObjectMapper().configure(SerializationFeature.INDENT_OUTPUT, true);// .configure(SerializationFeature.WRITE_SINGLE_ELEM_ARRAYS_UNWRAPPED,
+																						// true);
 	}
 
 	public static void gprint(Object map) {

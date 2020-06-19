@@ -1,22 +1,19 @@
 {
   "@context" : {
     "extent" : {
-      "@id" : "info:oi/extent"
+      "@id" : "info:oi/extent",
+      "@container" : "@list"
     },
     "oclcNumber" : {
-      "@id" : "info:oi/oclcNumber"
+      "@id" : "info:oi/oclcNumber",
+      "@container" : "@list"
     },
     "subject" : {
-      "@id" : "info:oi/subject"
-    },
-    "type" : {
-      "@id" : "info:oi/type"
+      "@id" : "info:oi/subject",
+      "@container" : "@list"
     },
     "componentList" : {
       "@id" : "info:oi/componentList"
-    },
-    "id" : {
-      "@id" : "info:oi/id"
     },
     "source" : {
       "@id" : "info:oi/source"
@@ -24,47 +21,65 @@
     "label" : {
       "@id" : "info:oi/label"
     },
+    "id" : {
+      "@id" : "info:oi/id",
+      "@container" : "@list"
+    },
+    "type" : {
+      "@id" : "info:oi/type",
+      "@container" : "@list"
+    },
     "gndIdentifier" : {
       "@id" : "info:oi/gndIdentifier"
     },
     "isbn" : {
-      "@id" : "info:oi/isbn"
+      "@id" : "info:oi/isbn",
+      "@container" : "@list"
     },
     "hasItem" : {
-      "@id" : "info:oi/hasItem"
-    },
-    "heldBy" : {
-      "@id" : "info:oi/heldBy"
+      "@id" : "info:oi/hasItem",
+      "@container" : "@list"
     },
     "note" : {
       "@id" : "info:oi/note"
+    },
+    "heldBy" : {
+      "@id" : "info:oi/heldBy"
     },
     "callNumber" : {
       "@id" : "info:oi/callNumber"
     },
     "responsibilityStatement" : {
-      "@id" : "info:oi/responsibilityStatement"
+      "@id" : "info:oi/responsibilityStatement",
+      "@container" : "@list"
     },
     "edition" : {
-      "@id" : "info:oi/edition"
+      "@id" : "info:oi/edition",
+      "@container" : "@list"
     },
     "language" : {
-      "@id" : "info:oi/language"
+      "@id" : "info:oi/language",
+      "@container" : "@list"
     },
     "medium" : {
-      "@id" : "info:oi/medium"
+      "@id" : "info:oi/medium",
+      "@container" : "@list"
     },
     "title" : {
-      "@id" : "info:oi/title"
+      "@id" : "info:oi/title",
+      "@container" : "@list"
     },
     "exampleOfWork" : {
-      "@id" : "info:oi/exampleOfWork"
+      "@id" : "info:oi/exampleOfWork",
+      "@container" : "@list"
     },
     "otherTitleInformation" : {
-      "@id" : "info:oi/otherTitleInformation"
+      "@id" : "info:oi/otherTitleInformation",
+      "@container" : "@list"
     },
     "contribution" : {
-      "@id" : "info:oi/contribution"
+      "@id" : "info:oi/contribution",
+      "@container" : "@list"
     },
     "agent" : {
       "@id" : "info:oi/agent"
@@ -79,28 +94,29 @@
       "@id" : "info:oi/role"
     },
     "subjectAltLabel" : {
-      "@id" : "info:oi/subjectAltLabel"
+      "@id" : "info:oi/subjectAltLabel",
+      "@container" : "@list"
     },
     "publication" : {
-      "@id" : "info:oi/publication"
-    },
-    "location" : {
-      "@id" : "info:oi/location"
+      "@id" : "info:oi/publication",
+      "@container" : "@list"
     },
     "publishedBy" : {
       "@id" : "info:oi/publishedBy"
+    },
+    "location" : {
+      "@id" : "info:oi/location"
     },
     "startDate" : {
       "@id" : "info:oi/startDate"
     },
     "context" : {
-      "@id" : "info:oi/context"
+      "@id" : "info:oi/context",
+      "@container" : "@list"
     },
     "describedBy" : {
-      "@id" : "info:oi/describedBy"
-    },
-    "dateCreated" : {
-      "@id" : "info:oi/dateCreated"
+      "@id" : "info:oi/describedBy",
+      "@container" : "@list"
     },
     "inDataset" : {
       "@id" : "info:oi/inDataset"
@@ -108,11 +124,11 @@
     "resultOf" : {
       "@id" : "info:oi/resultOf"
     },
-    "endTime" : {
-      "@id" : "info:oi/endTime"
-    },
     "instrument" : {
       "@id" : "info:oi/instrument"
+    },
+    "endTime" : {
+      "@id" : "info:oi/endTime"
     },
     "object" : {
       "@id" : "info:oi/object"
@@ -120,17 +136,23 @@
     "license" : {
       "@id" : "info:oi/license"
     },
+    "dateCreated" : {
+      "@id" : "info:oi/dateCreated"
+    },
     "sourceOrganization" : {
       "@id" : "info:oi/sourceOrganization"
     },
     "hbzId" : {
-      "@id" : "info:oi/hbzId"
+      "@id" : "info:oi/hbzId",
+      "@container" : "@list"
     },
     "tableOfContents" : {
-      "@id" : "info:oi/tableOfContents"
+      "@id" : "info:oi/tableOfContents",
+      "@container" : "@list"
     },
     "sameAs" : {
-      "@id" : "info:oi/sameAs"
+      "@id" : "info:oi/sameAs",
+      "@container" : "@list"
     }
   }
 }

@@ -3,7 +3,7 @@ package org.schnasse.oi;
 import java.util.Map;
 
 import org.junit.Test;
-import org.locationtech.jts.util.Assert;
+import org.schnasse.oi.helper.TestHelper;
 
 public class CsvTest {
 	@Test
@@ -12,7 +12,7 @@ public class CsvTest {
 				.getResourceAsStream("csv/in/BesucherzahlenMuseen2019.csv"), null, ";", null);
 		Map<String, Object> yml = org.schnasse.oi.reader.YamlReader.getMap(Thread.currentThread()
 				.getContextClassLoader().getResourceAsStream("csv/out/BesucherzahlenMuseen2019.csv.yml"));
-		Assert.equals(yml, csv);
+		TestHelper.mapCompare(yml, csv);
 	}
 
 	@Test
@@ -21,6 +21,6 @@ public class CsvTest {
 				.getResourceAsStream("csv/in/BesucherzahlenMuseen2019.csv"), null, ";", "\"");
 		Map<String, Object> json = org.schnasse.oi.reader.JsonReader.getMap(Thread.currentThread()
 				.getContextClassLoader().getResourceAsStream("csv/out/BesucherzahlenMuseen2019.csv.json"));
-		Assert.equals(json, csv);
+		TestHelper.mapCompare(json, csv);
 	}
 }

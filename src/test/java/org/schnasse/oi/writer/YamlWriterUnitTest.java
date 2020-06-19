@@ -19,7 +19,7 @@ public class YamlWriterUnitTest extends WriterUnitTest {
 						.getBytes())) {
 			Map<String, Object> map = XmlReader.getMap(input);
 			YamlWriter.gprint(map);
-			assertEquals("---root:\"test\"", outContent.toString().replaceAll("\\s+", ""));
+			assertEquals("---root:-\"test\"", outContent.toString().replaceAll("\\s+", ""));
 		}
 	}
 }
