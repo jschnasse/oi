@@ -8,7 +8,7 @@
     },
     "type" : "name"
   },
-  "features" : [ {
+  "features" : {
     "@id" : "_:b3",
     "geometry" : {
       "@id" : "_:b4",
@@ -92,7 +92,7 @@
       "SUM_FLAECHE" : 405098657
     },
     "type" : "Feature"
-  } ],
+  },
   "type" : "FeatureCollection",
   "@context" : {
     "type" : {

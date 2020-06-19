@@ -26,6 +26,7 @@ public class XmlReader {
 				@Override
 				protected Map<String, Object> mapObject(JsonParser jp, DeserializationContext ctxt) throws IOException {
 					JsonToken t = jp.getCurrentToken();
+
 					Multimap<String, Object> result = ArrayListMultimap.create();
 					if (t == JsonToken.START_OBJECT) {
 						t = jp.nextToken();

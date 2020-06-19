@@ -10,8 +10,7 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 public class YamlWriter {
 
 	public static ObjectMapper createMapper() {
-		return new ObjectMapper(new YAMLFactory()).configure(SerializationFeature.INDENT_OUTPUT, true)
-				.enable(SerializationFeature.WRITE_SINGLE_ELEM_ARRAYS_UNWRAPPED);
+		return new ObjectMapper(new YAMLFactory()).configure(SerializationFeature.INDENT_OUTPUT, true);
 	}
 
 	public static void gprint(Object map) {

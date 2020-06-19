@@ -19,7 +19,7 @@ public class JsonWriterUnitTest extends WriterUnitTest {
 						.getBytes())) {
 			Map<String, Object> map = XmlReader.getMap(input);
 			JsonWriter.gprint(map);
-			assertEquals("{\"root\":\"test\"}", outContent.toString().replaceAll("\\s+", ""));
+			assertEquals("{\"root\":[\"test\"]}", outContent.toString().replaceAll("\\s+", ""));
 		}
 	}
 }

@@ -1,37 +1,37 @@
 {
   "extent" : "XIV, 441 S. : Ill., graph. Darst.",
-  "oclcNumber" : [ "553577538" ],
+  "oclcNumber" : "553577538",
   "subject" : [ {
-    "type" : [ "ComplexSubject" ],
-    "componentList" : [ {
+    "type" : "ComplexSubject",
+    "componentList" : {
       "id" : "https://d-nb.info/gnd/4260601-9",
-      "type" : [ "SubjectHeading" ],
+      "type" : "SubjectHeading",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       },
       "label" : "Vorhersagbarkeit",
       "gndIdentifier" : "4260601-9"
-    } ],
+    },
     "label" : "Vorhersagbarkeit"
   }, {
-    "type" : [ "ComplexSubject" ],
-    "componentList" : [ {
+    "type" : "ComplexSubject",
+    "componentList" : {
       "id" : "https://d-nb.info/gnd/4047390-9",
-      "type" : [ "SubjectHeading" ],
+      "type" : "SubjectHeading",
       "source" : {
         "id" : "https://d-nb.info/gnd/7749153-1",
         "label" : "Gemeinsame Normdatei (GND)"
       },
       "label" : "Prognose",
       "gndIdentifier" : "4047390-9"
-    } ],
+    },
     "label" : "Prognose"
   } ],
   "isbn" : [ "9783446415683", "3446415688" ],
   "hasItem" : [ {
     "id" : "http://lobid.org/items/HT015847062:DE-Bi10:OCT%20Tale#!",
-    "type" : [ "Item" ],
+    "type" : "Item",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-Bi10#!",
       "label" : "lobid Organisation"
@@ -41,7 +41,7 @@
     "label" : "OCT Tale"
   }, {
     "id" : "http://lobid.org/items/HT015847062:DE-464:OCT9386%2B3#!",
-    "type" : [ "Item" ],
+    "type" : "Item",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-464#!",
       "label" : "lobid Organisation"
@@ -51,7 +51,7 @@
     "label" : "OCT9386+3"
   }, {
     "id" : "http://lobid.org/items/HT015847062:DE-1044:OCT9386%2B4#!",
-    "type" : [ "Item" ],
+    "type" : "Item",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-1044#!",
       "label" : "lobid Organisation"
@@ -59,7 +59,7 @@
     "label" : "lobid Bestandsressource"
   }, {
     "id" : "http://lobid.org/items/HT015847062:DE-465:OCT9386%2B4#!",
-    "type" : [ "Item" ],
+    "type" : "Item",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-465#!",
       "label" : "lobid Organisation"
@@ -69,7 +69,7 @@
     "label" : "OCT9386+4"
   }, {
     "id" : "http://lobid.org/items/HT015847062:DE-5:2009%2F5398#!",
-    "type" : [ "Item" ],
+    "type" : "Item",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-5#!",
       "label" : "lobid Organisation"
@@ -79,7 +79,7 @@
     "label" : "2009/5398"
   }, {
     "id" : "http://lobid.org/items/HT015847062:DE-464:OCT9386%2B1#!",
-    "type" : [ "Item" ],
+    "type" : "Item",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-464#!",
       "label" : "lobid Organisation"
@@ -89,7 +89,7 @@
     "label" : "OCT9386+1"
   }, {
     "id" : "http://lobid.org/items/HT015847062:DE-465:OCT9386%2B5#!",
-    "type" : [ "Item" ],
+    "type" : "Item",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-465#!",
       "label" : "lobid Organisation"
@@ -99,7 +99,7 @@
     "label" : "OCT9386+5"
   }, {
     "id" : "http://lobid.org/items/HT015847062:DE-467:75QFD8011#!",
-    "type" : [ "Item" ],
+    "type" : "Item",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-467#!",
       "label" : "lobid Organisation"
@@ -109,7 +109,7 @@
     "label" : "75QFD8011"
   }, {
     "id" : "http://lobid.org/items/HT015847062:DE-467:75QFD8011%2B1#!",
-    "type" : [ "Item" ],
+    "type" : "Item",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-467#!",
       "label" : "lobid Organisation"
@@ -119,7 +119,7 @@
     "label" : "75QFD8011+1"
   }, {
     "id" : "http://lobid.org/items/HT015847062:DE-464:OCT9386%2B2#!",
-    "type" : [ "Item" ],
+    "type" : "Item",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-464#!",
       "label" : "lobid Organisation"
@@ -129,7 +129,7 @@
     "label" : "OCT9386+2"
   }, {
     "id" : "http://lobid.org/items/HT015847062:DE-Kob7:PH%2FV%202009%204482#!",
-    "type" : [ "Item" ],
+    "type" : "Item",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-Kob7#!",
       "label" : "lobid Organisation"
@@ -139,7 +139,7 @@
     "label" : "PH/V 2009 4482"
   }, {
     "id" : "http://lobid.org/items/HT015847062:DE-467:32QFD8011%2B1#!",
-    "type" : [ "Item" ],
+    "type" : "Item",
     "heldBy" : {
       "id" : "http://lobid.org/organisations/DE-467#!",
       "label" : "lobid Organisation"
@@ -148,29 +148,29 @@
     "callNumber" : "32QFD8011+1",
     "label" : "32QFD8011+1"
   } ],
-  "responsibilityStatement" : [ "Nassim Nicholas Taleb" ],
-  "edition" : [ "[Nachdr.]" ],
-  "language" : [ {
+  "responsibilityStatement" : "Nassim Nicholas Taleb",
+  "edition" : "[Nachdr.]",
+  "language" : {
     "id" : "http://id.loc.gov/vocabulary/iso639-2/deu",
     "label" : "Deutsch"
-  } ],
-  "medium" : [ {
+  },
+  "medium" : {
     "id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010",
     "label" : "Print"
-  } ],
+  },
   "type" : [ "BibliographicResource", "Book" ],
   "title" : "Der schwarze Schwan",
   "exampleOfWork" : {
-    "type" : [ "Work" ],
+    "type" : "Work",
     "label" : "<<The>> black swan <dt.>"
   },
   "@context" : "http://lobid.org/resources/context.jsonld",
-  "otherTitleInformation" : [ "die Macht höchst unwahrscheinlicher Ereignisse" ],
-  "contribution" : [ {
-    "type" : [ "Contribution" ],
+  "otherTitleInformation" : "die Macht höchst unwahrscheinlicher Ereignisse",
+  "contribution" : {
+    "type" : "Contribution",
     "agent" : {
       "id" : "https://d-nb.info/gnd/124120180",
-      "type" : [ "Person" ],
+      "type" : "Person",
       "label" : "Taleb, Nassim Nicholas",
       "altLabel" : [ "Taleb Nassim, Nicholas", "Taleb, Nassim", "Taleb, Nassim N." ],
       "dateOfBirth" : "1960",
@@ -180,33 +180,33 @@
       "id" : "http://id.loc.gov/vocabulary/relators/cre",
       "label" : "Autor/in"
     }
-  } ],
+  },
   "subjectAltLabel" : [ "Prädiktion", "Zukunftsprognose", "Vorhersehbarkeit", "Vorhersage", "Zukunftsvoraussage", "Voraussehbarkeit", "Voraussage", "Vorausschätzung", "Prognostizierbarkeit" ],
-  "publication" : [ {
-    "type" : [ "PublicationEvent" ],
+  "publication" : {
+    "type" : "PublicationEvent",
     "location" : "München",
     "publishedBy" : "Hanser",
     "startDate" : "2009"
-  } ],
+  },
   "describedBy" : {
     "id" : "http://lobid.org/resources/HT015847062",
-    "type" : [ "BibliographicDescription" ],
+    "type" : "BibliographicDescription",
     "dateCreated" : "20090226",
     "inDataset" : {
       "id" : "http://lobid.org/resources/dataset#!",
       "label" : "lobid-resources – Der hbz-Verbundkatalog als Linked Open Data"
     },
     "resultOf" : {
-      "type" : [ "CreateAction" ],
+      "type" : "CreateAction",
       "endTime" : "2020-04-08T01:43:32",
       "instrument" : {
         "id" : "https://github.com/hbz/lobid-resources",
-        "type" : [ "SoftwareApplication" ],
+        "type" : "SoftwareApplication",
         "label" : "Software lobid-resources"
       },
       "object" : {
         "id" : "http://lobid.org/hbz01/HT015847062",
-        "type" : [ "DataFeedItem" ],
+        "type" : "DataFeedItem",
         "inDataset" : {
           "id" : "https://datahub.io/dataset/hbz_unioncatalog",
           "label" : "hbz_unioncatalog"
@@ -214,10 +214,10 @@
         "label" : "hbz-Ressource HT015847062 im Exportformat MAB2-XML"
       }
     },
-    "license" : [ {
+    "license" : {
       "id" : "http://creativecommons.org/publicdomain/zero/1.0",
       "label" : "Creative Commons-Lizenz CC0 1.0 Universal"
-    } ],
+    },
     "sourceOrganization" : {
       "id" : "http://lobid.org/organisations/DE-467#!",
       "label" : "lobid Organisation"
@@ -226,10 +226,10 @@
   },
   "id" : "http://lobid.org/resources/HT015847062#!",
   "hbzId" : "HT015847062",
-  "tableOfContents" : [ {
+  "tableOfContents" : {
     "id" : "http://digitale-objekte.hbz-nrw.de/storage/2009/05/23/file_28/3011578.pdf",
     "label" : "3011578.pdf"
-  } ],
+  },
   "sameAs" : [ {
     "id" : "http://hub.culturegraph.org/resource/HBZ-HT015847062",
     "label" : "Culturegraph Ressource"
