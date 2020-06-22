@@ -15,6 +15,18 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 
+/**
+ * This approach is inspired by
+ * <p>
+ * <ul>
+ * <li>https://www.dinochiesa.net/?p=1654</li>
+ * <li>https://jegansblog.wordpress.com/2015/05/05/jackson-for-xml-json-conversion/</li>
+ * </ul>
+ * </p>
+ * 
+ * @author SchnasseJan
+ *
+ */
 public class XmlReader {
 
 	@SuppressWarnings("deprecation")
