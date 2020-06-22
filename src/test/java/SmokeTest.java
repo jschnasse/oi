@@ -1,4 +1,3 @@
-
 /* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
 
 import java.util.Map;

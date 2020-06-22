@@ -1,3 +1,4 @@
+/* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
 package org.schnasse.oi.helper;
 
 import java.util.Map;

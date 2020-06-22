@@ -1,13 +1,9 @@
 /* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
 package org.schnasse.oi.writer.base;
 
-import java.io.File;
 import java.io.StringWriter;
-import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.base.Charsets;
-import com.google.common.io.Files;
 
 public class Writer {
 
@@ -17,6 +13,7 @@ public class Writer {
 			System.out.println(write(mapper, m) + "\n");
 		}
 	}
+
 	static public String write(ObjectMapper mapper, Object obj) {
 		try {
 			StringWriter w = new StringWriter();
@@ -28,6 +25,6 @@ public class Writer {
 	}
 
 	public static void gprint(ObjectMapper mapper, Object json) {
-			print(mapper,json);
+		print(mapper, json);
 	}
 }

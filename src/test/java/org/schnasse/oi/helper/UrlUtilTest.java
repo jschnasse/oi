@@ -1,57 +1,52 @@
+/* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
 package org.schnasse.oi.helper;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.StringWriter;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.Base64;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.TreeMap;
 
 import org.junit.Test;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-
 
 public class UrlUtilTest {
 	@Test
 	public void testEncode() {
 		try (InputStream in = Thread.currentThread().getContextClassLoader()
-						.getResourceAsStream("url/url-succeding-tests.json")) {
+				.getResourceAsStream("url/url-succeding-tests.json")) {
 			ObjectMapper mapper = new ObjectMapper();
 			JsonNode testdata = mapper.readValue(in, JsonNode.class).at("/tests");
 			for (JsonNode test : testdata) {
 				String url = test.at("/in").asText();
 				String expected = test.at("/out").asText();
 				String encodedUrl = URLUtil.saveEncode(url);
-				System.out.println(url+" , '"+expected+"' , '"+encodedUrl+"'");
-				org.junit.Assert.assertEquals(expected,encodedUrl);
+				System.out.println(url + " , '" + expected + "' , '" + encodedUrl + "'");
+				org.junit.Assert.assertEquals(expected, encodedUrl);
 			}
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
 	}
-	
+
 	@Test
 	public void testDecode() {
 		try (InputStream in = Thread.currentThread().getContextClassLoader()
-						.getResourceAsStream("url/url-succeding-tests.json")) {
+				.getResourceAsStream("url/url-succeding-tests.json")) {
 			ObjectMapper mapper = new ObjectMapper();
 			JsonNode testdata = mapper.readValue(in, JsonNode.class).at("/tests");
 			for (JsonNode test : testdata) {
 				String url = test.at("/in").asText();
 				String expected = test.at("/out").asText();
 				String decodedUrl = URLUtil.decode(expected);
-			  if(!expected.equals(decodedUrl)){
-				System.out.println("In:\t"+url+"\nDec:\t"+decodedUrl + "\nExp:\t"+expected+"\n");
-			  }
+				if (!expected.equals(decodedUrl)) {
+					System.out.println("In:\t" + url + "\nDec:\t" + decodedUrl + "\nExp:\t" + expected + "\n");
+				}
 			}
 		} catch (Exception e) {
 			throw new RuntimeException(e);
@@ -61,7 +56,7 @@ public class UrlUtilTest {
 	@Test
 	public void testDecodeWithErrorMessages() {
 		try (InputStream in = Thread.currentThread().getContextClassLoader()
-						.getResourceAsStream("url/url-succeding-tests.json")) {
+				.getResourceAsStream("url/url-succeding-tests.json")) {
 			ObjectMapper mapper = new ObjectMapper();
 			JsonNode testdata = mapper.readValue(in, JsonNode.class).at("/tests");
 			for (JsonNode test : testdata) {
@@ -89,7 +84,7 @@ public class UrlUtilTest {
 	@Test
 	public void testEncodeWithErrorMessages() {
 		try (InputStream in = Thread.currentThread().getContextClassLoader()
-						.getResourceAsStream("url/url-succeding-tests.json")) {
+				.getResourceAsStream("url/url-succeding-tests.json")) {
 			ObjectMapper mapper = new ObjectMapper();
 			JsonNode testdata = mapper.readValue(in, JsonNode.class).at("/tests");
 			for (JsonNode test : testdata) {
@@ -117,7 +112,7 @@ public class UrlUtilTest {
 	@Test
 	public void testfailingEncodeWithErrorMessages() {
 		try (InputStream in = Thread.currentThread().getContextClassLoader()
-						.getResourceAsStream("url/url-failing-tests.json")) {
+				.getResourceAsStream("url/url-failing-tests.json")) {
 			ObjectMapper mapper = new ObjectMapper();
 			JsonNode testdata = mapper.readValue(in, JsonNode.class).at("/tests");
 			for (JsonNode test : testdata) {
@@ -154,7 +149,7 @@ public class UrlUtilTest {
 		String user = "aUser";
 		String passwd = "aPasswd";
 		try (InputStream in = getInputStreamFromUrl(
-						new URL("https://jira.atlassian.com/rest/api/2/issue/JSWCLOUD-11658"), user, passwd)) {
+				new URL("https://jira.atlassian.com/rest/api/2/issue/JSWCLOUD-11658"), user, passwd)) {
 			System.out.println(convertInputStreamToString(in));
 		} catch (Exception e) {
 			System.out.println("If basic auth is provided, it should be correct: " + e.getMessage());
@@ -172,12 +167,14 @@ public class UrlUtilTest {
 	private InputStream getInputStreamFromUrl(URL url, String user, String passwd) throws IOException {
 		String encoded = Base64.getEncoder().encodeToString((user + ":" + passwd).getBytes(StandardCharsets.UTF_8));
 		return URLUtil.urlToInputStream(url, mapOf("Accept", "application/json", "Authorization", "Basic " + encoded,
-						"User-Agent", "myApplication"));
+				"User-Agent", "myApplication"));
 	}
 
 	private InputStream getInputStreamFromUrl(String url) throws IOException {
-		return URLUtil.urlToInputStream(new URL(url), mapOf("Accept", "application/json", "User-Agent", "myApplication"));
+		return URLUtil.urlToInputStream(new URL(url),
+				mapOf("Accept", "application/json", "User-Agent", "myApplication"));
 	}
+
 	private String convertInputStreamToString(InputStream inputStream) throws IOException {
 		ByteArrayOutputStream result = new ByteArrayOutputStream();
 		byte[] buffer = new byte[1024];
