@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 import com.fasterxml.jackson.databind.MappingIterator;
+import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvParser;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
@@ -54,6 +55,8 @@ public class CsvReader {
 			Map<String, Object> result = new HashMap<>();
 			result.put("data", all);
 			return result;
+		} catch (MismatchedInputException e) {
+			throw new RuntimeException(Messages.NO_CONTENT_OR_WRONG_FORMAT);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

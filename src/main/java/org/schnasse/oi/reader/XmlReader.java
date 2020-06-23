@@ -5,11 +5,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Map;
 
+import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer;
+import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.google.common.collect.ArrayListMultimap;
@@ -59,6 +61,10 @@ public class XmlReader {
 			@SuppressWarnings({ "unchecked", "rawtypes" })
 			Map<String, Object> map = (Map) mapper.readValue(in, Object.class);
 			return map;
+		} catch (MismatchedInputException e) {
+			throw new RuntimeException(Messages.NO_CONTENT_OR_WRONG_FORMAT);
+		} catch (JsonParseException e) {
+			throw new RuntimeException(Messages.NO_CONTENT_OR_WRONG_FORMAT);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
