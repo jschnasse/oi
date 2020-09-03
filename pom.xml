@@ -9,9 +9,23 @@
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<plugins>
 			<plugin>
+				<groupId>org.pitest</groupId>
+				<artifactId>pitest-maven</artifactId>
+				<version>1.5.2</version>
+				<configuration>
+					<jvmArgs>
+						<jvmArg>-Djava.net.useSystemProxies=true</jvmArg>
+					</jvmArgs>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
+					<systemPropertyVariables>
+						<java.net.useSystemProxies>true</java.net.useSystemProxies>
+					</systemPropertyVariables>
+					<argLine>-Djava.net.useSystemProxies=true</argLine>
 					<includes>
 						<include>UnitTests.java</include>
 						<include>IntegrationTests.java</include>
