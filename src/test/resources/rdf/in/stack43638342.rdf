@@ -1,0 +1,8 @@
+_:b0 a <http://schema.org/Book> ;
+    <http://schema.org/name> "Semantic Web Primer (First Edition)" ;
+    <http://schema.org/offers> _:b1 ;
+    <http://schema.org/publisher> "Linked Data Tools" .
+
+_:b1 a <http://schema.org/Offer> ;
+    <http://schema.org/price> "2.95" ;
+    <http://schema.org/priceCurrency> "USD" .

@@ -71,6 +71,17 @@ public class SmokeTest {
 	}
 
 	@Test
+	public void readTurtleRdf() throws Exception {
+		final Map<String, Object> map = org.schnasse.oi.reader.RdfReader.getMap(
+				Thread.currentThread().getContextClassLoader().getResourceAsStream("rdf/in/stack43638342.rdf"),
+				RDFFormat.TURTLE, JsonReader.getMap(Thread.currentThread().getContextClassLoader()
+						.getResourceAsStream("rdf/context/stack43638342.rdf.context")));
+		JsonWriter.gprint(map);
+		YamlWriter.gprint(map);
+		XmlWriter.gprint(map);
+	}
+
+	@Test
 	public void readJson_2() throws Exception {
 		Map<String, Object> map = org.schnasse.oi.reader.RdfReader.getMap(
 				JsonReader.getMap(Thread.currentThread().getContextClassLoader()
