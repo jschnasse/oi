@@ -36,7 +36,7 @@ public class Main implements Callable<Integer> {
 	@Option(names = { "-t", "--type" }, description = "yaml,json,xml,rdf,context,csv")
 	private String type = "yaml";
 
-	@Option(names = { "-i", "--inputType" }, description = "yml,json,xml,rdf,context,csv")
+	@Option(names = { "-i", "--inputType" }, description = "yml,json,xml,rdf,context,csv,nt,turtle")
 	String inputType;
 
 	@Option(names = { "-f", "--frame" }, paramLabel = "JsonLdFrame", description = "A json-ld Frame")
@@ -107,13 +107,15 @@ public class Main implements Callable<Integer> {
 					content = CsvReader.getMap(in, null, delimiter, quoteChar);
 				}
 			} else if ("rdf".equals(type) || "rdf".equals(inputType) || "nt".equals(inputType)
-					|| "json".equals(inputType)) {
+					|| "json".equals(inputType) || "turtle".equals(inputType)) {
 				if ("rdf".equals(inputType) && frame != null) {
 					content = RdfReader.getMap(in, RDFFormat.RDFXML, frameMap);
 				} else if ("rdf".equals(inputType) && frame == null) {
 					content = RdfReader.getMap(in, RDFFormat.RDFXML, null);
 				} else if ("nt".equals(inputType) && frame != null) {
 					content = RdfReader.getMap(in, RDFFormat.NTRIPLES, frameMap);
+				} else if ("turtle".equals(inputType) && frame != null) {
+					content = RdfReader.getMap(in, RDFFormat.TURTLE, frameMap);
 				} else if ("json".equals(inputType) && frame != null) {
 					content = RdfReader.getMap(JsonReader.getMap(in), RDFFormat.JSONLD, frameMap);
 				} else if (frame == null) {
