@@ -3,7 +3,7 @@ Priority: optional
 Homepage: https://github.com/jschnasse/oi
 Standards-Version: 3.9.2
 Package: oi
-Version: 0.3.0
+Version: 0.4.0
 Maintainer: Jan Schnasse <schnasse@gmx.de>
 Depends: openjdk-11-jre
 Architecture: all
