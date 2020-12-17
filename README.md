@@ -10,8 +10,8 @@ can be fixed easily with existing tools like `sed`,`grep` and `awk`.
 # Test Install
 
 ```
-wget https://dl.bintray.com/jschnasse/debian/oi_0.4.0.deb
-sudo apt install ./oi_0.4.0.deb #depends on openjdk-11-jre
+wget https://dl.bintray.com/jschnasse/debian/oi_0.4.1.deb
+sudo apt install ./oi_0.4.1.deb #depends on openjdk-11-jre
 ```
 # Keep up to date
 
@@ -213,8 +213,39 @@ asciidoctor -b manpage man.adoc
 sudo cp oi.1 /usr/share/man/man1/
 sudo mandb
 ```
+# Create Release
+
+bump
+
+```
+editor VERSIONS
+./bumpVersion.sh
+```
+
+git 
+
+```
+git add deb/*
+git add .
+git commit -m "Prepare for release ${oi_version}"
+mvn gitflow:release
+```
+
+build
+
+```
+./build.sh -DskipTests
+```
+
+release
+
+```
+./push_to_bintray.sh {{user}}:{{token}}
+```
 
 # Create Debian Package
 ```
 build.sh
 ```
+
+
