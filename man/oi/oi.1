@@ -1,13 +1,13 @@
 '\" t
 .\"     Title: oi
 .\"    Author: Jan Schnasse
-.\" Generator: Asciidoctor 1.5.8
-.\"      Date: 2020-05-11
+.\" Generator: Asciidoctor 2.0.10
+.\"      Date: 2020-12-17
 .\"    Manual: OI
 .\"    Source: OI
 .\"  Language: English
 .\"
-.TH "OI" "1" "2020-05-11" "OI" "OI"
+.TH "OI" "1" "2020-12-17" "OI" "OI"
 .ie \n(.g .ds Aq \(aq
 .el       .ds Aq '
 .ss \n[.ss] 0
@@ -31,9 +31,10 @@
 oi \- converts csv,jason,xml,yaml, and rdf to each other
 .SH "SYNOPSIS"
 .sp
-\fBoi\fP [\-hV] [\-d=Delimiter] [\-f=JsonLdFrame] [\-\-header=HeaderFields]
-[\-i=<inputType>] [\-t=<type>] [<inputFile>]
-== Options
+\fBoi\fP [\-hvV] [\-vv] [\-d=Delimiter] [\-f=JsonLdFrame]
+[\-\-header=HeaderFields] [\-i=<inputType>] [\-q=QuoteChar] [\-t=<type>]
+[<inputFile>]
+.SH "OPTIONS"
 .sp
 \fB[<inputFile>]\fP
 .RS 4
@@ -65,6 +66,11 @@ headers for CSV files.
 .RS 4
 oi tries to recognize the input type based on file extensions. Use this
 option to explicitly provide an input type: yml,json,xml,rdf,context,csv.
+.RE
+.sp
+\fB\-q, \-\-quoteChar\fP*
+.RS 4
+use the specified char when parsing strings in csv files.
 .RE
 .sp
 \fB\-t, \-\-type\fP=\fITYPE\fP

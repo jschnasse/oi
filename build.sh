@@ -22,7 +22,7 @@ function build(){
  package_version=$2
  package=${package_name}_$package_version
 
- if [ -f $scriptdir/man/$package_name ]
+ if [ -d $scriptdir/man/$package_name ]
  then
    cd $scriptdir/man/$package_name
    asciidoctor -b manpage man.adoc
@@ -32,7 +32,6 @@ function build(){
  dpkg-deb --build deb/$package
 }
 
-build_oi oi $oi_version
 build oi $oi_version
 build lscsv $lscsv_version
 build libprocname $libprocname_version

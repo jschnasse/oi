@@ -1,0 +1,11 @@
+Section: tools
+Priority: optional
+Homepage: https://github.com/jschnasse/oi
+Standards-Version: 3.9.2
+Package: oi
+Version: 0.4.2
+Maintainer: Jan Schnasse <schnasse@gmx.de>
+Depends: openjdk-11-jre
+Architecture: all
+Description: convert csv,yml,json and rdf
+Copyright: Jan Schnasse, EPL v2.0

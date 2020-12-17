@@ -10,8 +10,8 @@ can be fixed easily with existing tools like `sed`,`grep` and `awk`.
 # Test Install
 
 ```
-wget https://dl.bintray.com/jschnasse/debian/oi_0.4.1.deb
-sudo apt install ./oi_0.4.1.deb #depends on openjdk-11-jre
+wget https://dl.bintray.com/jschnasse/debian/oi_0.4.2.deb
+sudo apt install ./oi_0.4.2.deb #depends on openjdk-11-jre
 ```
 # Keep up to date
 
@@ -234,7 +234,7 @@ mvn gitflow:release
 build
 
 ```
-./build.sh -DskipTests
+sudo ./build.sh
 ```
 
 release
