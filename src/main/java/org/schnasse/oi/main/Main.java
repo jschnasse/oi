@@ -26,7 +26,7 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
-@Command(name = "oi", mixinStandardHelpOptions = true, version = "oi 0.3.0", description = "Converts yaml,json,xml,rdf to each other.")
+@Command(name = "oi", mixinStandardHelpOptions = true, version = "oi 0.4.0", description = "Converts yaml,json,xml,rdf to each other.")
 public class Main implements Callable<Integer> {
 	private static final ch.qos.logback.classic.Logger logger = (ch.qos.logback.classic.Logger) org.slf4j.LoggerFactory
 			.getLogger(Main.class);
