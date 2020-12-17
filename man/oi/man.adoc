@@ -41,7 +41,7 @@ oi - converts csv,jason,xml,yaml, and rdf to each other
   use the specified char when parsing strings in csv files.
   
 *-t, --type*=_TYPE_::
-  _TYPE_ must be one of yaml,json,xml,rdf,context
+  _TYPE_ must be one of yaml,json,xml,rdf,context,csv,nt,turtle,ntriples,jsonld
   
 *-V, --version*::
   Print version information and exit.

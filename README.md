@@ -56,9 +56,8 @@ curl https://api.github.com/users/jschnasse|oi -ijson -tcontext
 
 ```
 $ oi --help
-Usage: oi  [-hvV] [-vv] [-d=Delimiter] [-f=JsonLdFrame]
-           [--header=HeaderFields] [-i=<inputType>] [-q=QuoteChar] [-t=<type>]
-           [<inputFile>]  
+Usage: oi [-hvV] [-vv] [-d=Delimiter] [-f=JsonLdFrame] [--header=HeaderFields]
+          [-i=<inputType>] [-q=QuoteChar] [-t=<type>] [<inputFile>]
 Converts yaml,json,xml,rdf to each other.
       [<inputFile>]         Input file.
   -d, --delimiter=Delimiter delimiter for csv
@@ -66,11 +65,15 @@ Converts yaml,json,xml,rdf to each other.
   -h, --help                Show this help message and exit.
       --header=HeaderFields a comma separated list of headers
   -i, --inputType=<inputType>
-                            yml,json,xml,rdf,context,csv
-  -q, --quoteChar=QuoteChar quote char for csv		    
-  -t, --type=<type>         yaml,json,xml,rdf,context,csv
+                            yml,json,xml,rdf,context,csv,nt,turtle,ntriples,
+                              jsonld
+  -q, --quoteChar=QuoteChar quote char for csv
+  -t, --type=<type>         yaml,json,xml,rdf,context,csv,nt,turtle,ntriples,
+                              jsonld
+  -v, --verbose             Increase Verbosity to Warn
   -V, --version             Print version information and exit.
-  -vv                       Increase Verbosity to Debug
+      -vv                   Increase Verbosity to Debug
+
 ```
 
 Visit the man-page for more info.
@@ -245,7 +248,7 @@ mvn gitflow:release
 build
 
 ```
-sudo ./build.sh
+sudo ./build.sh skipTests
 ```
 
 release
