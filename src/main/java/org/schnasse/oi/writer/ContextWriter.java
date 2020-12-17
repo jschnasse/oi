@@ -29,7 +29,7 @@ public class ContextWriter {
 		Writer.gprint(createMapper(), result);
 	}
 
-	private static Map<String, Object> findContext(Map<String, Object> map) {
+	public static Map<String, Object> findContext(Map<String, Object> map) {
 		Map<String, Object> result = useExistingContext(map);
 		if (result == null) {
 			result = createContext(map);

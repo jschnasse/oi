@@ -139,7 +139,17 @@ to create valid and nice looking Json-Ld Documents.
 
 ## Use oi to create rdf
 
-Run `oi` to create adhoc context.
+Run `oi` to create adhoc rdf.
+
+This is as easy as:
+
+```
+oi json/in/rosenmontag.json -trdf
+```
+What happens here? Internally an adhoc context is created
+that is later used to constructed the rdf.
+
+Here are the details. Let's start with:
 
 ```
 cd oi/src/test/resources
@@ -152,17 +162,17 @@ This will print something like
 {
   "@context" : {
     "type" : {
-      "@id" : "info:jon-desktop/type"
+      "@id" : "info:oi/type"
     },
     "crs" : {
-      "@id" : "info:jon-desktop/crs"
+      "@id" : "info:oi/crs"
     },
     "properties" : {
-      "@id" : "info:jon-desktop/properties"
+      "@id" : "info:oi/properties"
     },
 ...
     "Shape_Length" : {
-      "@id" : "info:jon-desktop/Shape_Length"
+      "@id" : "info:oi/Shape_Length"
     }
   }
 }
@@ -184,6 +194,7 @@ Save it, e.g. under `/tmp/frame` and create your json-ld with
 ```
 oi json/in/rosenmontag.json -f /tmp/frame -trdf
 ```
+
 
 ## Json-Ld
 

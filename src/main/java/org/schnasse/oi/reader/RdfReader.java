@@ -70,7 +70,7 @@ public class RdfReader {
 		return graph.get(0);
 	}
 
-	private static Map<String, Object> getFramedJson(Map<String, Object> json, Map<String, Object> frame) {
+	public static Map<String, Object> getFramedJson(Map<String, Object> json, Map<String, Object> frame) {
 		try {
 			json.put("@context", frame.get("@context"));
 			return JsonLdProcessor.frame(json, frame, new JsonLdOptions());
@@ -83,6 +83,7 @@ public class RdfReader {
 			final String baseUrl) {
 		try {
 			final RDFParser rdfParser = Rio.createParser(inf);
+			rdfParser.setPreserveBNodeIDs(true);
 			final StatementCollector collector = new StatementCollector();
 			rdfParser.setRDFHandler(collector);
 			rdfParser.parse(inputStream, baseUrl);

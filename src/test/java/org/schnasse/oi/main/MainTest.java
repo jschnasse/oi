@@ -66,7 +66,7 @@ public class MainTest {
 		Path currentRelativePath = Paths.get("");
 		String s = currentRelativePath.toAbsolutePath().toString();
 		new CommandLine(new Main()).execute(s + "/src/test/resources/json/in/rosenmontag.json",
-				"-f" + s + "/src/test/resources/json/context/rosenmontag.json.context", "-trdf");
+				 "-tjsonld");
 		Map<String, Object> frame = JsonReader.getMap(Thread.currentThread().getContextClassLoader()
 				.getResourceAsStream("json/context/rosenmontag.json.context"));
 		Map<String, Object> expected = RdfReader.getMap(

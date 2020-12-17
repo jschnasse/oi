@@ -32,6 +32,7 @@ function build(){
  dpkg-deb --build deb/$package
 }
 
+build_oi oi $oi_version
 build oi $oi_version
 build lscsv $lscsv_version
 build libprocname $libprocname_version
