@@ -31,14 +31,15 @@ import picocli.CommandLine.Parameters;
 public class Main implements Callable<Integer> {
 	private static final ch.qos.logback.classic.Logger logger = (ch.qos.logback.classic.Logger) org.slf4j.LoggerFactory
 			.getLogger(Main.class);
+
 	@Parameters(index = "0", arity = "0..1", description = "Input file.")
 	private String inputFile;
 
-	@Option(names = { "-t", "--type" }, description = "yaml,json,xml,rdf,context,csv,nt,turtle,ntriples,jsonld")
-	private String type = "yaml";
+	@Option(names = { "-t", "--type" }, description = "yml,json,xml,rdf,context,csv,nt,turtle,ntriples,jsonld")
+	Type type = Type.YML;
 
 	@Option(names = { "-i", "--inputType" }, description = "yml,json,xml,rdf,context,csv,nt,turtle,ntriples,jsonld")
-	String inputType;
+	Type inputType;
 
 	@Option(names = { "-f", "--frame" }, paramLabel = "JsonLdFrame", description = "A json-ld Frame")
 	String frame;
@@ -58,11 +59,15 @@ public class Main implements Callable<Integer> {
 	@Option(names = { "-vv" }, paramLabel = "High Verbosity", description = "Increase Verbosity to Debug")
 	boolean levelDebug = false;
 
+	enum Type {
+		XML, JSON, JSONLD, CSV, YML, RDF, RDFXML, NTRIPLES, TURTLE, CONTEXT
+	}
+
 	public static void main(String... args) {
 		try {
-			int exitCode = new CommandLine(new Main()).execute(args);
+			int exitCode = new CommandLine(new Main()).setCaseInsensitiveEnumValuesAllowed(true).execute(args);
 			System.exit(exitCode);
-		} catch (Exception e) {
+		} catch (Throwable e) {
 			logger.debug("", e);
 			System.exit(1);
 		}
@@ -90,76 +95,135 @@ public class Main implements Callable<Integer> {
 	private void convert() {
 		try (InputStream in = getInput(inputFile)) {
 			inputType = findInputType();
-			Map<String, Object> content = getInputData(in);
+			Map<String, Object> content = readDataToMap(in);
 			print(content);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
 	}
 
-	private void print(Map<String, Object> content) {
-		if ("xml".equals(type)) {
-			XmlWriter.gprint(content);
-		} else if ("json".equals(type)) {
-			JsonWriter.gprint(content);
-		} else if ("yaml".equals(type)) {
-			YamlWriter.gprint(content);
-		} else if ("rdf".equals(type)) {
-			RdfWriter.gprint(content, RDFFormat.RDFXML);
-		} else if ("turtle".equals(type)) {
-			RdfWriter.gprint(content, RDFFormat.TURTLE);
-		} else if ("ntriples".equals(type)) {
-			RdfWriter.gprint(content, RDFFormat.NTRIPLES);
-		} else if ("jsonld".equals(type)) {
-			RdfWriter.gprint(content, RDFFormat.JSONLD);
-		} else if ("context".equals(type)) {
-			ContextWriter.gprint(content);
-		}
-	}
-
-	private Map<String, Object> getInputData(InputStream in) {
-		Map<String, Object> frameMap = new HashMap<>();
-		if (frame != null) {
-			frameMap = JsonReader.getMap(Helper.getInputStream(frame));
-		}
+	private Map<String, Object> readDataToMap(InputStream in) {
+		Map<String, Object> frameMap = readFrameToMap();
 		Map<String, Object> content = new HashMap<>();
-		if ("json".equals(inputType) && frame == null) {
-			content = JsonReader.getMap(in);
-		} else if ("yml".equals(inputType) || "yaml".equals(inputType)) {
-			content = YamlReader.getMap(in);
-		} else if ("xml".equals(inputType)) {
-			content = XmlReader.getMap(Helper.getInputStream(inputFile));
-		} else if ("csv".equals(inputType)) {
-			if (header != null) {
-				content = CsvReader.getMap(in, header.split(","), delimiter, quoteChar);
-			} else {
-				content = CsvReader.getMap(in, null, delimiter, quoteChar);
+		if (frameMap == null) {
+			switch (inputType) {
+			case XML:
+				content = XmlReader.getMap(Helper.getInputStream(inputFile));
+				break;
+			case JSON:
+				content = JsonReader.getMap(in);
+				break;
+			case YML:
+				content = YamlReader.getMap(in);
+				break;
+			case CSV: {
+				if (header != null) {
+					content = CsvReader.getMap(in, header.split(","), delimiter, quoteChar);
+				} else {
+					content = CsvReader.getMap(in, null, delimiter, quoteChar);
+				}
+				break;
 			}
-		} else if ("jsonld".equals(type)) {
-			if ("rdf".equals(inputType) && frame != null) {
-				content = RdfReader.getMap(in, RDFFormat.RDFXML, frameMap);
-			} else if ("rdf".equals(inputType) && frame == null) {
+			case CONTEXT:
+				break;
+			case JSONLD:
+				content = RdfReader.getMap(in, RDFFormat.JSONLD, null);
+				break;
+			case NTRIPLES:
+				content = RdfReader.getMap(in, RDFFormat.NTRIPLES, null);
+				break;
+			case RDF:
+				content = RdfReader.getMap(in, RDFFormat.JSONLD, null);
+				break;
+			case RDFXML:
 				content = RdfReader.getMap(in, RDFFormat.RDFXML, null);
-			} else if ("nt".equals(inputType) && frame != null) {
-				content = RdfReader.getMap(in, RDFFormat.NTRIPLES, frameMap);
-			} else if ("turtle".equals(inputType) && frame != null) {
-				content = RdfReader.getMap(in, RDFFormat.TURTLE, frameMap);
-			} else if ("json".equals(inputType) && frame != null) {
-				content = RdfReader.getMap(JsonReader.getMap(in), RDFFormat.JSONLD, frameMap);
-			} else if (frame == null) {
-				throw new RuntimeException("Please provide a Frame!");
+				break;
+			case TURTLE:
+				content = RdfReader.getMap(in, RDFFormat.TURTLE, null);
+				break;
+			default:
+				break;
 			}
-		}
-		if (frame != null) {
+		} else {
+			switch (inputType) {
+			case RDFXML:
+				content = RdfReader.getMap(in, RDFFormat.RDFXML, frameMap);
+				break;
+			case NTRIPLES:
+				content = RdfReader.getMap(in, RDFFormat.NTRIPLES, frameMap);
+				break;
+			case TURTLE:
+				content = RdfReader.getMap(in, RDFFormat.TURTLE, frameMap);
+				break;
+			case JSON:
+				content = RdfReader.getMap(JsonReader.getMap(in), RDFFormat.JSONLD, frameMap);
+				break;
+			case RDF:
+			case JSONLD:
+				content = RdfReader.getMap(JsonReader.getMap(in), RDFFormat.JSONLD, frameMap);
+				break;
+			case CONTEXT:
+				break;
+			case CSV:
+				break;
+			case XML:
+				break;
+			case YML:
+				break;
+			default:
+				break;
+			}
 			content.put("@context", frameMap.get("@context"));
 		}
 		return content;
 	}
 
-	private String findInputType() {
+	private void print(Map<String, Object> content) {
+		switch (type) {
+		case XML:
+			XmlWriter.gprint(content);
+			break;
+		case JSON:
+			JsonWriter.gprint(content);
+			break;
+		case YML:
+			YamlWriter.gprint(content);
+			break;
+		case RDFXML:
+			RdfWriter.gprint(content, RDFFormat.RDFXML);
+			break;
+		case TURTLE:
+			RdfWriter.gprint(content, RDFFormat.TURTLE);
+			break;
+		case NTRIPLES:
+			RdfWriter.gprint(content, RDFFormat.NTRIPLES);
+			break;
+		case RDF:
+		case JSONLD:
+			RdfWriter.gprint(content, RDFFormat.JSONLD);
+			break;
+		case CONTEXT:
+			ContextWriter.gprint(content);
+			break;
+		default:
+			throw new RuntimeException("You have specified an unknown"
+					+ " --type. \n Please lookup the list of valid types with 'oi --help'.");
+		}
+	}
+
+	private Map<String, Object> readFrameToMap() {
+		if (frame != null) {
+			Map<String, Object> frameMap = new HashMap<>();
+			frameMap = JsonReader.getMap(Helper.getInputStream(frame));
+			return frameMap;
+		}
+		return null;
+	}
+
+	private Type findInputType() {
 		if (inputType == null) {
 			if (inputFile != null) {
-				inputType = Files.getFileExtension(inputFile);
+				inputType = Type.valueOf(Files.getFileExtension(inputFile).toUpperCase());
 			} else {
 				throw new RuntimeException("Please provide an input type via -i,--inputType");
 			}
