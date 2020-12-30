@@ -21,60 +21,62 @@ import com.github.jsonldjava.core.JsonLdProcessor;
 import com.google.common.base.Charsets;
 
 public class RdfReader {
-	
-	static public Map<String, Object> getMap(Map<String, Object> json, RDFFormat format, Map<String, Object> frame) {
+
+	static public Map<String, Object> getMap(final Map<String, Object> json, final RDFFormat format,
+			final Map<String, Object> frame) {
 		return getMap(json, frame);
 	}
 
-	static public Map<String, Object> getMap(InputStream in, RDFFormat format, Map<String, Object> frame) {
+	static public Map<String, Object> getMap(final InputStream in, final RDFFormat format,
+			final Map<String, Object> frame) {
 		return getMap(readRdfToString(in, format, RDFFormat.JSONLD, ""), frame);
 	}
 
-	private static Map<String, Object> getMap(String rdfGraphAsJson, Map<String, Object> frame) {
+	private static Map<String, Object> getMap(final String rdfGraphAsJson, final Map<String, Object> frame) {
 		try {
 			Map<String, Object> result = null;
 			if (frame != null) {
 				result = removeGraphArray(getFramedJson(createJsonObject(rdfGraphAsJson), frame));
 			} else {
-				result =createJsonObject(rdfGraphAsJson);
+				result = createJsonObject(rdfGraphAsJson);
 			}
 			return result;
-		} catch (Exception e) {
+		} catch (final Exception e) {
 			throw new RuntimeException(e);
 		}
 	}
 
-	private static Map<String, Object> createJsonObject(String ld) {
+	private static Map<String, Object> createJsonObject(final String ld) {
 		try (InputStream inputStream = new ByteArrayInputStream(ld.getBytes(Charsets.UTF_8))) {
 			return JsonReader.getMap(inputStream);
-		} catch (Exception e) {
+		} catch (final Exception e) {
 			throw new RuntimeException(e);
 		}
 	}
 
-	private static Map<String, Object> getMap(Map<String, Object> json, Map<String, Object> frame) {
+	private static Map<String, Object> getMap(final Map<String, Object> json, final Map<String, Object> frame) {
 		try {
-			Map<String, Object> result = removeGraphArray(getFramedJson(json, frame));
+			final Map<String, Object> result = removeGraphArray(getFramedJson(json, frame));
 			return result;
-		} catch (Exception e) {
+		} catch (final Exception e) {
 			throw new RuntimeException(e);
 		}
 	}
 
-	private static Map<String, Object> removeGraphArray(Map<String, Object> framedJson) {
+	private static Map<String, Object> removeGraphArray(final Map<String, Object> framedJson) {
 		@SuppressWarnings("unchecked")
-		List<Map<String, Object>> graph = (List<Map<String, Object>>) framedJson.get("@graph");
-		if(graph==null || graph.isEmpty()) {
+		final List<Map<String, Object>> graph = (List<Map<String, Object>>) framedJson.get("@graph");
+		if (graph == null || graph.isEmpty()) {
 			return framedJson;
 		}
 		return graph.get(0);
 	}
 
-	public static Map<String, Object> getFramedJson(Map<String, Object> json, Map<String, Object> frame) {
+	public static Map<String, Object> getFramedJson(final Map<String, Object> json, final Map<String, Object> frame) {
 		try {
 			json.put("@context", frame.get("@context"));
 			return JsonLdProcessor.frame(json, frame, new JsonLdOptions());
-		} catch (Exception e) {
+		} catch (final Exception e) {
 			throw new RuntimeException(e);
 		}
 	}
@@ -93,22 +95,23 @@ public class RdfReader {
 		}
 	}
 
-	public static String readRdfToString(InputStream in, RDFFormat inf, RDFFormat outf, String baseUrl) {
+	public static String readRdfToString(final InputStream in, final RDFFormat inf, final RDFFormat outf,
+			final String baseUrl) {
 		Collection<Statement> myGraph = null;
 		myGraph = readRdfToGraph(in, inf, baseUrl);
 		return graphToString(myGraph, outf);
 	}
 
-	public static String graphToString(Collection<Statement> myGraph, RDFFormat outf) {
-		StringWriter out = new StringWriter();
-		RDFWriter writer = Rio.createWriter(outf, out);
+	public static String graphToString(final Collection<Statement> myGraph, final RDFFormat outf) {
+		final StringWriter out = new StringWriter();
+		final RDFWriter writer = Rio.createWriter(outf, out);
 		try {
 			writer.startRDF();
-			for (Statement st : myGraph) {
+			for (final Statement st : myGraph) {
 				writer.handleStatement(st);
 			}
 			writer.endRDF();
-		} catch (RDFHandlerException e) {
+		} catch (final RDFHandlerException e) {
 			throw new RuntimeException(e);
 		}
 		return out.getBuffer().toString();

@@ -17,7 +17,7 @@ function generate(){
 	mkdir -p $extension/out
 	mkdir -p $extension/context
 	oi $extension/in/$filename -d=";" -t context > $extension/context/$filename.context
-	oi $extension/in/$filename -d=";" -t yaml > $extension/out/$filename.yml
+	oi $extension/in/$filename -d=";" -t yml > $extension/out/$filename.yml
 	oi $extension/in/$filename -d=";" -t json > $extension/out/$filename.json
 	oi $extension/in/$filename -d=";" -t xml > $extension/out/$filename.xml
 	oi $extension/in/$filename -d=";" -t csv > $extension/out/$filename.csv

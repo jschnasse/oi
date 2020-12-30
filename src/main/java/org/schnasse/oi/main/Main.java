@@ -63,18 +63,18 @@ public class Main implements Callable<Integer> {
 		XML, JSON, JSONLD, CSV, YML, RDF, RDFXML, NTRIPLES, TURTLE, CONTEXT
 	}
 
-	public static void main(String... args) {
+	public static void main(final String... args) {
 		try {
-			int exitCode = new CommandLine(new Main()).setCaseInsensitiveEnumValuesAllowed(true).execute(args);
+			final int exitCode = new CommandLine(new Main()).setCaseInsensitiveEnumValuesAllowed(true).execute(args);
 			System.exit(exitCode);
-		} catch (Throwable e) {
+		} catch (final Throwable e) {
 			logger.debug("", e);
 			System.exit(1);
 		}
 	}
 
-	public static void setLoggingLevel(Level level) {
-		ch.qos.logback.classic.Logger root = (ch.qos.logback.classic.Logger) org.slf4j.LoggerFactory
+	public static void setLoggingLevel(final Level level) {
+		final ch.qos.logback.classic.Logger root = (ch.qos.logback.classic.Logger) org.slf4j.LoggerFactory
 				.getLogger(ch.qos.logback.classic.Logger.ROOT_LOGGER_NAME);
 		root.setLevel(level);
 	}
@@ -95,15 +95,15 @@ public class Main implements Callable<Integer> {
 	private void convert() {
 		try (InputStream in = getInput(inputFile)) {
 			inputType = findInputType();
-			Map<String, Object> content = readDataToMap(in);
+			final Map<String, Object> content = readDataToMap(in);
 			print(content);
-		} catch (Exception e) {
+		} catch (final Exception e) {
 			throw new RuntimeException(e);
 		}
 	}
 
-	private Map<String, Object> readDataToMap(InputStream in) {
-		Map<String, Object> frameMap = readFrameToMap();
+	private Map<String, Object> readDataToMap(final InputStream in) {
+		final Map<String, Object> frameMap = readFrameToMap();
 		Map<String, Object> content = new HashMap<>();
 		if (frameMap == null) {
 			switch (inputType) {
@@ -144,7 +144,7 @@ public class Main implements Callable<Integer> {
 			default:
 				break;
 			}
-		} else {
+		} else { // frame != null
 			switch (inputType) {
 			case RDFXML:
 				content = RdfReader.getMap(in, RDFFormat.RDFXML, frameMap);
@@ -178,9 +178,12 @@ public class Main implements Callable<Integer> {
 		return content;
 	}
 
-	private void print(Map<String, Object> content) {
+	private void print(final Map<String, Object> content) {
 		switch (type) {
 		case XML:
+			XmlWriter.gprint(content);
+			break;
+		case CSV:
 			XmlWriter.gprint(content);
 			break;
 		case JSON:
@@ -231,7 +234,7 @@ public class Main implements Callable<Integer> {
 		return inputType;
 	}
 
-	private InputStream getInput(String inputFile) {
+	private InputStream getInput(final String inputFile) {
 		if (inputFile != null) {
 			return Helper.getInputStream(inputFile);
 		}
