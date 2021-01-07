@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 
 function download(){
@@ -18,11 +18,20 @@ function install(){
  asciidoctor -b manpage man.adoc
  sudo cp oi.1 /usr/share/man/man1/
  sudo mandb
+ jlink \
+    --add-modules java.base \
+    --verbose \
+    --strip-debug \
+    --compress 2 \
+    --no-header-files \
+    --no-man-pages \
+    --output /usr/share/jvm_for_oi
+ ln -s /usr/share/jvm_for_oi/bin/java /usr/bin/jvm_for_oi
  )
 }
 if [ -f /usr/lib/libprocname.so ]
 then
-    LD_PRELOAD=/usr/lib/libprocname.so PROCNAME=oi java -jar /usr/lib/oi.jar $@
+    LD_PRELOAD=/usr/lib/libprocname.so PROCNAME=oi jvm_for_oi -jar /usr/lib/oi.jar $@
 else
-    java -jar /usr/lib/oi.jar $@
+    jvm_for_oi -jar /usr/lib/oi.jar $@
 fi

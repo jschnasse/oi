@@ -7,10 +7,11 @@ cat VERSIONS
 
 if [ ! -d deb/oi_${oi_version} ]
 then
-echo "Create deb directory on bases of last version!"
-echo "cp -r $(ls -tdr deb/oi*/|tail -1) deb/oi_${oi_version}"
-cp -r $(ls -tdr deb/oi*/|tail -1) deb/oi_${oi_version}
-
+#echo "Create deb directory on bases of last version!"
+#echo "cp -r $(ls -tdr deb/oi*/|tail -1) deb/oi_${oi_version}"
+#cp -r $(ls -tdr deb/oi*/|tail -1) deb/oi_${oi_version}
+    echo "Create deb directory!"
+    cp -r deb/oi deb/oi_${oi_version}
 fi
 
 #README

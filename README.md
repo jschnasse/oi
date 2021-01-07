@@ -11,7 +11,7 @@ can be fixed easily with existing tools like `sed`,`grep` and `awk`.
 
 ```
 wget https://dl.bintray.com/jschnasse/debian/oi_0.4.4.deb
-sudo apt install ./oi_0.4.4.deb #depends on openjdk-11-jre
+sudo apt install ./oi_0.4.4.deb 
 ```
 # Keep up to date
 

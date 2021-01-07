@@ -15,6 +15,17 @@ function build_oi(){
  mvn package -D$mvnparam
  sudo cp src/main/resources/$package_name deb/$package/usr/bin
  sudo cp target/$package_name.jar deb/$package/usr/lib
+ 
+ jlink \
+    --add-modules java.base \
+    --verbose \
+    --strip-debug \
+    --compress 2 \
+    --no-header-files \
+    --no-man-pages \
+    --output deb/$package/usr/share/jvm_for_oi
+ ln -s deb/$package/usr/share/jvm_for_oi deb/$package/usr/bin/jvm_for_oi 
+ 
 }
 
 function build(){
