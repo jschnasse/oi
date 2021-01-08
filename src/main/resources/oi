@@ -22,7 +22,7 @@ function install(){
     --add-modules java.base \
     --verbose \
     --strip-debug \
-    --compress 2 \
+    --compress=1 \
     --no-header-files \
     --no-man-pages \
     --output /usr/share/jvm_for_oi
