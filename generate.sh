@@ -5,7 +5,7 @@ cd $scriptdir
 
 function generateAll(){
   extension=$1
-  for i in `ls $extension/in/`
+  for i in `ls $scriptdir/src/test/resources/$extension/in/`
   do
     generate $extension $i
   done
@@ -14,20 +14,20 @@ function generateAll(){
 function generate(){
     extension=$1
     filename=$2
-	mkdir -p $extension/out
-	mkdir -p $extension/context
-	oi $extension/in/$filename -d=";" -t context > $extension/context/$filename.context
-	oi $extension/in/$filename -d=";" -t yaml > $extension/out/$filename.yml
-	oi $extension/in/$filename -d=";" -t json > $extension/out/$filename.json
-	oi $extension/in/$filename -d=";" -t xml > $extension/out/$filename.xml
-	oi $extension/in/$filename -d=";" -t csv > $extension/out/$filename.csv
-	oi $extension/in/$filename -d=";" -f $extension/context/$filename.context -trdf > $extension/out/$filename.jsonld
+    inputFile=$scriptdir/src/test/resources/$extension/in/$filename
+    outputDir=$scriptdir/src/test/resources/$extension/out
+    contextFile=$scriptdir/src/test/resources/$extension/context/$filename.context
+	mkdir -p $outputDir
+	mkdir -p $scriptdir/src/test/resources/$extension/context
+	java -jar $scriptdir/target/oi.jar $inputFile -d=";" -t context > $contextFile
+	java -jar $scriptdir/target/oi.jar $inputFile -d=";" -t yml > $outputDir/$filename.yml
+	java -jar $scriptdir/target/oi.jar $inputFile -d=";" -t json > $outputDir/$filename.json
+	java -jar $scriptdir/target/oi.jar $inputFile -d=";" -t xml > $outputDir/$filename.xml
+	java -jar $scriptdir/target/oi.jar $inputFile -d=";" -t csv > $outputDir/$filename.csv
+	java -jar $scriptdir/target/oi.jar $inputFile -d=";" -t rdf -f $contextFile > $outputDir/$filename.jsonld
 }
 
-rm deb/*.deb
-./build.sh -DskipTests
-sudo dpkg -i deb/*.deb
-cd $scriptdir/src/test/resources
+mvn package -DskipTests
 
 generateAll csv
 generateAll json
