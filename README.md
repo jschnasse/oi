@@ -258,8 +258,13 @@ release
 ```
 
 # Create Debian Package
+
 ```
 build.sh
 ```
 
+# Docker Tests
+
+docker build -t docker_build_test -f docker/Dockerfile.build.test .
+docker build -t docker_install_test -f docker/Dockerfile.install.test .
 

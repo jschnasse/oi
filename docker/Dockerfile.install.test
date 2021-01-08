@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
   && apt install -y lscsv \
   && apt install -y libprocname \
   && apt install -y oi \
-  && java -version \
-  && oi /etc/passwd -d":" --header="login,password,uid,gid,comment,home,shell" -icsv
+  && jvm_for_oi -version 
+ 
+RUN oi /etc/passwd -d":" --header="login,password,uid,gid,comment,home,shell" -icsv
 
