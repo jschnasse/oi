@@ -10,8 +10,8 @@ can be fixed easily with existing tools like `sed`,`grep` and `awk`.
 # Test Install
 
 ```
-wget https://dl.bintray.com/jschnasse/debian/oi_0.5.1.deb
-sudo apt install ./oi_0.5.1.deb 
+wget https://dl.bintray.com/jschnasse/debian/oi_0.5.2.deb
+sudo apt install ./oi_0.5.2.deb 
 ```
 # Keep up to date
 
