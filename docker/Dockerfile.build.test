@@ -19,4 +19,4 @@ COPY src/main/resources/oi /usr/bin
 RUN ln -s /usr/share/jvm_for_oi/bin/java /usr/bin/jvm_for_oi \
 && chmod +x /usr/bin/oi 
 
-RUN oi /etc/passwd -d":" --header="login,password,uid,gid,comment,home,shell" -icsv
+RUN jvm_for_oi -jar /usr/lib/oi.jar /etc/passwd -d":" --header="login,password,uid,gid,comment,home,shell" -icsv

@@ -265,6 +265,14 @@ build.sh
 
 # Docker Tests
 
-docker build -t docker_build_test -f docker/Dockerfile.build.test .
-docker build -t docker_install_test -f docker/Dockerfile.install.test .
+Test if build is working
 
+```
+docker build -t docker_build_test -f docker/Dockerfile.build.test .
+```
+
+Test if install from repo works
+
+```
+docker build -t docker_install_test -f docker/Dockerfile.install.test .
+```
