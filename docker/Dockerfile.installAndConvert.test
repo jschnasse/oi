@@ -1,0 +1,16 @@
+FROM ubuntu:18.04
+RUN apt-get update && apt-get install -y \
+  git \
+  curl \
+  man \
+  gnupg \
+  && curl -sSL 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x379ce192d401ab61' | apt-key add - \
+  && echo "deb https://dl.bintray.com/jschnasse/debian buster main" | tee -a /etc/apt/sources.list.d/jschnasse.list \
+  && apt update -y \
+  && apt install -y lscsv \
+  && apt install -y libprocname \
+  && apt install -y oi \
+  && jvm_for_oi -version 
+COPY . /tmp/oi  
+RUN oi /etc/passwd -d":" --header="login,password,uid,gid,comment,home,shell" -icsv
+RUN oi /tmp/oi/src/test/resources/xml/in/HT015847062.xml

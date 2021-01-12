@@ -1,0 +1,60 @@
+{
+  "@context" : {
+    "data" : {
+      "@id" : "info:oi/data",
+      "@container" : "@list"
+    },
+    "Auftragskonto" : {
+      "@id" : "info:oi/Auftragskonto"
+    },
+    "Auslagenersatz Ruecklastschrift" : {
+      "@id" : "info:oi/Auslagenersatz Ruecklastschrift"
+    },
+    "BIC (SWIFT-Code)" : {
+      "@id" : "info:oi/BIC (SWIFT-Code)"
+    },
+    "Beguenstigter/Zahlungspflichtiger" : {
+      "@id" : "info:oi/Beguenstigter/Zahlungspflichtiger"
+    },
+    "Betrag" : {
+      "@id" : "info:oi/Betrag"
+    },
+    "Buchungstag" : {
+      "@id" : "info:oi/Buchungstag"
+    },
+    "Buchungstext" : {
+      "@id" : "info:oi/Buchungstext"
+    },
+    "Glaeubiger ID" : {
+      "@id" : "info:oi/Glaeubiger ID"
+    },
+    "Info" : {
+      "@id" : "info:oi/Info"
+    },
+    "Kontonummer/IBAN" : {
+      "@id" : "info:oi/Kontonummer/IBAN"
+    },
+    "Kundenreferenz (End-to-End)" : {
+      "@id" : "info:oi/Kundenreferenz (End-to-End)"
+    },
+    "Lastschrift Ursprungsbetrag" : {
+      "@id" : "info:oi/Lastschrift Ursprungsbetrag"
+    },
+    "Mandatsreferenz" : {
+      "@id" : "info:oi/Mandatsreferenz"
+    },
+    "Sammlerreferenz" : {
+      "@id" : "info:oi/Sammlerreferenz"
+    },
+    "Valutadatum" : {
+      "@id" : "info:oi/Valutadatum"
+    },
+    "Verwendungszweck" : {
+      "@id" : "info:oi/Verwendungszweck"
+    },
+    "Waehrung" : {
+      "@id" : "info:oi/Waehrung"
+    }
+  }
+}
+

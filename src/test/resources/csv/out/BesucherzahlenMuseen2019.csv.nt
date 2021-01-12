@@ -1,0 +1,184 @@
+_:b0 <info:oi/data> _:b14 .
+_:b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b1 .
+_:b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b15 .
+_:b15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b2 .
+_:b15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b16 .
+_:b16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b3 .
+_:b16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b17 .
+_:b17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b4 .
+_:b17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b18 .
+_:b18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b5 .
+_:b18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b19 .
+_:b19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b6 .
+_:b19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b20 .
+_:b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b7 .
+_:b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b21 .
+_:b21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8 .
+_:b21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b22 .
+_:b22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b9 .
+_:b22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b23 .
+_:b23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b10 .
+_:b23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b24 .
+_:b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b11 .
+_:b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b25 .
+_:b25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b12 .
+_:b25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b26 .
+_:b26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b13 .
+_:b26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b1 <info:oi/2019> "Jan" .
+_:b1 <info:oi/Arch\u00E4ologische Zone> "3.551" .
+_:b1 <info:oi/K\u00F6lnisches Stadtmuseum> "4.090" .
+_:b1 <info:oi/Museen gesamt> "111.243" .
+_:b1 <info:oi/Museum Ludwig> "36.166" .
+_:b1 <info:oi/Museum Schn\u00FCtgen> "3.659" .
+_:b1 <info:oi/Museum f\u00FCr Angewandte Kunst> "13.209" .
+_:b1 <info:oi/Museum f\u00FCr Ostasiatische Kunst> "1.604" .
+_:b1 <info:oi/NS-Dokumentationszentrum> "8.322" .
+_:b1 <info:oi/Rautenstrauch-Joest-Museum> "14.424" .
+_:b1 <info:oi/R\u00F6misch-Germanisches Museum> "4.227" .
+_:b1 <info:oi/Wallraf-Richartz-Museum - Fondation Corboud> "21.991" .
+_:b2 <info:oi/2019> "Feb" .
+_:b2 <info:oi/Arch\u00E4ologische Zone> "4.043" .
+_:b2 <info:oi/K\u00F6lnisches Stadtmuseum> "19.468" .
+_:b2 <info:oi/Museen gesamt> "103.676" .
+_:b2 <info:oi/Museum Ludwig> "15.479" .
+_:b2 <info:oi/Museum Schn\u00FCtgen> "3.615" .
+_:b2 <info:oi/Museum f\u00FCr Angewandte Kunst> "9.076" .
+_:b2 <info:oi/Museum f\u00FCr Ostasiatische Kunst> "1.689" .
+_:b2 <info:oi/NS-Dokumentationszentrum> "6.872" .
+_:b2 <info:oi/Rautenstrauch-Joest-Museum> "15.892" .
+_:b2 <info:oi/R\u00F6misch-Germanisches Museum> "3.452" .
+_:b2 <info:oi/Wallraf-Richartz-Museum - Fondation Corboud> "24.090" .
+_:b3 <info:oi/2019> "Mrz" .
+_:b3 <info:oi/Arch\u00E4ologische Zone> "5.606" .
+_:b3 <info:oi/K\u00F6lnisches Stadtmuseum> "12.067" .
+_:b3 <info:oi/Museen gesamt> "94.980" .
+_:b3 <info:oi/Museum Ludwig> "21.206" .
+_:b3 <info:oi/Museum Schn\u00FCtgen> "2.749" .
+_:b3 <info:oi/Museum f\u00FCr Angewandte Kunst> "9.119" .
+_:b3 <info:oi/Museum f\u00FCr Ostasiatische Kunst> "1.828" .
+_:b3 <info:oi/NS-Dokumentationszentrum> "7.553" .
+_:b3 <info:oi/Rautenstrauch-Joest-Museum> "5.436" .
+_:b3 <info:oi/R\u00F6misch-Germanisches Museum> "5.152" .
+_:b3 <info:oi/Wallraf-Richartz-Museum - Fondation Corboud> "24.264" .
+_:b4 <info:oi/2019> "Apr" .
+_:b4 <info:oi/Arch\u00E4ologische Zone> "0" .
+_:b4 <info:oi/K\u00F6lnisches Stadtmuseum> "3.262" .
+_:b4 <info:oi/Museen gesamt> "60.081" .
+_:b4 <info:oi/Museum Ludwig> "20.459" .
+_:b4 <info:oi/Museum Schn\u00FCtgen> "2.789" .
+_:b4 <info:oi/Museum f\u00FCr Angewandte Kunst> "5.395" .
+_:b4 <info:oi/Museum f\u00FCr Ostasiatische Kunst> "1.759" .
+_:b4 <info:oi/NS-Dokumentationszentrum> "9.124" .
+_:b4 <info:oi/Rautenstrauch-Joest-Museum> "4.634" .
+_:b4 <info:oi/R\u00F6misch-Germanisches Museum> "5.852" .
+_:b4 <info:oi/Wallraf-Richartz-Museum - Fondation Corboud> "6.807" .
+_:b5 <info:oi/2019> "Mai" .
+_:b5 <info:oi/Arch\u00E4ologische Zone> "0" .
+_:b5 <info:oi/K\u00F6lnisches Stadtmuseum> "3.711" .
+_:b5 <info:oi/Museen gesamt> "69.775" .
+_:b5 <info:oi/Museum Ludwig> "24.489" .
+_:b5 <info:oi/Museum Schn\u00FCtgen> "2.174" .
+_:b5 <info:oi/Museum f\u00FCr Angewandte Kunst> "8.283" .
+_:b5 <info:oi/Museum f\u00FCr Ostasiatische Kunst> "1.656" .
+_:b5 <info:oi/NS-Dokumentationszentrum> "9.415" .
+_:b5 <info:oi/Rautenstrauch-Joest-Museum> "5.386" .
+_:b5 <info:oi/R\u00F6misch-Germanisches Museum> "6.387" .
+_:b5 <info:oi/Wallraf-Richartz-Museum - Fondation Corboud> "8.274" .
+_:b6 <info:oi/2019> "Jun" .
+_:b6 <info:oi/Arch\u00E4ologische Zone> "0" .
+_:b6 <info:oi/K\u00F6lnisches Stadtmuseum> "9.719" .
+_:b6 <info:oi/Museen gesamt> "59.567" .
+_:b6 <info:oi/Museum Ludwig> "17.637" .
+_:b6 <info:oi/Museum Schn\u00FCtgen> "2.511" .
+_:b6 <info:oi/Museum f\u00FCr Angewandte Kunst> "4.131" .
+_:b6 <info:oi/Museum f\u00FCr Ostasiatische Kunst> "1.478" .
+_:b6 <info:oi/NS-Dokumentationszentrum> "9.279" .
+_:b6 <info:oi/Rautenstrauch-Joest-Museum> "3.794" .
+_:b6 <info:oi/R\u00F6misch-Germanisches Museum> "5.152" .
+_:b6 <info:oi/Wallraf-Richartz-Museum - Fondation Corboud> "5.866" .
+_:b7 <info:oi/2019> "Jul" .
+_:b7 <info:oi/Arch\u00E4ologische Zone> "0" .
+_:b7 <info:oi/K\u00F6lnisches Stadtmuseum> "3.100" .
+_:b7 <info:oi/Museen gesamt> "49.347" .
+_:b7 <info:oi/Museum Ludwig> "17.847" .
+_:b7 <info:oi/Museum Schn\u00FCtgen> "2.055" .
+_:b7 <info:oi/Museum f\u00FCr Angewandte Kunst> "2.254" .
+_:b7 <info:oi/Museum f\u00FCr Ostasiatische Kunst> "1.184" .
+_:b7 <info:oi/NS-Dokumentationszentrum> "8.929" .
+_:b7 <info:oi/Rautenstrauch-Joest-Museum> "5.268" .
+_:b7 <info:oi/R\u00F6misch-Germanisches Museum> "2.750" .
+_:b7 <info:oi/Wallraf-Richartz-Museum - Fondation Corboud> "5.960" .
+_:b8 <info:oi/2019> "Aug" .
+_:b8 <info:oi/Arch\u00E4ologische Zone> "0" .
+_:b8 <info:oi/K\u00F6lnisches Stadtmuseum> "2.314" .
+_:b8 <info:oi/Museen gesamt> "50.611" .
+_:b8 <info:oi/Museum Ludwig> "17.130" .
+_:b8 <info:oi/Museum Schn\u00FCtgen> "2.463" .
+_:b8 <info:oi/Museum f\u00FCr Angewandte Kunst> "7.385" .
+_:b8 <info:oi/Museum f\u00FCr Ostasiatische Kunst> "1.385" .
+_:b8 <info:oi/NS-Dokumentationszentrum> "5.512" .
+_:b8 <info:oi/Rautenstrauch-Joest-Museum> "4.246" .
+_:b8 <info:oi/R\u00F6misch-Germanisches Museum> "3.842" .
+_:b8 <info:oi/Wallraf-Richartz-Museum - Fondation Corboud> "6.334" .
+_:b9 <info:oi/2019> "Sep" .
+_:b9 <info:oi/Arch\u00E4ologische Zone> "0" .
+_:b9 <info:oi/K\u00F6lnisches Stadtmuseum> "6.140" .
+_:b9 <info:oi/Museen gesamt> "50.278" .
+_:b9 <info:oi/Museum Ludwig> "15.561" .
+_:b9 <info:oi/Museum Schn\u00FCtgen> "2.376" .
+_:b9 <info:oi/Museum f\u00FCr Angewandte Kunst> "6.601" .
+_:b9 <info:oi/Museum f\u00FCr Ostasiatische Kunst> "1.199" .
+_:b9 <info:oi/NS-Dokumentationszentrum> "6.495" .
+_:b9 <info:oi/Rautenstrauch-Joest-Museum> "3.979" .
+_:b9 <info:oi/R\u00F6misch-Germanisches Museum> "1.064" .
+_:b9 <info:oi/Wallraf-Richartz-Museum - Fondation Corboud> "6.863" .
+_:b10 <info:oi/2019> "Okt" .
+_:b10 <info:oi/Arch\u00E4ologische Zone> "0" .
+_:b10 <info:oi/K\u00F6lnisches Stadtmuseum> "8.698" .
+_:b10 <info:oi/Museen gesamt> "63.081" .
+_:b10 <info:oi/Museum Ludwig> "18.110" .
+_:b10 <info:oi/Museum Schn\u00FCtgen> "1.750" .
+_:b10 <info:oi/Museum f\u00FCr Angewandte Kunst> "8.527" .
+_:b10 <info:oi/Museum f\u00FCr Ostasiatische Kunst> "1.235" .
+_:b10 <info:oi/NS-Dokumentationszentrum> "7.368" .
+_:b10 <info:oi/Rautenstrauch-Joest-Museum> "5.361" .
+_:b10 <info:oi/R\u00F6misch-Germanisches Museum> "1.646" .
+_:b10 <info:oi/Wallraf-Richartz-Museum - Fondation Corboud> "10.386" .
+_:b11 <info:oi/2019> "Nov" .
+_:b11 <info:oi/Arch\u00E4ologische Zone> "0" .
+_:b11 <info:oi/K\u00F6lnisches Stadtmuseum> "0" .
+_:b11 <info:oi/Museen gesamt> "41.640" .
+_:b11 <info:oi/Museum Ludwig> "0" .
+_:b11 <info:oi/Museum Schn\u00FCtgen> "0" .
+_:b11 <info:oi/Museum f\u00FCr Angewandte Kunst> "0" .
+_:b11 <info:oi/Museum f\u00FCr Ostasiatische Kunst> "0" .
+_:b11 <info:oi/NS-Dokumentationszentrum> "0" .
+_:b11 <info:oi/Rautenstrauch-Joest-Museum> "0" .
+_:b11 <info:oi/R\u00F6misch-Germanisches Museum> "0" .
+_:b11 <info:oi/Wallraf-Richartz-Museum - Fondation Corboud> "41.640" .
+_:b12 <info:oi/2019> "Dez" .
+_:b12 <info:oi/Arch\u00E4ologische Zone> "0" .
+_:b12 <info:oi/K\u00F6lnisches Stadtmuseum> "0" .
+_:b12 <info:oi/Museen gesamt> "0" .
+_:b12 <info:oi/Museum Ludwig> "0" .
+_:b12 <info:oi/Museum Schn\u00FCtgen> "0" .
+_:b12 <info:oi/Museum f\u00FCr Angewandte Kunst> "0" .
+_:b12 <info:oi/Museum f\u00FCr Ostasiatische Kunst> "0" .
+_:b12 <info:oi/NS-Dokumentationszentrum> "0" .
+_:b12 <info:oi/Rautenstrauch-Joest-Museum> "0" .
+_:b12 <info:oi/R\u00F6misch-Germanisches Museum> "0" .
+_:b12 <info:oi/Wallraf-Richartz-Museum - Fondation Corboud> "0" .
+_:b13 <info:oi/2019> "Jahressumme" .
+_:b13 <info:oi/Arch\u00E4ologische Zone> "13.200" .
+_:b13 <info:oi/K\u00F6lnisches Stadtmuseum> "72.569" .
+_:b13 <info:oi/Museen gesamt> "754.279" .
+_:b13 <info:oi/Museum Ludwig> "204.084" .
+_:b13 <info:oi/Museum Schn\u00FCtgen> "26.141" .
+_:b13 <info:oi/Museum f\u00FCr Angewandte Kunst> "73.980" .
+_:b13 <info:oi/Museum f\u00FCr Ostasiatische Kunst> "15.017" .
+_:b13 <info:oi/NS-Dokumentationszentrum> "78.869" .
+_:b13 <info:oi/Rautenstrauch-Joest-Museum> "68.420" .
+_:b13 <info:oi/R\u00F6misch-Germanisches Museum> "39.524" .
+_:b13 <info:oi/Wallraf-Richartz-Museum - Fondation Corboud> "162.475" .
+

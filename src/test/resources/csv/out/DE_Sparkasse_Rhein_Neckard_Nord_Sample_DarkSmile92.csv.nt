@@ -1,0 +1,21 @@
+_:b0 <info:oi/data> _:b2 .
+_:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b1 .
+_:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b1 <info:oi/Auftragskonto> "01234567" .
+_:b1 <info:oi/Auslagenersatz Ruecklastschrift> "" .
+_:b1 <info:oi/BIC (SWIFT-Code)> "GENODEF1WU1" .
+_:b1 <info:oi/Beguenstigter/Zahlungspflichtiger> "Name of payee" .
+_:b1 <info:oi/Betrag> "-25,65" .
+_:b1 <info:oi/Buchungstag> "03.11.17" .
+_:b1 <info:oi/Buchungstext> "FOLGELASTSCHRIFT" .
+_:b1 <info:oi/Glaeubiger ID> "DE15FIT00000123456" .
+_:b1 <info:oi/Info> "Umsatz gebucht" .
+_:b1 <info:oi/Kontonummer/IBAN> "DE28790900000100232823" .
+_:b1 <info:oi/Kundenreferenz (End-to-End)> "BWUE17110200347677C" .
+_:b1 <info:oi/Lastschrift Ursprungsbetrag> "" .
+_:b1 <info:oi/Mandatsreferenz> "24274-1" .
+_:b1 <info:oi/Sammlerreferenz> "" .
+_:b1 <info:oi/Valutadatum> "03.11.17" .
+_:b1 <info:oi/Verwendungszweck> "Monthly membership" .
+_:b1 <info:oi/Waehrung> "EUR" .
+

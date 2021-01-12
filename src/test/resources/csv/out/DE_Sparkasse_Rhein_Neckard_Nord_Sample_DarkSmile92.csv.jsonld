@@ -1,0 +1,61 @@
+[ {
+  "@id" : "_:b0",
+  "info:oi/data" : [ {
+    "@list" : [ {
+      "@id" : "_:b1"
+    } ]
+  } ]
+}, {
+  "@id" : "_:b1",
+  "info:oi/Auftragskonto" : [ {
+    "@value" : "01234567"
+  } ],
+  "info:oi/Auslagenersatz Ruecklastschrift" : [ {
+    "@value" : ""
+  } ],
+  "info:oi/BIC (SWIFT-Code)" : [ {
+    "@value" : "GENODEF1WU1"
+  } ],
+  "info:oi/Beguenstigter/Zahlungspflichtiger" : [ {
+    "@value" : "Name of payee"
+  } ],
+  "info:oi/Betrag" : [ {
+    "@value" : "-25,65"
+  } ],
+  "info:oi/Buchungstag" : [ {
+    "@value" : "03.11.17"
+  } ],
+  "info:oi/Buchungstext" : [ {
+    "@value" : "FOLGELASTSCHRIFT"
+  } ],
+  "info:oi/Glaeubiger ID" : [ {
+    "@value" : "DE15FIT00000123456"
+  } ],
+  "info:oi/Info" : [ {
+    "@value" : "Umsatz gebucht"
+  } ],
+  "info:oi/Kontonummer/IBAN" : [ {
+    "@value" : "DE28790900000100232823"
+  } ],
+  "info:oi/Kundenreferenz (End-to-End)" : [ {
+    "@value" : "BWUE17110200347677C"
+  } ],
+  "info:oi/Lastschrift Ursprungsbetrag" : [ {
+    "@value" : ""
+  } ],
+  "info:oi/Mandatsreferenz" : [ {
+    "@value" : "24274-1"
+  } ],
+  "info:oi/Sammlerreferenz" : [ {
+    "@value" : ""
+  } ],
+  "info:oi/Valutadatum" : [ {
+    "@value" : "03.11.17"
+  } ],
+  "info:oi/Verwendungszweck" : [ {
+    "@value" : "Monthly membership"
+  } ],
+  "info:oi/Waehrung" : [ {
+    "@value" : "EUR"
+  } ]
+} ]

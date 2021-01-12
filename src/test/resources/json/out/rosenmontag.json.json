@@ -6,7 +6,7 @@
       "name" : "EPSG:4326"
     }
   },
-  "features" : {
+  "features" : [ {
     "type" : "Feature",
     "id" : 1,
     "geometry" : {
@@ -26,6 +26,6 @@
       "PopupInfo" : "",
       "Shape_Length" : 0.09055540198881518
     }
-  }
+  } ]
 }
 

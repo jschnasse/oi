@@ -1,0 +1,198 @@
+_:b0 <info:oi/data> _:b29 .
+_:b29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b1 .
+_:b29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b30 .
+_:b30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b2 .
+_:b30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b31 .
+_:b31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b3 .
+_:b31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b32 .
+_:b32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b4 .
+_:b32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b33 .
+_:b33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b5 .
+_:b33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b34 .
+_:b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b6 .
+_:b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b35 .
+_:b35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b7 .
+_:b35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b36 .
+_:b36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8 .
+_:b36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b37 .
+_:b37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b9 .
+_:b37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b38 .
+_:b38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b10 .
+_:b38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b39 .
+_:b39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b11 .
+_:b39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b40 .
+_:b40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b12 .
+_:b40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b41 .
+_:b41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b13 .
+_:b41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b42 .
+_:b42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b14 .
+_:b42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b43 .
+_:b43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b15 .
+_:b43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b44 .
+_:b44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b16 .
+_:b44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b45 .
+_:b45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b17 .
+_:b45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b46 .
+_:b46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b18 .
+_:b46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b47 .
+_:b47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b19 .
+_:b47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b48 .
+_:b48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b20 .
+_:b48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b49 .
+_:b49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b21 .
+_:b49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b50 .
+_:b50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b22 .
+_:b50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b51 .
+_:b51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b23 .
+_:b51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b52 .
+_:b52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b24 .
+_:b52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b53 .
+_:b53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b25 .
+_:b53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b54 .
+_:b54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b26 .
+_:b54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b55 .
+_:b55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b27 .
+_:b55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b56 .
+_:b56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b28 .
+_:b56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b1 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "28955" .
+_:b1 <info:oi/Aufkl\u00E4rungsquote> "46" .
+_:b1 <info:oi/Bekannt gewordene F\u00E4lle> "63141" .
+_:b1 <info:oi/Ermittelte Tatverd\u00E4chtigte> "20101" .
+_:b1 <info:oi/Jahr> "1990" .
+_:b2 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "27370" .
+_:b2 <info:oi/Aufkl\u00E4rungsquote> "43" .
+_:b2 <info:oi/Bekannt gewordene F\u00E4lle> "63159" .
+_:b2 <info:oi/Ermittelte Tatverd\u00E4chtigte> "19485" .
+_:b2 <info:oi/Jahr> "1991" .
+_:b3 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "26796" .
+_:b3 <info:oi/Aufkl\u00E4rungsquote> "43" .
+_:b3 <info:oi/Bekannt gewordene F\u00E4lle> "62854" .
+_:b3 <info:oi/Ermittelte Tatverd\u00E4chtigte> "20031" .
+_:b3 <info:oi/Jahr> "1992" .
+_:b4 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "27563" .
+_:b4 <info:oi/Aufkl\u00E4rungsquote> "44" .
+_:b4 <info:oi/Bekannt gewordene F\u00E4lle> "63419" .
+_:b4 <info:oi/Ermittelte Tatverd\u00E4chtigte> "20057" .
+_:b4 <info:oi/Jahr> "1993" .
+_:b5 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "26649" .
+_:b5 <info:oi/Aufkl\u00E4rungsquote> "41" .
+_:b5 <info:oi/Bekannt gewordene F\u00E4lle> "64971" .
+_:b5 <info:oi/Ermittelte Tatverd\u00E4chtigte> "19909" .
+_:b5 <info:oi/Jahr> "1994" .
+_:b6 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "34512" .
+_:b6 <info:oi/Aufkl\u00E4rungsquote> "47" .
+_:b6 <info:oi/Bekannt gewordene F\u00E4lle> "73647" .
+_:b6 <info:oi/Ermittelte Tatverd\u00E4chtigte> "22583" .
+_:b6 <info:oi/Jahr> "1995" .
+_:b7 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "34895" .
+_:b7 <info:oi/Aufkl\u00E4rungsquote> "51" .
+_:b7 <info:oi/Bekannt gewordene F\u00E4lle> "68679" .
+_:b7 <info:oi/Ermittelte Tatverd\u00E4chtigte> "23756" .
+_:b7 <info:oi/Jahr> "1996" .
+_:b8 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "36223" .
+_:b8 <info:oi/Aufkl\u00E4rungsquote> "51" .
+_:b8 <info:oi/Bekannt gewordene F\u00E4lle> "70412" .
+_:b8 <info:oi/Ermittelte Tatverd\u00E4chtigte> "22359" .
+_:b8 <info:oi/Jahr> "1997" .
+_:b9 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "33829" .
+_:b9 <info:oi/Aufkl\u00E4rungsquote> "52" .
+_:b9 <info:oi/Bekannt gewordene F\u00E4lle> "64884" .
+_:b9 <info:oi/Ermittelte Tatverd\u00E4chtigte> "22849" .
+_:b9 <info:oi/Jahr> "1998" .
+_:b10 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "33456" .
+_:b10 <info:oi/Aufkl\u00E4rungsquote> "53" .
+_:b10 <info:oi/Bekannt gewordene F\u00E4lle> "63411" .
+_:b10 <info:oi/Ermittelte Tatverd\u00E4chtigte> "21795" .
+_:b10 <info:oi/Jahr> "1999" .
+_:b11 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "32980" .
+_:b11 <info:oi/Aufkl\u00E4rungsquote> "51" .
+_:b11 <info:oi/Bekannt gewordene F\u00E4lle> "64147" .
+_:b11 <info:oi/Ermittelte Tatverd\u00E4chtigte> "23445" .
+_:b11 <info:oi/Jahr> "2000" .
+_:b12 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "33728" .
+_:b12 <info:oi/Aufkl\u00E4rungsquote> "51" .
+_:b12 <info:oi/Bekannt gewordene F\u00E4lle> "67038" .
+_:b12 <info:oi/Ermittelte Tatverd\u00E4chtigte> "23179" .
+_:b12 <info:oi/Jahr> "2001" .
+_:b13 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "36045" .
+_:b13 <info:oi/Aufkl\u00E4rungsquote> "49" .
+_:b13 <info:oi/Bekannt gewordene F\u00E4lle> "74304" .
+_:b13 <info:oi/Ermittelte Tatverd\u00E4chtigte> "23716" .
+_:b13 <info:oi/Jahr> "2002" .
+_:b14 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "36173" .
+_:b14 <info:oi/Aufkl\u00E4rungsquote> "49" .
+_:b14 <info:oi/Bekannt gewordene F\u00E4lle> "74636" .
+_:b14 <info:oi/Ermittelte Tatverd\u00E4chtigte> "24838" .
+_:b14 <info:oi/Jahr> "2003" .
+_:b15 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "40011" .
+_:b15 <info:oi/Aufkl\u00E4rungsquote> "49" .
+_:b15 <info:oi/Bekannt gewordene F\u00E4lle> "82451" .
+_:b15 <info:oi/Ermittelte Tatverd\u00E4chtigte> "26192" .
+_:b15 <info:oi/Jahr> "2004" .
+_:b16 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "40133" .
+_:b16 <info:oi/Aufkl\u00E4rungsquote> "51" .
+_:b16 <info:oi/Bekannt gewordene F\u00E4lle> "78915" .
+_:b16 <info:oi/Ermittelte Tatverd\u00E4chtigte> "24933" .
+_:b16 <info:oi/Jahr> "2005" .
+_:b17 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "38882" .
+_:b17 <info:oi/Aufkl\u00E4rungsquote> "50" .
+_:b17 <info:oi/Bekannt gewordene F\u00E4lle> "77840" .
+_:b17 <info:oi/Ermittelte Tatverd\u00E4chtigte> "25318" .
+_:b17 <info:oi/Jahr> "2006" .
+_:b18 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "41145" .
+_:b18 <info:oi/Aufkl\u00E4rungsquote> "52" .
+_:b18 <info:oi/Bekannt gewordene F\u00E4lle> "78672" .
+_:b18 <info:oi/Ermittelte Tatverd\u00E4chtigte> "25626" .
+_:b18 <info:oi/Jahr> "2007" .
+_:b19 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "38817" .
+_:b19 <info:oi/Aufkl\u00E4rungsquote> "49" .
+_:b19 <info:oi/Bekannt gewordene F\u00E4lle> "79159" .
+_:b19 <info:oi/Ermittelte Tatverd\u00E4chtigte> "27387" .
+_:b19 <info:oi/Jahr> "2008" .
+_:b20 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "38883" .
+_:b20 <info:oi/Aufkl\u00E4rungsquote> "50" .
+_:b20 <info:oi/Bekannt gewordene F\u00E4lle> "77644" .
+_:b20 <info:oi/Ermittelte Tatverd\u00E4chtigte> "27183" .
+_:b20 <info:oi/Jahr> "2009" .
+_:b21 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "38495" .
+_:b21 <info:oi/Aufkl\u00E4rungsquote> "48" .
+_:b21 <info:oi/Bekannt gewordene F\u00E4lle> "80123" .
+_:b21 <info:oi/Ermittelte Tatverd\u00E4chtigte> "27742" .
+_:b21 <info:oi/Jahr> "2010" .
+_:b22 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "42862" .
+_:b22 <info:oi/Aufkl\u00E4rungsquote> "49" .
+_:b22 <info:oi/Bekannt gewordene F\u00E4lle> "87608" .
+_:b22 <info:oi/Ermittelte Tatverd\u00E4chtigte> "28650" .
+_:b22 <info:oi/Jahr> "2011" .
+_:b23 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "44233" .
+_:b23 <info:oi/Aufkl\u00E4rungsquote> "50" .
+_:b23 <info:oi/Bekannt gewordene F\u00E4lle> "88215" .
+_:b23 <info:oi/Ermittelte Tatverd\u00E4chtigte> "28803" .
+_:b23 <info:oi/Jahr> "2012" .
+_:b24 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "45773" .
+_:b24 <info:oi/Aufkl\u00E4rungsquote> "52" .
+_:b24 <info:oi/Bekannt gewordene F\u00E4lle> "88240" .
+_:b24 <info:oi/Ermittelte Tatverd\u00E4chtigte> "29015" .
+_:b24 <info:oi/Jahr> "2013" .
+_:b25 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "47010" .
+_:b25 <info:oi/Aufkl\u00E4rungsquote> "50" .
+_:b25 <info:oi/Bekannt gewordene F\u00E4lle> "93855" .
+_:b25 <info:oi/Ermittelte Tatverd\u00E4chtigte> "30126" .
+_:b25 <info:oi/Jahr> "2014" .
+_:b26 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "45796" .
+_:b26 <info:oi/Aufkl\u00E4rungsquote> "51" .
+_:b26 <info:oi/Bekannt gewordene F\u00E4lle> "90491" .
+_:b26 <info:oi/Ermittelte Tatverd\u00E4chtigte> "30392" .
+_:b26 <info:oi/Jahr> "2015" .
+_:b27 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "43598" .
+_:b27 <info:oi/Aufkl\u00E4rungsquote> "53" .
+_:b27 <info:oi/Bekannt gewordene F\u00E4lle> "83066" .
+_:b27 <info:oi/Ermittelte Tatverd\u00E4chtigte> "29758" .
+_:b27 <info:oi/Jahr> "2016" .
+_:b28 <info:oi/Aufgekl\u00E4rte F\u00E4lle> "41832" .
+_:b28 <info:oi/Aufkl\u00E4rungsquote> "57" .
+_:b28 <info:oi/Bekannt gewordene F\u00E4lle> "73280" .
+_:b28 <info:oi/Ermittelte Tatverd\u00E4chtigte> "28176" .
+_:b28 <info:oi/Jahr> "2017" .
+

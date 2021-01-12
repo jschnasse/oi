@@ -37,7 +37,18 @@ public class MainTest {
 		System.setOut(originalOut);
 		System.setErr(originalErr);
 	}
-
+	
+	@Test
+	public void just_xml() throws Exception {
+		Path currentRelativePath = Paths.get("");
+		String s = currentRelativePath.toAbsolutePath().toString();
+		new CommandLine(new Main()).setCaseInsensitiveEnumValuesAllowed(true).execute(s + "/src/test/resources/xml/in/HT015847062.xml");
+		Map<String, Object> expected = YamlReader.getMap(Thread.currentThread().getContextClassLoader()
+				.getResourceAsStream("xml/out/HT015847062.xml.yml"));
+		Map<String, Object> actual = YamlReader.getMap(new ByteArrayInputStream(outContent.toByteArray()));
+		TestHelper.mapCompare(expected, actual);
+	}
+	
 	@Test
 	public void csv_to_json() throws Exception {
 		Path currentRelativePath = Paths.get("");

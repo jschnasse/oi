@@ -3,7 +3,7 @@
 scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $scriptdir
 source VERSIONS
-mvnparam=$1
+mvnparam=skipTests
 
 function build_oi(){
  package_name=$1

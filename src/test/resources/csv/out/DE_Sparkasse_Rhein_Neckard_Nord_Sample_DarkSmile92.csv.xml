@@ -1,0 +1,24 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<HashMap>
+  <data>
+    <Auftragskonto>01234567</Auftragskonto>
+    <Auslagenersatz Ruecklastschrift></Auslagenersatz Ruecklastschrift>
+    <BIC (SWIFT-Code)>GENODEF1WU1</BIC (SWIFT-Code)>
+    <Beguenstigter/Zahlungspflichtiger>Name of payee</Beguenstigter/Zahlungspflichtiger>
+    <Betrag>-25,65</Betrag>
+    <Buchungstag>03.11.17</Buchungstag>
+    <Buchungstext>FOLGELASTSCHRIFT</Buchungstext>
+    <Glaeubiger ID>DE15FIT00000123456</Glaeubiger ID>
+    <Info>Umsatz gebucht</Info>
+    <Kontonummer/IBAN>DE28790900000100232823</Kontonummer/IBAN>
+    <Kundenreferenz (End-to-End)>BWUE17110200347677C</Kundenreferenz (End-to-End)>
+    <Lastschrift Ursprungsbetrag></Lastschrift Ursprungsbetrag>
+    <Mandatsreferenz>24274-1</Mandatsreferenz>
+    <Sammlerreferenz></Sammlerreferenz>
+    <Valutadatum>03.11.17</Valutadatum>
+    <Verwendungszweck>Monthly membership</Verwendungszweck>
+    <Waehrung>EUR</Waehrung>
+  </data>
+</HashMap>
+
+

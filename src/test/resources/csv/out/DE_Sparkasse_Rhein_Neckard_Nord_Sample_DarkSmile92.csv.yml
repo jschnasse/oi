@@ -1,0 +1,21 @@
+---
+data:
+- Auftragskonto: "01234567"
+  Auslagenersatz Ruecklastschrift: ""
+  BIC (SWIFT-Code): "GENODEF1WU1"
+  Beguenstigter/Zahlungspflichtiger: "Name of payee"
+  Betrag: "-25,65"
+  Buchungstag: "03.11.17"
+  Buchungstext: "FOLGELASTSCHRIFT"
+  Glaeubiger ID: "DE15FIT00000123456"
+  Info: "Umsatz gebucht"
+  Kontonummer/IBAN: "DE28790900000100232823"
+  Kundenreferenz (End-to-End): "BWUE17110200347677C"
+  Lastschrift Ursprungsbetrag: ""
+  Mandatsreferenz: "24274-1"
+  Sammlerreferenz: ""
+  Valutadatum: "03.11.17"
+  Verwendungszweck: "Monthly membership"
+  Waehrung: "EUR"
+
+

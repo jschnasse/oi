@@ -1,0 +1,462 @@
+
+_:b0 <info:oi/data> _:b52 .
+
+_:b52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b1;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b53 .
+
+_:b53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b2;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b54 .
+
+_:b54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b3;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b55 .
+
+_:b55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b4;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b56 .
+
+_:b56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b5;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b57 .
+
+_:b57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b6;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b58 .
+
+_:b58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b7;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b59 .
+
+_:b59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b60 .
+
+_:b60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b9;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b61 .
+
+_:b61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b10;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b62 .
+
+_:b62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b11;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b63 .
+
+_:b63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b12;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b64 .
+
+_:b64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b13;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b65 .
+
+_:b65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b14;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b66 .
+
+_:b66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b15;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b67 .
+
+_:b67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b16;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b68 .
+
+_:b68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b17;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b69 .
+
+_:b69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b18;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b70 .
+
+_:b70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b19;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b71 .
+
+_:b71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b20;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b72 .
+
+_:b72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b21;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b73 .
+
+_:b73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b22;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b74 .
+
+_:b74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b23;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b75 .
+
+_:b75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b24;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b76 .
+
+_:b76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b25;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b77 .
+
+_:b77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b26;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b78 .
+
+_:b78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b27;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b79 .
+
+_:b79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b28;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b80 .
+
+_:b80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b29;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b81 .
+
+_:b81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b30;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b82 .
+
+_:b82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b31;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b83 .
+
+_:b83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b32;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b84 .
+
+_:b84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b33;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b85 .
+
+_:b85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b34;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b86 .
+
+_:b86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b35;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b87 .
+
+_:b87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b36;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b88 .
+
+_:b88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b37;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b89 .
+
+_:b89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b38;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b90 .
+
+_:b90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b39;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b91 .
+
+_:b91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b40;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b92 .
+
+_:b92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b41;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b93 .
+
+_:b93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b42;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b94 .
+
+_:b94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b43;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b95 .
+
+_:b95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b44;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b96 .
+
+_:b96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b45;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b97 .
+
+_:b97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b46;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b98 .
+
+_:b98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b47;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b99 .
+
+_:b99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b48;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b100 .
+
+_:b100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b49;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b101 .
+
+_:b101 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b50;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b102 .
+
+_:b102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b51;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+
+_:b1 <info:oi/Art\u0020des\u0020Kampfmittels> "Granate (50-60 cm lang)";
+  <info:oi/Datum> "Mi";
+  <info:oi/Entschärfungsdatum> "23.01.2019";
+  <info:oi/Fundzeit> "11:00";
+  <info:oi/Örtlichkeit> "Deutz-Mülheimer-Str. 129" .
+
+_:b2 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner, amerikanisch";
+  <info:oi/Datum> "Mi";
+  <info:oi/Entschärfungsdatum> "06.02.2019";
+  <info:oi/Fundzeit> "14:00";
+  <info:oi/Örtlichkeit> "Mülheimer-Hafen" .
+
+_:b3 <info:oi/Art\u0020des\u0020Kampfmittels> "Stabbrandbombe";
+  <info:oi/Datum> "Di";
+  <info:oi/Entschärfungsdatum> "12.02.2019";
+  <info:oi/Fundzeit> "21:20";
+  <info:oi/Örtlichkeit> "Ensener Weg (Weiss), Ackerfläche zwischen Dauergrünland und Haus Auenweg 140" .
+
+_:b4 <info:oi/Art\u0020des\u0020Kampfmittels> "2 Kampfmittel in Kleingartenanlage";
+  <info:oi/Datum> "DI";
+  <info:oi/Entschärfungsdatum> "19.03.2019";
+  <info:oi/Fundzeit> "09:00";
+  <info:oi/Örtlichkeit> "Militärringstr./ Unterer Kommarweg" .
+
+_:b5 <info:oi/Art\u0020des\u0020Kampfmittels> "Waldbad Dünnwald, vermeintliche Granate stellte sich als Holzstück heraus";
+  <info:oi/Datum> "Fr";
+  <info:oi/Entschärfungsdatum> "22.03.2019";
+  <info:oi/Fundzeit> "15:30";
+  <info:oi/Örtlichkeit> "Peter-Baum-Weg" .
+
+_:b6 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zenter";
+  <info:oi/Datum> "Mi";
+  <info:oi/Entschärfungsdatum> "27.03.2019";
+  <info:oi/Fundzeit> "15:30";
+  <info:oi/Örtlichkeit> "Kannebäckerstraße 64" .
+
+_:b7 <info:oi/Art\u0020des\u0020Kampfmittels> "Bombenträger für Streubomben";
+  <info:oi/Datum> "Do";
+  <info:oi/Entschärfungsdatum> "28.03.2019";
+  <info:oi/Fundzeit> "15:45";
+  <info:oi/Örtlichkeit> "Emil-Hoffmann-Straße/Tor 3" .
+
+_:b8 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner";
+  <info:oi/Datum> "Mi";
+  <info:oi/Entschärfungsdatum> "20.03.2019";
+  <info:oi/Fundzeit> "12:30";
+  <info:oi/Örtlichkeit> "Hansestr. 52" .
+
+_:b9 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zenter";
+  <info:oi/Datum> "Do";
+  <info:oi/Entschärfungsdatum> "21.03.2019";
+  <info:oi/Fundzeit> "09:00";
+  <info:oi/Örtlichkeit> "Hansestr. 52 / Westhovener Aue" .
+
+_:b10 <info:oi/Art\u0020des\u0020Kampfmittels> "Wasserrohr";
+  <info:oi/Datum> "Di";
+  <info:oi/Entschärfungsdatum> "09.04.2019";
+  <info:oi/Fundzeit> "13:00";
+  <info:oi/Örtlichkeit> "Venloer Str. Bahnhof West" .
+
+_:b11 <info:oi/Art\u0020des\u0020Kampfmittels> "Brandbombe auf Spiel- und Bolzplatz";
+  <info:oi/Datum> "Mo";
+  <info:oi/Entschärfungsdatum> "15.04.2019";
+  <info:oi/Fundzeit> "10:20";
+  <info:oi/Örtlichkeit> "von-Bodelschwingh-Str." .
+
+_:b12 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zenter, Langzeitzünder";
+  <info:oi/Datum> "MI";
+  <info:oi/Entschärfungsdatum> "24.04.2019";
+  <info:oi/Fundzeit> "13:00";
+  <info:oi/Örtlichkeit> "Kendenicher Str. 85" .
+
+_:b13 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner";
+  <info:oi/Datum> "Mo";
+  <info:oi/Entschärfungsdatum> "29.04.2019";
+  <info:oi/Fundzeit> "10:30";
+  <info:oi/Örtlichkeit> "Grünstr." .
+
+_:b14 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner";
+  <info:oi/Datum> "Mo";
+  <info:oi/Entschärfungsdatum> "06.05.2019";
+  <info:oi/Fundzeit> "11:00";
+  <info:oi/Örtlichkeit> "Erlenweg" .
+
+_:b15 <info:oi/Art\u0020des\u0020Kampfmittels> "10 und 2x 5 Zentner, Englisch mit Heckaufschlagzünder";
+  <info:oi/Datum> "Mi";
+  <info:oi/Entschärfungsdatum> "15.05.2019";
+  <info:oi/Fundzeit> "08:30";
+  <info:oi/Örtlichkeit> "Longericher Str. 335" .
+
+_:b16 <info:oi/Art\u0020des\u0020Kampfmittels> "Deutsche Flaggranate";
+  <info:oi/Datum> "Fr";
+  <info:oi/Entschärfungsdatum> "24.05.2019";
+  <info:oi/Fundzeit> "13:45";
+  <info:oi/Örtlichkeit> "Nachtigallstr. 2B" .
+
+_:b17 <info:oi/Art\u0020des\u0020Kampfmittels> "Objekt in Eierfrom, ca. 40 cm lang";
+  <info:oi/Datum> "Di";
+  <info:oi/Entschärfungsdatum> "04.06.2019";
+  <info:oi/Fundzeit> "11:30";
+  <info:oi/Örtlichkeit> "Leybergstr. 1" .
+
+_:b18 <info:oi/Art\u0020des\u0020Kampfmittels> "Batterien eines Panzers ";
+  <info:oi/Datum> "Di ";
+  <info:oi/Entschärfungsdatum> "04.06.2019";
+  <info:oi/Fundzeit> "12:00";
+  <info:oi/Örtlichkeit> "Albertus-Magnus-Platz" .
+
+_:b19 <info:oi/Art\u0020des\u0020Kampfmittels> "rauchende Phosphorbombe";
+  <info:oi/Datum> "Mi";
+  <info:oi/Entschärfungsdatum> "05.06.2019";
+  <info:oi/Fundzeit> "07:45";
+  <info:oi/Örtlichkeit> "Albertus-Magnus-Platz" .
+
+_:b20 <info:oi/Art\u0020des\u0020Kampfmittels> "3,7 cm Sprenggranate amer. Bauart";
+  <info:oi/Datum> "Fr. ";
+  <info:oi/Entschärfungsdatum> "05.07.2019";
+  <info:oi/Fundzeit> "13:23";
+  <info:oi/Örtlichkeit> "Kasselberger Weg Ecke Auf dem Herbst" .
+
+_:b21 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner englisch";
+  <info:oi/Datum> "Mo.";
+  <info:oi/Entschärfungsdatum> "08.07.2019";
+  <info:oi/Fundzeit> "10:00";
+  <info:oi/Örtlichkeit> "Erlenweg 39" .
+
+_:b22 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner, Ohne Zünder";
+  <info:oi/Datum> "Fr. ";
+  <info:oi/Entschärfungsdatum> "19.07.2019";
+  <info:oi/Fundzeit> "10:00";
+  <info:oi/Örtlichkeit> "BAB 3 / Eiler Str. " .
+
+_:b23 <info:oi/Art\u0020des\u0020Kampfmittels> "2 x 5 Zentner (deutsch u. amerikanisch), ohne Zünder";
+  <info:oi/Datum> "Fr";
+  <info:oi/Entschärfungsdatum> "19.07.2019";
+  <info:oi/Fundzeit> "12:00";
+  <info:oi/Örtlichkeit> "BAB 3 / Eiler Str. " .
+
+_:b24 <info:oi/Art\u0020des\u0020Kampfmittels> "10 Zentner, amerikanisch Heckzünder";
+  <info:oi/Datum> "Do";
+  <info:oi/Entschärfungsdatum> "01.08.2019";
+  <info:oi/Fundzeit> "09:30";
+  <info:oi/Örtlichkeit> "Harry-Klopfer-Str. 1" .
+
+_:b25 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner englisch, Langzeitzünder";
+  <info:oi/Datum> "Di";
+  <info:oi/Entschärfungsdatum> "06.08.2019";
+  <info:oi/Fundzeit> "10:00";
+  <info:oi/Örtlichkeit> "Geisbergstr. 47 a" .
+
+_:b26 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner englisch, Aufschlagzünder";
+  <info:oi/Datum> "Mi";
+  <info:oi/Entschärfungsdatum> "07.08.2019";
+  <info:oi/Fundzeit> "14:30";
+  <info:oi/Örtlichkeit> "Robert-Koch-Str./ Gyrhofstr." .
+
+_:b27 <info:oi/Art\u0020des\u0020Kampfmittels> "Granate (50-60 cm lang); bewegt";
+  <info:oi/Datum> "Do";
+  <info:oi/Entschärfungsdatum> "08.08.2019";
+  <info:oi/Fundzeit> "12:30";
+  <info:oi/Örtlichkeit> "Kalkberg" .
+
+_:b28 <info:oi/Art\u0020des\u0020Kampfmittels> "Signalbombe, leer,";
+  <info:oi/Datum> "Fr";
+  <info:oi/Entschärfungsdatum> "09.08.2019";
+  <info:oi/Fundzeit> "10:50";
+  <info:oi/Örtlichkeit> "Egonstr.76" .
+
+_:b29 <info:oi/Art\u0020des\u0020Kampfmittels> "Rohr";
+  <info:oi/Datum> "Di";
+  <info:oi/Entschärfungsdatum> "13.08.2019";
+  <info:oi/Fundzeit> "11:00";
+  <info:oi/Örtlichkeit> "Neusser Wall 33" .
+
+_:b30 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner englisch, Langzeitzünder";
+  <info:oi/Datum> "DO";
+  <info:oi/Entschärfungsdatum> "15.08.2019";
+  <info:oi/Fundzeit> "10:00";
+  <info:oi/Örtlichkeit> "Briedeler Str. 14" .
+
+_:b31 <info:oi/Art\u0020des\u0020Kampfmittels> "Granate";
+  <info:oi/Datum> "Sa";
+  <info:oi/Entschärfungsdatum> "31.08.2019";
+  <info:oi/Fundzeit> "19:00";
+  <info:oi/Örtlichkeit> "Kasselberger Weg" .
+
+_:b32 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner englisch, Aufschlagzünder";
+  <info:oi/Datum> "Mo";
+  <info:oi/Entschärfungsdatum> "02.09.2019";
+  <info:oi/Fundzeit> "10:00";
+  <info:oi/Örtlichkeit> "Grüner Weg Ehrenfeld" .
+
+_:b33 <info:oi/Art\u0020des\u0020Kampfmittels> "Granate";
+  <info:oi/Datum> "Sa";
+  <info:oi/Entschärfungsdatum> "07.09.2019";
+  <info:oi/Fundzeit> "18:15";
+  <info:oi/Örtlichkeit> "Thenhoven-Escher Weg" .
+
+_:b34 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner";
+  <info:oi/Datum> "Fr";
+  <info:oi/Entschärfungsdatum> "13.09.2019";
+  <info:oi/Fundzeit> "10:00";
+  <info:oi/Örtlichkeit> "Leybergastraße" .
+
+_:b35 <info:oi/Art\u0020des\u0020Kampfmittels> "50Kg, amerikanisch, ohne Zünder";
+  <info:oi/Datum> "Mi";
+  <info:oi/Entschärfungsdatum> "25.09.2019";
+  <info:oi/Fundzeit> "11:20";
+  <info:oi/Örtlichkeit> "Konrad-Adenauer-Str. 25 (Ro)" .
+
+_:b36 <info:oi/Art\u0020des\u0020Kampfmittels> "KBD Verdachtspunkt nicht bestätigt, Schlacke";
+  <info:oi/Datum> "So";
+  <info:oi/Entschärfungsdatum> "29.09.2019";
+  <info:oi/Fundzeit> "08:30";
+  <info:oi/Örtlichkeit> "Gremberger Str. DB Bahngleise" .
+
+_:b37 <info:oi/Art\u0020des\u0020Kampfmittels> "amerikanische Phosphorgranate mit 81mm Durchmesser";
+  <info:oi/Datum> "Di";
+  <info:oi/Entschärfungsdatum> "01.10.2019";
+  <info:oi/Fundzeit> "15:00";
+  <info:oi/Örtlichkeit> "Merkenicher Str. 206" .
+
+_:b38 <info:oi/Art\u0020des\u0020Kampfmittels> "10 Zentner, englisch, Heckzünder";
+  <info:oi/Datum> "Mo";
+  <info:oi/Entschärfungsdatum> "07.10.2019";
+  <info:oi/Fundzeit> "09:10";
+  <info:oi/Örtlichkeit> "Kapellenstr. 65, 51103 Köln" .
+
+_:b39 <info:oi/Art\u0020des\u0020Kampfmittels> "Sprengranate (Meldung an Putzer)";
+  <info:oi/Datum> "Di";
+  <info:oi/Entschärfungsdatum> "08.10.2019";
+  <info:oi/Fundzeit> "11:56";
+  <info:oi/Örtlichkeit> "Richard-Byrdstr./Melli-Beesestr." .
+
+_:b40 <info:oi/Art\u0020des\u0020Kampfmittels> "10 zentner amerikanisch, Heckzünder";
+  <info:oi/Datum> "Mo";
+  <info:oi/Entschärfungsdatum> "14.10.2019";
+  <info:oi/Fundzeit> "09:00";
+  <info:oi/Örtlichkeit> "Scheffelstr.30" .
+
+_:b41 <info:oi/Art\u0020des\u0020Kampfmittels> "Sprengung 10 Zentner";
+  <info:oi/Datum> "Di";
+  <info:oi/Entschärfungsdatum> "15.10.2019";
+  <info:oi/Fundzeit> "09:00";
+  <info:oi/Örtlichkeit> "Weidenweg" .
+
+_:b42 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner mit Front- und Heckzünder";
+  <info:oi/Datum> "Do";
+  <info:oi/Entschärfungsdatum> "07.11.2019";
+  <info:oi/Fundzeit> "10:00";
+  <info:oi/Örtlichkeit> "Deutzer Ring" .
+
+_:b43 <info:oi/Art\u0020des\u0020Kampfmittels> "2,5 Zentner mit Heckaufschlagzünder";
+  <info:oi/Datum> "Do";
+  <info:oi/Entschärfungsdatum> "21.11.2019";
+  <info:oi/Fundzeit> "13:50";
+  <info:oi/Örtlichkeit> "Wuppertaler Str. 30" .
+
+_:b44 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner mit Heckaufschlagzünder";
+  <info:oi/Datum> "Fr. ";
+  <info:oi/Entschärfungsdatum> "22.11.2019";
+  <info:oi/Fundzeit> "15:15";
+  <info:oi/Örtlichkeit> "Karlheinz-Steimel-Weg" .
+
+_:b45 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner mit Heckaufschlagzünder";
+  <info:oi/Datum> "Sa";
+  <info:oi/Entschärfungsdatum> "23.11.2019";
+  <info:oi/Fundzeit> "07:00";
+  <info:oi/Örtlichkeit> "Karlheinz-Steimel-Weg" .
+
+_:b46 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner mit Heckaufschlagzünder";
+  <info:oi/Datum> "Di.";
+  <info:oi/Entschärfungsdatum> "26.11.2019";
+  <info:oi/Fundzeit> "15:15";
+  <info:oi/Örtlichkeit> "Karlheinz-Steimel-Weg" .
+
+_:b47 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner mit Heckaufschlagzünder";
+  <info:oi/Datum> "Sa";
+  <info:oi/Entschärfungsdatum> "27.11.2019";
+  <info:oi/Fundzeit> "08:00";
+  <info:oi/Örtlichkeit> "Karlheinz-Steimel-Weg" .
+
+_:b48 <info:oi/Art\u0020des\u0020Kampfmittels> "Panzerabwehrrakete ";
+  <info:oi/Datum> "Sa";
+  <info:oi/Entschärfungsdatum> "07.12.2019";
+  <info:oi/Fundzeit> "12:30";
+  <info:oi/Örtlichkeit> "Loorweg 87 (Po Langel)" .
+
+_:b49 <info:oi/Art\u0020des\u0020Kampfmittels> "Nebelgranate";
+  <info:oi/Datum> "Di";
+  <info:oi/Entschärfungsdatum> "10.12.2019";
+  <info:oi/Fundzeit> "13:30";
+  <info:oi/Örtlichkeit> "Gräfstr./Subbelrather Str." .
+
+_:b50 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner mit Heckaufschlagzünder";
+  <info:oi/Datum> "Mo";
+  <info:oi/Entschärfungsdatum> "16.12.2019";
+  <info:oi/Fundzeit> "15:00";
+  <info:oi/Örtlichkeit> "Am Westhover Berg 39" .
+
+_:b51 <info:oi/Art\u0020des\u0020Kampfmittels> "5 Zentner mit Heckaufschlagzünder";
+  <info:oi/Datum> "Mi";
+  <info:oi/Entschärfungsdatum> "18.12.2019";
+  <info:oi/Fundzeit> "04:30";
+  <info:oi/Örtlichkeit> "Ensener Weg  " .
+

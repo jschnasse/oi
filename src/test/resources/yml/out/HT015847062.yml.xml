@@ -1,5 +1,5 @@
 <?xml version='1.1' encoding='UTF-8'?>
-<LinkedHashMap>
+<HashMap>
   <extent>XIV, 441 S. : Ill., graph. Darst.</extent>
   <oclcNumber>553577538</oclcNumber>
   <subject>
@@ -263,6 +263,6 @@
     <id>http://worldcat.org/oclc/553577538</id>
     <label>553577538</label>
   </sameAs>
-</LinkedHashMap>
+</HashMap>
 
 

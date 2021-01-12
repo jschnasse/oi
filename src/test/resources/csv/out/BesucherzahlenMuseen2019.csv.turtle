@@ -1,0 +1,224 @@
+
+_:b0 <info:oi/data> _:b14 .
+
+_:b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b1 .
+
+_:b1 <info:oi/2019> "Jan";
+  <info:oi/Archäologische\u0020Zone> "3.551";
+  <info:oi/Kölnisches\u0020Stadtmuseum> "4.090";
+  <info:oi/Museen\u0020gesamt> "111.243";
+  <info:oi/Museum\u0020Ludwig> "36.166";
+  <info:oi/Museum\u0020Schnütgen> "3.659";
+  <info:oi/Museum\u0020für\u0020Angewandte\u0020Kunst> "13.209";
+  <info:oi/Museum\u0020für\u0020Ostasiatische\u0020Kunst> "1.604";
+  <info:oi/NS-Dokumentationszentrum> "8.322";
+  <info:oi/Rautenstrauch-Joest-Museum> "14.424";
+  <info:oi/Römisch-Germanisches\u0020Museum> "4.227";
+  <info:oi/Wallraf-Richartz-Museum\u0020-\u0020Fondation\u0020Corboud> "21.991" .
+
+_:b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b15 .
+
+_:b15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b2 .
+
+_:b2 <info:oi/2019> "Feb";
+  <info:oi/Archäologische\u0020Zone> "4.043";
+  <info:oi/Kölnisches\u0020Stadtmuseum> "19.468";
+  <info:oi/Museen\u0020gesamt> "103.676";
+  <info:oi/Museum\u0020Ludwig> "15.479";
+  <info:oi/Museum\u0020Schnütgen> "3.615";
+  <info:oi/Museum\u0020für\u0020Angewandte\u0020Kunst> "9.076";
+  <info:oi/Museum\u0020für\u0020Ostasiatische\u0020Kunst> "1.689";
+  <info:oi/NS-Dokumentationszentrum> "6.872";
+  <info:oi/Rautenstrauch-Joest-Museum> "15.892";
+  <info:oi/Römisch-Germanisches\u0020Museum> "3.452";
+  <info:oi/Wallraf-Richartz-Museum\u0020-\u0020Fondation\u0020Corboud> "24.090" .
+
+_:b15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b16 .
+
+_:b16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b3 .
+
+_:b3 <info:oi/2019> "Mrz";
+  <info:oi/Archäologische\u0020Zone> "5.606";
+  <info:oi/Kölnisches\u0020Stadtmuseum> "12.067";
+  <info:oi/Museen\u0020gesamt> "94.980";
+  <info:oi/Museum\u0020Ludwig> "21.206";
+  <info:oi/Museum\u0020Schnütgen> "2.749";
+  <info:oi/Museum\u0020für\u0020Angewandte\u0020Kunst> "9.119";
+  <info:oi/Museum\u0020für\u0020Ostasiatische\u0020Kunst> "1.828";
+  <info:oi/NS-Dokumentationszentrum> "7.553";
+  <info:oi/Rautenstrauch-Joest-Museum> "5.436";
+  <info:oi/Römisch-Germanisches\u0020Museum> "5.152";
+  <info:oi/Wallraf-Richartz-Museum\u0020-\u0020Fondation\u0020Corboud> "24.264" .
+
+_:b16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b17 .
+
+_:b17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b4 .
+
+_:b4 <info:oi/2019> "Apr";
+  <info:oi/Archäologische\u0020Zone> "0";
+  <info:oi/Kölnisches\u0020Stadtmuseum> "3.262";
+  <info:oi/Museen\u0020gesamt> "60.081";
+  <info:oi/Museum\u0020Ludwig> "20.459";
+  <info:oi/Museum\u0020Schnütgen> "2.789";
+  <info:oi/Museum\u0020für\u0020Angewandte\u0020Kunst> "5.395";
+  <info:oi/Museum\u0020für\u0020Ostasiatische\u0020Kunst> "1.759";
+  <info:oi/NS-Dokumentationszentrum> "9.124";
+  <info:oi/Rautenstrauch-Joest-Museum> "4.634";
+  <info:oi/Römisch-Germanisches\u0020Museum> "5.852";
+  <info:oi/Wallraf-Richartz-Museum\u0020-\u0020Fondation\u0020Corboud> "6.807" .
+
+_:b17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b18 .
+
+_:b18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b5 .
+
+_:b5 <info:oi/2019> "Mai";
+  <info:oi/Archäologische\u0020Zone> "0";
+  <info:oi/Kölnisches\u0020Stadtmuseum> "3.711";
+  <info:oi/Museen\u0020gesamt> "69.775";
+  <info:oi/Museum\u0020Ludwig> "24.489";
+  <info:oi/Museum\u0020Schnütgen> "2.174";
+  <info:oi/Museum\u0020für\u0020Angewandte\u0020Kunst> "8.283";
+  <info:oi/Museum\u0020für\u0020Ostasiatische\u0020Kunst> "1.656";
+  <info:oi/NS-Dokumentationszentrum> "9.415";
+  <info:oi/Rautenstrauch-Joest-Museum> "5.386";
+  <info:oi/Römisch-Germanisches\u0020Museum> "6.387";
+  <info:oi/Wallraf-Richartz-Museum\u0020-\u0020Fondation\u0020Corboud> "8.274" .
+
+_:b18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b19 .
+
+_:b19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b6 .
+
+_:b6 <info:oi/2019> "Jun";
+  <info:oi/Archäologische\u0020Zone> "0";
+  <info:oi/Kölnisches\u0020Stadtmuseum> "9.719";
+  <info:oi/Museen\u0020gesamt> "59.567";
+  <info:oi/Museum\u0020Ludwig> "17.637";
+  <info:oi/Museum\u0020Schnütgen> "2.511";
+  <info:oi/Museum\u0020für\u0020Angewandte\u0020Kunst> "4.131";
+  <info:oi/Museum\u0020für\u0020Ostasiatische\u0020Kunst> "1.478";
+  <info:oi/NS-Dokumentationszentrum> "9.279";
+  <info:oi/Rautenstrauch-Joest-Museum> "3.794";
+  <info:oi/Römisch-Germanisches\u0020Museum> "5.152";
+  <info:oi/Wallraf-Richartz-Museum\u0020-\u0020Fondation\u0020Corboud> "5.866" .
+
+_:b19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b20 .
+
+_:b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b7 .
+
+_:b7 <info:oi/2019> "Jul";
+  <info:oi/Archäologische\u0020Zone> "0";
+  <info:oi/Kölnisches\u0020Stadtmuseum> "3.100";
+  <info:oi/Museen\u0020gesamt> "49.347";
+  <info:oi/Museum\u0020Ludwig> "17.847";
+  <info:oi/Museum\u0020Schnütgen> "2.055";
+  <info:oi/Museum\u0020für\u0020Angewandte\u0020Kunst> "2.254";
+  <info:oi/Museum\u0020für\u0020Ostasiatische\u0020Kunst> "1.184";
+  <info:oi/NS-Dokumentationszentrum> "8.929";
+  <info:oi/Rautenstrauch-Joest-Museum> "5.268";
+  <info:oi/Römisch-Germanisches\u0020Museum> "2.750";
+  <info:oi/Wallraf-Richartz-Museum\u0020-\u0020Fondation\u0020Corboud> "5.960" .
+
+_:b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b21 .
+
+_:b21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8 .
+
+_:b8 <info:oi/2019> "Aug";
+  <info:oi/Archäologische\u0020Zone> "0";
+  <info:oi/Kölnisches\u0020Stadtmuseum> "2.314";
+  <info:oi/Museen\u0020gesamt> "50.611";
+  <info:oi/Museum\u0020Ludwig> "17.130";
+  <info:oi/Museum\u0020Schnütgen> "2.463";
+  <info:oi/Museum\u0020für\u0020Angewandte\u0020Kunst> "7.385";
+  <info:oi/Museum\u0020für\u0020Ostasiatische\u0020Kunst> "1.385";
+  <info:oi/NS-Dokumentationszentrum> "5.512";
+  <info:oi/Rautenstrauch-Joest-Museum> "4.246";
+  <info:oi/Römisch-Germanisches\u0020Museum> "3.842";
+  <info:oi/Wallraf-Richartz-Museum\u0020-\u0020Fondation\u0020Corboud> "6.334" .
+
+_:b21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b22 .
+
+_:b22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b9 .
+
+_:b9 <info:oi/2019> "Sep";
+  <info:oi/Archäologische\u0020Zone> "0";
+  <info:oi/Kölnisches\u0020Stadtmuseum> "6.140";
+  <info:oi/Museen\u0020gesamt> "50.278";
+  <info:oi/Museum\u0020Ludwig> "15.561";
+  <info:oi/Museum\u0020Schnütgen> "2.376";
+  <info:oi/Museum\u0020für\u0020Angewandte\u0020Kunst> "6.601";
+  <info:oi/Museum\u0020für\u0020Ostasiatische\u0020Kunst> "1.199";
+  <info:oi/NS-Dokumentationszentrum> "6.495";
+  <info:oi/Rautenstrauch-Joest-Museum> "3.979";
+  <info:oi/Römisch-Germanisches\u0020Museum> "1.064";
+  <info:oi/Wallraf-Richartz-Museum\u0020-\u0020Fondation\u0020Corboud> "6.863" .
+
+_:b22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b23 .
+
+_:b23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b10 .
+
+_:b10 <info:oi/2019> "Okt";
+  <info:oi/Archäologische\u0020Zone> "0";
+  <info:oi/Kölnisches\u0020Stadtmuseum> "8.698";
+  <info:oi/Museen\u0020gesamt> "63.081";
+  <info:oi/Museum\u0020Ludwig> "18.110";
+  <info:oi/Museum\u0020Schnütgen> "1.750";
+  <info:oi/Museum\u0020für\u0020Angewandte\u0020Kunst> "8.527";
+  <info:oi/Museum\u0020für\u0020Ostasiatische\u0020Kunst> "1.235";
+  <info:oi/NS-Dokumentationszentrum> "7.368";
+  <info:oi/Rautenstrauch-Joest-Museum> "5.361";
+  <info:oi/Römisch-Germanisches\u0020Museum> "1.646";
+  <info:oi/Wallraf-Richartz-Museum\u0020-\u0020Fondation\u0020Corboud> "10.386" .
+
+_:b23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b24 .
+
+_:b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b11 .
+
+_:b11 <info:oi/2019> "Nov";
+  <info:oi/Archäologische\u0020Zone> "0";
+  <info:oi/Kölnisches\u0020Stadtmuseum> "0";
+  <info:oi/Museen\u0020gesamt> "41.640";
+  <info:oi/Museum\u0020Ludwig> "0";
+  <info:oi/Museum\u0020Schnütgen> "0";
+  <info:oi/Museum\u0020für\u0020Angewandte\u0020Kunst> "0";
+  <info:oi/Museum\u0020für\u0020Ostasiatische\u0020Kunst> "0";
+  <info:oi/NS-Dokumentationszentrum> "0";
+  <info:oi/Rautenstrauch-Joest-Museum> "0";
+  <info:oi/Römisch-Germanisches\u0020Museum> "0";
+  <info:oi/Wallraf-Richartz-Museum\u0020-\u0020Fondation\u0020Corboud> "41.640" .
+
+_:b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b25 .
+
+_:b25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b12 .
+
+_:b12 <info:oi/2019> "Dez";
+  <info:oi/Archäologische\u0020Zone> "0";
+  <info:oi/Kölnisches\u0020Stadtmuseum> "0";
+  <info:oi/Museen\u0020gesamt> "0";
+  <info:oi/Museum\u0020Ludwig> "0";
+  <info:oi/Museum\u0020Schnütgen> "0";
+  <info:oi/Museum\u0020für\u0020Angewandte\u0020Kunst> "0";
+  <info:oi/Museum\u0020für\u0020Ostasiatische\u0020Kunst> "0";
+  <info:oi/NS-Dokumentationszentrum> "0";
+  <info:oi/Rautenstrauch-Joest-Museum> "0";
+  <info:oi/Römisch-Germanisches\u0020Museum> "0";
+  <info:oi/Wallraf-Richartz-Museum\u0020-\u0020Fondation\u0020Corboud> "0" .
+
+_:b25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b26 .
+
+_:b26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b13 .
+
+_:b13 <info:oi/2019> "Jahressumme";
+  <info:oi/Archäologische\u0020Zone> "13.200";
+  <info:oi/Kölnisches\u0020Stadtmuseum> "72.569";
+  <info:oi/Museen\u0020gesamt> "754.279";
+  <info:oi/Museum\u0020Ludwig> "204.084";
+  <info:oi/Museum\u0020Schnütgen> "26.141";
+  <info:oi/Museum\u0020für\u0020Angewandte\u0020Kunst> "73.980";
+  <info:oi/Museum\u0020für\u0020Ostasiatische\u0020Kunst> "15.017";
+  <info:oi/NS-Dokumentationszentrum> "78.869";
+  <info:oi/Rautenstrauch-Joest-Museum> "68.420";
+  <info:oi/Römisch-Germanisches\u0020Museum> "39.524";
+  <info:oi/Wallraf-Richartz-Museum\u0020-\u0020Fondation\u0020Corboud> "162.475" .
+
+_:b26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+
