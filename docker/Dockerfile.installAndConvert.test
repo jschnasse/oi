@@ -14,3 +14,5 @@ RUN apt-get update && apt-get install -y \
 COPY . /tmp/oi  
 RUN oi /etc/passwd -d":" --header="login,password,uid,gid,comment,home,shell" -icsv
 RUN oi /tmp/oi/src/test/resources/xml/in/HT015847062.xml
+RUN oi /tmp/oi/src/test/resources/yml/in/HT015847062.yml -t rdfxml
+RUN oi -i turtle /tmp/oi/src/test/resources/issue-11/in/books.ttl -f /tmp/oi/src/test/resources/issue-11/in/books.frame
