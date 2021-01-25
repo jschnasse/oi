@@ -52,6 +52,25 @@ lsblk |grep -o sd.*|awk '{print $1 ";" $4 ";" $NF}'|oi -d";" --header="device,si
 curl https://api.github.com/users/jschnasse|oi -ijson -tcontext
 ```
 
+4. Generate pretty Json from RDF
+
+```
+oi -i turtle -t json books.ttl |jq '.["@graph"][0]'
+``` 
+
+with books.ttl
+
+```
+_:b0 a <http://schema.org/Book> ;
+    <http://schema.org/name> "Semantic Web Primer (First Edition)" ;
+    <http://schema.org/offers> _:b1 ;
+    <http://schema.org/publisher> "Linked Data Tools" .
+
+_:b1 a <http://schema.org/Offer> ;
+    <http://schema.org/price> "2.95" ;
+    <http://schema.org/priceCurrency> "USD" .
+```
+
 # Manual
 
 ```
@@ -233,6 +252,7 @@ bump
 
 ```
 editor VERSIONS
+source VERSIONS
 ./bumpVersion.sh
 ```
 
@@ -248,7 +268,8 @@ mvn gitflow:release
 build
 
 ```
-sudo ./build.sh skipTests
+# user must be able to use sudo
+./build.sh 
 ```
 
 release
