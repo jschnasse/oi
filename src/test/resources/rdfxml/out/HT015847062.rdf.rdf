@@ -1,0 +1,76 @@
+[ {
+  "@id" : "_:b0",
+  "@type" : [ "http://schema.org/CreateAction" ]
+}, {
+  "@id" : "_:b1",
+  "@type" : [ "https://d-nb.info/standards/elementset/gnd#Work" ]
+}, {
+  "@id" : "_:b2",
+  "@type" : [ "http://www.loc.gov/mads/rdf/v1#ComplexSubject" ]
+}, {
+  "@id" : "_:b3",
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Contribution" ]
+}, {
+  "@id" : "_:b4",
+  "@type" : [ "http://www.loc.gov/mads/rdf/v1#ComplexSubject" ]
+}, {
+  "@id" : "_:b5",
+  "@type" : [ "http://schema.org/PublicationEvent" ]
+}, {
+  "@id" : "http://lobid.org/hbz01/HT015847062",
+  "@type" : [ "http://schema.org/DataFeedItem" ]
+}, {
+  "@id" : "http://lobid.org/items/HT015847062:DE-1044:OCT9386%2B4#!",
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+}, {
+  "@id" : "http://lobid.org/items/HT015847062:DE-464:OCT9386%2B1#!",
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+}, {
+  "@id" : "http://lobid.org/items/HT015847062:DE-464:OCT9386%2B2#!",
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+}, {
+  "@id" : "http://lobid.org/items/HT015847062:DE-464:OCT9386%2B3#!",
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+}, {
+  "@id" : "http://lobid.org/items/HT015847062:DE-465:OCT9386%2B4#!",
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+}, {
+  "@id" : "http://lobid.org/items/HT015847062:DE-465:OCT9386%2B5#!",
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+}, {
+  "@id" : "http://lobid.org/items/HT015847062:DE-467:32QFD8011%2B1#!",
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+}, {
+  "@id" : "http://lobid.org/items/HT015847062:DE-467:75QFD8011#!",
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+}, {
+  "@id" : "http://lobid.org/items/HT015847062:DE-467:75QFD8011%2B1#!",
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+}, {
+  "@id" : "http://lobid.org/items/HT015847062:DE-5:2009%2F5398#!",
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+}, {
+  "@id" : "http://lobid.org/items/HT015847062:DE-Bi10:OCT%20Tale#!",
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+}, {
+  "@id" : "http://lobid.org/items/HT015847062:DE-Kob7:PH%2FV%202009%204482#!",
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+}, {
+  "@id" : "http://lobid.org/resources/HT015847062",
+  "@type" : [ "http://purl.org/lobid/lv#BibliographicDescription" ]
+}, {
+  "@id" : "http://lobid.org/resources/HT015847062#!",
+  "@type" : [ "http://purl.org/dc/terms/BibliographicResource", "http://purl.org/ontology/bibo/Book" ]
+}, {
+  "@id" : "https://d-nb.info/gnd/124120180",
+  "@type" : [ "https://d-nb.info/standards/elementset/gnd#Person" ]
+}, {
+  "@id" : "https://d-nb.info/gnd/4047390-9",
+  "@type" : [ "https://d-nb.info/standards/elementset/gnd#SubjectHeading" ]
+}, {
+  "@id" : "https://d-nb.info/gnd/4260601-9",
+  "@type" : [ "https://d-nb.info/standards/elementset/gnd#SubjectHeading" ]
+}, {
+  "@id" : "https://github.com/hbz/lobid-resources",
+  "@type" : [ "http://schema.org/SoftwareApplication" ]
+} ]

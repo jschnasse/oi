@@ -1,0 +1,111 @@
+---
+'@context':
+  prefLabel: "http://www.w3.org/2004/02/skos/core#prefLabel"
+  endDate: "http://schema.org/endDate"
+  startDate: "http://schema.org/startDate"
+  contributorID: "http://dcat-ap.de/def/dcatde/contributorID"
+  politicalGeocodingLevelURI: "http://dcat-ap.de/def/dcatde/politicalGeocodingLevelURI"
+  description: "http://purl.org/dc/terms/description"
+  identifier: "http://www.w3.org/ns/adms#identifier"
+  issued: "http://purl.org/dc/terms/issued"
+  modified: "http://purl.org/dc/terms/modified"
+  publisher: "http://purl.org/dc/terms/publisher"
+  spatial: "http://purl.org/dc/terms/spatial"
+  temporal: "http://purl.org/dc/terms/temporal"
+  title: "http://purl.org/dc/terms/title"
+  distribution: "http://www.w3.org/ns/dcat#distribution"
+  keyword: "http://www.w3.org/ns/dcat#keyword"
+  landingPage: "http://www.w3.org/ns/dcat#landingPage"
+  format: "http://purl.org/dc/terms/format"
+  language: "http://purl.org/dc/terms/language"
+  license: "http://purl.org/dc/terms/license"
+  accessURL: "http://www.w3.org/ns/dcat#accessURL"
+  name: "http://xmlns.com/foaf/0.1/name"
+'@graph':
+- '@id': "_:b0"
+  '@type': "http://purl.org/dc/terms/Location"
+  prefLabel: "05913000"
+- '@id': "_:b1"
+  '@type': "http://purl.org/dc/terms/PeriodOfTime"
+  endDate:
+    '@type': "http://www.w3.org/2001/XMLSchema#dateTime"
+    '@value': "2017-12-31T00:00:00"
+  startDate:
+    '@type': "http://www.w3.org/2001/XMLSchema#dateTime"
+    '@value': "1990-01-01T00:00:00"
+- '@id': "http://dcat-ap.de/def/contributors/openNRW"
+- '@id': "http://dcat-ap.de/def/licenses/dl-by-de/2.0"
+- '@id': "http://dcat-ap.de/def/politicalGeocoding/Level/municipality"
+- '@id': "http://opendata.dortmund.de"
+- '@id': "http://opendata.dortmund.de/duva2ckan-1.0.6/files/de-nrw-dortmund-entwicklung_der_kriminalitaet_nach_faellen_und_aufklaerungen_seit_1990/content"
+- '@id': "http://publications.europa.eu/resource/authority/file-type/CSV"
+- '@id': "http://publications.europa.eu/resource/authority/language/DEU"
+- '@id': "https://ckan.www.open.nrw.de/dataset/http://opendata.dortmund.de/duva2ckan-1.0.6/files/de-nrw-dortmund-entwicklung_der_kriminalitaet_nach_faellen_und_aufklaerungen_seit_1990#117"
+  '@type': "http://www.w3.org/ns/dcat#Dataset"
+  contributorID:
+  - '@id': "http://dcat-ap.de/def/contributors/openNRW"
+  - '@id': "http://opendata.dortmund.de"
+  politicalGeocodingLevelURI:
+    '@id': "http://dcat-ap.de/def/politicalGeocoding/Level/municipality"
+  description: "Entwicklung der Kriminalität nach Fällen und Aufklärungen seit 1990"
+  http://purl.org/dc/terms/identifier: "http://opendata.dortmund.de/duva2ckan-1.0.6/files/de-nrw-dortmund-entwicklung_der_kriminalitaet_nach_faellen_und_aufklaerungen_seit_1990#117"
+  issued:
+    '@type': "http://www.w3.org/2001/XMLSchema#dateTime"
+    '@value': "2019-10-24T05:19:59.879256"
+  modified:
+    '@type': "http://www.w3.org/2001/XMLSchema#dateTime"
+    '@value': "2020-04-10T06:37:26.742374"
+  publisher:
+    '@id': "https://ckan.www.open.nrw.de/organization/29cfaeaa-bea5-4dcd-9c1e-b928d73b838b"
+    '@type': "http://xmlns.com/foaf/0.1/Organization"
+    name: "Dortmund"
+  spatial:
+    '@id': "_:b0"
+    '@type': "http://purl.org/dc/terms/Location"
+    prefLabel: "05913000"
+  temporal:
+    '@id': "_:b1"
+    '@type': "http://purl.org/dc/terms/PeriodOfTime"
+    endDate:
+      '@type': "http://www.w3.org/2001/XMLSchema#dateTime"
+      '@value': "2017-12-31T00:00:00"
+    startDate:
+      '@type': "http://www.w3.org/2001/XMLSchema#dateTime"
+      '@value': "1990-01-01T00:00:00"
+  title: "Entwicklung der Kriminalität nach Fällen und Aufklärungen seit 1990"
+  identifier: "117"
+  distribution:
+    '@id': "https://ckan.www.open.nrw.de/dataset/http://opendata.dortmund.de/duva2ckan-1.0.6/files/de-nrw-dortmund-entwicklung_der_kriminalitaet_nach_faellen_und_aufklaerungen_seit_1990#117/resource/e94d3be2-8a61-4c51-861d-d0e7eb513639"
+    '@type': "http://www.w3.org/ns/dcat#Distribution"
+    format:
+      '@id': "http://publications.europa.eu/resource/authority/file-type/CSV"
+    language:
+      '@id': "http://publications.europa.eu/resource/authority/language/DEU"
+    license:
+      '@id': "http://dcat-ap.de/def/licenses/dl-by-de/2.0"
+    accessURL:
+      '@id': "http://opendata.dortmund.de/duva2ckan-1.0.6/files/de-nrw-dortmund-entwicklung_der_kriminalitaet_nach_faellen_und_aufklaerungen_seit_1990/content"
+  keyword:
+  - "aufgeklärte-fälle"
+  - "ermittelte-tatverdächtigte"
+  - "aufklärungsquote"
+  - "jahr"
+  - "bekannt-gewordene-fälle"
+  landingPage:
+    '@id': "https://opendata.dortmund.de/Informationsportal"
+- '@id': "https://ckan.www.open.nrw.de/dataset/http://opendata.dortmund.de/duva2ckan-1.0.6/files/de-nrw-dortmund-entwicklung_der_kriminalitaet_nach_faellen_und_aufklaerungen_seit_1990#117/resource/e94d3be2-8a61-4c51-861d-d0e7eb513639"
+  '@type': "http://www.w3.org/ns/dcat#Distribution"
+  format:
+    '@id': "http://publications.europa.eu/resource/authority/file-type/CSV"
+  language:
+    '@id': "http://publications.europa.eu/resource/authority/language/DEU"
+  license:
+    '@id': "http://dcat-ap.de/def/licenses/dl-by-de/2.0"
+  accessURL:
+    '@id': "http://opendata.dortmund.de/duva2ckan-1.0.6/files/de-nrw-dortmund-entwicklung_der_kriminalitaet_nach_faellen_und_aufklaerungen_seit_1990/content"
+- '@id': "https://ckan.www.open.nrw.de/organization/29cfaeaa-bea5-4dcd-9c1e-b928d73b838b"
+  '@type': "http://xmlns.com/foaf/0.1/Organization"
+  name: "Dortmund"
+- '@id': "https://opendata.dortmund.de/Informationsportal"
+
+

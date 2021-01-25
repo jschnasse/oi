@@ -1,0 +1,7 @@
+[ {
+  "@id" : "_:b0",
+  "@type" : [ "http://schema.org/Book" ]
+}, {
+  "@id" : "_:b1",
+  "@type" : [ "http://schema.org/Offer" ]
+} ]

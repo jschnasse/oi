@@ -1,0 +1,5 @@
+
+_:b0 a <http://schema.org/Book> .
+
+_:b1 a <http://schema.org/Offer> .
+

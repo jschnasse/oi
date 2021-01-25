@@ -1,0 +1,8 @@
+{
+  "name" : "http://schema.org/name",
+  "offers" : "http://schema.org/offers",
+  "publisher" : "http://schema.org/publisher",
+  "price" : "http://schema.org/price",
+  "priceCurrency" : "price:Currency"
+}
+
