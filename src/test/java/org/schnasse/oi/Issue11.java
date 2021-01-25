@@ -48,4 +48,16 @@ public class Issue11 {
 		Map<String, Object> actual = YamlReader.getMap(new ByteArrayInputStream(outContent.toByteArray()));
 		TestHelper.mapCompare(expected, actual);
 	}
+	
+	@SuppressWarnings("unchecked")
+	@Test
+	public void read_schema_org_integration_test2() {
+		Path currentRelativePath = Paths.get("");
+		String s = currentRelativePath.toAbsolutePath().toString();
+		new CommandLine(new Main()).setCaseInsensitiveEnumValuesAllowed(true).execute(s + "/src/test/resources/issue-11/in/books.ttl","-i","turtle");		
+		Map<String, Object> expected = YamlReader.getMap(Thread.currentThread().getContextClassLoader()
+				.getResourceAsStream("issue-11/out/book-gen.yml"));
+		Map<String, Object> actual = YamlReader.getMap(new ByteArrayInputStream(outContent.toByteArray()));
+		TestHelper.mapCompare(expected, actual);
+	}
 }
