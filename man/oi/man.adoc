@@ -1,6 +1,6 @@
 = oi(1)
 Jan Schnasse
-v0.5.7
+v0.5.8
 :doctype: manpage
 :manmanual: OI
 :mansource: OI
