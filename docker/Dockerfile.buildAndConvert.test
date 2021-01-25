@@ -1,6 +1,6 @@
 FROM adoptopenjdk/openjdk12:jdk-12.0.1_12 as build
 RUN jlink \
-    --add-modules java.base,java.naming,java.xml \
+    --add-modules java.base,java.naming,java.xml,jdk.crypto.ec \
     --verbose \
     --strip-debug \
     --compress=1 \
@@ -23,3 +23,4 @@ RUN ln -s /usr/share/jvm_for_oi/bin/java /usr/bin/jvm_for_oi \
 RUN jvm_for_oi -jar /usr/lib/oi.jar /etc/passwd -d":" --header="login,password,uid,gid,comment,home,shell" -icsv
 RUN jvm_for_oi -jar /usr/lib/oi.jar /tmp/oi/src/test/resources/xml/in/HT015847062.xml
 RUN jvm_for_oi -jar /usr/lib/oi.jar /tmp/oi/src/test/resources/yml/in/HT015847062.yml -t rdfxml
+RUN jvm_for_oi -jar /usr/lib/oi.jar -i turtle /tmp/oi/src/test/resources/issue-11/in/books.ttl -f /tmp/oi/src/test/resources/issue-11/in/books.frame
