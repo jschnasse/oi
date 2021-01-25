@@ -60,7 +60,7 @@ public class SmokeTest {
 
 	@Test
 	public void readRdf() throws Exception {
-		Map<String, Object> map = org.schnasse.oi.reader.RdfReader.getMap(
+		Map<String, Object> map = org.schnasse.oi.reader.RdfReader.getMapWithHandcraftedFrame(
 				JsonReader.getMap(getInputStream("old.tests/HT015847062.json")), RDFFormat.JSONLD,
 				JsonReader.getMap(getInputStream("old.tests/context.jsonld")));
 		JsonWriter.gprint(map);
@@ -93,7 +93,7 @@ public class SmokeTest {
 
 	@Test
 	public void readJson_2() throws Exception {
-		Map<String, Object> map = org.schnasse.oi.reader.RdfReader.getMap(
+		Map<String, Object> map = org.schnasse.oi.reader.RdfReader.getMapWithHandcraftedFrame(
 				JsonReader.getMap(getInputStream("json/in/arbeitsmarktKoeln.json")), RDFFormat.JSONLD,
 				JsonReader.getMap(getInputStream("json/context/arbeitsmarktKoeln.json.context")));
 		JsonWriter.gprint(map);

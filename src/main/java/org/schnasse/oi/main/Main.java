@@ -128,23 +128,23 @@ public class Main implements Callable<Integer> {
 				break;
 			case JSONLD:
 				content = RdfReader.getMap(in, RDFFormat.JSONLD, null);
-				content= RdfReader.getMap(content, RDFFormat.JSONLD, ContextWriter.findContext(content)); 
+				content= RdfReader.getMapWithGeneratedFrame(content, RDFFormat.JSONLD, ContextWriter.findContext(content)); 
 				break;
 			case NTRIPLES:
 				content = RdfReader.getMap(in, RDFFormat.NTRIPLES, null);
-				content= RdfReader.getMap(content, RDFFormat.JSONLD, ContextWriter.findContext(content)); 
+				content= RdfReader.getMapWithGeneratedFrame(content, RDFFormat.JSONLD, ContextWriter.findContext(content)); 
 				break;
 			case RDF:
 				content = RdfReader.getMap(in, RDFFormat.JSONLD, null);
-				content= RdfReader.getMap(content, RDFFormat.JSONLD, ContextWriter.findContext(content)); 
+				content= RdfReader.getMapWithGeneratedFrame(content, RDFFormat.JSONLD, ContextWriter.findContext(content)); 
 				break;
 			case RDFXML:
 				content = RdfReader.getMap(in, RDFFormat.RDFXML, null);
-				content= RdfReader.getMap(content, RDFFormat.JSONLD, ContextWriter.findContext(content)); 
+				content= RdfReader.getMapWithGeneratedFrame(content, RDFFormat.JSONLD, ContextWriter.findContext(content)); 
 				break;
 			case TURTLE:
 				content = RdfReader.getMap(in, RDFFormat.TURTLE, null);
-				content= RdfReader.getMap(content, RDFFormat.JSONLD, ContextWriter.findContext(content)); 
+				content= RdfReader.getMapWithGeneratedFrame(content, RDFFormat.JSONLD, ContextWriter.findContext(content)); 
 				break;
 			default:
 				break;
@@ -161,11 +161,11 @@ public class Main implements Callable<Integer> {
 				content = RdfReader.getMap(in, RDFFormat.TURTLE, frameMap);
 				break;
 			case JSON:
-				content = RdfReader.getMap(JsonReader.getMap(in), RDFFormat.JSONLD, frameMap);
+				content = RdfReader.getMapWithHandcraftedFrame(JsonReader.getMap(in), RDFFormat.JSONLD, frameMap);
 				break;
 			case RDF:
 			case JSONLD:
-				content = RdfReader.getMap(JsonReader.getMap(in), RDFFormat.JSONLD, frameMap);
+				content = RdfReader.getMapWithHandcraftedFrame(JsonReader.getMap(in), RDFFormat.JSONLD, frameMap);
 				break;
 			case CONTEXT:
 				break;

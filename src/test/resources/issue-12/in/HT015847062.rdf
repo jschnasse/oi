@@ -1,0 +1,279 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:lv="http://purl.org/lobid/lv#"
+    xmlns:gndo="https://d-nb.info/standards/elementset/gnd#"
+    xmlns:wdrs="http://www.w3.org/2007/05/powder-s#"
+    xmlns:schema="http://schema.org/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:j.0="http://www.loc.gov/mads/rdf/v1#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:bibo="http://purl.org/ontology/bibo/"
+    xmlns:rdau="http://rdaregistry.info/Elements/u/"
+    xmlns:mo="http://purl.org/ontology/mo/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://lobid.org/items/HT015847062:DE-1044:OCT9386%2B4#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lobid Bestandsressource</rdfs:label>
+    <bf:heldBy rdf:resource="http://lobid.org/organisations/DE-1044#!"/>
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/items/HT015847062:DE-Kob7:PH%2FV%202009%204482#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PH/V 2009 4482</rdfs:label>
+    <lv:callNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PH/V 2009 4482</lv:callNumber>
+    <bf:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRHKO</bf:note>
+    <bf:heldBy rdf:resource="http://lobid.org/organisations/DE-Kob7#!"/>
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://d-nb.info/gnd/4260601-9">
+    <gndo:gndIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4260601-9</gndo:gndIdentifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vorhersagbarkeit</rdfs:label>
+    <bf:source rdf:resource="https://d-nb.info/gnd/7749153-1"/>
+    <rdf:type rdf:resource="https://d-nb.info/standards/elementset/gnd#SubjectHeading"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/items/HT015847062:DE-467:32QFD8011%2B1#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32QFD8011+1</rdfs:label>
+    <lv:callNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32QFD8011+1</lv:callNumber>
+    <bf:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">US1</bf:note>
+    <bf:heldBy rdf:resource="http://lobid.org/organisations/DE-467#!"/>
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://d-nb.info/gnd/4260601-9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <schema:object rdf:resource="http://lobid.org/hbz01/HT015847062"/>
+    <schema:instrument rdf:resource="https://github.com/hbz/lobid-resources"/>
+    <schema:endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2020-04-08T01:43:32</schema:endTime>
+    <rdf:type rdf:resource="http://schema.org/CreateAction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://datahub.io/dataset/hbz_unioncatalog">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hbz_unioncatalog</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;&lt;The&gt;&gt; black swan &lt;dt.&gt;</rdfs:label>
+    <rdf:type rdf:resource="https://d-nb.info/standards/elementset/gnd#Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vorhersagbarkeit</rdfs:label>
+    <j.0:componentList rdf:nodeID="A0"/>
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/items/HT015847062:DE-464:OCT9386%2B1#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OCT9386+1</rdfs:label>
+    <lv:callNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OCT9386+1</lv:callNumber>
+    <bf:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D05</bf:note>
+    <bf:heldBy rdf:resource="http://lobid.org/organisations/DE-464#!"/>
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://d-nb.info/gnd/124120180">
+    <gndo:gndIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">124120180</gndo:gndIdentifier>
+    <gndo:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1960</gndo:dateOfBirth>
+    <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taleb, Nassim N.</skos:altLabel>
+    <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taleb, Nassim</skos:altLabel>
+    <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taleb Nassim, Nicholas</skos:altLabel>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taleb, Nassim Nicholas</rdfs:label>
+    <rdf:type rdf:resource="https://d-nb.info/standards/elementset/gnd#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/organisations/DE-464#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lobid Organisation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/items/HT015847062:DE-465:OCT9386%2B4#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OCT9386+4</rdfs:label>
+    <lv:callNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OCT9386+4</lv:callNumber>
+    <bf:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E11</bf:note>
+    <bf:heldBy rdf:resource="http://lobid.org/organisations/DE-465#!"/>
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://digitale-objekte.hbz-nrw.de/storage/2009/05/23/file_28/3011578.pdf">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3011578.pdf</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/organisations/DE-Bi10#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lobid Organisation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://github.com/hbz/lobid-resources">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software lobid-resources</rdfs:label>
+    <rdf:type rdf:resource="http://schema.org/SoftwareApplication"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/items/HT015847062:DE-5:2009%2F5398#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009/5398</rdfs:label>
+    <lv:callNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009/5398</lv:callNumber>
+    <bf:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00000010</bf:note>
+    <bf:heldBy rdf:resource="http://lobid.org/organisations/DE-5#!"/>
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/iso639-2/deu">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deutsch</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/resources/dataset#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lobid-resources – Der hbz-Verbundkatalog als Linked Open Data</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/hbz01/HT015847062">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hbz-Ressource HT015847062 im Exportformat MAB2-XML</rdfs:label>
+    <lv:inDataset rdf:resource="https://datahub.io/dataset/hbz_unioncatalog"/>
+    <rdf:type rdf:resource="http://schema.org/DataFeedItem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://d-nb.info/gnd/7749153-1">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gemeinsame Normdatei (GND)</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://rdaregistry.info/termList/RDAproductionMethod/1010">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Print</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://d-nb.info/gnd/4047390-9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/items/HT015847062:DE-Bi10:OCT%20Tale#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OCT Tale</rdfs:label>
+    <lv:callNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OCT Tale</lv:callNumber>
+    <bf:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00040000</bf:note>
+    <bf:heldBy rdf:resource="http://lobid.org/organisations/DE-Bi10#!"/>
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/items/HT015847062:DE-467:75QFD8011%2B1#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">75QFD8011+1</rdfs:label>
+    <lv:callNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">75QFD8011+1</lv:callNumber>
+    <bf:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ULEHR</bf:note>
+    <bf:heldBy rdf:resource="http://lobid.org/organisations/DE-467#!"/>
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:nodeID="A6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/items/HT015847062:DE-464:OCT9386%2B3#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OCT9386+3</rdfs:label>
+    <lv:callNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OCT9386+3</lv:callNumber>
+    <bf:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D05</bf:note>
+    <bf:heldBy rdf:resource="http://lobid.org/organisations/DE-464#!"/>
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/resources/HT015847062#!">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+    <lv:subjectAltLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prädiktion</lv:subjectAltLabel>
+    <bf:hasItem rdf:resource="http://lobid.org/items/HT015847062:DE-Bi10:OCT%20Tale#!"/>
+    <bf:hasItem rdf:resource="http://lobid.org/items/HT015847062:DE-464:OCT9386%2B3#!"/>
+    <bibo:edition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[Nachdr.]</bibo:edition>
+    <dcterms:subject rdf:nodeID="A7"/>
+    <lv:subjectAltLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zukunftsprognose</lv:subjectAltLabel>
+    <bibo:oclcnum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">553577538</bibo:oclcnum>
+    <lv:subjectAltLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vorhersehbarkeit</lv:subjectAltLabel>
+    <lv:hbzID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HT015847062</lv:hbzID>
+    <lv:subjectAltLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vorhersage</lv:subjectAltLabel>
+    <bf:extent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XIV, 441 S. : Ill., graph. Darst.</bf:extent>
+    <dcterms:medium rdf:resource="http://rdaregistry.info/termList/RDAproductionMethod/1010"/>
+    <lv:exampleOfWork rdf:nodeID="A2"/>
+    <owl:sameAs rdf:resource="http://hub.culturegraph.org/resource/HBZ-HT015847062"/>
+    <bf:hasItem rdf:resource="http://lobid.org/items/HT015847062:DE-1044:OCT9386%2B4#!"/>
+    <dcterms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Der schwarze Schwan</dcterms:title>
+    <lv:subjectAltLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zukunftsvoraussage</lv:subjectAltLabel>
+    <bf:hasItem rdf:resource="http://lobid.org/items/HT015847062:DE-465:OCT9386%2B4#!"/>
+    <bibo:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9783446415683</bibo:isbn>
+    <lv:subjectAltLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Voraussehbarkeit</lv:subjectAltLabel>
+    <bf:contribution rdf:nodeID="A5"/>
+    <dcterms:tableOfContents rdf:resource="http://digitale-objekte.hbz-nrw.de/storage/2009/05/23/file_28/3011578.pdf"/>
+    <bf:responsibilityStatement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nassim Nicholas Taleb</bf:responsibilityStatement>
+    <bf:hasItem rdf:resource="http://lobid.org/items/HT015847062:DE-5:2009%2F5398#!"/>
+    <rdau:P60493 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">die Macht höchst unwahrscheinlicher Ereignisse</rdau:P60493>
+    <owl:sameAs rdf:resource="http://worldcat.org/oclc/553577538"/>
+    <bf:hasItem rdf:resource="http://lobid.org/items/HT015847062:DE-464:OCT9386%2B1#!"/>
+    <bf:hasItem rdf:resource="http://lobid.org/items/HT015847062:DE-465:OCT9386%2B5#!"/>
+    <lv:subjectAltLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Voraussage</lv:subjectAltLabel>
+    <bf:hasItem rdf:resource="http://lobid.org/items/HT015847062:DE-467:75QFD8011#!"/>
+    <lv:subjectAltLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vorausschätzung</lv:subjectAltLabel>
+    <bibo:isbn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3446415688</bibo:isbn>
+    <dcterms:subject rdf:nodeID="A3"/>
+    <dcterms:language rdf:resource="http://id.loc.gov/vocabulary/iso639-2/deu"/>
+    <schema:publication rdf:nodeID="A8"/>
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/Book"/>
+    <bf:hasItem rdf:resource="http://lobid.org/items/HT015847062:DE-467:75QFD8011%2B1#!"/>
+    <bf:hasItem rdf:resource="http://lobid.org/items/HT015847062:DE-464:OCT9386%2B2#!"/>
+    <bf:hasItem rdf:resource="http://lobid.org/items/HT015847062:DE-Kob7:PH%2FV%202009%204482#!"/>
+    <lv:subjectAltLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prognostizierbarkeit</lv:subjectAltLabel>
+    <wdrs:describedby rdf:resource="http://lobid.org/resources/HT015847062"/>
+    <bf:hasItem rdf:resource="http://lobid.org/items/HT015847062:DE-467:32QFD8011%2B1#!"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <schema:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</schema:startDate>
+    <schema:publishedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hanser</schema:publishedBy>
+    <schema:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">München</schema:location>
+    <rdf:type rdf:resource="http://schema.org/PublicationEvent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://hub.culturegraph.org/resource/HBZ-HT015847062">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Culturegraph Ressource</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://creativecommons.org/publicdomain/zero/1.0">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons-Lizenz CC0 1.0 Universal</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/organisations/DE-Kob7#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lobid Organisation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/items/HT015847062:DE-464:OCT9386%2B2#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OCT9386+2</rdfs:label>
+    <lv:callNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OCT9386+2</lv:callNumber>
+    <bf:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D05</bf:note>
+    <bf:heldBy rdf:resource="http://lobid.org/organisations/DE-464#!"/>
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prognose</rdfs:label>
+    <j.0:componentList rdf:nodeID="A4"/>
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <bf:role rdf:resource="http://id.loc.gov/vocabulary/relators/cre"/>
+    <bf:agent rdf:resource="https://d-nb.info/gnd/124120180"/>
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Contribution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/organisations/DE-467#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lobid Organisation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://id.loc.gov/vocabulary/relators/cre">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Autor/in</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/organisations/DE-465#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lobid Organisation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/organisations/DE-1044#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lobid Organisation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/organisations/DE-5#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lobid Organisation</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/resources/HT015847062">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Webseite der hbz-Ressource HT015847062</rdfs:label>
+    <schema:sourceOrganization rdf:resource="http://lobid.org/organisations/DE-467#!"/>
+    <schema:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0"/>
+    <lv:resultOf rdf:nodeID="A1"/>
+    <lv:inDataset rdf:resource="http://lobid.org/resources/dataset#!"/>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20090226</dcterms:created>
+    <rdf:type rdf:resource="http://purl.org/lobid/lv#BibliographicDescription"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/items/HT015847062:DE-465:OCT9386%2B5#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OCT9386+5</rdfs:label>
+    <lv:callNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OCT9386+5</lv:callNumber>
+    <bf:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E11</bf:note>
+    <bf:heldBy rdf:resource="http://lobid.org/organisations/DE-465#!"/>
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://worldcat.org/oclc/553577538">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">553577538</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://d-nb.info/gnd/4047390-9">
+    <gndo:gndIdentifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4047390-9</gndo:gndIdentifier>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prognose</rdfs:label>
+    <bf:source rdf:resource="https://d-nb.info/gnd/7749153-1"/>
+    <rdf:type rdf:resource="https://d-nb.info/standards/elementset/gnd#SubjectHeading"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://lobid.org/items/HT015847062:DE-467:75QFD8011#!">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">75QFD8011</rdfs:label>
+    <lv:callNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">75QFD8011</lv:callNumber>
+    <bf:note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ULEHR</bf:note>
+    <bf:heldBy rdf:resource="http://lobid.org/organisations/DE-467#!"/>
+    <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Item"/>
+  </rdf:Description>
+</rdf:RDF>
+

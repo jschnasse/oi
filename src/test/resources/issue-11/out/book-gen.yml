@@ -1,10 +1,11 @@
 ---
-'@id': "_:b0"
-'@type': "http://schema.org/Book"
+id: "_:b0"
+type: "Book"
 name: "Semantic Web Primer (First Edition)"
 offers:
-  '@id': "_:b1"
-  '@type': "http://schema.org/Offer"
+  id: "_:b1"
+  type: "Offer"
   price: "2.95"
   priceCurrency: "USD"
 publisher: "Linked Data Tools"
+'@context': "https://schema.org/docs/jsonldcontext.jsonld"

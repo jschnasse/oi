@@ -22,10 +22,12 @@ import com.google.common.base.Charsets;
 
 public class RdfReader {
 	
-	static public Map<String, Object> getMap(Map<String, Object> json, RDFFormat format, Map<String, Object> frame) {
-		return getMap(json, frame);
+	static public Map<String, Object> getMapWithHandcraftedFrame(Map<String, Object> json, RDFFormat format, Map<String, Object> frame) {
+		return getMapWithHandcraftedFrame(json, frame);
 	}
-
+	static public Map<String, Object> getMapWithGeneratedFrame(Map<String, Object> json, RDFFormat format, Map<String, Object> frame) {
+		return getMapWithGeneratedFrame(json, frame);
+	}
 	static public Map<String, Object> getMap(InputStream in, RDFFormat format, Map<String, Object> frame) {
 		return getMap(readRdfToString(in, format, RDFFormat.JSONLD, ""), frame);
 	}
@@ -52,9 +54,18 @@ public class RdfReader {
 		}
 	}
 
-	private static Map<String, Object> getMap(Map<String, Object> json, Map<String, Object> frame) {
+	private static Map<String, Object> getMapWithHandcraftedFrame(Map<String, Object> json, Map<String, Object> frame) {
 		try {
 			Map<String, Object> result = removeGraphArray(getFramedJson(json, frame));
+			return result;
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	private static Map<String, Object> getMapWithGeneratedFrame(Map<String, Object> json, Map<String, Object> frame) {
+		try {
+			Map<String, Object> result = getFramedJson(json, frame);
 			return result;
 		} catch (Exception e) {
 			throw new RuntimeException(e);
