@@ -13,8 +13,8 @@ function build_oi(){
  mkdir -p deb/$package/usr/bin
  mkdir -p deb/$package/usr/share/man/man1/
  mvn package -D$mvnparam
- sudo cp src/main/resources/$package_name deb/$package/usr/bin
- sudo cp target/$package_name.jar deb/$package/usr/lib
+ cp src/main/resources/$package_name deb/$package/usr/bin
+ cp target/$package_name.jar deb/$package/usr/lib
 
 docker build -t adopt_jdk_image -f Dockerfile.build .
 docker create --name adopt_jdk_container adopt_jdk_image
@@ -35,7 +35,7 @@ function build(){
    cd $scriptdir/man/$package_name
    asciidoctor -b manpage man.adoc
    cd -
-   sudo cp $scriptdir/man/$package_name/$package_name.1 deb/$package/usr/share/man/man1/
+   cp $scriptdir/man/$package_name/$package_name.1 deb/$package/usr/share/man/man1/
  fi  
  dpkg-deb --build deb/$package
 }

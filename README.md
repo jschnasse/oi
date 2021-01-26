@@ -1,13 +1,15 @@
 [![Build Status](https://travis-ci.org/jschnasse/oi.svg?branch=master)](https://travis-ci.org/jschnasse/oi)
 [![codecov](https://codecov.io/gh/jschnasse/oi/branch/master/graph/badge.svg)](https://codecov.io/gh/jschnasse/oi)
+
 # About
 
-`oi` a small tool to convert csv,json,yaml,xml,rdf to each other.
-Use `oi` to translate one structured format into another. Even if
-the result is not hundred percent correct it almost always 
-can be fixed easily with existing tools like `sed`,`grep` and `awk`.
+`oi` a small tool to convert between csv,json,yml,xml,rdf. 
+The tool attempts to create various output formats. 
+The result is not meant to be 100% correct for each and every case. 
+The overall idea is to provide adhoc conversions just as one step in a conversion pipeline.
+It can be combined easily with existing tools like `xsltproc`,`jq`,`sed`,`grep` and `awk`.
 
-# Test Install
+# Install
 
 ```
 wget https://dl.bintray.com/jschnasse/debian/oi_0.5.8.deb
@@ -31,8 +33,7 @@ sudo apt update
 sudo apt install oi
 ```
 
-
-# First try. 
+# Example Usage 
 
 1. Convert `passwd` to `yml` (use `-t` to print different formats)
 
@@ -97,8 +98,52 @@ Converts yaml,json,xml,rdf to each other.
 
 Visit the man-page for more info.
 
+# Clone and Install from Source
 
-# Detailed Examples
+Requires: JRE 11, Git, Docker and asciidoctor
+
+**Basic Install**
+
+```
+git clone https://github.com/jschnasse/oi
+cd oi
+mvn package
+sudo cp src/main/resources/oi /usr/bin
+sudo cp target/oi.jar /usr/lib
+```
+
+**Take a look at the script!**
+
+```
+sudo editor /usr/bin/oi
+# You can modify the _java command,e.g. 
+# set it to 'java'.
+# Per default the tool comes with
+# its own jvm. See next step.
+```
+
+**Install minimal jvm**
+
+```
+docker build -t adopt_jdk_image -f Dockerfile.build .
+docker create --name adopt_jdk_container adopt_jdk_image
+docker cp adopt_jdk_container:/opt/jvm_for_oi /tmp/jvm_for_oi
+docker rm adopt_jdk_container
+
+sudo mv /tmp/jvm_for_oi /usr/share
+ln -s /usr/share/jvm_for_oi/bin/java /usr/bin/jvm_for_oi
+```
+
+**Install man page**
+
+```
+cd man
+asciidoctor -b manpage man.adoc
+sudo cp oi.1 /usr/share/man/man1/
+sudo mandb
+```
+
+# Detailed Usage Examples
 
 Find examples in the [test directory](https://github.com/jschnasse/oi/tree/master/src/test/resources). 
 Each test folder contains a `in`,`out` and `context` dir. The `in` dir contains the original source.
@@ -108,22 +153,7 @@ The `context` dir contains a generated Json-Ld context. The `out` dir contains g
 To test the examples by yourself you have to (1) clone this repo, (2) install the oi tool and 
 (3) cd into `src/test/resources` directory.
 
-## Clone and Install from Source
 
-Requires: JRE 11, Git and asciidoctor
-
-```
-git clone https://github.com/jschnasse/oi
-cd oi
-mvn package
-sudo cp src/main/resources/oi /usr/bin
-sudo cp target/oi.jar /usr/lib
-cd man
-asciidoctor -b manpage man.adoc
-sudo cp oi.1 /usr/share/man/man1/
-sudo mandb
-
-```
 
 ## Navigate to Test Folder
 
@@ -217,23 +247,12 @@ Save it, e.g. under `/tmp/frame` and create your json-ld with
 oi json/in/rosenmontag.json -f /tmp/frame -trdf
 ```
 
-
-## Json-Ld
-
-To use rdf and json-ld conversion, it is mandatory to provide a [Json-Ld Frame](https://w3c.github.io/json-ld-framing/).
-Example
-
-```
-cd src/test/resources/json
-oi HT015847062.json -f frame.json -trdf
-# You will observe, that the output is Json-Ld again
-oi HT015847062.rdf -f frame.json -trdf
-# Also in this case you get Json-Ld back
-```
-
 # Install from source
 
-Requires: JRE 11 and asciidoctor
+Requires: JRE 11, and asciidoctor, and docker.
+
+This section essentialy rebuilds the the steps
+used in `build.sh` to create a `.deb` package.
 
 ```
 git clone https://github.com/jschnasse/oi
@@ -246,9 +265,18 @@ asciidoctor -b manpage man.adoc
 sudo cp oi.1 /usr/share/man/man1/
 sudo mandb
 ```
+
 # Create Release
 
-bump
+**Test**
+
+```
+mvn package
+docker build -t docker_build_test -f docker/Dockerfile.build.test .
+docker build -t docker_build_convert__test -f docker/Dockerfile.buildAndConvert.test .
+```
+
+**Bump Versions**
 
 ```
 editor VERSIONS
@@ -256,7 +284,7 @@ source VERSIONS
 ./bumpVersion.sh
 ```
 
-git 
+**Commit, Push, Git** 
 
 ```
 git add deb/*
@@ -265,20 +293,29 @@ git commit -m "Prepare for release ${oi_version}"
 mvn gitflow:release
 ```
 
-build
+**Build**
 
 ```
 # user must be able to use sudo
 ./build.sh 
 ```
 
-release
+**Release**
 
 ```
 ./push_to_bintray.sh {{user}}:{{token}}
 ```
 
+**Test**
+
+```
+docker build -t docker_install_test -f docker/Dockerfile.install.test .
+docker build -t docker_install_convert_test -f docker/Dockerfile.installAndConvert.test .
+```
+
 # Create Debian Package
+
+This will create a debian package under `./deb`
 
 ```
 build.sh
@@ -286,14 +323,26 @@ build.sh
 
 # Docker Tests
 
-Test if build is working
+**Test if build is working**
 
 ```
 docker build -t docker_build_test -f docker/Dockerfile.build.test .
 ```
 
-Test if install from repo works
+**Build plus conversion**
+
+```
+docker build -t docker_build_convert_test -f docker/Dockerfile.buildAndConvert.test .
+```
+
+**Test if install from repo works**
 
 ```
 docker build -t docker_install_test -f docker/Dockerfile.install.test .
+```
+
+**Install plus conversion**
+
+```
+docker build -t docker_install_convert_test -f docker/Dockerfile.installAndConvert.test .
 ```

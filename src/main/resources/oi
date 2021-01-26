@@ -1,37 +1,13 @@
 #! /bin/bash
 
+_java=jvm_for_oi
 
-function download(){
- (
- git clone https://github.com/jschnasse/oi /tmp/oi
- cd /tmp/oi
- )
-}
-
-# Install with
-function install(){
- (
- mvn package
- sudo cp src/main/resources/oi /usr/bin
- sudo cp target/oi.jar /usr/lib
- cd man
- asciidoctor -b manpage man.adoc
- sudo cp oi.1 /usr/share/man/man1/
- sudo mandb
- jlink \
-    --add-modules java.base \
-    --verbose \
-    --strip-debug \
-    --compress=1 \
-    --no-header-files \
-    --no-man-pages \
-    --output /usr/share/jvm_for_oi
- ln -s /usr/share/jvm_for_oi/bin/java /usr/bin/jvm_for_oi
- )
-}
+# if libprocname is available use it!
+# the libprocname enables tools like `ps`
+# to show individual names for java progs.
 if [ -f /usr/lib/libprocname.so ]
 then
-    LD_PRELOAD=/usr/lib/libprocname.so PROCNAME=oi jvm_for_oi -jar /usr/lib/oi.jar $@
+    LD_PRELOAD=/usr/lib/libprocname.so PROCNAME=oi $_java -jar /usr/lib/oi.jar $@
 else
-    jvm_for_oi -jar /usr/lib/oi.jar $@
+    $_java -jar /usr/lib/oi.jar $@
 fi
