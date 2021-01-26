@@ -1,5 +1,10 @@
 language: java
 sudo: false # faster builds
 
+script:
+  - mvn package
+  - docker build -t docker_build_test -f docker/Dockerfile.build.test .
+  - docker build -t docker_build_convert__test -f docker/Dockerfile.buildAndConvert.test .
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)

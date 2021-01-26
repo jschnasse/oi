@@ -15,6 +15,7 @@ It can be combined easily with existing tools like `xsltproc`,`jq`,`sed`,`grep` 
 wget https://dl.bintray.com/jschnasse/debian/oi_0.5.8.deb
 sudo apt install ./oi_0.5.8.deb 
 ```
+
 # Keep up to date
 
 Accept the bintray gpg key. 
