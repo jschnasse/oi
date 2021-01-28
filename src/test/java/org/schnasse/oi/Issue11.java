@@ -7,12 +7,14 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
 
+import org.eclipse.rdf4j.rio.RDFFormat;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.schnasse.oi.helper.TestHelper;
 import org.schnasse.oi.main.Main;
 import org.schnasse.oi.reader.JsonReader;
+import org.schnasse.oi.reader.RdfReader;
 import org.schnasse.oi.reader.YamlReader;
 
 import picocli.CommandLine;
@@ -113,6 +115,19 @@ public class Issue11 {
 		Map<String, Object> expected = JsonReader.getMap(
 				Thread.currentThread().getContextClassLoader().getResourceAsStream("issue-12/out/HT015847062.json"));
 		Map<String, Object> actual = JsonReader.getMap(new ByteArrayInputStream(outContent.toByteArray()));
+		TestHelper.mapCompare(expected, actual);
+	}
+	
+	@Test
+	public void model_rdf_with_json_test() {
+		Path currentRelativePath = Paths.get("");
+		String s = currentRelativePath.toAbsolutePath().toString();
+		new CommandLine(new Main()).setCaseInsensitiveEnumValuesAllowed(true).execute(
+				s + "/src/test/resources/issue-14/in/run.json", "-t", "turtle", "-f",
+				s + "/src/test/resources/issue-14/in/run.context");
+		Map<String, Object> expected = RdfReader.getMapWithGeneratedFrame(
+				Thread.currentThread().getContextClassLoader().getResourceAsStream("issue-14/out/run.ttl"),RDFFormat.TURTLE);
+		Map<String, Object> actual = RdfReader.getMapWithGeneratedFrame(new ByteArrayInputStream(outContent.toByteArray()),RDFFormat.TURTLE);
 		TestHelper.mapCompare(expected, actual);
 	}
 }

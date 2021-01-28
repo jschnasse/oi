@@ -28,19 +28,25 @@ public class RdfReader {
 	static public Map<String, Object> getMapWithGeneratedFrame(Map<String, Object> json, RDFFormat format, Map<String, Object> frame) {
 		return getMapWithGeneratedFrame(json, frame);
 	}
-	static public Map<String, Object> getMap(InputStream in, RDFFormat format, Map<String, Object> frame) {
-		return getMap(readRdfToString(in, format, RDFFormat.JSONLD, ""), frame);
+	static public Map<String, Object> getMapWithGeneratedFrame(InputStream in, RDFFormat format) {
+		return getMapWithGeneratedFrame(readRdfToString(in, format, RDFFormat.JSONLD, ""));
+	}
+	static public Map<String, Object> getMapWithHandcraftedFrame(InputStream in, RDFFormat format,Map<String, Object> frame) {
+		return getMapWithHandcraftedFrame(readRdfToString(in, format, RDFFormat.JSONLD, ""),frame);
 	}
 
-	private static Map<String, Object> getMap(String rdfGraphAsJson, Map<String, Object> frame) {
+
+	private static Map<String, Object> getMapWithHandcraftedFrame(String rdfGraphAsJson, Map<String, Object> frame) {
 		try {
-			Map<String, Object> result = null;
-			if (frame != null) {
-				result = removeGraphArray(getFramedJson(createJsonObject(rdfGraphAsJson), frame));
-			} else {
-				result =createJsonObject(rdfGraphAsJson);
-			}
-			return result;
+			return removeGraphArray(getFramedJson(createJsonObject(rdfGraphAsJson), frame));
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	private static Map<String, Object> getMapWithGeneratedFrame(String rdfGraphAsJson) {
+		try {
+			return createJsonObject(rdfGraphAsJson);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

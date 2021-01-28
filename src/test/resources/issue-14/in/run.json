@@ -1,0 +1,19 @@
+{
+    "runs": [
+        {
+            "id": "runs:0000001",
+            "distance": {
+                "length": 10.0,
+                "unit": "mile"
+            },
+            "time": {
+                "start": "2018-04-09T10:00:00",
+                "end": "2018-04-09T12:00:00"
+            },
+            "runner": {
+                "id": "runner:0000002",
+                "name": "Paul"
+            }
+        }
+    ]
+}

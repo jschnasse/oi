@@ -248,25 +248,6 @@ Save it, e.g. under `/tmp/frame` and create your json-ld with
 oi json/in/rosenmontag.json -f /tmp/frame -trdf
 ```
 
-# Install from source
-
-Requires: JRE 11, and asciidoctor, and docker.
-
-This section essentialy rebuilds the the steps
-used in `build.sh` to create a `.deb` package.
-
-```
-git clone https://github.com/jschnasse/oi
-cd oi
-mvn package
-sudo cp src/main/resources/oi /usr/bin
-sudo cp target/oi.jar /usr/lib
-cd man
-asciidoctor -b manpage man.adoc
-sudo cp oi.1 /usr/share/man/man1/
-sudo mandb
-```
-
 # Create Release
 
 **Test**

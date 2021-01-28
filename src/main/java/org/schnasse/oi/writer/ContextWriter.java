@@ -135,13 +135,9 @@ public class ContextWriter {
 	private static Map<String, Object> useExistingContext(Map<String, Object> map) {
 		Object context = map.get("@context");
 		if (context != null) {
-			if (context instanceof String) {
 				Map<String, Object> result = new HashMap<>();
 				result.put("@context", context);
 				return result;
-			} else if (context instanceof Map) {
-				return (Map<String, Object>) map.get("@context");
-			}
 		}
 		return null;
 	}

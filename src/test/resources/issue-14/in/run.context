@@ -1,0 +1,38 @@
+{
+"@context" : {
+        "ical": "http://www.w3.org/2002/12/cal/ical#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "runs": {
+            "@id": "info:stack/49726990/runs/",
+            "@container": "@list"
+        },
+        "distance": {
+            "@id": "info:stack/49726990/distance"
+        },
+        "length": {
+            "@id": "info:stack/49726990/length",
+            "@type": "xsd:double"
+        },
+        "unit": {
+            "@id": "info:stack/49726990/unit"
+        },
+        "runner": {
+            "@id": "info:stack/49726990/runner/"
+        },
+        "name": {
+            "@id": "info:stack/49726990/name"
+        },
+        "time": {
+            "@id": "info:stack/49726990/time"
+        },
+        "start": {
+            "@id":"ical:dtstart",
+            "@type": "xsd:dateTime"
+        },
+        "end": {
+            "@id":"ical:dtend",
+            "@type": "xsd:dateTime"
+        },
+        "id": "@id"
+    }
+ }

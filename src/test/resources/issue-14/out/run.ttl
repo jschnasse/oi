@@ -1,0 +1,17 @@
+<info:stack/49726990/runs/0000001> <info:stack/49726990/distance> _:b1 .
+
+_:b1 <info:stack/49726990/length> 1.0E1;
+  <info:stack/49726990/unit> "mile" .
+
+<info:stack/49726990/runs/0000001> <info:stack/49726990/runner/> <info:stack/49726990/runner/0000002>;
+  <info:stack/49726990/time> _:b2 .
+
+_:b2 <http://www.w3.org/2002/12/cal/ical#dtend> "2018-04-09T12:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+  <http://www.w3.org/2002/12/cal/ical#dtstart> "2018-04-09T10:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<info:stack/49726990/runner/0000002> <info:stack/49726990/name> "Paul" .
+
+_:b0 <info:stack/49726990/runs/> _:b3 .
+
+_:b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <info:stack/49726990/runs/0000001>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .

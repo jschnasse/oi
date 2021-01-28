@@ -83,11 +83,11 @@ public class MainTest {
 		// Read expected
 		Map<String, Object> frame = JsonReader.getMap(Thread.currentThread().getContextClassLoader()
 				.getResourceAsStream("json/context/rosenmontag.json.context"));
-		Map<String, Object> expected = RdfReader.getMap(
+		Map<String, Object> expected = RdfReader.getMapWithHandcraftedFrame(
 				Thread.currentThread().getContextClassLoader().getResourceAsStream("json/out/rosenmontag.json.jsonld"),
 				RDFFormat.JSONLD, frame);
 		// Get actual from stream 
-		Map<String, Object> actual = RdfReader.getMap(new ByteArrayInputStream(outContent.toByteArray()),
+		Map<String, Object> actual = RdfReader.getMapWithHandcraftedFrame(new ByteArrayInputStream(outContent.toByteArray()),
 				RDFFormat.JSONLD, frame);
 		TestHelper.mapCompare(expected, actual);
 	}

@@ -70,9 +70,9 @@ public class SmokeTest {
 
 	@Test
 	public void readTurtleRdf() throws Exception {
-		final Map<String, Object> map = org.schnasse.oi.reader.RdfReader.getMap(
-				getInputStream("rdf/in/stack43638342.rdf"), RDFFormat.TURTLE,
-				JsonReader.getMap(getInputStream("rdf/context/stack43638342.rdf.context")));
+		final Map<String, Object> map = org.schnasse.oi.reader.RdfReader.getMapWithHandcraftedFrame(
+				getInputStream("turtle/in/stack43638342.rdf"), RDFFormat.TURTLE,
+				JsonReader.getMap(getInputStream("turtle/context/stack43638342.rdf.context")));
 		JsonWriter.gprint(map);
 		YamlWriter.gprint(map);
 		XmlWriter.gprint(map);
@@ -110,15 +110,15 @@ public class SmokeTest {
 
 	@Test
 	public void writeContext2() throws Exception {
-		Map<String, Object> map = org.schnasse.oi.reader.RdfReader.getMap(
-				getInputStream("rdf/in/entwicklung-der-kriminalitat-nach-fallen-und-aufklarungen-seit-1990.rdf"),
-				RDFFormat.RDFXML, null);
+		Map<String, Object> map = org.schnasse.oi.reader.RdfReader.getMapWithGeneratedFrame(
+				getInputStream("rdfxml/in/entwicklung-der-kriminalitat-nach-fallen-und-aufklarungen-seit-1990.rdf"),
+				RDFFormat.RDFXML);
 		ContextWriter.gprint(map);
 
-		map = org.schnasse.oi.reader.RdfReader.getMap(
-				getInputStream("rdf/in/entwicklung-der-kriminalitat-nach-fallen-und-aufklarungen-seit-1990.rdf"),
+		map = org.schnasse.oi.reader.RdfReader.getMapWithHandcraftedFrame(
+				getInputStream("rdfxml/in/entwicklung-der-kriminalitat-nach-fallen-und-aufklarungen-seit-1990.rdf"),
 				RDFFormat.RDFXML, JsonReader.getMap(Thread.currentThread().getContextClassLoader().getResourceAsStream(
-						"rdf/context/entwicklung-der-kriminalitat-nach-fallen-und-aufklarungen-seit-1990.rdf.context")));
+						"rdfxml/context/entwicklung-der-kriminalitat-nach-fallen-und-aufklarungen-seit-1990.rdf.context")));
 		JsonWriter.gprint(map);
 	}
 }
