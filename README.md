@@ -12,8 +12,8 @@ It can be combined easily with existing tools like `xsltproc`,`jq`,`sed`,`grep` 
 # Install
 
 ```
-wget https://dl.bintray.com/jschnasse/debian/oi_0.5.9.deb
-sudo apt install ./oi_0.5.9.deb 
+wget https://dl.bintray.com/jschnasse/debian/oi_0.5.10.deb
+sudo apt install ./oi_0.5.10.deb 
 ```
 
 # Keep up to date
