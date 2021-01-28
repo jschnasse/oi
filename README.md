@@ -278,7 +278,6 @@ mvn gitflow:release
 **Build**
 
 ```
-# user must be able to use sudo
 ./build.sh 
 ```
 
