@@ -1,13 +1,13 @@
 #! /bin/bash
 
 _java=jvm_for_oi
-
+_java_flags=-Djava.net.useSystemProxies="true"
 # if libprocname is available use it!
 # the libprocname enables tools like `ps`
 # to show individual names for java progs.
 if [ -f /usr/lib/libprocname.so ]
 then
-    LD_PRELOAD=/usr/lib/libprocname.so PROCNAME=oi $_java -jar /usr/lib/oi.jar $@
+    LD_PRELOAD=/usr/lib/libprocname.so PROCNAME=oi $_java ${_java_flags} -jar /usr/lib/oi.jar $@
 else
-    $_java -jar /usr/lib/oi.jar $@
+    $_java ${_java_flags} -jar /usr/lib/oi.jar $@
 fi
