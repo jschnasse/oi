@@ -34,10 +34,10 @@ public class Main implements Callable<Integer> {
 
 	@Parameters(index = "0", arity = "0..1", description = "Input file.")
 	private String inputFile;
-
-	@Option(names = { "-t", "--type" }, description = "yml,json,xml,rdf,context,csv,nt,turtle,ntriples,jsonld")
+	
+	@Option(names = { "-o", "--outputType","-t","--type" }, description = "yml,json,xml,rdf,context,csv,nt,turtle,ntriples,jsonld")
 	Type type = Type.YML;
-
+	
 	@Option(names = { "-i", "--inputType" }, description = "yml,json,xml,rdf,context,csv,nt,turtle,ntriples,jsonld")
 	Type inputType;
 
@@ -212,7 +212,7 @@ public class Main implements Callable<Integer> {
 			break;
 		default:
 			throw new RuntimeException("You have specified an unknown"
-					+ " --type. \n Please lookup the list of valid types with 'oi --help'.");
+					+ " --outtype. \n Please lookup the list of valid types with 'oi --help'.");
 		}
 	}
 

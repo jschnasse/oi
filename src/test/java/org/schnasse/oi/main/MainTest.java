@@ -60,6 +60,18 @@ public class MainTest {
 		Map<String, Object> actual = JsonReader.getMap(new ByteArrayInputStream(outContent.toByteArray()));
 		TestHelper.mapCompare(expected, actual);
 	}
+	
+	@Test
+	public void csv_to_json_with_o() throws Exception {
+		Path currentRelativePath = Paths.get("");
+		String s = currentRelativePath.toAbsolutePath().toString();
+		new CommandLine(new Main()).setCaseInsensitiveEnumValuesAllowed(true).execute(s + "/src/test/resources/csv/in/Kampfmittelfunde_2019.csv", "-d;",
+				"-ojson");
+		Map<String, Object> expected = JsonReader.getMap(Thread.currentThread().getContextClassLoader()
+				.getResourceAsStream("csv/out/Kampfmittelfunde_2019.csv.json"));
+		Map<String, Object> actual = JsonReader.getMap(new ByteArrayInputStream(outContent.toByteArray()));
+		TestHelper.mapCompare(expected, actual);
+	}
 
 	@Test
 	public void json_to_yml() throws Exception {
