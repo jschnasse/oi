@@ -1,6 +1,4 @@
-
-/* Copyright 2020 Jan Schnasse. Licensed under the EPL 2.0 */
-
+/* Copyright 2021 Jan Schnasse. Licensed under the EPL 2.0 */
 import java.io.InputStream;
 import java.util.Map;
 
