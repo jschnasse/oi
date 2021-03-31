@@ -22,7 +22,7 @@ public class JsonSchemaWriter {
 			schema.put("title", title);
 			schema.put("description", description);
 			schema.put("type", "object");
-			JsonNode properties = createProperty(m.convertValue(json, JsonNode.class), null);
+			JsonNode properties = createProperty(m.convertValue(json, JsonNode.class));
 			schema.set("properties", properties);
 			JsonWriter.gprint(schema);
 		} catch (Exception e) {
@@ -30,7 +30,7 @@ public class JsonSchemaWriter {
 		}
 	}
 
-	private static ObjectNode createProperty(JsonNode jsonData, JsonNodeType type) throws IOException {
+	private static ObjectNode createProperty(JsonNode jsonData) throws IOException {
 		ObjectNode propObject = m.createObjectNode();
 		for (Iterator<Entry<String,JsonNode>> iterator = jsonData.fields(); iterator.hasNext();) {
 			Entry<String,JsonNode> field=iterator.next();
@@ -43,7 +43,7 @@ public class JsonSchemaWriter {
 			}
 		}
 		return propObject;
-	}
+	} 
 
 	private static ObjectNode processJsonField(JsonNode curNode, JsonNodeType curNodeType)
 			throws IOException {
@@ -54,7 +54,7 @@ public class JsonSchemaWriter {
 			if(!curNode.isEmpty()) {
 				JsonNodeType typeOfArrayElements=curNode.get(0).getNodeType();
 				if(typeOfArrayElements.equals(JsonNodeType.OBJECT)) {
-					property.set("items", createProperty(curNode.get(0), typeOfArrayElements));
+					property.set("items", createProperty(curNode.get(0)));
 				}else {
 					property.set("items", processJsonField(curNode.get(0), typeOfArrayElements));
 				}
@@ -68,7 +68,7 @@ public class JsonSchemaWriter {
 			break;
 		case OBJECT:
 			property.put("type", "object");
-			property.set("properties", createProperty(curNode, curNodeType));
+			property.set("properties", createProperty(curNode));
 			break;
 		case STRING:
 			property.put("type", "string");
