@@ -14,6 +14,7 @@ import org.schnasse.oi.reader.RdfReader;
 import org.schnasse.oi.reader.XmlReader;
 import org.schnasse.oi.reader.YamlReader;
 import org.schnasse.oi.writer.ContextWriter;
+import org.schnasse.oi.writer.JsonSchemaWriter;
 import org.schnasse.oi.writer.JsonWriter;
 import org.schnasse.oi.writer.RdfWriter;
 import org.schnasse.oi.writer.XmlWriter;
@@ -34,10 +35,11 @@ public class Main implements Callable<Integer> {
 
 	@Parameters(index = "0", arity = "0..1", description = "Input file.")
 	private String inputFile;
-	
-	@Option(names = { "-o", "--outputType","-t","--type" }, description = "yml,json,xml,rdf,context,csv,nt,turtle,ntriples,jsonld")
+
+	@Option(names = { "-o", "--outputType", "-t",
+			"--type" }, description = "yml,json,xml,rdf,context,csv,nt,turtle,ntriples,jsonld,jsonschema")
 	Type type = Type.YML;
-	
+
 	@Option(names = { "-i", "--inputType" }, description = "yml,json,xml,rdf,context,csv,nt,turtle,ntriples,jsonld")
 	Type inputType;
 
@@ -60,7 +62,7 @@ public class Main implements Callable<Integer> {
 	boolean levelDebug = false;
 
 	enum Type {
-		XML, JSON, JSONLD, CSV, YML, RDF, RDFXML, NTRIPLES, TURTLE, CONTEXT
+		XML, JSON, JSONLD, CSV, YML, RDF, RDFXML, NTRIPLES, TURTLE, CONTEXT, JSONSCHEMA
 	}
 
 	public static void main(String... args) {
@@ -128,23 +130,28 @@ public class Main implements Callable<Integer> {
 				break;
 			case JSONLD:
 				content = RdfReader.getMapWithGeneratedFrame(in, RDFFormat.JSONLD);
-				content= RdfReader.getMapWithGeneratedFrame(content, RDFFormat.JSONLD, ContextWriter.findContext(content)); 
+				content = RdfReader.getMapWithGeneratedFrame(content, RDFFormat.JSONLD,
+						ContextWriter.findContext(content));
 				break;
 			case NTRIPLES:
 				content = RdfReader.getMapWithGeneratedFrame(in, RDFFormat.NTRIPLES);
-				content= RdfReader.getMapWithGeneratedFrame(content, RDFFormat.JSONLD, ContextWriter.findContext(content)); 
+				content = RdfReader.getMapWithGeneratedFrame(content, RDFFormat.JSONLD,
+						ContextWriter.findContext(content));
 				break;
 			case RDF:
 				content = RdfReader.getMapWithGeneratedFrame(in, RDFFormat.JSONLD);
-				content= RdfReader.getMapWithGeneratedFrame(content, RDFFormat.JSONLD, ContextWriter.findContext(content)); 
+				content = RdfReader.getMapWithGeneratedFrame(content, RDFFormat.JSONLD,
+						ContextWriter.findContext(content));
 				break;
 			case RDFXML:
 				content = RdfReader.getMapWithGeneratedFrame(in, RDFFormat.RDFXML);
-				content= RdfReader.getMapWithGeneratedFrame(content, RDFFormat.JSONLD, ContextWriter.findContext(content)); 
+				content = RdfReader.getMapWithGeneratedFrame(content, RDFFormat.JSONLD,
+						ContextWriter.findContext(content));
 				break;
 			case TURTLE:
 				content = RdfReader.getMapWithGeneratedFrame(in, RDFFormat.TURTLE);
-				content= RdfReader.getMapWithGeneratedFrame(content, RDFFormat.JSONLD, ContextWriter.findContext(content)); 
+				content = RdfReader.getMapWithGeneratedFrame(content, RDFFormat.JSONLD,
+						ContextWriter.findContext(content));
 				break;
 			default:
 				break;
@@ -209,6 +216,9 @@ public class Main implements Callable<Integer> {
 			break;
 		case CONTEXT:
 			ContextWriter.gprint(content);
+			break;
+		case JSONSCHEMA:
+			JsonSchemaWriter.gprint(content);
 			break;
 		default:
 			throw new RuntimeException("You have specified an unknown"

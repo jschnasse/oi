@@ -1,0 +1,28 @@
+{
+  "title" : "Oi Generated Schema",
+  "description" : "https://github.com/jschnasse/oi",
+  "type" : "object",
+  "properties" : {
+    "data" : {
+      "type" : "array",
+      "items" : {
+        "Art des Kampfmittels" : {
+          "type" : "string"
+        },
+        "Datum" : {
+          "type" : "string"
+        },
+        "Entschärfungsdatum" : {
+          "type" : "string"
+        },
+        "Fundzeit" : {
+          "type" : "string"
+        },
+        "Örtlichkeit" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
+
