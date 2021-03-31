@@ -1,0 +1,64 @@
+{
+  "title" : "Oi Generated Schema",
+  "description" : "https://github.com/jschnasse/oi",
+  "type" : "object",
+  "properties" : {
+    "data" : {
+      "type" : "array",
+      "items" : {
+        "Auftragskonto" : {
+          "type" : "string"
+        },
+        "Auslagenersatz Ruecklastschrift" : {
+          "type" : "string"
+        },
+        "BIC (SWIFT-Code)" : {
+          "type" : "string"
+        },
+        "Beguenstigter/Zahlungspflichtiger" : {
+          "type" : "string"
+        },
+        "Betrag" : {
+          "type" : "string"
+        },
+        "Buchungstag" : {
+          "type" : "string"
+        },
+        "Buchungstext" : {
+          "type" : "string"
+        },
+        "Glaeubiger ID" : {
+          "type" : "string"
+        },
+        "Info" : {
+          "type" : "string"
+        },
+        "Kontonummer/IBAN" : {
+          "type" : "string"
+        },
+        "Kundenreferenz (End-to-End)" : {
+          "type" : "string"
+        },
+        "Lastschrift Ursprungsbetrag" : {
+          "type" : "string"
+        },
+        "Mandatsreferenz" : {
+          "type" : "string"
+        },
+        "Sammlerreferenz" : {
+          "type" : "string"
+        },
+        "Valutadatum" : {
+          "type" : "string"
+        },
+        "Verwendungszweck" : {
+          "type" : "string"
+        },
+        "Waehrung" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
+

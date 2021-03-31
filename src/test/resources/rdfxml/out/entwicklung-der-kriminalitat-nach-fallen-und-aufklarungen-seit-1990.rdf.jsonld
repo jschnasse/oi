@@ -1,19 +1,96 @@
 [ {
   "@id" : "_:b0",
-  "@type" : [ "http://purl.org/dc/terms/Location" ]
+  "@type" : [ "http://purl.org/dc/terms/Location" ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "05913000"
+  } ]
 }, {
   "@id" : "_:b1",
-  "@type" : [ "http://purl.org/dc/terms/PeriodOfTime" ]
+  "@type" : [ "http://purl.org/dc/terms/PeriodOfTime" ],
+  "http://schema.org/endDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2017-12-31T00:00:00"
+  } ],
+  "http://schema.org/startDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "1990-01-01T00:00:00"
+  } ]
 }, {
   "@id" : "https://ckan.www.open.nrw.de/dataset/http://opendata.dortmund.de/duva2ckan-1.0.6/files/de-nrw-dortmund-entwicklung_der_kriminalitaet_nach_faellen_und_aufklaerungen_seit_1990#117",
   "@type" : [ "http://www.w3.org/ns/dcat#Dataset" ],
+  "http://dcat-ap.de/def/dcatde/contributorID" : [ {
+    "@id" : "http://dcat-ap.de/def/contributors/openNRW"
+  }, {
+    "@id" : "http://opendata.dortmund.de"
+  } ],
+  "http://dcat-ap.de/def/dcatde/politicalGeocodingLevelURI" : [ {
+    "@id" : "http://dcat-ap.de/def/politicalGeocoding/Level/municipality"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@value" : "Entwicklung der Kriminalität nach Fällen und Aufklärungen seit 1990"
+  } ],
   "http://purl.org/dc/terms/identifier" : [ {
     "@value" : "http://opendata.dortmund.de/duva2ckan-1.0.6/files/de-nrw-dortmund-entwicklung_der_kriminalitaet_nach_faellen_und_aufklaerungen_seit_1990#117"
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2019-10-24T05:19:59.879256"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2020-04-10T06:37:26.742374"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@id" : "https://ckan.www.open.nrw.de/organization/29cfaeaa-bea5-4dcd-9c1e-b928d73b838b"
+  } ],
+  "http://purl.org/dc/terms/spatial" : [ {
+    "@id" : "_:b0"
+  } ],
+  "http://purl.org/dc/terms/temporal" : [ {
+    "@id" : "_:b1"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "Entwicklung der Kriminalität nach Fällen und Aufklärungen seit 1990"
+  } ],
+  "http://www.w3.org/ns/adms#identifier" : [ {
+    "@value" : "117"
+  } ],
+  "http://www.w3.org/ns/dcat#distribution" : [ {
+    "@id" : "https://ckan.www.open.nrw.de/dataset/http://opendata.dortmund.de/duva2ckan-1.0.6/files/de-nrw-dortmund-entwicklung_der_kriminalitaet_nach_faellen_und_aufklaerungen_seit_1990#117/resource/e94d3be2-8a61-4c51-861d-d0e7eb513639"
+  } ],
+  "http://www.w3.org/ns/dcat#keyword" : [ {
+    "@value" : "aufgeklärte-fälle"
+  }, {
+    "@value" : "ermittelte-tatverdächtigte"
+  }, {
+    "@value" : "aufklärungsquote"
+  }, {
+    "@value" : "jahr"
+  }, {
+    "@value" : "bekannt-gewordene-fälle"
+  } ],
+  "http://www.w3.org/ns/dcat#landingPage" : [ {
+    "@id" : "https://opendata.dortmund.de/Informationsportal"
   } ]
 }, {
   "@id" : "https://ckan.www.open.nrw.de/dataset/http://opendata.dortmund.de/duva2ckan-1.0.6/files/de-nrw-dortmund-entwicklung_der_kriminalitaet_nach_faellen_und_aufklaerungen_seit_1990#117/resource/e94d3be2-8a61-4c51-861d-d0e7eb513639",
-  "@type" : [ "http://www.w3.org/ns/dcat#Distribution" ]
+  "@type" : [ "http://www.w3.org/ns/dcat#Distribution" ],
+  "http://purl.org/dc/terms/format" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/file-type/CSV"
+  } ],
+  "http://purl.org/dc/terms/language" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/language/DEU"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "http://dcat-ap.de/def/licenses/dl-by-de/2.0"
+  } ],
+  "http://www.w3.org/ns/dcat#accessURL" : [ {
+    "@id" : "http://opendata.dortmund.de/duva2ckan-1.0.6/files/de-nrw-dortmund-entwicklung_der_kriminalitaet_nach_faellen_und_aufklaerungen_seit_1990/content"
+  } ]
 }, {
   "@id" : "https://ckan.www.open.nrw.de/organization/29cfaeaa-bea5-4dcd-9c1e-b928d73b838b",
-  "@type" : [ "http://xmlns.com/foaf/0.1/Organization" ]
+  "@type" : [ "http://xmlns.com/foaf/0.1/Organization" ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Dortmund"
+  } ]
 } ]

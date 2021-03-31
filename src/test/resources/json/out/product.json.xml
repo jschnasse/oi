@@ -1,0 +1,10 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<LinkedHashMap>
+  <productId>1</productId>
+  <productName>A green door</productName>
+  <price>12.5</price>
+  <tags>home</tags>
+  <tags>green</tags>
+</LinkedHashMap>
+
+

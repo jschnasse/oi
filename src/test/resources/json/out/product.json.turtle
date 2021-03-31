@@ -1,0 +1,12 @@
+
+_:b0 <info:oi/price> 1.25E1;
+  <info:oi/productId> 1;
+  <info:oi/productName> "A green door";
+  <info:oi/tags> _:b1 .
+
+_:b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "home";
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b2 .
+
+_:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "green";
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+

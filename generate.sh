@@ -29,6 +29,7 @@ function generate(){
 	$jvm_for_oi -jar $scriptdir/target/oi.jar -i $extension $inputFile -d=";" -t rdf > $outputDir/$filename.rdf
 	$jvm_for_oi -jar $scriptdir/target/oi.jar -i $extension $inputFile -d=";" -t turtle > $outputDir/$filename.turtle
 	$jvm_for_oi -jar $scriptdir/target/oi.jar -i $extension $inputFile -d=";" -t ntriples > $outputDir/$filename.nt
+	$jvm_for_oi -jar $scriptdir/target/oi.jar -i $extension $inputFile -d=";" -o jsonschema > $outputDir/$filename.schema.json
 }
 
 mvn package -DskipTests

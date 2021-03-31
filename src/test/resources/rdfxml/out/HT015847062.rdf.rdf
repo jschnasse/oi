@@ -1,76 +1,530 @@
 [ {
   "@id" : "_:b0",
-  "@type" : [ "http://schema.org/CreateAction" ]
+  "@type" : [ "http://schema.org/CreateAction" ],
+  "http://schema.org/endTime" : [ {
+    "@value" : "2020-04-08T01:43:32"
+  } ],
+  "http://schema.org/instrument" : [ {
+    "@id" : "https://github.com/hbz/lobid-resources"
+  } ],
+  "http://schema.org/object" : [ {
+    "@id" : "http://lobid.org/hbz01/HT015847062"
+  } ]
 }, {
   "@id" : "_:b1",
-  "@type" : [ "https://d-nb.info/standards/elementset/gnd#Work" ]
+  "@type" : [ "https://d-nb.info/standards/elementset/gnd#Work" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "<<The>> black swan <dt.>"
+  } ]
 }, {
   "@id" : "_:b2",
-  "@type" : [ "http://www.loc.gov/mads/rdf/v1#ComplexSubject" ]
+  "@type" : [ "http://www.loc.gov/mads/rdf/v1#ComplexSubject" ],
+  "http://www.loc.gov/mads/rdf/v1#componentList" : [ {
+    "@list" : [ {
+      "@id" : "https://d-nb.info/gnd/4260601-9"
+    } ]
+  }, {
+    "@list" : [ {
+      "@id" : "https://d-nb.info/gnd/4260601-9"
+    } ]
+  }, {
+    "@list" : [ {
+      "@id" : "https://d-nb.info/gnd/4260601-9"
+    } ]
+  }, {
+    "@list" : [ {
+      "@id" : "https://d-nb.info/gnd/4260601-9"
+    } ]
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Vorhersagbarkeit"
+  } ]
 }, {
   "@id" : "_:b3",
-  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Contribution" ]
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Contribution" ],
+  "http://id.loc.gov/ontologies/bibframe/agent" : [ {
+    "@id" : "https://d-nb.info/gnd/124120180"
+  } ],
+  "http://id.loc.gov/ontologies/bibframe/role" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/relators/cre"
+  } ]
 }, {
   "@id" : "_:b4",
-  "@type" : [ "http://www.loc.gov/mads/rdf/v1#ComplexSubject" ]
+  "@type" : [ "http://www.loc.gov/mads/rdf/v1#ComplexSubject" ],
+  "http://www.loc.gov/mads/rdf/v1#componentList" : [ {
+    "@list" : [ {
+      "@id" : "https://d-nb.info/gnd/4047390-9"
+    } ]
+  }, {
+    "@list" : [ {
+      "@id" : "https://d-nb.info/gnd/4047390-9"
+    } ]
+  }, {
+    "@list" : [ {
+      "@id" : "https://d-nb.info/gnd/4047390-9"
+    } ]
+  }, {
+    "@list" : [ {
+      "@id" : "https://d-nb.info/gnd/4047390-9"
+    } ]
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Prognose"
+  } ]
 }, {
   "@id" : "_:b5",
-  "@type" : [ "http://schema.org/PublicationEvent" ]
+  "@type" : [ "http://schema.org/PublicationEvent" ],
+  "http://schema.org/location" : [ {
+    "@value" : "München"
+  } ],
+  "http://schema.org/publishedBy" : [ {
+    "@value" : "Hanser"
+  } ],
+  "http://schema.org/startDate" : [ {
+    "@value" : "2009"
+  } ]
+}, {
+  "@id" : "http://creativecommons.org/publicdomain/zero/1.0",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Creative Commons-Lizenz CC0 1.0 Universal"
+  } ]
+}, {
+  "@id" : "http://digitale-objekte.hbz-nrw.de/storage/2009/05/23/file_28/3011578.pdf",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "3011578.pdf"
+  } ]
+}, {
+  "@id" : "http://hub.culturegraph.org/resource/HBZ-HT015847062",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Culturegraph Ressource"
+  } ]
+}, {
+  "@id" : "http://id.loc.gov/vocabulary/iso639-2/deu",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Deutsch"
+  } ]
+}, {
+  "@id" : "http://id.loc.gov/vocabulary/relators/cre",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Autor/in"
+  } ]
 }, {
   "@id" : "http://lobid.org/hbz01/HT015847062",
-  "@type" : [ "http://schema.org/DataFeedItem" ]
+  "@type" : [ "http://schema.org/DataFeedItem" ],
+  "http://purl.org/lobid/lv#inDataset" : [ {
+    "@id" : "https://datahub.io/dataset/hbz_unioncatalog"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hbz-Ressource HT015847062 im Exportformat MAB2-XML"
+  } ]
 }, {
   "@id" : "http://lobid.org/items/HT015847062:DE-1044:OCT9386%2B4#!",
-  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ],
+  "http://id.loc.gov/ontologies/bibframe/heldBy" : [ {
+    "@id" : "http://lobid.org/organisations/DE-1044#!"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "lobid Bestandsressource"
+  } ]
 }, {
   "@id" : "http://lobid.org/items/HT015847062:DE-464:OCT9386%2B1#!",
-  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ],
+  "http://id.loc.gov/ontologies/bibframe/heldBy" : [ {
+    "@id" : "http://lobid.org/organisations/DE-464#!"
+  } ],
+  "http://id.loc.gov/ontologies/bibframe/note" : [ {
+    "@value" : "D05"
+  } ],
+  "http://purl.org/lobid/lv#callNumber" : [ {
+    "@value" : "OCT9386+1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "OCT9386+1"
+  } ]
 }, {
   "@id" : "http://lobid.org/items/HT015847062:DE-464:OCT9386%2B2#!",
-  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ],
+  "http://id.loc.gov/ontologies/bibframe/heldBy" : [ {
+    "@id" : "http://lobid.org/organisations/DE-464#!"
+  } ],
+  "http://id.loc.gov/ontologies/bibframe/note" : [ {
+    "@value" : "D05"
+  } ],
+  "http://purl.org/lobid/lv#callNumber" : [ {
+    "@value" : "OCT9386+2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "OCT9386+2"
+  } ]
 }, {
   "@id" : "http://lobid.org/items/HT015847062:DE-464:OCT9386%2B3#!",
-  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ],
+  "http://id.loc.gov/ontologies/bibframe/heldBy" : [ {
+    "@id" : "http://lobid.org/organisations/DE-464#!"
+  } ],
+  "http://id.loc.gov/ontologies/bibframe/note" : [ {
+    "@value" : "D05"
+  } ],
+  "http://purl.org/lobid/lv#callNumber" : [ {
+    "@value" : "OCT9386+3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "OCT9386+3"
+  } ]
 }, {
   "@id" : "http://lobid.org/items/HT015847062:DE-465:OCT9386%2B4#!",
-  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ],
+  "http://id.loc.gov/ontologies/bibframe/heldBy" : [ {
+    "@id" : "http://lobid.org/organisations/DE-465#!"
+  } ],
+  "http://id.loc.gov/ontologies/bibframe/note" : [ {
+    "@value" : "E11"
+  } ],
+  "http://purl.org/lobid/lv#callNumber" : [ {
+    "@value" : "OCT9386+4"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "OCT9386+4"
+  } ]
 }, {
   "@id" : "http://lobid.org/items/HT015847062:DE-465:OCT9386%2B5#!",
-  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ],
+  "http://id.loc.gov/ontologies/bibframe/heldBy" : [ {
+    "@id" : "http://lobid.org/organisations/DE-465#!"
+  } ],
+  "http://id.loc.gov/ontologies/bibframe/note" : [ {
+    "@value" : "E11"
+  } ],
+  "http://purl.org/lobid/lv#callNumber" : [ {
+    "@value" : "OCT9386+5"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "OCT9386+5"
+  } ]
 }, {
   "@id" : "http://lobid.org/items/HT015847062:DE-467:32QFD8011%2B1#!",
-  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ],
+  "http://id.loc.gov/ontologies/bibframe/heldBy" : [ {
+    "@id" : "http://lobid.org/organisations/DE-467#!"
+  } ],
+  "http://id.loc.gov/ontologies/bibframe/note" : [ {
+    "@value" : "US1"
+  } ],
+  "http://purl.org/lobid/lv#callNumber" : [ {
+    "@value" : "32QFD8011+1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "32QFD8011+1"
+  } ]
 }, {
   "@id" : "http://lobid.org/items/HT015847062:DE-467:75QFD8011#!",
-  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ],
+  "http://id.loc.gov/ontologies/bibframe/heldBy" : [ {
+    "@id" : "http://lobid.org/organisations/DE-467#!"
+  } ],
+  "http://id.loc.gov/ontologies/bibframe/note" : [ {
+    "@value" : "ULEHR"
+  } ],
+  "http://purl.org/lobid/lv#callNumber" : [ {
+    "@value" : "75QFD8011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "75QFD8011"
+  } ]
 }, {
   "@id" : "http://lobid.org/items/HT015847062:DE-467:75QFD8011%2B1#!",
-  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ],
+  "http://id.loc.gov/ontologies/bibframe/heldBy" : [ {
+    "@id" : "http://lobid.org/organisations/DE-467#!"
+  } ],
+  "http://id.loc.gov/ontologies/bibframe/note" : [ {
+    "@value" : "ULEHR"
+  } ],
+  "http://purl.org/lobid/lv#callNumber" : [ {
+    "@value" : "75QFD8011+1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "75QFD8011+1"
+  } ]
 }, {
   "@id" : "http://lobid.org/items/HT015847062:DE-5:2009%2F5398#!",
-  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ],
+  "http://id.loc.gov/ontologies/bibframe/heldBy" : [ {
+    "@id" : "http://lobid.org/organisations/DE-5#!"
+  } ],
+  "http://id.loc.gov/ontologies/bibframe/note" : [ {
+    "@value" : "00000010"
+  } ],
+  "http://purl.org/lobid/lv#callNumber" : [ {
+    "@value" : "2009/5398"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2009/5398"
+  } ]
 }, {
   "@id" : "http://lobid.org/items/HT015847062:DE-Bi10:OCT%20Tale#!",
-  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ],
+  "http://id.loc.gov/ontologies/bibframe/heldBy" : [ {
+    "@id" : "http://lobid.org/organisations/DE-Bi10#!"
+  } ],
+  "http://id.loc.gov/ontologies/bibframe/note" : [ {
+    "@value" : "00040000"
+  } ],
+  "http://purl.org/lobid/lv#callNumber" : [ {
+    "@value" : "OCT Tale"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "OCT Tale"
+  } ]
 }, {
   "@id" : "http://lobid.org/items/HT015847062:DE-Kob7:PH%2FV%202009%204482#!",
-  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ]
+  "@type" : [ "http://id.loc.gov/ontologies/bibframe/Item" ],
+  "http://id.loc.gov/ontologies/bibframe/heldBy" : [ {
+    "@id" : "http://lobid.org/organisations/DE-Kob7#!"
+  } ],
+  "http://id.loc.gov/ontologies/bibframe/note" : [ {
+    "@value" : "FRHKO"
+  } ],
+  "http://purl.org/lobid/lv#callNumber" : [ {
+    "@value" : "PH/V 2009 4482"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "PH/V 2009 4482"
+  } ]
+}, {
+  "@id" : "http://lobid.org/organisations/DE-1044#!",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "lobid Organisation"
+  } ]
+}, {
+  "@id" : "http://lobid.org/organisations/DE-464#!",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "lobid Organisation"
+  } ]
+}, {
+  "@id" : "http://lobid.org/organisations/DE-465#!",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "lobid Organisation"
+  } ]
+}, {
+  "@id" : "http://lobid.org/organisations/DE-467#!",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "lobid Organisation"
+  } ]
+}, {
+  "@id" : "http://lobid.org/organisations/DE-5#!",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "lobid Organisation"
+  } ]
+}, {
+  "@id" : "http://lobid.org/organisations/DE-Bi10#!",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "lobid Organisation"
+  } ]
+}, {
+  "@id" : "http://lobid.org/organisations/DE-Kob7#!",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "lobid Organisation"
+  } ]
 }, {
   "@id" : "http://lobid.org/resources/HT015847062",
-  "@type" : [ "http://purl.org/lobid/lv#BibliographicDescription" ]
+  "@type" : [ "http://purl.org/lobid/lv#BibliographicDescription" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "20090226"
+  } ],
+  "http://purl.org/lobid/lv#inDataset" : [ {
+    "@id" : "http://lobid.org/resources/dataset#!"
+  } ],
+  "http://purl.org/lobid/lv#resultOf" : [ {
+    "@id" : "_:b0"
+  } ],
+  "http://schema.org/license" : [ {
+    "@id" : "http://creativecommons.org/publicdomain/zero/1.0"
+  } ],
+  "http://schema.org/sourceOrganization" : [ {
+    "@id" : "http://lobid.org/organisations/DE-467#!"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Webseite der hbz-Ressource HT015847062"
+  } ]
 }, {
   "@id" : "http://lobid.org/resources/HT015847062#!",
-  "@type" : [ "http://purl.org/dc/terms/BibliographicResource", "http://purl.org/ontology/bibo/Book" ]
+  "@type" : [ "http://purl.org/dc/terms/BibliographicResource", "http://purl.org/ontology/bibo/Book" ],
+  "http://id.loc.gov/ontologies/bibframe/contribution" : [ {
+    "@list" : [ {
+      "@id" : "_:b3"
+    } ]
+  } ],
+  "http://id.loc.gov/ontologies/bibframe/extent" : [ {
+    "@value" : "XIV, 441 S. : Ill., graph. Darst."
+  } ],
+  "http://id.loc.gov/ontologies/bibframe/hasItem" : [ {
+    "@id" : "http://lobid.org/items/HT015847062:DE-Bi10:OCT%20Tale#!"
+  }, {
+    "@id" : "http://lobid.org/items/HT015847062:DE-464:OCT9386%2B3#!"
+  }, {
+    "@id" : "http://lobid.org/items/HT015847062:DE-1044:OCT9386%2B4#!"
+  }, {
+    "@id" : "http://lobid.org/items/HT015847062:DE-465:OCT9386%2B4#!"
+  }, {
+    "@id" : "http://lobid.org/items/HT015847062:DE-5:2009%2F5398#!"
+  }, {
+    "@id" : "http://lobid.org/items/HT015847062:DE-464:OCT9386%2B1#!"
+  }, {
+    "@id" : "http://lobid.org/items/HT015847062:DE-465:OCT9386%2B5#!"
+  }, {
+    "@id" : "http://lobid.org/items/HT015847062:DE-467:75QFD8011#!"
+  }, {
+    "@id" : "http://lobid.org/items/HT015847062:DE-467:75QFD8011%2B1#!"
+  }, {
+    "@id" : "http://lobid.org/items/HT015847062:DE-464:OCT9386%2B2#!"
+  }, {
+    "@id" : "http://lobid.org/items/HT015847062:DE-Kob7:PH%2FV%202009%204482#!"
+  }, {
+    "@id" : "http://lobid.org/items/HT015847062:DE-467:32QFD8011%2B1#!"
+  } ],
+  "http://id.loc.gov/ontologies/bibframe/responsibilityStatement" : [ {
+    "@value" : "Nassim Nicholas Taleb"
+  } ],
+  "http://purl.org/dc/terms/language" : [ {
+    "@id" : "http://id.loc.gov/vocabulary/iso639-2/deu"
+  } ],
+  "http://purl.org/dc/terms/medium" : [ {
+    "@id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010"
+  } ],
+  "http://purl.org/dc/terms/subject" : [ {
+    "@id" : "_:b4"
+  }, {
+    "@id" : "_:b2"
+  } ],
+  "http://purl.org/dc/terms/tableOfContents" : [ {
+    "@id" : "http://digitale-objekte.hbz-nrw.de/storage/2009/05/23/file_28/3011578.pdf"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "Der schwarze Schwan"
+  } ],
+  "http://purl.org/lobid/lv#exampleOfWork" : [ {
+    "@id" : "_:b1"
+  } ],
+  "http://purl.org/lobid/lv#hbzID" : [ {
+    "@value" : "HT015847062"
+  } ],
+  "http://purl.org/lobid/lv#subjectAltLabel" : [ {
+    "@value" : "Prädiktion"
+  }, {
+    "@value" : "Zukunftsprognose"
+  }, {
+    "@value" : "Vorhersehbarkeit"
+  }, {
+    "@value" : "Vorhersage"
+  }, {
+    "@value" : "Zukunftsvoraussage"
+  }, {
+    "@value" : "Voraussehbarkeit"
+  }, {
+    "@value" : "Voraussage"
+  }, {
+    "@value" : "Vorausschätzung"
+  }, {
+    "@value" : "Prognostizierbarkeit"
+  } ],
+  "http://purl.org/ontology/bibo/edition" : [ {
+    "@value" : "[Nachdr.]"
+  } ],
+  "http://purl.org/ontology/bibo/isbn" : [ {
+    "@value" : "9783446415683"
+  }, {
+    "@value" : "3446415688"
+  } ],
+  "http://purl.org/ontology/bibo/oclcnum" : [ {
+    "@value" : "553577538"
+  } ],
+  "http://rdaregistry.info/Elements/u/P60493" : [ {
+    "@value" : "die Macht höchst unwahrscheinlicher Ereignisse"
+  } ],
+  "http://schema.org/publication" : [ {
+    "@id" : "_:b5"
+  } ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "http://hub.culturegraph.org/resource/HBZ-HT015847062"
+  }, {
+    "@id" : "http://worldcat.org/oclc/553577538"
+  } ],
+  "http://www.w3.org/2007/05/powder-s#describedby" : [ {
+    "@id" : "http://lobid.org/resources/HT015847062"
+  } ]
+}, {
+  "@id" : "http://lobid.org/resources/dataset#!",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "lobid-resources – Der hbz-Verbundkatalog als Linked Open Data"
+  } ]
+}, {
+  "@id" : "http://rdaregistry.info/termList/RDAproductionMethod/1010",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Print"
+  } ]
+}, {
+  "@id" : "http://worldcat.org/oclc/553577538",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "553577538"
+  } ]
 }, {
   "@id" : "https://d-nb.info/gnd/124120180",
-  "@type" : [ "https://d-nb.info/standards/elementset/gnd#Person" ]
+  "@type" : [ "https://d-nb.info/standards/elementset/gnd#Person" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Taleb, Nassim Nicholas"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Taleb, Nassim N."
+  }, {
+    "@value" : "Taleb, Nassim"
+  }, {
+    "@value" : "Taleb Nassim, Nicholas"
+  } ],
+  "https://d-nb.info/standards/elementset/gnd#dateOfBirth" : [ {
+    "@value" : "1960"
+  } ],
+  "https://d-nb.info/standards/elementset/gnd#gndIdentifier" : [ {
+    "@value" : "124120180"
+  } ]
 }, {
   "@id" : "https://d-nb.info/gnd/4047390-9",
-  "@type" : [ "https://d-nb.info/standards/elementset/gnd#SubjectHeading" ]
+  "@type" : [ "https://d-nb.info/standards/elementset/gnd#SubjectHeading" ],
+  "http://id.loc.gov/ontologies/bibframe/source" : [ {
+    "@id" : "https://d-nb.info/gnd/7749153-1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Prognose"
+  } ],
+  "https://d-nb.info/standards/elementset/gnd#gndIdentifier" : [ {
+    "@value" : "4047390-9"
+  } ]
 }, {
   "@id" : "https://d-nb.info/gnd/4260601-9",
-  "@type" : [ "https://d-nb.info/standards/elementset/gnd#SubjectHeading" ]
+  "@type" : [ "https://d-nb.info/standards/elementset/gnd#SubjectHeading" ],
+  "http://id.loc.gov/ontologies/bibframe/source" : [ {
+    "@id" : "https://d-nb.info/gnd/7749153-1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Vorhersagbarkeit"
+  } ],
+  "https://d-nb.info/standards/elementset/gnd#gndIdentifier" : [ {
+    "@value" : "4260601-9"
+  } ]
+}, {
+  "@id" : "https://d-nb.info/gnd/7749153-1",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Gemeinsame Normdatei (GND)"
+  } ]
+}, {
+  "@id" : "https://datahub.io/dataset/hbz_unioncatalog",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hbz_unioncatalog"
+  } ]
 }, {
   "@id" : "https://github.com/hbz/lobid-resources",
-  "@type" : [ "http://schema.org/SoftwareApplication" ]
+  "@type" : [ "http://schema.org/SoftwareApplication" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Software lobid-resources"
+  } ]
 } ]

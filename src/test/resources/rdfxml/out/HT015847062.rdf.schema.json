@@ -1,0 +1,189 @@
+{
+  "title" : "Oi Generated Schema",
+  "description" : "https://github.com/jschnasse/oi",
+  "type" : "object",
+  "properties" : {
+    "@context" : {
+      "type" : "object",
+      "properties" : {
+        "endTime" : {
+          "type" : "string"
+        },
+        "instrument" : {
+          "type" : "string"
+        },
+        "object" : {
+          "type" : "string"
+        },
+        "label" : {
+          "type" : "string"
+        },
+        "componentList" : {
+          "type" : "string"
+        },
+        "agent" : {
+          "type" : "string"
+        },
+        "role" : {
+          "type" : "string"
+        },
+        "location" : {
+          "type" : "string"
+        },
+        "publishedBy" : {
+          "type" : "string"
+        },
+        "startDate" : {
+          "type" : "string"
+        },
+        "inDataset" : {
+          "type" : "string"
+        },
+        "heldBy" : {
+          "type" : "string"
+        },
+        "note" : {
+          "type" : "string"
+        },
+        "callNumber" : {
+          "type" : "string"
+        },
+        "created" : {
+          "type" : "string"
+        },
+        "resultOf" : {
+          "type" : "string"
+        },
+        "license" : {
+          "type" : "string"
+        },
+        "sourceOrganization" : {
+          "type" : "string"
+        },
+        "contribution" : {
+          "type" : "string"
+        },
+        "extent" : {
+          "type" : "string"
+        },
+        "hasItem" : {
+          "type" : "string"
+        },
+        "responsibilityStatement" : {
+          "type" : "string"
+        },
+        "language" : {
+          "type" : "string"
+        },
+        "medium" : {
+          "type" : "string"
+        },
+        "subject" : {
+          "type" : "string"
+        },
+        "tableOfContents" : {
+          "type" : "string"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "exampleOfWork" : {
+          "type" : "string"
+        },
+        "hbzID" : {
+          "type" : "string"
+        },
+        "subjectAltLabel" : {
+          "type" : "string"
+        },
+        "edition" : {
+          "type" : "string"
+        },
+        "isbn" : {
+          "type" : "string"
+        },
+        "oclcnum" : {
+          "type" : "string"
+        },
+        "P60493" : {
+          "type" : "string"
+        },
+        "publication" : {
+          "type" : "string"
+        },
+        "sameAs" : {
+          "type" : "string"
+        },
+        "describedby" : {
+          "type" : "string"
+        },
+        "altLabel" : {
+          "type" : "string"
+        },
+        "dateOfBirth" : {
+          "type" : "string"
+        },
+        "gndIdentifier" : {
+          "type" : "string"
+        },
+        "source" : {
+          "type" : "string"
+        }
+      }
+    },
+    "@graph" : {
+      "type" : "array",
+      "items" : {
+        "@id" : {
+          "type" : "string"
+        },
+        "@type" : {
+          "type" : "string"
+        },
+        "endTime" : {
+          "type" : "string"
+        },
+        "instrument" : {
+          "type" : "object",
+          "properties" : {
+            "@id" : {
+              "type" : "string"
+            },
+            "@type" : {
+              "type" : "string"
+            },
+            "label" : {
+              "type" : "string"
+            }
+          }
+        },
+        "object" : {
+          "type" : "object",
+          "properties" : {
+            "@id" : {
+              "type" : "string"
+            },
+            "@type" : {
+              "type" : "string"
+            },
+            "inDataset" : {
+              "type" : "object",
+              "properties" : {
+                "@id" : {
+                  "type" : "string"
+                },
+                "label" : {
+                  "type" : "string"
+                }
+              }
+            },
+            "label" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

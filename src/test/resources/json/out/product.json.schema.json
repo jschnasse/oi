@@ -1,0 +1,23 @@
+{
+  "title" : "Oi Generated Schema",
+  "description" : "https://github.com/jschnasse/oi",
+  "type" : "object",
+  "properties" : {
+    "productId" : {
+      "type" : "number"
+    },
+    "productName" : {
+      "type" : "string"
+    },
+    "price" : {
+      "type" : "number"
+    },
+    "tags" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    }
+  }
+}
+

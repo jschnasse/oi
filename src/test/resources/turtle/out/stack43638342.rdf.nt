@@ -1,3 +1,8 @@
 _:b0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Book> .
+_:b0 <http://schema.org/name> "Semantic Web Primer (First Edition)" .
+_:b0 <http://schema.org/offers> _:b1 .
+_:b0 <http://schema.org/publisher> "Linked Data Tools" .
 _:b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Offer> .
+_:b1 <http://schema.org/price> "2.95" .
+_:b1 <http://schema.org/priceCurrency> "USD" .
 

@@ -1,7 +1,22 @@
 [ {
   "@id" : "_:b0",
-  "@type" : [ "http://schema.org/Book" ]
+  "@type" : [ "http://schema.org/Book" ],
+  "http://schema.org/name" : [ {
+    "@value" : "Semantic Web Primer (First Edition)"
+  } ],
+  "http://schema.org/offers" : [ {
+    "@id" : "_:b1"
+  } ],
+  "http://schema.org/publisher" : [ {
+    "@value" : "Linked Data Tools"
+  } ]
 }, {
   "@id" : "_:b1",
-  "@type" : [ "http://schema.org/Offer" ]
+  "@type" : [ "http://schema.org/Offer" ],
+  "http://schema.org/price" : [ {
+    "@value" : "2.95"
+  } ],
+  "http://schema.org/priceCurrency" : [ {
+    "@value" : "USD"
+  } ]
 } ]

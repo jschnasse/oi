@@ -1,0 +1,49 @@
+{
+  "title" : "Oi Generated Schema",
+  "description" : "https://github.com/jschnasse/oi",
+  "type" : "object",
+  "properties" : {
+    "data" : {
+      "type" : "array",
+      "items" : {
+        "2019" : {
+          "type" : "string"
+        },
+        "Archäologische Zone" : {
+          "type" : "string"
+        },
+        "Kölnisches Stadtmuseum" : {
+          "type" : "string"
+        },
+        "Museen gesamt" : {
+          "type" : "string"
+        },
+        "Museum Ludwig" : {
+          "type" : "string"
+        },
+        "Museum Schnütgen" : {
+          "type" : "string"
+        },
+        "Museum für Angewandte Kunst" : {
+          "type" : "string"
+        },
+        "Museum für Ostasiatische Kunst" : {
+          "type" : "string"
+        },
+        "NS-Dokumentationszentrum" : {
+          "type" : "string"
+        },
+        "Rautenstrauch-Joest-Museum" : {
+          "type" : "string"
+        },
+        "Römisch-Germanisches Museum" : {
+          "type" : "string"
+        },
+        "Wallraf-Richartz-Museum - Fondation Corboud" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
+

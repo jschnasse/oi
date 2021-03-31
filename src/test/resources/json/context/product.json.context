@@ -1,0 +1,18 @@
+{
+  "@context" : {
+    "productId" : {
+      "@id" : "info:oi/productId"
+    },
+    "productName" : {
+      "@id" : "info:oi/productName"
+    },
+    "price" : {
+      "@id" : "info:oi/price"
+    },
+    "tags" : {
+      "@id" : "info:oi/tags",
+      "@container" : "@list"
+    }
+  }
+}
+

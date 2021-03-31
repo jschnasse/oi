@@ -1,0 +1,62 @@
+{
+  "title" : "Oi Generated Schema",
+  "description" : "https://github.com/jschnasse/oi",
+  "type" : "object",
+  "properties" : {
+    "@context" : {
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "offers" : {
+          "type" : "string"
+        },
+        "publisher" : {
+          "type" : "string"
+        },
+        "price" : {
+          "type" : "string"
+        },
+        "priceCurrency" : {
+          "type" : "string"
+        }
+      }
+    },
+    "@graph" : {
+      "type" : "array",
+      "items" : {
+        "@id" : {
+          "type" : "string"
+        },
+        "@type" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "offers" : {
+          "type" : "object",
+          "properties" : {
+            "@id" : {
+              "type" : "string"
+            },
+            "@type" : {
+              "type" : "string"
+            },
+            "price" : {
+              "type" : "string"
+            },
+            "priceCurrency" : {
+              "type" : "string"
+            }
+          }
+        },
+        "publisher" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
+

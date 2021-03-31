@@ -1,0 +1,279 @@
+{
+  "title" : "Oi Generated Schema",
+  "description" : "https://github.com/jschnasse/oi",
+  "type" : "object",
+  "properties" : {
+    "type" : {
+      "type" : "string"
+    },
+    "crs" : {
+      "type" : "object",
+      "properties" : {
+        "type" : {
+          "type" : "string"
+        },
+        "properties" : {
+          "type" : "object",
+          "properties" : {
+            "name" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "features" : {
+      "type" : "array",
+      "items" : {
+        "type" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "number"
+        },
+        "geometry" : {
+          "type" : "object",
+          "properties" : {
+            "type" : {
+              "type" : "string"
+            },
+            "coordinates" : {
+              "type" : "array",
+              "items" : {
+                "type" : "array",
+                "items" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "number"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "properties" : {
+          "type" : "object",
+          "properties" : {
+            "OBJECTID" : {
+              "type" : "number"
+            },
+            "AGGR" : {
+              "type" : "number"
+            },
+            "SUM_FLAECHE" : {
+              "type" : "number"
+            },
+            "NAME" : {
+              "type" : "string"
+            },
+            "NUMMER" : {
+              "type" : "string"
+            },
+            "AGS" : {
+              "type" : "string"
+            },
+            "AM_SGB_INSG_AA" : {
+              "type" : "number"
+            },
+            "AM_SGB_MANN_AA" : {
+              "type" : "number"
+            },
+            "AM_SGB_FRAU_AA" : {
+              "type" : "number"
+            },
+            "AM_SGB_DEUTSCH_AA" : {
+              "type" : "number"
+            },
+            "AM_SGB_UNTER25_AA" : {
+              "type" : "number"
+            },
+            "AM_SGB_INSG_AP" : {
+              "type" : "number"
+            },
+            "AM_SGB_MANN_AP" : {
+              "type" : "number"
+            },
+            "AM_SGB_FRAU_AP" : {
+              "type" : "number"
+            },
+            "AM_SGB_DEUTSCH_AP" : {
+              "type" : "number"
+            },
+            "AM_SGB_UNTER25_AP" : {
+              "type" : "number"
+            },
+            "AM_SGB_INSG_HA" : {
+              "type" : "number"
+            },
+            "AM_SGB_MANN_HA" : {
+              "type" : "number"
+            },
+            "AM_SGB_FRAU_HA" : {
+              "type" : "number"
+            },
+            "AM_SGB_DEUTSCH_HA" : {
+              "type" : "number"
+            },
+            "AM_SGB_UNTER25_HA" : {
+              "type" : "number"
+            },
+            "AM_SGB_INSG_HP" : {
+              "type" : "number"
+            },
+            "AM_SGB_MANN_HP" : {
+              "type" : "number"
+            },
+            "AM_SGB_FRAU_HP" : {
+              "type" : "number"
+            },
+            "AM_SGB_DEUTSCH_HP" : {
+              "type" : "number"
+            },
+            "AM_SGB_UNTER25_HP" : {
+              "type" : "number"
+            },
+            "OBJECTID_12" : {
+              "type" : "number"
+            },
+            "AGS_1" : {
+              "type" : "string"
+            },
+            "AM_SGB2_INSG_AA" : {
+              "type" : "number"
+            },
+            "AM_SGB2_MANN_AA" : {
+              "type" : "number"
+            },
+            "AM_SGB2_FRAU_AA" : {
+              "type" : "number"
+            },
+            "AM_SGB2_DEUTSCH_AA" : {
+              "type" : "number"
+            },
+            "AM_SGB2_UNTER25_AA" : {
+              "type" : "number"
+            },
+            "AM_SGB2_INSG_AP" : {
+              "type" : "number"
+            },
+            "AM_SGB2_MANN_AP" : {
+              "type" : "number"
+            },
+            "AM_SGB2_FRAU_AP" : {
+              "type" : "number"
+            },
+            "AM_SGB2_DEUTSCH_AP" : {
+              "type" : "number"
+            },
+            "AM_SGB2_UNTER25_AP" : {
+              "type" : "number"
+            },
+            "AM_SGB2_INSG_HA" : {
+              "type" : "number"
+            },
+            "AM_SGB2_MANN_HA" : {
+              "type" : "number"
+            },
+            "AM_SGB2_FRAU_HA" : {
+              "type" : "number"
+            },
+            "AM_SGB2_DEUTSCH_HA" : {
+              "type" : "number"
+            },
+            "AM_SGB2_UNTER25_HA" : {
+              "type" : "number"
+            },
+            "AM_SGB2_INSG_HP" : {
+              "type" : "number"
+            },
+            "AM_SGB2_MANN_HP" : {
+              "type" : "number"
+            },
+            "AM_SGB2_FRAU_HP" : {
+              "type" : "number"
+            },
+            "AM_SGB2_DEUTSCH_HP" : {
+              "type" : "number"
+            },
+            "AM_SGB2_UNTER25_HP" : {
+              "type" : "number"
+            },
+            "OBJECTID_12_13" : {
+              "type" : "number"
+            },
+            "AGS_12" : {
+              "type" : "string"
+            },
+            "AM_SGB3_INSG_AA" : {
+              "type" : "number"
+            },
+            "AM_SGB3_MANN_AA" : {
+              "type" : "number"
+            },
+            "AM_SGB3_FRAU_AA" : {
+              "type" : "number"
+            },
+            "AM_SGB3_DEUTSCH_AA" : {
+              "type" : "number"
+            },
+            "AM_SGB3_UNTER25_AA" : {
+              "type" : "number"
+            },
+            "AM_SGB3_INSG_AP" : {
+              "type" : "number"
+            },
+            "AM_SGB3_MANN_AP" : {
+              "type" : "number"
+            },
+            "AM_SGB3_FRAU_AP" : {
+              "type" : "number"
+            },
+            "AM_SGB3_DEUTSCH_AP" : {
+              "type" : "number"
+            },
+            "AM_SGB3_UNTER25_AP" : {
+              "type" : "number"
+            },
+            "AM_SGB3_INSG_HA" : {
+              "type" : "number"
+            },
+            "AM_SGB3_MANN_HA" : {
+              "type" : "number"
+            },
+            "AM_SGB3_FRAU_HA" : {
+              "type" : "number"
+            },
+            "AM_SGB3_DEUTSCH_HA" : {
+              "type" : "number"
+            },
+            "AM_SGB3_UNTER25_HA" : {
+              "type" : "number"
+            },
+            "AM_SGB3_INSG_HP" : {
+              "type" : "number"
+            },
+            "AM_SGB3_MANN_HP" : {
+              "type" : "number"
+            },
+            "AM_SGB3_FRAU_HP" : {
+              "type" : "number"
+            },
+            "AM_SGB3_DEUTSCH_HP" : {
+              "type" : "number"
+            },
+            "AM_SGB3_UNTER25_HP" : {
+              "type" : "number"
+            },
+            "SHAPE.AREA" : {
+              "type" : "number"
+            },
+            "SHAPE.LEN" : {
+              "type" : "number"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

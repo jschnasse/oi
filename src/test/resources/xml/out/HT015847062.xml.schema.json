@@ -1,0 +1,538 @@
+{
+  "title" : "Oi Generated Schema",
+  "description" : "https://github.com/jschnasse/oi",
+  "type" : "object",
+  "properties" : {
+    "extent" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "oclcNumber" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "subject" : {
+      "type" : "array",
+      "items" : {
+        "componentList" : {
+          "type" : "array",
+          "items" : {
+            "source" : {
+              "type" : "array",
+              "items" : {
+                "label" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "string"
+                  }
+                },
+                "id" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "string"
+                  }
+                }
+              }
+            },
+            "label" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            },
+            "type" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            },
+            "id" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            },
+            "gndIdentifier" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "label" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "type" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "isbn" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "hasItem" : {
+      "type" : "array",
+      "items" : {
+        "note" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "label" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "type" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "heldBy" : {
+          "type" : "array",
+          "items" : {
+            "label" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            },
+            "id" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "callNumber" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "id" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "responsibilityStatement" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "edition" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "language" : {
+      "type" : "array",
+      "items" : {
+        "label" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "id" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "medium" : {
+      "type" : "array",
+      "items" : {
+        "label" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "id" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "type" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "title" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "exampleOfWork" : {
+      "type" : "array",
+      "items" : {
+        "label" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "type" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "otherTitleInformation" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "contribution" : {
+      "type" : "array",
+      "items" : {
+        "agent" : {
+          "type" : "array",
+          "items" : {
+            "altLabel" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            },
+            "dateOfBirth" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            },
+            "label" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            },
+            "type" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            },
+            "id" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            },
+            "gndIdentifier" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "role" : {
+          "type" : "array",
+          "items" : {
+            "label" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            },
+            "id" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "type" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "subjectAltLabel" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "publication" : {
+      "type" : "array",
+      "items" : {
+        "publishedBy" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "type" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "location" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "startDate" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "context" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "describedBy" : {
+      "type" : "array",
+      "items" : {
+        "inDataset" : {
+          "type" : "array",
+          "items" : {
+            "label" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            },
+            "id" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "resultOf" : {
+          "type" : "array",
+          "items" : {
+            "instrument" : {
+              "type" : "array",
+              "items" : {
+                "label" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "string"
+                  }
+                },
+                "type" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "string"
+                  }
+                },
+                "id" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "string"
+                  }
+                }
+              }
+            },
+            "type" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            },
+            "endTime" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            },
+            "object" : {
+              "type" : "array",
+              "items" : {
+                "inDataset" : {
+                  "type" : "array",
+                  "items" : {
+                    "label" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "string"
+                      }
+                    },
+                    "id" : {
+                      "type" : "array",
+                      "items" : {
+                        "type" : "string"
+                      }
+                    }
+                  }
+                },
+                "label" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "string"
+                  }
+                },
+                "type" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "string"
+                  }
+                },
+                "id" : {
+                  "type" : "array",
+                  "items" : {
+                    "type" : "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "label" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "type" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "license" : {
+          "type" : "array",
+          "items" : {
+            "label" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            },
+            "id" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "dateCreated" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "sourceOrganization" : {
+          "type" : "array",
+          "items" : {
+            "label" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            },
+            "id" : {
+              "type" : "array",
+              "items" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "id" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "id" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "hbzId" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "tableOfContents" : {
+      "type" : "array",
+      "items" : {
+        "label" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "id" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "sameAs" : {
+      "type" : "array",
+      "items" : {
+        "label" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        },
+        "id" : {
+          "type" : "array",
+          "items" : {
+            "type" : "string"
+          }
+        }
+      }
+    }
+  }
+}
+

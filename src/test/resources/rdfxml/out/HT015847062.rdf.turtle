@@ -1,52 +1,260 @@
 
-<http://lobid.org/hbz01/HT015847062> a <http://schema.org/DataFeedItem> .
+<https://github.com/hbz/lobid-resources> a <http://schema.org/SoftwareApplication>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Software lobid-resources" .
 
-<http://lobid.org/items/HT015847062:DE-1044:OCT9386%2B4#!> a <http://id.loc.gov/ontologies/bibframe/Item> .
+<http://lobid.org/hbz01/HT015847062> a <http://schema.org/DataFeedItem>;
+  <http://purl.org/lobid/lv#inDataset> <https://datahub.io/dataset/hbz_unioncatalog>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "hbz-Ressource HT015847062 im Exportformat MAB2-XML" .
 
-<http://lobid.org/items/HT015847062:DE-464:OCT9386%2B1#!> a <http://id.loc.gov/ontologies/bibframe/Item> .
+<https://datahub.io/dataset/hbz_unioncatalog> <http://www.w3.org/2000/01/rdf-schema#label>
+    "hbz_unioncatalog" .
 
-<http://lobid.org/items/HT015847062:DE-464:OCT9386%2B2#!> a <http://id.loc.gov/ontologies/bibframe/Item> .
+<https://d-nb.info/gnd/4260601-9> a <https://d-nb.info/standards/elementset/gnd#SubjectHeading>;
+  <http://id.loc.gov/ontologies/bibframe/source> <https://d-nb.info/gnd/7749153-1>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Vorhersagbarkeit";
+  <https://d-nb.info/standards/elementset/gnd#gndIdentifier> "4260601-9" .
 
-<http://lobid.org/items/HT015847062:DE-464:OCT9386%2B3#!> a <http://id.loc.gov/ontologies/bibframe/Item> .
+<https://d-nb.info/gnd/7749153-1> <http://www.w3.org/2000/01/rdf-schema#label> "Gemeinsame Normdatei (GND)" .
 
-<http://lobid.org/items/HT015847062:DE-465:OCT9386%2B4#!> a <http://id.loc.gov/ontologies/bibframe/Item> .
+<https://d-nb.info/gnd/124120180> a <https://d-nb.info/standards/elementset/gnd#Person>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Taleb, Nassim Nicholas";
+  <http://www.w3.org/2004/02/skos/core#altLabel> "Taleb Nassim, Nicholas", "Taleb, Nassim",
+    "Taleb, Nassim N.";
+  <https://d-nb.info/standards/elementset/gnd#dateOfBirth> "1960";
+  <https://d-nb.info/standards/elementset/gnd#gndIdentifier> "124120180" .
 
-<http://lobid.org/items/HT015847062:DE-465:OCT9386%2B5#!> a <http://id.loc.gov/ontologies/bibframe/Item> .
+<http://id.loc.gov/vocabulary/relators/cre> <http://www.w3.org/2000/01/rdf-schema#label>
+    "Autor/in" .
 
-<http://lobid.org/items/HT015847062:DE-467:32QFD8011%2B1#!> a <http://id.loc.gov/ontologies/bibframe/Item> .
+<https://d-nb.info/gnd/4047390-9> a <https://d-nb.info/standards/elementset/gnd#SubjectHeading>;
+  <http://id.loc.gov/ontologies/bibframe/source> <https://d-nb.info/gnd/7749153-1>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Prognose";
+  <https://d-nb.info/standards/elementset/gnd#gndIdentifier> "4047390-9" .
 
-<http://lobid.org/items/HT015847062:DE-467:75QFD8011#!> a <http://id.loc.gov/ontologies/bibframe/Item> .
+<http://creativecommons.org/publicdomain/zero/1.0> <http://www.w3.org/2000/01/rdf-schema#label>
+    "Creative Commons-Lizenz CC0 1.0 Universal" .
 
-<http://lobid.org/items/HT015847062:DE-467:75QFD8011%2B1#!> a <http://id.loc.gov/ontologies/bibframe/Item> .
+<http://digitale-objekte.hbz-nrw.de/storage/2009/05/23/file_28/3011578.pdf> <http://www.w3.org/2000/01/rdf-schema#label>
+    "3011578.pdf" .
 
-<http://lobid.org/items/HT015847062:DE-5:2009%2F5398#!> a <http://id.loc.gov/ontologies/bibframe/Item> .
+<http://hub.culturegraph.org/resource/HBZ-HT015847062> <http://www.w3.org/2000/01/rdf-schema#label>
+    "Culturegraph Ressource" .
 
-<http://lobid.org/items/HT015847062:DE-Bi10:OCT%20Tale#!> a <http://id.loc.gov/ontologies/bibframe/Item> .
+<http://id.loc.gov/vocabulary/iso639-2/deu> <http://www.w3.org/2000/01/rdf-schema#label>
+    "Deutsch" .
 
-<http://lobid.org/items/HT015847062:DE-Kob7:PH%2FV%202009%204482#!> a <http://id.loc.gov/ontologies/bibframe/Item> .
+<http://lobid.org/items/HT015847062:DE-1044:OCT9386%2B4#!> a <http://id.loc.gov/ontologies/bibframe/Item>;
+  <http://id.loc.gov/ontologies/bibframe/heldBy> <http://lobid.org/organisations/DE-1044#!>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "lobid Bestandsressource" .
 
-<http://lobid.org/resources/HT015847062> a <http://purl.org/lobid/lv#BibliographicDescription> .
+<http://lobid.org/organisations/DE-1044#!> <http://www.w3.org/2000/01/rdf-schema#label>
+    "lobid Organisation" .
+
+<http://lobid.org/items/HT015847062:DE-464:OCT9386%2B1#!> a <http://id.loc.gov/ontologies/bibframe/Item>;
+  <http://id.loc.gov/ontologies/bibframe/heldBy> <http://lobid.org/organisations/DE-464#!>;
+  <http://id.loc.gov/ontologies/bibframe/note> "D05";
+  <http://purl.org/lobid/lv#callNumber> "OCT9386+1";
+  <http://www.w3.org/2000/01/rdf-schema#label> "OCT9386+1" .
+
+<http://lobid.org/organisations/DE-464#!> <http://www.w3.org/2000/01/rdf-schema#label>
+    "lobid Organisation" .
+
+<http://lobid.org/items/HT015847062:DE-464:OCT9386%2B2#!> a <http://id.loc.gov/ontologies/bibframe/Item>;
+  <http://id.loc.gov/ontologies/bibframe/heldBy> <http://lobid.org/organisations/DE-464#!>;
+  <http://id.loc.gov/ontologies/bibframe/note> "D05";
+  <http://purl.org/lobid/lv#callNumber> "OCT9386+2";
+  <http://www.w3.org/2000/01/rdf-schema#label> "OCT9386+2" .
+
+<http://lobid.org/items/HT015847062:DE-464:OCT9386%2B3#!> a <http://id.loc.gov/ontologies/bibframe/Item>;
+  <http://id.loc.gov/ontologies/bibframe/heldBy> <http://lobid.org/organisations/DE-464#!>;
+  <http://id.loc.gov/ontologies/bibframe/note> "D05";
+  <http://purl.org/lobid/lv#callNumber> "OCT9386+3";
+  <http://www.w3.org/2000/01/rdf-schema#label> "OCT9386+3" .
+
+<http://lobid.org/items/HT015847062:DE-465:OCT9386%2B4#!> a <http://id.loc.gov/ontologies/bibframe/Item>;
+  <http://id.loc.gov/ontologies/bibframe/heldBy> <http://lobid.org/organisations/DE-465#!>;
+  <http://id.loc.gov/ontologies/bibframe/note> "E11";
+  <http://purl.org/lobid/lv#callNumber> "OCT9386+4";
+  <http://www.w3.org/2000/01/rdf-schema#label> "OCT9386+4" .
+
+<http://lobid.org/organisations/DE-465#!> <http://www.w3.org/2000/01/rdf-schema#label>
+    "lobid Organisation" .
+
+<http://lobid.org/items/HT015847062:DE-465:OCT9386%2B5#!> a <http://id.loc.gov/ontologies/bibframe/Item>;
+  <http://id.loc.gov/ontologies/bibframe/heldBy> <http://lobid.org/organisations/DE-465#!>;
+  <http://id.loc.gov/ontologies/bibframe/note> "E11";
+  <http://purl.org/lobid/lv#callNumber> "OCT9386+5";
+  <http://www.w3.org/2000/01/rdf-schema#label> "OCT9386+5" .
+
+<http://lobid.org/items/HT015847062:DE-467:32QFD8011%2B1#!> a <http://id.loc.gov/ontologies/bibframe/Item>;
+  <http://id.loc.gov/ontologies/bibframe/heldBy> <http://lobid.org/organisations/DE-467#!>;
+  <http://id.loc.gov/ontologies/bibframe/note> "US1";
+  <http://purl.org/lobid/lv#callNumber> "32QFD8011+1";
+  <http://www.w3.org/2000/01/rdf-schema#label> "32QFD8011+1" .
+
+<http://lobid.org/organisations/DE-467#!> <http://www.w3.org/2000/01/rdf-schema#label>
+    "lobid Organisation" .
+
+<http://lobid.org/items/HT015847062:DE-467:75QFD8011#!> a <http://id.loc.gov/ontologies/bibframe/Item>;
+  <http://id.loc.gov/ontologies/bibframe/heldBy> <http://lobid.org/organisations/DE-467#!>;
+  <http://id.loc.gov/ontologies/bibframe/note> "ULEHR";
+  <http://purl.org/lobid/lv#callNumber> "75QFD8011";
+  <http://www.w3.org/2000/01/rdf-schema#label> "75QFD8011" .
+
+<http://lobid.org/items/HT015847062:DE-467:75QFD8011%2B1#!> a <http://id.loc.gov/ontologies/bibframe/Item>;
+  <http://id.loc.gov/ontologies/bibframe/heldBy> <http://lobid.org/organisations/DE-467#!>;
+  <http://id.loc.gov/ontologies/bibframe/note> "ULEHR";
+  <http://purl.org/lobid/lv#callNumber> "75QFD8011+1";
+  <http://www.w3.org/2000/01/rdf-schema#label> "75QFD8011+1" .
+
+<http://lobid.org/items/HT015847062:DE-5:2009%2F5398#!> a <http://id.loc.gov/ontologies/bibframe/Item>;
+  <http://id.loc.gov/ontologies/bibframe/heldBy> <http://lobid.org/organisations/DE-5#!>;
+  <http://id.loc.gov/ontologies/bibframe/note> "00000010";
+  <http://purl.org/lobid/lv#callNumber> "2009/5398";
+  <http://www.w3.org/2000/01/rdf-schema#label> "2009/5398" .
+
+<http://lobid.org/organisations/DE-5#!> <http://www.w3.org/2000/01/rdf-schema#label>
+    "lobid Organisation" .
+
+<http://lobid.org/items/HT015847062:DE-Bi10:OCT%20Tale#!> a <http://id.loc.gov/ontologies/bibframe/Item>;
+  <http://id.loc.gov/ontologies/bibframe/heldBy> <http://lobid.org/organisations/DE-Bi10#!>;
+  <http://id.loc.gov/ontologies/bibframe/note> "00040000";
+  <http://purl.org/lobid/lv#callNumber> "OCT Tale";
+  <http://www.w3.org/2000/01/rdf-schema#label> "OCT Tale" .
+
+<http://lobid.org/organisations/DE-Bi10#!> <http://www.w3.org/2000/01/rdf-schema#label>
+    "lobid Organisation" .
+
+<http://lobid.org/items/HT015847062:DE-Kob7:PH%2FV%202009%204482#!> a <http://id.loc.gov/ontologies/bibframe/Item>;
+  <http://id.loc.gov/ontologies/bibframe/heldBy> <http://lobid.org/organisations/DE-Kob7#!>;
+  <http://id.loc.gov/ontologies/bibframe/note> "FRHKO";
+  <http://purl.org/lobid/lv#callNumber> "PH/V 2009 4482";
+  <http://www.w3.org/2000/01/rdf-schema#label> "PH/V 2009 4482" .
+
+<http://lobid.org/organisations/DE-Kob7#!> <http://www.w3.org/2000/01/rdf-schema#label>
+    "lobid Organisation" .
+
+<http://lobid.org/resources/HT015847062> a <http://purl.org/lobid/lv#BibliographicDescription>;
+  <http://purl.org/dc/terms/created> "20090226";
+  <http://purl.org/lobid/lv#inDataset> <http://lobid.org/resources/dataset#!>;
+  <http://purl.org/lobid/lv#resultOf> _:b0 .
+
+_:b0 a <http://schema.org/CreateAction>;
+  <http://schema.org/endTime> "2020-04-08T01:43:32";
+  <http://schema.org/instrument> <https://github.com/hbz/lobid-resources>;
+  <http://schema.org/object> <http://lobid.org/hbz01/HT015847062> .
+
+<http://lobid.org/resources/HT015847062> <http://schema.org/license> <http://creativecommons.org/publicdomain/zero/1.0>;
+  <http://schema.org/sourceOrganization> <http://lobid.org/organisations/DE-467#!>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Webseite der hbz-Ressource HT015847062" .
+
+<http://lobid.org/resources/dataset#!> <http://www.w3.org/2000/01/rdf-schema#label>
+    "lobid-resources – Der hbz-Verbundkatalog als Linked Open Data" .
 
 <http://lobid.org/resources/HT015847062#!> a <http://purl.org/dc/terms/BibliographicResource>,
-    <http://purl.org/ontology/bibo/Book> .
+    <http://purl.org/ontology/bibo/Book>;
+  <http://id.loc.gov/ontologies/bibframe/contribution> _:b14 .
 
-<https://d-nb.info/gnd/124120180> a <https://d-nb.info/standards/elementset/gnd#Person> .
+_:b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b3 .
 
-<https://d-nb.info/gnd/4047390-9> a <https://d-nb.info/standards/elementset/gnd#SubjectHeading> .
+_:b3 a <http://id.loc.gov/ontologies/bibframe/Contribution>;
+  <http://id.loc.gov/ontologies/bibframe/agent> <https://d-nb.info/gnd/124120180>;
+  <http://id.loc.gov/ontologies/bibframe/role> <http://id.loc.gov/vocabulary/relators/cre> .
 
-<https://d-nb.info/gnd/4260601-9> a <https://d-nb.info/standards/elementset/gnd#SubjectHeading> .
+_:b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 
-<https://github.com/hbz/lobid-resources> a <http://schema.org/SoftwareApplication> .
+<http://lobid.org/resources/HT015847062#!> <http://id.loc.gov/ontologies/bibframe/extent>
+    "XIV, 441 S. : Ill., graph. Darst.";
+  <http://id.loc.gov/ontologies/bibframe/hasItem> <http://lobid.org/items/HT015847062:DE-1044:OCT9386%2B4#!>,
+    <http://lobid.org/items/HT015847062:DE-464:OCT9386%2B1#!>, <http://lobid.org/items/HT015847062:DE-464:OCT9386%2B2#!>,
+    <http://lobid.org/items/HT015847062:DE-464:OCT9386%2B3#!>, <http://lobid.org/items/HT015847062:DE-465:OCT9386%2B4#!>,
+    <http://lobid.org/items/HT015847062:DE-465:OCT9386%2B5#!>, <http://lobid.org/items/HT015847062:DE-467:32QFD8011%2B1#!>,
+    <http://lobid.org/items/HT015847062:DE-467:75QFD8011#!>, <http://lobid.org/items/HT015847062:DE-467:75QFD8011%2B1#!>,
+    <http://lobid.org/items/HT015847062:DE-5:2009%2F5398#!>, <http://lobid.org/items/HT015847062:DE-Bi10:OCT%20Tale#!>,
+    <http://lobid.org/items/HT015847062:DE-Kob7:PH%2FV%202009%204482#!>;
+  <http://id.loc.gov/ontologies/bibframe/responsibilityStatement> "Nassim Nicholas Taleb";
+  <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/deu>;
+  <http://purl.org/dc/terms/medium> <http://rdaregistry.info/termList/RDAproductionMethod/1010>;
+  <http://purl.org/dc/terms/subject> _:b2 .
 
-_:b0 a <http://schema.org/CreateAction> .
+_:b2 a <http://www.loc.gov/mads/rdf/v1#ComplexSubject>;
+  <http://www.loc.gov/mads/rdf/v1#componentList> _:b6 .
 
-_:b1 a <https://d-nb.info/standards/elementset/gnd#Work> .
+_:b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://d-nb.info/gnd/4260601-9>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 
-_:b2 a <http://www.loc.gov/mads/rdf/v1#ComplexSubject> .
+_:b2 <http://www.loc.gov/mads/rdf/v1#componentList> _:b7 .
 
-_:b3 a <http://id.loc.gov/ontologies/bibframe/Contribution> .
+_:b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://d-nb.info/gnd/4260601-9>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 
-_:b4 a <http://www.loc.gov/mads/rdf/v1#ComplexSubject> .
+_:b2 <http://www.loc.gov/mads/rdf/v1#componentList> _:b8 .
 
-_:b5 a <http://schema.org/PublicationEvent> .
+_:b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://d-nb.info/gnd/4260601-9>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+
+_:b2 <http://www.loc.gov/mads/rdf/v1#componentList> _:b9 .
+
+_:b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://d-nb.info/gnd/4260601-9>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+
+_:b2 <http://www.w3.org/2000/01/rdf-schema#label> "Vorhersagbarkeit" .
+
+<http://lobid.org/resources/HT015847062#!> <http://purl.org/dc/terms/subject> _:b4 .
+
+_:b4 a <http://www.loc.gov/mads/rdf/v1#ComplexSubject>;
+  <http://www.loc.gov/mads/rdf/v1#componentList> _:b10 .
+
+_:b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://d-nb.info/gnd/4047390-9>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+
+_:b4 <http://www.loc.gov/mads/rdf/v1#componentList> _:b11 .
+
+_:b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://d-nb.info/gnd/4047390-9>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+
+_:b4 <http://www.loc.gov/mads/rdf/v1#componentList> _:b12 .
+
+_:b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://d-nb.info/gnd/4047390-9>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+
+_:b4 <http://www.loc.gov/mads/rdf/v1#componentList> _:b13 .
+
+_:b13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://d-nb.info/gnd/4047390-9>;
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+
+_:b4 <http://www.w3.org/2000/01/rdf-schema#label> "Prognose" .
+
+<http://lobid.org/resources/HT015847062#!> <http://purl.org/dc/terms/tableOfContents>
+    <http://digitale-objekte.hbz-nrw.de/storage/2009/05/23/file_28/3011578.pdf>;
+  <http://purl.org/dc/terms/title> "Der schwarze Schwan";
+  <http://purl.org/lobid/lv#exampleOfWork> _:b1 .
+
+_:b1 a <https://d-nb.info/standards/elementset/gnd#Work>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "<<The>> black swan <dt.>" .
+
+<http://lobid.org/resources/HT015847062#!> <http://purl.org/lobid/lv#hbzID> "HT015847062";
+  <http://purl.org/lobid/lv#subjectAltLabel> "Prognostizierbarkeit", "Prädiktion", "Voraussage",
+    "Vorausschätzung", "Voraussehbarkeit", "Vorhersage", "Vorhersehbarkeit", "Zukunftsprognose",
+    "Zukunftsvoraussage";
+  <http://purl.org/ontology/bibo/edition> "[Nachdr.]";
+  <http://purl.org/ontology/bibo/isbn> "3446415688", "9783446415683";
+  <http://purl.org/ontology/bibo/oclcnum> "553577538";
+  <http://rdaregistry.info/Elements/u/P60493> "die Macht höchst unwahrscheinlicher Ereignisse";
+  <http://schema.org/publication> _:b5 .
+
+_:b5 a <http://schema.org/PublicationEvent>;
+  <http://schema.org/location> "München";
+  <http://schema.org/publishedBy> "Hanser";
+  <http://schema.org/startDate> "2009" .
+
+<http://lobid.org/resources/HT015847062#!> <http://www.w3.org/2002/07/owl#sameAs>
+    <http://hub.culturegraph.org/resource/HBZ-HT015847062>, <http://worldcat.org/oclc/553577538>;
+  <http://www.w3.org/2007/05/powder-s#describedby> <http://lobid.org/resources/HT015847062> .
+
+<http://rdaregistry.info/termList/RDAproductionMethod/1010> <http://www.w3.org/2000/01/rdf-schema#label>
+    "Print" .
+
+<http://worldcat.org/oclc/553577538> <http://www.w3.org/2000/01/rdf-schema#label>
+    "553577538" .
 

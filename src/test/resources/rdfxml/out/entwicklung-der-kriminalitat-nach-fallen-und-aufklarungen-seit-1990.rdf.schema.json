@@ -1,0 +1,90 @@
+{
+  "title" : "Oi Generated Schema",
+  "description" : "https://github.com/jschnasse/oi",
+  "type" : "object",
+  "properties" : {
+    "@context" : {
+      "type" : "object",
+      "properties" : {
+        "prefLabel" : {
+          "type" : "string"
+        },
+        "endDate" : {
+          "type" : "string"
+        },
+        "startDate" : {
+          "type" : "string"
+        },
+        "contributorID" : {
+          "type" : "string"
+        },
+        "politicalGeocodingLevelURI" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "identifier" : {
+          "type" : "string"
+        },
+        "issued" : {
+          "type" : "string"
+        },
+        "modified" : {
+          "type" : "string"
+        },
+        "publisher" : {
+          "type" : "string"
+        },
+        "spatial" : {
+          "type" : "string"
+        },
+        "temporal" : {
+          "type" : "string"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "distribution" : {
+          "type" : "string"
+        },
+        "keyword" : {
+          "type" : "string"
+        },
+        "landingPage" : {
+          "type" : "string"
+        },
+        "format" : {
+          "type" : "string"
+        },
+        "language" : {
+          "type" : "string"
+        },
+        "license" : {
+          "type" : "string"
+        },
+        "accessURL" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        }
+      }
+    },
+    "@graph" : {
+      "type" : "array",
+      "items" : {
+        "@id" : {
+          "type" : "string"
+        },
+        "@type" : {
+          "type" : "string"
+        },
+        "prefLabel" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
+

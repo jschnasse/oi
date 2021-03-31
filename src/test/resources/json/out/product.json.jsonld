@@ -1,0 +1,21 @@
+[ {
+  "@id" : "_:b0",
+  "info:oi/price" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#double",
+    "@value" : "1.25E1"
+  } ],
+  "info:oi/productId" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "info:oi/productName" : [ {
+    "@value" : "A green door"
+  } ],
+  "info:oi/tags" : [ {
+    "@list" : [ {
+      "@value" : "home"
+    }, {
+      "@value" : "green"
+    } ]
+  } ]
+} ]
