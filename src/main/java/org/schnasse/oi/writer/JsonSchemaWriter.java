@@ -1,8 +1,6 @@
 package org.schnasse.oi.writer;
 
 import java.io.IOException;
-import java.io.StringWriter;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -15,7 +13,6 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 public class JsonSchemaWriter {
 
 	private static ObjectMapper m = new ObjectMapper();
-	private static Map<String, JsonNodeType> map = new HashMap<>();
 
 	public static void gprint(Map<String, Object> json) {
 		try {
@@ -54,11 +51,13 @@ public class JsonSchemaWriter {
 		switch (curNodeType) {
 		case ARRAY:
 			property.put("type", "array");
-			JsonNodeType typeOfArrayElements=curNode.get(0).getNodeType();
-			if(typeOfArrayElements.equals(JsonNodeType.OBJECT)) {
-				property.set("items", createProperty(curNode.get(0), typeOfArrayElements));
-			}else {
-				property.set("items", processJsonField(curNode.get(0), typeOfArrayElements));
+			if(!curNode.isEmpty()) {
+				JsonNodeType typeOfArrayElements=curNode.get(0).getNodeType();
+				if(typeOfArrayElements.equals(JsonNodeType.OBJECT)) {
+					property.set("items", createProperty(curNode.get(0), typeOfArrayElements));
+				}else {
+					property.set("items", processJsonField(curNode.get(0), typeOfArrayElements));
+				}
 			}
 			break;
 		case BOOLEAN:

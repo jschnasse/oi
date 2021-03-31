@@ -165,4 +165,25 @@ public class JsonSchemaWriterUnitTest extends WriterUnitTest {
 
 			}
 	}
+	
+	@Test
+	public void testJsonSchemaWriter_issue15() throws IOException {
+		try (InputStream input = new ByteArrayInputStream(
+				new String("{\"emptyArray\":[]}") 
+						.getBytes())) {
+			Map<String, Object> map = JsonReader.getMap(input);
+			JsonSchemaWriter.gprint(map);
+		String expected="{"+
+				"\"title\":\"OiGeneratedSchema\","+
+				"\"description\":\"https://github.com/jschnasse/oi\","+
+				"\"type\":\"object\","+
+				"\"properties\":{"+
+				"\"emptyArray\":{"+
+				"\"type\":\"array\""+
+				"}"+
+				"}"+
+				"}";
+		assertEquals(expected.replaceAll("\\s+",""),outContent.toString().replaceAll("\\s+",""));
+			}
+	}
 }
