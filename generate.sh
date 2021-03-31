@@ -32,6 +32,10 @@ function generate(){
 	$jvm_for_oi -jar $scriptdir/target/oi.jar -i $extension $inputFile -d=";" -o jsonschema > $outputDir/$filename.schema.json
 }
 
+function printHelp(){
+   deb/oi_$oi_version/usr/share/jvm_for_oi/bin/java -jar $scriptdir/target/oi.jar --help
+}
+
 mvn package -DskipTests
 
 generateAll csv
@@ -40,3 +44,6 @@ generateAll rdfxml
 generateAll turtle
 generateAll xml
 generateAll yml
+
+printHelp
+

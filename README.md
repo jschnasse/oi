@@ -78,7 +78,7 @@ _:b1 a <http://schema.org/Offer> ;
 ```
 $ oi --help
 Usage: oi [-hvV] [-vv] [-d=Delimiter] [-f=JsonLdFrame] [--header=HeaderFields]
-          [-i=<inputType>] [-q=QuoteChar] [-t=<type>] [<inputFile>]
+          [-i=<inputType>] [-o=<type>] [-q=QuoteChar] [<inputFile>]
 Converts yaml,json,xml,rdf to each other.
       [<inputFile>]         Input file.
   -d, --delimiter=Delimiter delimiter for csv
@@ -88,12 +88,14 @@ Converts yaml,json,xml,rdf to each other.
   -i, --inputType=<inputType>
                             yml,json,xml,rdf,context,csv,nt,turtle,ntriples,
                               jsonld
+  -o, -t, --type, --outputType=<type>
+                            yml,json,xml,rdf,context,csv,nt,turtle,ntriples,
+                              jsonld,jsonschema
   -q, --quoteChar=QuoteChar quote char for csv
-  -t, --type=<type>         yaml,json,xml,rdf,context,csv,nt,turtle,ntriples,
-                              jsonld
   -v, --verbose             Increase Verbosity to Warn
   -V, --version             Print version information and exit.
       -vv                   Increase Verbosity to Debug
+
 
 ```
 
