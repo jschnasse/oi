@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk12:jdk-12.0.1_12 as build
+FROM adoptopenjdk/openjdk12:latest as build
 RUN jlink \
     --add-modules java.base,java.naming,java.xml,jdk.crypto.ec \
     --verbose \
