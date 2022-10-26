@@ -9,30 +9,7 @@ The result is not meant to be 100% correct for each and every case.
 The overall idea is to provide adhoc conversions just as one step in a conversion pipeline.
 It can be combined easily with existing tools like `xsltproc`,`jq`,`sed`,`grep` and `awk`.
 
-# Install
 
-```
-wget https://dl.bintray.com/jschnasse/debian/oi_0.6.11.deb
-sudo apt install ./oi_0.6.11.deb 
-```
-
-# Keep up to date
-
-Accept the bintray gpg key. 
-
-```
-curl -sSL \
-'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x379ce192d401ab61' \
-| sudo apt-key add -
-```
-
-Add [my repo](https://dl.bintray.com/jschnasse/debian/)
-
-```
-echo "deb https://dl.bintray.com/jschnasse/debian buster main" | sudo tee -a /etc/apt/sources.list.d/jschnasse.list
-sudo apt update
-sudo apt install oi
-```
 
 # Example Usage 
 
